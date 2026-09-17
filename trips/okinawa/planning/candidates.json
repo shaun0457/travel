@@ -1,0 +1,16 @@
+[
+  {"id":"cand-f0","name":"琉球鮨 うらおにかい (久茂地海鮮壽司)","category":"food","typeTag":"頂級壽司","mapcode":"33 156 450*21","x":90,"y":166,"region":"那霸久茂地","desc":"【已排入 Day 3 晚餐核心】全海鮮江戶前熟成壽司，無牛肉成分，需提前預約。自 OMO5 步行約 8 分鐘。","tag":"必吃核心・無牛"},
+  {"id":"cand-f1","name":"Yakizen 焼膳 (炭火雞豚串燒)","category":"food","typeTag":"那霸居酒屋","mapcode":"33 157 504*12","x":93,"y":167,"region":"那霸市區","desc":"【已排入 Day 3 宵夜場】職人炭火現烤雞肉串（燒鳥）與豚肉串，與生啤極搭。","tag":"@yakizen.desu"},
+  {"id":"cand-f2","name":"炭火焼き鳥 鶏尽 那覇店 (專門燒鳥)","category":"food","typeTag":"炭火燒鳥","mapcode":"33 157 323*11","x":96,"y":169,"region":"那霸松尾","desc":"專注沖繩在地優質地雞串燒，100% 雞肉料理專門店，完全無牛肉困擾，氛圍精緻。","tag":"@torijinnaha"},
+  {"id":"cand-f3","name":"海人食堂 (讀谷村生猛海鮮丼)","category":"food","typeTag":"漁港直送","mapcode":"33 792 330*55","x":170,"y":115,"region":"讀谷村漁港","desc":"都屋漁港直營海鮮丼名店！炸金槍魚排、生猛海膽海葡萄丼，海邊看著港口吃極為過癮。","tag":"漁港直營海鮮"},
+  {"id":"cand-f4","name":"泊港魚市場 (泊いゆまち)","category":"food","typeTag":"海鮮批發","mapcode":"33 186 620*00","x":82,"y":158,"region":"那霸泊港","desc":"若想在那霸市區就近吃早場海鮮，可作為替代糸滿魚市場的 Plan B，生魚片鮮度極高。","tag":"清晨海鮮丼"},
+  {"id":"cand-f5","name":"通堂拉麵 小祿本店 (おんな味 雞湯拉麵)","category":"food","typeTag":"招牌雞白湯","mapcode":"33 094 365*41","x":80,"y":178,"region":"那霸小祿","desc":"招牌「女麵」以濃郁清甜的純雞骨高湯熬製，搭配豚肉叉燒與溏心蛋，不吃牛肉的安心深夜拉麵首選。","tag":"純雞骨拉麵"},
+  {"id":"cand-h1","name":"慈眼院 (首里觀音堂)","category":"shrine","typeTag":"合掌犬生肖朱印","mapcode":"33 161 653*22","x":100,"y":162,"region":"首里","desc":"Day 1 首里順路備選。以招牌「合掌犬」與十二生肖守護本尊手寫御朱印聞名，情侶造訪超人氣寺院。","tag":"生肖御朱印"},
+  {"id":"cand-h2","name":"沖繩縣護國神社 (奧武山公園)","category":"shrine","typeTag":"綠意靜謐","mapcode":"33 096 820*11","x":87,"y":173,"region":"奧武山","desc":"緊鄰沖宮步行僅 2 分鐘。境內綠意盎然，神職常態提供手寫墨寶直書き，可與沖宮一網打盡。","tag":"奧武山雙社"},
+  {"id":"cand-s1","name":"古宇利島 ＆ 古宇利跨海大橋","category":"spot","typeTag":"絕景大橋","mapcode":"485 601 893*55","x":310,"y":22,"region":"北部今歸仁","desc":"Day 2 瀨底透明獨木舟因海況取消時的第一順位 Plan B！絕美跨海公路景致與心形岩。","tag":"海況 Plan B"},
+  {"id":"cand-s2","name":"萬座毛 (象鼻海蝕崖)","category":"spot","typeTag":"海景名勝","mapcode":"206 312 038*55","x":210,"y":90,"region":"恩納村","desc":"從恩納住宿出發僅 10～15 分鐘，天然象鼻岩與無邊際草原，適合順路看海拍照。","tag":"順路海景"},
+  {"id":"cand-s3","name":"港川外人住宅街 (Minatogawa)","category":"spot","typeTag":"美式文青","mapcode":"33 341 002*77","x":110,"y":150,"region":"浦添市","desc":"美軍老宿舍改建的文青聚落，聚集 oHacorté 水果塔、精品咖啡與特色手作選物。","tag":"下午茶散步"},
+  {"id":"cand-s4","name":"美國村 (American Village)","category":"spot","typeTag":"美式街區","mapcode":"33 526 450*63","x":135,"y":132,"region":"北谷町","desc":"Day 1 備選。若下午不想逛 PARCO CITY，可在此看夕陽日落、散步海堤步道。","tag":"夕陽散步"},
+  {"id":"cand-s5","name":"備瀨福木林道","category":"spot","typeTag":"綠意林蔭","mapcode":"553 105 654*41","x":305,"y":28,"region":"本部町","desc":"水族館旁數千棵福木構成的古老林道，微風吹拂騎腳踏車非常悠閒舒適。","tag":"水族館順路"},
+  {"id":"cand-s6","name":"瀨長島 Umikaji Terrace","category":"spot","typeTag":"海景咖啡","mapcode":"33 002 602*06","x":60,"y":188,"region":"豐見城","desc":"Day 4 與 Outlet 二選一的放鬆首選：純白階梯海景露台、幸福鬆餅、近距離看飛機降落。","tag":"登機前看海"}
+]
