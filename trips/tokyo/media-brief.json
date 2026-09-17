@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "policy": "legacy-no-hero-media",
+  "siteHero": null,
+  "dayHeroes": {},
+  "notes": ["目前未指定東京旅程圖片；沿用 gemini-mobile-v1 無 hero 圖設定。"]
+}

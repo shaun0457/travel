@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "slug": "tokyo",
+    "title": "東京家族 5 日遊 2026",
+    "shortTitle": "東京家族 5 日遊",
+    "emoji": "🗼",
+    "date_range": "2026-10-14 to 2026-10-18",
+    "language": "zh-TW",
+    "status": "planning",
+    "publish": true,
+    "shareTitle": "東京家族 5 日遊 🗼 Tokyo 2026",
+    "shareText": "2026/10/14–10/18 東京家族 5 日遊行程。",
+    "badges": [
+      {"icon": "calendar", "text": "10/14–10/18・5日"},
+      {"icon": "users", "text": "家人同行"}
+    ],
+    "features": {"itinerary": true, "routeCanvas": false, "shrineGuide": false, "candidates": true, "tasks": true, "tools": false},
+    "tabLabels": {"itinerary": "行程表", "backup": "備選庫", "tasks": "待處理"},
+    "template": "gemini-mobile-v1",
+    "planning_notes": ["本趟為家人同行的東京 5 日遊；目前先建立旅程骨架，後續依航班、住宿與家庭成員需求規劃。"],
+    "assumptions": [],
+    "uncertain_items": ["同行人數尚未提供。", "航班資訊尚未提供。", "住宿地點尚未提供。", "每日景點、餐廳與交通方式尚未規劃。"],
+    "source_format": "split-json-v1"
+  }
+}

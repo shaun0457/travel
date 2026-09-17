@@ -1,0 +1,11 @@
+{
+  "dayNumber": 2,
+  "dayLabel": "10/15 (四)",
+  "title": "東京 Day 2｜待規劃",
+  "stay": "待確認",
+  "bannerAlert": "此日尚未安排正式行程。",
+  "routePoints": [],
+  "spots": [
+    {"id":"tokyo-d2-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/15 東京行程待規劃","visited":false,"notes":"已保留完整一天供家族行程規劃；景點、餐廳與移動路線待確認。"}
+  ]
+}

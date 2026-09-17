@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "not_generated",
+  "generated_at": null,
+  "based_on": {"confirmed_itinerary": true, "discovery_place_ids": []},
+  "proposals": [],
+  "notes": ["東京家族 5 日遊目前只有日期與家人同行條件；待加入航班、住宿或候選景點後再產生規劃草案。"]
+}

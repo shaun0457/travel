@@ -1,0 +1,11 @@
+{
+  "dayNumber": 5,
+  "dayLabel": "10/18 (日)",
+  "title": "東京 Day 5｜返程日待規劃",
+  "stay": "返程",
+  "bannerAlert": "目前僅確認為旅程最後一天；返程航班與登機前安排待補。",
+  "routePoints": [],
+  "spots": [
+    {"id":"tokyo-d5-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/18 東京返程日待規劃","visited":false,"notes":"已確認此日為東京家族 5 日遊 Day 5。待補返程航班、行李安排與登機前行程。"}
+  ]
+}
