@@ -1,139 +1,20 @@
-              <button onclick="highlightCandidate('${item.id}')" class="flex-1 py-1.5 rounded-xl border transition-all text-xs font-bold flex items-center justify-center gap-1.5 ${isHighlighted ? 'bg-rose-500 text-white border-rose-500 shadow-sm' : 'bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100'}">
-                <i class="fa-solid fa-location-dot"></i><span>${isHighlighted ? '地圖紅點標記中' : '地圖紅點預覽'}</span>
-              </button>
-              <div class="relative inline-block">
-                <select aria-label="加入行程" onchange="addCandidateToDay('${item.id}', this.value); this.selectedIndex = 0;" class="appearance-none bg-brand-50 hover:bg-brand-100 text-brand-700 border border-brand-200 text-xs font-bold py-1.5 pl-3 pr-7 rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-400">
-                  <option value="" disabled selected>＋ 加入行程</option>
-                  <option value="0">加入 Day 1 (10/26)</option>
-                  <option value="1">加入 Day 2 (10/27)</option>
-                  <option value="2">加入 Day 3 (10/28)</option>
-                  <option value="3">加入 Day 4 (10/29)</option>
-                </select>
-                <i class="fa-solid fa-chevron-down absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-brand-600 pointer-events-none"></i>
-              </div>
-            </div>
-          </div>`;
-      }).join('');
-    }
+const categoryLabels={all:'全部',food:'餐廳',restaurant:'餐廳',spot:'景點',attraction:'景點',cafe:'咖啡',activity:'活動',shopping:'購物',shrine:'寺社',view:'景點'};
+function normalizedCandidateCategory(c){const raw=itemCategory(c);if(raw==='food'||raw==='restaurant')return 'food';if(raw==='spot'||raw==='attraction'||raw==='view')return 'spot';return raw}
+function renderCandidateFilters(){const cats=['all',...new Set(candidateDatabase.map(normalizedCandidateCategory))],regions=['all',...new Set(candidateDatabase.map(itemRegion).filter(Boolean))];document.getElementById('candidate-category-filters').innerHTML=cats.map(c=>`<button onclick="setCandidateCategory('${esc(c)}')" class="tap-target shrink-0 px-3 rounded-xl text-xs font-bold ${candCategory===c?'bg-brand-600 text-white':'bg-slate-100 text-slate-600'}">${esc(categoryLabels[c]||c)}</button>`).join('');document.getElementById('candidate-region-filters').innerHTML=regions.map(r=>`<button onclick="setCandidateRegion('${esc(r).replaceAll("'","&#39;")}')" class="tap-target shrink-0 px-3 rounded-xl text-xs font-bold ${candRegion===r?'bg-slate-800 text-white':'bg-white border border-slate-200 text-slate-600'}">${esc(r==='all'?'全部地區':r)}</button>`).join('')}
+function setCandidateCategory(v){candCategory=v;renderCandidates()}
+function setCandidateRegion(v){candRegion=v;renderCandidates()}
+function renderCandidates(){renderCandidateFilters();const filtered=candidateDatabase.filter(c=>(candCategory==='all'||normalizedCandidateCategory(c)===candCategory)&&(candRegion==='all'||itemRegion(c)===candRegion));const host=document.getElementById('candidates-list-container');host.innerHTML=filtered.length?filtered.map(c=>candidateCard(c)).join(''):'<div class="bg-white rounded-2xl p-5 text-center text-xs text-slate-400 border border-slate-100">這個篩選條件目前沒有候選地點。</div>';renderAgentSuggestion()}
+function candidateCard(item){const id=candidateId(item),inDays=tripData.map((d,i)=>d.spots?.some(s=>s.candId===id||s.place_id&&s.place_id===item.place_id)?`Day ${i+1}`:null).filter(Boolean);const source=sourceLabel(item),verified=verificationLabel(item)==='已查證';return `<article class="bg-white rounded-2xl p-4 card-shadow border border-sky-100"><button onclick="openPlaceDetail('candidate','${esc(id).replaceAll("'","&#39;")}')" class="tap-target w-full text-left"><div class="flex items-center gap-2 flex-wrap"><span class="text-[10px] bg-sky-50 text-brand-700 px-2 py-1 rounded-full font-bold">${esc(categoryLabels[normalizedCandidateCategory(item)]||normalizedCandidateCategory(item))}</span>${itemRegion(item)?`<span class="text-[10px] text-slate-400">${esc(itemRegion(item))}</span>`:''}${verified?'<span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-1 rounded-full font-bold">✓ Verified</span>':''}${source?`<span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-1 rounded-full">${esc(source)}</span>`:''}</div><h3 class="font-extrabold text-slate-900 mt-2">${esc(itemTitle(item))}</h3>${itemNotes(item)?`<p class="text-xs text-slate-500 mt-1 line-clamp-2">${esc(noteExcerpt(itemNotes(item)))}</p>`:''}${inDays.length?`<p class="text-[10px] text-purple-600 font-bold mt-2">此裝置已加入 ${esc(inDays.join('・'))}</p>`:''}</button><div class="mt-3 grid grid-cols-[1fr_auto] gap-2"><div class="relative"><select aria-label="加入某一天" onchange="addCandidateToDay('${esc(id).replaceAll("'","&#39;")}',this.value);this.selectedIndex=0" class="tap-target w-full appearance-none rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-extrabold pl-3 pr-8"><option value="" selected disabled>加入 Day X</option>${tripData.map((d,i)=>`<option value="${i}">Day ${d.dayNumber||i+1} · ${esc(d.dayLabel||'')}</option>`).join('')}</select><i class="fa-solid fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-brand-600 pointer-events-none"></i></div><button onclick="openCandidateNav('${esc(id).replaceAll("'","&#39;")}')" class="tap-target px-3 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold">導航預覽</button></div></article>`}
+function addCandidateToDay(id,dayIndexStr){const dayIdx=Number.parseInt(dayIndexStr,10),item=candidateDatabase.find(c=>candidateId(c)===id);if(!item||!Number.isInteger(dayIdx)||!tripData[dayIdx])return;const day=tripData[dayIdx];if(day.spots.some(s=>s.candId===id)){showToast(`「${itemTitle(item)}」已加入 Day ${dayIdx+1}`);return}day.spots.push(makeAddedSpot(item,dayIdx,false));persistState();renderAll();switchMainTab('itinerary');switchDay(dayIdx);showToast(`已暫加「${itemTitle(item)}」到 Day ${dayIdx+1}`)}
+function removeAddedSpot(dayIdx,id){const day=tripData[dayIdx];const idx=day?.spots?.findIndex(s=>s.candId===id);if(idx<0)return;day.spots.splice(idx,1);persistState();renderAll();showToast('已移除此裝置的暫加候選')}
+function renderAgentSuggestion(){const host=document.getElementById('agent-suggestion-card');const recs=asArray(planningData.recommendations||planningData.suggestions).filter(r=>!dismissedRecommendations.has(r.id));const r=recs[0];if(!r){host.innerHTML='';return}const id=r.candidate_id||r.place_id,dayIdx=Number.isInteger(r.day_index)?r.day_index:null;host.innerHTML=`<div class="bg-gradient-to-br from-indigo-50 via-white to-sky-50 rounded-2xl p-4 card-shadow border border-indigo-100"><div class="flex items-center justify-between"><h3 class="font-extrabold text-slate-900">✨ Agent 建議</h3><button onclick="dismissRecommendation('${esc(r.id)}')" class="tap-target w-11 rounded-full text-slate-400" aria-label="略過建議"><i class="fa-solid fa-xmark"></i></button></div><p class="text-xs text-slate-600 mt-2 leading-relaxed">${esc(r.reason||r.summary||'此建議已通過 planning constraints。')}</p><div class="flex gap-2 mt-3">${id&&dayIdx!==null?`<button onclick="addCandidateToDay('${esc(id)}','${dayIdx}')" class="tap-target flex-1 rounded-xl bg-brand-600 text-white text-xs font-bold">加入 Day ${dayIdx+1}</button>`:''}<button onclick="dismissRecommendation('${esc(r.id)}')" class="tap-target px-4 rounded-xl bg-white border border-slate-200 text-slate-600 text-xs font-bold">略過</button></div></div>`}
+function dismissRecommendation(id){dismissedRecommendations.add(id);persistState();renderAgentSuggestion()}
 
-    function filterCandidates(type) {
-      candFilter = type;
-      ['all', 'food', 'shrine', 'spot'].forEach(t => {
-        const btn = document.getElementById(`cand-filter-${t}`);
-        btn.className = t === type
-          ? "cand-filter-btn py-1.5 rounded-xl text-[11px] font-bold bg-brand-600 text-white"
-          : "cand-filter-btn py-1.5 rounded-xl text-[11px] font-bold bg-white text-slate-600 border border-slate-200";
-      });
-      renderCandidates();
-    }
-
-    function highlightCandidate(id) {
-      const item = candidateDatabase.find(c => c.id === id);
-      if (!item) return;
-      currentHighlightedCandidate = item;
-      document.getElementById("candidate-preview-name").innerText = `🔴 ${item.name} (${item.region})`;
-      document.getElementById("candidate-preview-banner").classList.remove("hidden");
-      document.getElementById("clear-preview-btn").classList.remove("hidden");
-      document.getElementById("canvas-map-title").innerText = `紅點標記中：${item.name}`;
-      renderCandidates();
-      drawRouteMap();
-      showToast(`已在地圖標示紅點：${item.name}`);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function clearCandidateHighlight() {
-      currentHighlightedCandidate = null;
-      document.getElementById("candidate-preview-banner").classList.add("hidden");
-      document.getElementById("clear-preview-btn").classList.add("hidden");
-      const d = tripData[currentDayIndex];
-      document.getElementById("canvas-map-title").innerText = `Day ${d.dayNumber} 自駕動線地圖 (${d.dayLabel})`;
-      renderCandidates();
-      drawRouteMap();
-      showToast("已重設為標準動線地圖");
-    }
-
-    function addCandidateToDay(candId, dayIndexStr) {
-      const dayIdx = parseInt(dayIndexStr, 10);
-      const item = candidateDatabase.find(c => c.id === candId);
-      if (!item || isNaN(dayIdx)) return;
-      const day = tripData[dayIdx];
-      if (day.spots.some(s => s.candId === item.id)) {
-        showToast(`「${item.name}」已經在 Day ${day.dayNumber} 了`);
-        return;
-      }
-      day.spots.push(makeAddedSpot(item, dayIdx, false));
-      day.routePoints.push({ name: item.name.split(' ')[0], x: item.x, y: item.y, time: "彈性", candId: item.id });
-      persistState();
-      showToast(`已將「${item.name}」加入 Day ${day.dayNumber}！`);
-      switchMainTab('itinerary');
-      switchDay(dayIdx);
-      renderCandidates();
-      updateGlobalCounters();
-    }
-
-    function removeAddedSpot(dayIdx, spotIdx) {
-      const day = tripData[dayIdx];
-      const spot = day.spots[spotIdx];
-      day.spots.splice(spotIdx, 1);
-      const ptIdx = day.routePoints.findIndex(p => p.candId && p.candId === spot.candId);
-      if (ptIdx > -1) day.routePoints.splice(ptIdx, 1);
-      persistState();
-      renderCurrentDay();
-      renderCandidates();
-      updateGlobalCounters();
-      showToast("已從行程中移除");
-    }
-
-    // ---------- 地圖 ----------
-    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function drawRouteMap() {
-      if (animFrameId) cancelAnimationFrame(animFrameId);
-      animProgress = reduceMotion ? 1 : 0;
-      animatePath();
-    }
-    function animatePath() {
-      animProgress = Math.min(1, animProgress + 0.04);
-      renderCanvasFrame(animProgress);
-      if (animProgress < 1) animFrameId = requestAnimationFrame(animatePath);
-    }
-
-    function renderCanvasFrame(progress) {
-      const canvas = document.getElementById("routeCanvas");
-      if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      const width = canvas.width, height = canvas.height;
-      ctx.clearRect(0, 0, width, height);
-
-      ctx.save();
-      ctx.fillStyle = "#e0f2fe";
-      ctx.strokeStyle = "#bae6fd";
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(50, 205);
-      ctx.bezierCurveTo(45, 175, 70, 150, 105, 140);
-      ctx.bezierCurveTo(150, 130, 190, 100, 230, 70);
-      ctx.bezierCurveTo(270, 45, 315, 20, 345, 30);
-      ctx.bezierCurveTo(365, 40, 340, 65, 305, 80);
-      ctx.bezierCurveTo(260, 95, 220, 130, 175, 155);
-      ctx.bezierCurveTo(130, 180, 95, 220, 60, 220);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.25)";
-      ctx.lineWidth = 1;
-      for (let i = 25; i < height; i += 45) {
-        ctx.beginPath();
-        ctx.moveTo(10, i);
-        ctx.quadraticCurveTo(width / 2, i + 8, width - 10, i);
-        ctx.stroke();
-      }
-      ctx.restore();
-
-      const points = tripData[currentDayIndex].routePoints || [];
-      if (points.length >= 2) {
-        ctx.save();
-        ctx.strokeStyle = "rgba(2, 132, 199, 0.25)";
-        ctx.lineWidth = 3;
-        ctx.setLineDash([4, 4]);
-        ctx.beginPath();
-        ctx.moveTo(points[0].x, points[0].y);
+function eventId(e){return e.event_id||e.id}
+function eventNote(e){return e.user_note||e?.raw?.note||e?.raw?.caption||''}
+function eventClaims(id){return discoveryClaims.filter(c=>c.event_id===id)}
+function inboxStatusLabel(s){return ({received:'待辨識',processing:'處理中',parsing:'處理中',parsed:'待查證',needs_review:'待查證',processed:'已入池',duplicate:'重複',rejected:'略過',archived:'封存'})[s]||s}
+function renderInbox(){const host=document.getElementById('inbox-list-container');host.innerHTML=discoveryInbox.length?discoveryInbox.map(e=>{const id=eventId(e),claims=eventClaims(id),placeClaim=claims.find(c=>['place','place_name','identity'].includes(c.field)),regionClaim=claims.find(c=>['region','area','location'].includes(c.field)),categoryClaim=claims.find(c=>c.field==='category');return `<article class="bg-white rounded-2xl p-4 card-shadow border border-sky-100"><div class="flex gap-3"><input aria-label="選取 ${esc(id)}" type="checkbox" ${selectedInboxIds.has(id)?'checked':''} onchange="toggleInboxSelection('${esc(id).replaceAll("'","&#39;")}',this.checked)" class="mt-1 w-5 h-5 accent-sky-600"><div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-2"><span class="text-[10px] font-bold text-rose-600">${esc(e?.source?.platform||'source')}</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-full">${esc(inboxStatusLabel(e.status))}</span></div><a href="${esc(e?.source?.url||'#')}" target="_blank" rel="noopener" class="tap-target flex items-center text-xs font-bold text-brand-700 truncate">${esc(e?.source?.author?`@${e.source.author}`:'原始貼文 / URL')} <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i></a>${eventNote(e)?`<p class="text-xs text-slate-500 line-clamp-2">${esc(eventNote(e))}</p>`:''}<div class="mt-2 p-2.5 bg-slate-50 rounded-xl text-[11px] text-slate-600"><strong class="text-slate-700">AI extracted</strong><div class="mt-1">可能地點：${esc(placeClaim?.value||e?.extraction?.place_hint||'待辨識')}</div><div>區域：${esc(regionClaim?.value||'待查證')} · 類型：${esc(categoryClaim?.value||'待查證')}</div></div></div></div></article>`}).join(''):'<div class="bg-white rounded-2xl p-5 text-center border border-slate-100"><p class="text-xs text-slate-400">Inbox 目前是空的。分享 Instagram / URL 給 Agent 後會先進這裡。</p></div>'}
+function toggleInboxSelection(id,on){if(on)selectedInboxIds.add(id);else selectedInboxIds.delete(id)}
+async function batchInboxToCandidate(){if(!selectedInboxIds.size){showToast('先選擇要整理的原始貼文');return}const prompt=`trip:inbox process ${travelMeta.slug}: ${[...selectedInboxIds].join(', ')}. Extract claims, resolve entities, verify planning-critical facts, then promote planning-ready places to Candidate Pool.`;const ok=await copyText(prompt);showToast(ok?`已複製 ${selectedInboxIds.size} 筆 Agent 整理指令`:'無法複製整理指令')}
+function switchSavedPanel(panel){savedPanel=panel;persistState();document.getElementById('saved-panel-candidates').classList.toggle('hidden',panel!=='candidates');document.getElementById('saved-panel-inbox').classList.toggle('hidden',panel!=='inbox');['candidates','inbox'].forEach(x=>{const b=document.getElementById(`saved-tab-${x}`);b.classList.toggle('bg-brand-600',x===panel);b.classList.toggle('text-white',x===panel);b.classList.toggle('text-slate-600',x!==panel)})}

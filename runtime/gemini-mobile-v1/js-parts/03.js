@@ -1,73 +1,14 @@
-        <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2 text-xs">
-          <span class="text-slate-500 shrink-0"><i class="fa-solid fa-bed text-brand-500 mr-1"></i> 今日住宿</span>
-          <span class="font-bold text-slate-800 text-right">${day.stay}</span>
-        </div>
-        <div class="mt-2.5 p-2.5 rounded-xl bg-sky-50/80 border border-sky-100 text-[11px] text-sky-900 leading-relaxed">${day.bannerAlert}</div>`;
-
-      document.getElementById("spots-timeline-container").innerHTML = day.spots.map((spot, idx) => {
-        const isVisited = spot.visited;
-        const badgeColor = catBadgeColors[spot.category] || "bg-slate-50 text-slate-700 border-slate-200";
-        const tagStyle = typeTagStyles[spot.typeTag] || "bg-slate-100 text-slate-600";
-        return `
-          <div class="bg-white rounded-2xl p-4 card-shadow border ${isVisited ? 'border-emerald-200 bg-emerald-50/20 opacity-80' : 'border-sky-100/80'} transition-all">
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2 min-w-0">
-                <button onclick="toggleSpotVisited(${currentDayIndex}, ${idx})" aria-label="標記已去過" class="w-6 h-6 shrink-0 rounded-full flex items-center justify-center border transition-all ${isVisited ? 'bg-emerald-500 border-emerald-500 text-white' : 'border-slate-300 text-transparent hover:border-brand-500'}">
-                  <i class="fa-solid fa-check text-xs"></i>
-                </button>
-                <span class="font-outfit font-bold text-xs text-slate-400 shrink-0">${spot.time}</span>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border truncate ${badgeColor}">${spot.categoryLabel}</span>
-              </div>
-              <div class="flex items-center gap-1.5 shrink-0">
-                <span class="text-[9px] px-1.5 py-0.5 rounded ${tagStyle}">${spot.typeTag}</span>
-                ${spot.typeTag === "自選加入" ? `<button onclick="removeAddedSpot(${currentDayIndex}, ${idx})" aria-label="移除" class="text-[10px] text-slate-400 hover:text-rose-500 px-1"><i class="fa-solid fa-trash-can"></i></button>` : ''}
-              </div>
-            </div>
-            <h3 class="text-sm font-extrabold mt-2.5 ${isVisited ? 'line-through text-slate-400' : 'text-slate-900'}">${spot.title}</h3>
-            <div class="mt-2 text-xs text-slate-600 whitespace-pre-line leading-relaxed bg-slate-50/80 p-2.5 rounded-xl border border-slate-100">${spot.notes}</div>
-            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
-              <button onclick="copyMapcode('${spot.mapcode}')" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-sky-50 text-brand-700 text-xs font-semibold hover:bg-sky-100 active:scale-95 transition-all">
-                <i class="fa-solid fa-location-crosshairs text-[11px]"></i>
-                <span class="font-outfit font-bold">${spot.mapcode}</span>
-                <span class="text-[10px] text-brand-500 underline ml-0.5">複製</span>
-              </button>
-              <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(spot.title)}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium hover:bg-slate-200 active:scale-95 transition-all">
-                <i class="fa-solid fa-diamond-turn-right text-emerald-600 text-[11px]"></i><span>導航</span>
-              </a>
-            </div>
-          </div>`;
-      }).join('');
-
-      drawRouteMap();
-    }
-
-    function renderCandidates() {
-      const filtered = candidateDatabase.filter(c => candFilter === 'all' || c.category === candFilter);
-      document.getElementById("count-cand-all").innerText = candidateDatabase.length;
-      ['food', 'shrine', 'spot'].forEach(k => {
-        document.getElementById(`count-cand-${k}`).innerText = candidateDatabase.filter(c => c.category === k).length;
-      });
-
-      document.getElementById("candidates-list-container").innerHTML = filtered.map(item => {
-        const isHighlighted = currentHighlightedCandidate && currentHighlightedCandidate.id === item.id;
-        const inDays = tripData.map((d, i) => d.spots.some(s => s.candId === item.id) ? `D${i + 1}` : null).filter(Boolean);
-        let catBadge;
-        if (item.category === 'food') catBadge = '<span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">美食料理(無牛)</span>';
-        else if (item.category === 'shrine') catBadge = '<span class="text-[10px] bg-rose-100 text-rose-800 px-2 py-0.5 rounded-full font-bold">御朱印寺社</span>';
-        else catBadge = '<span class="text-[10px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full font-bold">景點購物</span>';
-
-        return `
-          <div class="bg-white rounded-2xl p-4 card-shadow border ${isHighlighted ? 'border-rose-400 ring-2 ring-rose-200' : 'border-sky-100/80'} transition-all">
-            <div class="flex items-start justify-between gap-2">
-              <div class="min-w-0">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  ${catBadge}
-                  <span class="text-[10px] font-medium text-slate-400">${item.region}</span>
-                  ${inDays.length ? `<span class="text-[10px] font-bold bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded">已加入 ${inDays.join('・')}</span>` : ''}
-                </div>
-                <h3 class="font-extrabold text-slate-900 text-sm mt-1">${item.name}</h3>
-              </div>
-              <span class="text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-mono shrink-0">${item.tag}</span>
-            </div>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed bg-slate-50 p-2.5 rounded-xl border border-slate-100">${item.desc}</p>
-            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
+function renderDayTabs(){const host=document.getElementById('day-tabs');host.innerHTML=tripData.map((d,i)=>`<button onclick="switchDay(${i})" class="day-tab-btn shrink-0 min-w-[82px] px-3 rounded-2xl border text-center ${i===currentDayIndex?'bg-brand-600 border-brand-600 text-white shadow-md':'bg-white border-slate-200 text-slate-600'}"><span class="block text-[9px] opacity-80">Day ${d.dayNumber||i+1}</span><span class="block text-xs font-bold">${esc(d.dayLabel||`Day ${i+1}`)}</span></button>`).join('')}
+function switchDay(index){currentDayIndex=Math.max(0,Math.min(tripData.length-1,index));persistState();renderDayTabs();renderToday();renderItinerary();renderNextStopBar()}
+function transportSummary(day){let mins=0,km=0,hasMins=false,hasKm=false;(day.spots||[]).forEach(s=>{const t=s.transport_to_next;if(Number.isFinite(Number(t?.duration_min))){mins+=Number(t.duration_min);hasMins=true}if(Number.isFinite(Number(t?.distance_km))){km+=Number(t.distance_km);hasKm=true}});return {mins:hasMins?mins:null,km:hasKm?Math.round(km*10)/10:null}}
+function routeSummaryHtml(day){const t=transportSummary(day),stops=(day.spots||[]).length,sequence=(day.spots||[]).filter(s=>s.category!=='hotel').slice(0,4).map(s=>itemTitle(s).replace(/\s*\(.+?\)\s*/g,'').slice(0,12)).join(' → ');return `<div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100"><div class="flex items-start justify-between gap-3"><div><p class="text-[11px] font-bold text-brand-600">Day ${day.dayNumber||currentDayIndex+1}｜${esc(day.dayLabel||'')}</p><h2 class="font-extrabold text-slate-900 mt-1 line-clamp-2">${esc(day.title||'今日行程')}</h2></div><span class="text-[10px] bg-sky-50 text-brand-700 px-2 py-1 rounded-full shrink-0">${stops} stops</span></div><div class="flex gap-3 mt-3 text-xs text-slate-600 flex-wrap">${t.mins!==null?`<span>🚗 約 ${Math.floor(t.mins/60)?`${Math.floor(t.mins/60)}h `:''}${t.mins%60}m</span>`:''}<span>📍 ${stops} stops</span>${t.km!==null?`<span>🛣 約 ${t.km} km</span>`:''}</div>${sequence?`<div class="mt-3 pt-3 border-t border-slate-100"><p class="text-[10px] font-bold text-slate-400">今日重點</p><p class="text-xs text-slate-700 mt-1 line-clamp-2">${esc(sequence)}</p></div>`:''}</div>`}
+function noteExcerpt(text){const s=String(text||'').replace(/\s+/g,' ').trim();return s.length>86?`${s.slice(0,86)}…`:s}
+function spotCard(spot,idx,{compact=false}={}){const visited=!!spot.visited;const region=itemRegion(spot),duration=spot.duration_min?`約 ${spot.duration_min} 分鐘`:'';return `<article class="bg-white rounded-2xl p-4 card-shadow border ${visited?'border-emerald-200 bg-emerald-50/20':'border-sky-100'}"><div class="flex items-start gap-3"><button onclick="toggleSpotVisited(${currentDayIndex},${idx})" class="tap-target w-11 rounded-full border shrink-0 ${visited?'bg-emerald-500 border-emerald-500 text-white':'bg-white border-slate-200 text-slate-300'}" aria-label="${visited?'取消完成':'完成打卡'}"><i class="fa-solid fa-check"></i></button><button onclick="openPlaceDetail('spot',${currentDayIndex},${idx})" class="tap-target min-w-0 flex-1 text-left"><div class="flex items-center gap-2 flex-wrap"><span class="font-outfit font-extrabold text-brand-600">${esc(spot.time)}</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-full">${esc(spot.categoryLabel||spot.typeTag||itemCategory(spot))}</span></div><h3 class="font-extrabold mt-1 ${visited?'line-through text-slate-400':'text-slate-900'}">${esc(itemTitle(spot))}</h3>${region||duration?`<p class="text-[11px] text-slate-400 mt-1">${esc([region,duration].filter(Boolean).join(' · '))}</p>`:''}${!compact&&itemNotes(spot)?`<p class="text-xs text-slate-500 mt-2 line-clamp-2">${esc(noteExcerpt(itemNotes(spot)))}</p>`:''}</button></div><div class="mt-3 grid grid-cols-[1fr_auto] gap-2"><button onclick="googleSpot(${currentDayIndex},${idx})" class="primary-nav rounded-xl bg-brand-600 text-white text-xs font-extrabold"><i class="fa-solid fa-diamond-turn-right mr-1"></i>Google 地圖導航</button><button onclick="openPlaceDetail('spot',${currentDayIndex},${idx})" class="tap-target px-3 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold">詳細</button></div></article>`}
+function getNextStop(){const day=tripData[currentDayIndex];const idx=(day.spots||[]).findIndex(s=>!s.visited);return idx>=0?{spot:day.spots[idx],index:idx}:null}
+function renderToday(){const day=tripData[currentDayIndex];document.getElementById('today-summary').innerHTML=routeSummaryHtml(day);const nextIndex=(day.spots||[]).findIndex(s=>!s.visited);const upcoming=nextIndex>=0?day.spots.slice(nextIndex,nextIndex+3):[];document.getElementById('today-upcoming').innerHTML=upcoming.length?`<div class="flex items-center justify-between"><h2 class="font-extrabold text-slate-900">接下來</h2><span class="text-[11px] text-slate-400">最多顯示 3 站</span></div>`+upcoming.map(s=>spotCard(s,day.spots.indexOf(s),{compact:true})).join(''):`<div class="bg-white rounded-2xl p-5 card-shadow border border-emerald-100 text-center"><div class="text-2xl">✓</div><h2 class="font-extrabold mt-2">今天的行程都完成了</h2><p class="text-xs text-slate-500 mt-1">可到「行程」查看完整旅程筆記。</p></div>`}
+function renderItinerary(){const day=tripData[currentDayIndex];document.getElementById('route-summary').innerHTML=routeSummaryHtml(day);document.getElementById('spots-timeline-container').innerHTML=(day.spots||[]).map((s,i)=>spotCard(s,i)).join('');document.getElementById('trip-notes-panel').innerHTML=`<div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100 space-y-3"><div><p class="text-[10px] font-bold text-brand-600">旅程筆記</p><h3 class="font-extrabold text-slate-900">${esc(day.title||'Day notes')}</h3></div>${day.bannerAlert?`<p class="text-xs text-slate-600 whitespace-pre-line leading-relaxed">${esc(day.bannerAlert)}</p>`:''}${day.stay?`<div class="pt-3 border-t border-slate-100 text-xs"><span class="text-slate-400">今日住宿</span><strong class="block text-slate-800 mt-1">${esc(day.stay)}</strong></div>`:''}</div>`;applyDayViewMode();drawRouteMap()}
+function toggleSpotVisited(dayIdx,spotIdx){const s=tripData[dayIdx]?.spots?.[spotIdx];if(!s)return;s.visited=!s.visited;persistState();renderToday();renderItinerary();renderNextStopBar();updateGlobalCounters()}
+function setDayViewMode(mode){dayViewMode=mode;applyDayViewMode();if(mode==='map')setTimeout(drawRouteMap,40)}
+function applyDayViewMode(){const map=document.getElementById('route-map-panel'),notes=document.getElementById('trip-notes-panel'),list=document.getElementById('spots-timeline-container');map.classList.toggle('hidden',dayViewMode!=='map');notes.classList.toggle('hidden',dayViewMode!=='notes');list.classList.toggle('hidden',dayViewMode!=='list');['list','map','notes'].forEach(m=>{const b=document.getElementById(`view-mode-${m}`);if(!b)return;b.classList.toggle('bg-brand-600',m===dayViewMode);b.classList.toggle('text-white',m===dayViewMode);b.classList.toggle('text-slate-600',m!==dayViewMode)})}
+function renderNextStopBar(){const next=getNextStop(),bar=document.getElementById('next-stop-bar');if(!next){bar.classList.add('hidden');return}bar.classList.remove('hidden');document.getElementById('next-stop-title').textContent=itemTitle(next.spot);const prev=tripData[currentDayIndex].spots[next.index-1],transport=prev?.transport_to_next;document.getElementById('next-stop-meta').textContent=[next.spot.time,transport?.duration_min?`${transport.mode==='walk'?'🚶':'🚗'} ${transport.duration_min} 分鐘`:null].filter(Boolean).join(' · ')}
+function drawRouteMap(){const canvas=document.getElementById('routeCanvas');if(!canvas||dayViewMode!=='map')return;const ctx=canvas.getContext('2d'),points=tripData[currentDayIndex]?.routePoints||[],w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);ctx.fillStyle='#f0f9ff';ctx.fillRect(0,0,w,h);if(points.length<2){ctx.fillStyle='#64748b';ctx.font='12px sans-serif';ctx.textAlign='center';ctx.fillText('此日尚無可視化 routePoints',w/2,h/2);return}ctx.strokeStyle='#0284c7';ctx.lineWidth=3;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(points[0].x,Math.min(h-10,points[0].y));for(let i=1;i<points.length;i++)ctx.lineTo(points[i].x,Math.min(h-10,points[i].y));ctx.stroke();ctx.setLineDash([]);points.forEach((p,i)=>{const y=Math.min(h-10,p.y);ctx.fillStyle='#0284c7';ctx.beginPath();ctx.arc(p.x,y,5,0,Math.PI*2);ctx.fill();ctx.fillStyle='#0f172a';ctx.font="bold 9px 'Noto Sans TC',sans-serif";ctx.textAlign=p.x<70?'left':p.x>w-70?'right':'center';ctx.fillText(String(p.name||i+1).slice(0,8),p.x,y+(i%2?16:-10))})}
