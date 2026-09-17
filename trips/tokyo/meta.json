@@ -13,14 +13,18 @@
     "shareText": "2026/10/14–10/18 東京家族 5 日遊行程。",
     "badges": [
       {"icon": "calendar", "text": "10/14–10/18・5日"},
-      {"icon": "users", "text": "家人同行"}
+      {"icon": "users", "text": "家人同行"},
+      {"icon": "mountain", "text": "希望看到富士山"}
     ],
     "features": {"itinerary": true, "routeCanvas": false, "shrineGuide": false, "candidates": true, "tasks": true, "tools": false},
     "tabLabels": {"itinerary": "行程表", "backup": "備選庫", "tasks": "待處理"},
     "template": "gemini-mobile-v1",
-    "planning_notes": ["本趟為家人同行的東京 5 日遊；目前先建立旅程骨架，後續依航班、住宿與家庭成員需求規劃。"],
+    "planning_notes": [
+      "本趟為家人同行的東京 5 日遊；目前先建立旅程骨架，後續依航班、住宿與家庭成員需求規劃。",
+      "高優先需求：安排能看到富士山的行程。河口湖目前列為優先評估，但不先鎖死；之後依交通、家人同行負擔與天候，在河口湖、箱根或其他觀景方案中選擇。"
+    ],
     "assumptions": [],
-    "uncertain_items": ["同行人數尚未提供。", "航班資訊尚未提供。", "住宿地點尚未提供。", "每日景點、餐廳與交通方式尚未規劃。"],
+    "uncertain_items": ["同行人數尚未提供。", "航班資訊尚未提供。", "住宿地點尚未提供。", "每日景點、餐廳與交通方式尚未規劃。", "富士山觀景地點尚未定案，需依天氣與交通條件安排。"],
     "source_format": "split-json-v1"
   }
 }
