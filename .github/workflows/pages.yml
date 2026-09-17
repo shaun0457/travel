@@ -27,6 +27,16 @@ jobs:
         run: npm run build
       - name: Verify build
         run: npm run verify:build
+      - name: Install Playwright mobile gate
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Verify mobile runtime at 390x844
+        run: |
+          for page in dist/*/index.html; do
+            echo "Verifying $page"
+            npm run verify:mobile -- "$page"
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
