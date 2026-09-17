@@ -1,19 +1,35 @@
 # Architecture
 
-The system has two responsibilities: guide an Agent through a gated travel-site workflow, and keep a stable runtime that can render many trips from data.
+## Product hierarchy
 
-## Data flow
+```text
+Travel Home
+└── Trip Dashboard
+    ├── Today
+    ├── Itinerary
+    ├── Map / Route
+    ├── Candidate Pool
+    ├── Inbox
+    ├── Tasks
+    └── Tools / More
+```
 
-`user notes → structured trip source → UI/media briefs → verify → build → dist → GitHub Pages`
+## Source lifecycle
 
-Runtime stays destination-neutral. New trips should change source data, UI tokens, media, and copy—not the page skeleton. Generated output is never the authoring surface.
+```text
+RAW INSPIRATION              CLEAN PLACE KNOWLEDGE             PLANNED TRAVEL
+URL / Instagram / screenshot → CaptureEvent / Claim / Entity → Candidate / Draft → Confirmed Day
+       discovery/inbox.json      discovery/claims.json            planning/          days/
+                                 discovery/places/
+```
+
+Build/runtime lifecycle remains `Trip source → Runtime → Build → dist/ → GitHub Pages`. Generated output is never an authoring surface.
 
 ## Boundaries
-
-- `trips/`: user intent and travel facts.
-- `runtime/`: shared presentation and interaction behavior.
+- `trips/`: facts, discovery, planning, tasks, packing, UI/media contracts.
+- `runtime/`: shared presentation/interaction behavior.
 - `skill/`: Agent operating policy.
-- `scripts/`: deterministic build/verification.
-- `dist/`: disposable artifact.
+- `scripts/`: deterministic build and verification.
+- `dist/`: generated artifact.
 
-When adding a capability, prefer extending the source schema or shared runtime rather than introducing a second one-off page implementation.
+`build.mjs` performs PlaceEntity joins before emitting runtime data. A day spot may reference `place_id` instead of duplicating address/contact metadata. Runtime receives resolved data but source remains normalized.
