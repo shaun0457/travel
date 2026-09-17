@@ -1,13 +1,34 @@
 {
   "schema_version": 1,
-  "status": "not_generated",
-  "generated_at": null,
+  "status": "generated",
+  "generated_at": "2026-09-17T19:43:00+08:00",
   "based_on": {
     "confirmed_itinerary": true,
-    "discovery_place_ids": []
+    "discovery_place_ids": [
+      "onna_manzamo"
+    ]
   },
+  "recommendations": [
+    {
+      "id": "rec-day1-manzamo-conditional",
+      "candidate_id": "cand-s2",
+      "place_id": "onna_manzamo",
+      "day_index": 0,
+      "priority": "optional",
+      "reason": "萬座毛與 Day 1 最後往恩納住宿的移動方向一致，無需預約、建議停留約 45 分鐘；但觀景區只開放到日落，因此只有 PARCO / 下午茶段提早完成且抵達時仍有日光才加入 Day 1，否則直接略過，避免為了收藏點破壞入住節奏。",
+      "basis": {
+        "geography": "same final region: Onna",
+        "day_route": "fits the northbound final leg",
+        "opening_constraints": "viewing area closes at sunset",
+        "meal_density": "does not add another meal stop",
+        "reservation": "not required",
+        "priority": "optional"
+      }
+    }
+  ],
   "proposals": [],
   "notes": [
-    "This file is an agent planning workspace. It does not replace confirmed days until explicitly promoted."
+    "Agent recommendations are conditional planning advice only. They do not replace confirmed day source until explicitly promoted.",
+    "Recommendation inputs must be planning-ready PlaceEntities and must consider route, opening constraints, meals, reservation and priority."
   ]
 }

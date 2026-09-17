@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "onna_manzamo",
+  "identity": {
+    "name": "万座毛",
+    "local_name": "万座毛",
+    "aliases": ["萬座毛", "象鼻海蝕崖"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Onna",
+    "area": "Onna Village",
+    "address": "沖縄県国頭郡恩納村字恩納2767",
+    "lat": null,
+    "lng": null,
+    "maps_query": "万座毛 恩納村"
+  },
+  "contact": {
+    "phone": "098-966-8080",
+    "website": "https://www.manzamo.jp/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "normal",
+    "duration_min": 45,
+    "meal_slots": [],
+    "weather_dependency": "medium"
+  },
+  "constraints": {
+    "reservation": "not_required",
+    "closed_days": [],
+    "opening_hours": "facility 08:00–20:00 in March–October; Manzamo viewing area until sunset"
+  },
+  "sources": [
+    {
+      "type": "official_operator",
+      "url": "https://www.manzamo.jp/manzamou.php",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "phone", "opening_hours", "parking", "admission"]
+    },
+    {
+      "type": "local_tourism_association",
+      "url": "https://goto-onna.com/facility/manzamo/",
+      "verified_at": "2026-09-17",
+      "fields": ["viewing_hours", "closed_days", "admission"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}
