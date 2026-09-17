@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "naha_naminoue_shrine",
+  "identity": {
+    "name": "波上宮",
+    "local_name": "波上宮",
+    "aliases": []
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Wakasa",
+    "address": "沖縄県那覇市若狭1-25-11",
+    "lat": null,
+    "lng": null,
+    "maps_query": "波上宮 那覇"
+  },
+  "contact": {
+    "phone": "098-868-3697",
+    "website": "https://www.naminouegu.jp/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 35,
+    "meal_slots": [],
+    "weather_dependency": "low"
+  },
+  "constraints": {
+    "reservation": "not_required",
+    "closed_days": [],
+    "opening_hours": "授与所 09:00–16:45 (official 2026 notice)"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.naminouegu.jp/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "授与所_hours"]
+    },
+    {
+      "type": "official",
+      "url": "https://naminouegu.jp/map.html",
+      "verified_at": "2026-09-17",
+      "fields": ["address", "phone", "access"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

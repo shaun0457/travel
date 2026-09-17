@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "place_id": "naha_gokokuji",
+  "identity": {
+    "name": "波上山 護国寺",
+    "local_name": "護国寺",
+    "aliases": ["波上山護國寺"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Wakasa",
+    "address": "沖縄県那覇市若狭1-25-5",
+    "lat": null,
+    "lng": null,
+    "maps_query": "波上山 護国寺 那覇"
+  },
+  "contact": {
+    "phone": "098-868-1469",
+    "website": "https://www.naha-contentsdb.jp/spot/697",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 25,
+    "meal_slots": [],
+    "weather_dependency": "low"
+  },
+  "constraints": {
+    "reservation": "not_required",
+    "closed_days": [],
+    "opening_hours": "本堂参拝 07:00–18:00; 寺務所 09:00–18:00"
+  },
+  "sources": [
+    {
+      "type": "local_government_tourism",
+      "url": "https://www.naha-contentsdb.jp/spot/697",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "opening_hours"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

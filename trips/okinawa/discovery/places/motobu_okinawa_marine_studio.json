@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "place_id": "motobu_okinawa_marine_studio",
+  "identity": {
+    "name": "沖縄マリンスタジオ 瀬底島クリアカヤック",
+    "local_name": "沖縄マリンスタジオ",
+    "aliases": ["瀨底島透明獨木舟", "瀬底島カヤック"]
+  },
+  "category": "activity",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Motobu",
+    "area": "Sesoko / Anchi Beach",
+    "address": "沖縄県国頭郡本部町字瀬底2631-1",
+    "lat": null,
+    "lng": null,
+    "maps_query": "沖縄マリンスタジオ 瀬底 2631-1"
+  },
+  "contact": {
+    "phone": "0980-47-7356",
+    "website": "https://anchi-beach-oms-sesoko.com/",
+    "reservation_url": "https://anchi-beach-oms-sesoko.com/"
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 60,
+    "meal_slots": [],
+    "meeting_point": "沖縄マリンスタジオ アンチ浜受付（本部町瀬底2631-1）",
+    "weather_dependency": "high"
+  },
+  "constraints": {
+    "reservation": "required",
+    "closed_days": [],
+    "opening_hours": "09:00–17:00"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://anchi-beach-oms-sesoko.com/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "phone", "opening_hours", "duration", "reservation", "activity_type"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

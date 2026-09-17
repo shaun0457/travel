@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "nago_ufuya",
+  "identity": {
+    "name": "百年古家 大家",
+    "local_name": "百年古家 大家（うふやー）",
+    "aliases": ["大家", "Ufuya"]
+  },
+  "category": "restaurant",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Nago",
+    "area": "Nakayama",
+    "address": "沖縄県名護市中山90",
+    "lat": null,
+    "lng": null,
+    "maps_query": "百年古家 大家 名護"
+  },
+  "contact": {
+    "phone": "0980-53-0280",
+    "website": "https://ufuya.com/",
+    "reservation_url": "https://ufuya.com/"
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 120,
+    "meal_slots": ["dinner"],
+    "weather_dependency": "none"
+  },
+  "constraints": {
+    "reservation": "recommended",
+    "closed_days": [],
+    "opening_hours": "dinner 17:30–21:00 (L.O. 20:30; drink L.O. 20:45)"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://ufuya.com/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "phone", "opening_hours", "reservation"]
+    },
+    {
+      "type": "official",
+      "url": "https://ufuya.com/news_detail.html?code=82",
+      "verified_at": "2026-09-17",
+      "fields": ["dinner_reservation_policy", "dinner_menu"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

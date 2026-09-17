@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "place_id": "naha_uraonikai",
+  "identity": {
+    "name": "琉球鮨 うらおにかい",
+    "local_name": "琉球鮨 うらおにかい",
+    "aliases": ["琉球鮨うらおにかい"]
+  },
+  "category": "restaurant",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Kumoji",
+    "address": "沖縄県那覇市久茂地2-19-16 BG PLAZA 1-C",
+    "lat": null,
+    "lng": null,
+    "maps_query": "琉球鮨 うらおにかい 那覇"
+  },
+  "contact": {
+    "phone": "098-988-3101",
+    "website": "https://uraonikai-okinawa.owst.jp/",
+    "reservation_url": "https://uraonikai-okinawa.owst.jp/"
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 120,
+    "meal_slots": ["dinner"],
+    "weather_dependency": "none"
+  },
+  "constraints": {
+    "reservation": "required",
+    "closed_days": ["monday"],
+    "opening_hours": "Tue–Fri dinner 18:00–20:00 / 20:30–22:30; Sat/Sun/holidays lunch 12:00–14:00 and dinner 18:00–22:30"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://uraonikai-okinawa.owst.jp/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "phone", "opening_hours", "reservation", "closed_days"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

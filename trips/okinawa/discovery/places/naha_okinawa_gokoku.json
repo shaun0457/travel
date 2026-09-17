@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "naha_okinawa_gokoku",
+  "identity": {
+    "name": "沖縄県護国神社",
+    "local_name": "沖縄県護国神社",
+    "aliases": ["沖繩縣護國神社"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Onoyama",
+    "address": "沖縄県那覇市奥武山町44",
+    "lat": null,
+    "lng": null,
+    "maps_query": "沖縄県護国神社"
+  },
+  "contact": {
+    "phone": "098-857-2798",
+    "website": "https://okinawa-gokoku.jp/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 25,
+    "meal_slots": [],
+    "weather_dependency": "low"
+  },
+  "constraints": {
+    "reservation": "not_required_for_personal_prayer",
+    "closed_days": [],
+    "opening_hours": "お守り授与 09:00–17:00; 御祈願 09:30–11:45 / 13:00–16:00"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://okinawa-gokoku.jp/access/",
+      "verified_at": "2026-09-17",
+      "fields": ["address", "phone", "access", "授与_hours", "prayer_hours"]
+    },
+    {
+      "type": "official",
+      "url": "https://okinawa-gokoku.jp/faq/",
+      "verified_at": "2026-09-17",
+      "fields": ["reservation_policy"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

@@ -1,17 +1,18 @@
 {
   "dayNumber": 3,
   "dayLabel": "10/28 (三)",
-  "title": "恩納退房 ➔ 通堂拉麵 ➔ 波上宮雙朱印 ➔ OMO5 ➔ 琉球鮨 ➔ Yakizen炭火串燒宵夜 ➔ 松山超商",
+  "title": "恩納退房 ➔ 通堂拉麵 ➔ 波上宮/護國寺 ➔ OMO5 ➔ 琉球鮨 ➔ Yakizen炭火串燒宵夜 ➔ 松山超商",
   "stay": "OMO5 沖縄那覇 by 星野リゾート",
   "bannerAlert": "🍜 今日午餐安排【通堂拉麵】(純雞骨/豚骨無牛)！晚餐核心：【琉球鮨】海鮮無菜單。晚上 21:00 安排了【Yakizen 焼膳】炭火雞豚串燒當作超 Chill 宵夜續攤！",
-  "routePoints": [{"name":"恩納退房","x":235,"y":80,"time":"10:30"},{"name":"通堂拉麵","x":80,"y":178,"time":"11:30"},{"name":"波上宮/護國寺","x":80,"y":160,"time":"13:00"},{"name":"OMO5 那霸","x":92,"y":165,"time":"15:00"},{"name":"市區漫步","x":102,"y":168,"time":"16:00"},{"name":"琉球鮨","x":90,"y":166,"time":"18:00"},{"name":"Yakizen宵夜","x":93,"y":167,"time":"21:00"},{"name":"松山超商","x":92,"y":165,"time":"22:30"}],
+  "routePoints": [{"name":"恩納退房","x":235,"y":80,"time":"10:30"},{"name":"通堂拉麵","x":80,"y":178,"time":"11:30"},{"name":"波上宮","x":80,"y":160,"time":"13:00"},{"name":"護国寺","x":81,"y":161,"time":"13:40"},{"name":"OMO5 那霸","x":92,"y":165,"time":"15:00"},{"name":"市區漫步","x":102,"y":168,"time":"16:00"},{"name":"琉球鮨","x":90,"y":166,"time":"18:00"},{"name":"Yakizen宵夜","x":93,"y":167,"time":"21:00"},{"name":"松山超商","x":92,"y":165,"time":"22:30"}],
   "spots": [
     {"id":"d3-1","time":"10:30","category":"hotel","typeTag":"悠閒出發","categoryLabel":"退房啟程","title":"恩納退房 ➔ 開車南下那霸","mapcode":"206 381 685*45","visited":false,"notes":"早上睡到自然醒、海邊散步喝咖啡，10:30～11:00 退房南下。"},
     {"id":"d3-lunch","time":"11:30","category":"food","typeTag":"順路午餐","categoryLabel":"人氣拉麵","title":"通堂拉麵 小祿本店 (おんな味 雞白湯)","mapcode":"33 094 365*41","visited":false,"notes":"【南下那霸第一站午餐】\n招牌「女麵」是清甜純雞骨高湯、「男麵」是濃郁豚骨，搭配豚肉叉燒，完全不含牛肉！吃完剛好去參拜波上宮。"},
-    {"id":"d3-2","time":"13:00","category":"shrine","typeTag":"御朱印核心","categoryLabel":"海景神社＆古寺","title":"波上宮 ＆ 波上山護國寺 (一口氣收兩座直書き)","mapcode":"33 185 005*77","visited":false,"notes":"【情侶必訪海景御朱印雙社】\n• 波上宮：斷崖絕景神社，神職親自墨書直書き；可求情侶「結び守」御守。\n• 波上山護國寺：就在波上宮鳥居旁徒步 10 秒！沖繩最古老佛寺，師父現寫極具張力的墨寶。"},
-    {"id":"d3-3","time":"15:00","category":"hotel","typeTag":"住宿 Check-in","categoryLabel":"星野旅宿","title":"OMO5 沖縄那覇 by 星野集團 Check-in","mapcode":"33 156 612*25","visited":false,"notes":"辦理入住、停妥車輛。入住後不再長距離開車，全程以步行或輕軌活動！"},
+    {"id":"d3-2a","time":"13:00","category":"shrine","typeTag":"御朱印核心","categoryLabel":"海景神社","title":"波上宮","place_id":"naha_naminoue_shrine","mapcode":"33 185 005*77","visited":false,"notes":"【情侶必訪海景御朱印】斷崖上的琉球八社；完成參拜與御朱印後，再步行前往隔壁護国寺。"},
+    {"id":"d3-2b","time":"13:40","category":"shrine","typeTag":"御朱印核心","categoryLabel":"沖繩古寺","title":"波上山 護国寺","place_id":"naha_gokokuji","mapcode":"33 185 005*77","visited":false,"notes":"【與波上宮拆成獨立導航點】寺務所 09:00 後可辦理相關參拜事項；與波上宮相鄰，步行銜接即可。"},
+    {"id":"d3-3","time":"15:00","category":"hotel","typeTag":"住宿 Check-in","categoryLabel":"星野旅宿","title":"OMO5 沖縄那覇 by 星野集團 Check-in","place_id":"naha_omo5","mapcode":"33 156 612*25","visited":false,"notes":"辦理入住、停妥車輛。入住後不再長距離開車，全程以步行或輕軌活動！"},
     {"id":"d3-4","time":"16:00","category":"view","typeTag":"自由漫步","categoryLabel":"市區探索","title":"那霸市區散步 (牧志市場/國際通/壺屋街)","mapcode":"33 157 382*41","visited":false,"notes":"【輕鬆散步・不硬塞】選 1～2 處散步即可。\n💡 到牧志市場可品嚐「琉球牛乳餅」，留胃給晚餐壽司！"},
-    {"id":"d3-5","time":"18:00","category":"food","typeTag":"核心餐廳","categoryLabel":"頂級海鮮無菜單","title":"琉球鮨 うらおにかい (久茂地)","mapcode":"33 156 450*21","visited":false,"notes":"【🔥 今日唯一重點正式大餐・頂級海鮮熟成壽司・無牛肉！】\n地址：那霸市久茂地2-19-16 BG plaza 1-c。\n自 OMO5 步行約 8～10 分鐘即達！結合江戶前技法與沖繩在地野生魚獲的無菜單熟成壽司，不開車可以安心佐日本清酒。"},
+    {"id":"d3-5","time":"18:00","category":"food","typeTag":"核心餐廳","categoryLabel":"頂級海鮮無菜單","title":"琉球鮨 うらおにかい (久茂地)","place_id":"naha_uraonikai","mapcode":"33 156 450*21","visited":false,"notes":"【🔥 今日唯一重點正式大餐・頂級海鮮熟成壽司・無牛肉！】\n地址：那霸市久茂地2-19-16 BG plaza 1-c。\n自 OMO5 步行約 8～10 分鐘即達！結合江戶前技法與沖繩在地野生魚獲的無菜單熟成壽司，不開車可以安心佐日本清酒。"},
     {"id":"d3-yakizen","time":"21:00","category":"food","typeTag":"深夜宵夜","categoryLabel":"二次會串燒","title":"Yakizen 焼膳 (炭火雞豚串燒居酒屋)","mapcode":"33 157 504*12","visited":false,"notes":"【完美宵夜場🍻】吃完壽司、散步消化後，來這裡續攤！\n職人炭火現烤雞肉串（燒鳥）與豚肉串，點幾串配上沖繩 Orion 生啤酒，完全無牛肉困擾，體驗那霸超 Chill 的夜晚！"},
     {"id":"d3-6","time":"22:30","category":"shopping","typeTag":"超商尋寶","categoryLabel":"回飯店前必逛","title":"松山超商巡禮 (全家松山一丁目店 / Lawson 那霸松山店)","mapcode":"33 156 612*25","visited":false,"notes":"【回 OMO5 前先去超商買一輪！】\n• 全家 (松山一丁目店)：就在 OMO5 對角，步行 40 秒，採買 Orion 調酒。\n• Lawson (那霸松山店)：步行 2 分鐘，買甜點櫃限定蛋糕，完美收尾那霸之夜。"}
   ]

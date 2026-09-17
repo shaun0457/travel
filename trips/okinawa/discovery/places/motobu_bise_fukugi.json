@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "motobu_bise_fukugi",
+  "identity": {
+    "name": "備瀬のフクギ並木",
+    "local_name": "備瀬のフクギ並木",
+    "aliases": ["備瀨福木林道", "備瀬福木林道"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Motobu",
+    "area": "Bise",
+    "address": "沖縄県国頭郡本部町備瀬",
+    "lat": null,
+    "lng": null,
+    "maps_query": "備瀬のフクギ並木"
+  },
+  "contact": {
+    "phone": "0980-47-3641",
+    "website": "https://www.motobu-ka.com/tourist_info/tourist_info-post-687/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "normal",
+    "duration_min": 45,
+    "meal_slots": [],
+    "weather_dependency": "medium"
+  },
+  "constraints": {
+    "reservation": "not_required",
+    "closed_days": [],
+    "opening_hours": "outdoor village streets; no fixed gate hours"
+  },
+  "sources": [
+    {
+      "type": "official_tourism",
+      "url": "https://www.okinawastory.jp/spot/1348",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "access"]
+    },
+    {
+      "type": "local_tourism_association",
+      "url": "https://www.motobu-ka.com/tourist_info/tourist_info-post-687/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "parking"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

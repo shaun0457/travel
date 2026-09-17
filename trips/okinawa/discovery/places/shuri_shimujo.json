@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "place_id": "shuri_shimujo",
+  "identity": {
+    "name": "沖縄そばの店 しむじょう",
+    "local_name": "しむじょう",
+    "aliases": ["沖繩麵 下門", "沖縄そば 下門"]
+  },
+  "category": "restaurant",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Shuri Sueyoshicho",
+    "address": "沖縄県那覇市首里末吉町2-124",
+    "lat": null,
+    "lng": null,
+    "maps_query": "沖縄そばの店 しむじょう 那覇"
+  },
+  "contact": {
+    "phone": "098-884-1933",
+    "website": "https://www.okinawastory.jp/gourmet/600011799",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 60,
+    "meal_slots": ["lunch"],
+    "weather_dependency": "none"
+  },
+  "constraints": {
+    "reservation": "not_available",
+    "closed_days": ["tuesday", "wednesday"],
+    "opening_hours": "11:00–sold out (guidance begins around 10:45)"
+  },
+  "sources": [
+    {
+      "type": "official_tourism",
+      "url": "https://www.okinawastory.jp/gourmet/600011799",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "phone", "opening_hours", "closed_days", "reservation"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17",
+    "notes": "Existing itinerary label '沖繩麵 下門' resolves to the registered shop しむじょう at the same address."
+  }
+}

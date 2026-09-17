@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "motobu_churaumi_aquarium",
+  "identity": {
+    "name": "沖縄美ら海水族館",
+    "local_name": "沖縄美ら海水族館",
+    "aliases": ["沖繩美麗海水族館", "美麗海水族館"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Motobu",
+    "area": "Ocean Expo Park",
+    "address": "沖縄県国頭郡本部町石川424",
+    "lat": null,
+    "lng": null,
+    "maps_query": "沖縄美ら海水族館"
+  },
+  "contact": {
+    "phone": "0980-48-3748",
+    "website": "https://churaumi.okinawa/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 150,
+    "meal_slots": [],
+    "weather_dependency": "low"
+  },
+  "constraints": {
+    "reservation": "not_required",
+    "closed_days": [],
+    "opening_hours": "08:30–18:30; last admission 17:30 (2026-10-27 schedule)"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.churaumi.okinawa/guide/hour/",
+      "verified_at": "2026-09-17",
+      "fields": ["opening_hours", "closure_schedule"]
+    },
+    {
+      "type": "official",
+      "url": "https://churaumi.okinawa/ba/guide/access/",
+      "verified_at": "2026-09-17",
+      "fields": ["address", "phone", "parking"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

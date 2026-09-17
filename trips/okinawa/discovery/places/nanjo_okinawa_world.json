@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "place_id": "nanjo_okinawa_world",
+  "identity": {
+    "name": "おきなわワールド 文化王国・玉泉洞",
+    "local_name": "おきなわワールド",
+    "aliases": ["沖繩世界文化王國＆玉泉洞", "玉泉洞"]
+  },
+  "category": "attraction",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Nanjo",
+    "area": "Tamagusuku Maekawa",
+    "address": "沖縄県南城市玉城字前川1336",
+    "lat": null,
+    "lng": null,
+    "maps_query": "おきなわワールド 玉泉洞"
+  },
+  "contact": {
+    "phone": "098-949-7421",
+    "website": "https://www.gyokusendo.co.jp/okinawaworld/",
+    "reservation_url": null
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 120,
+    "meal_slots": [],
+    "weather_dependency": "low"
+  },
+  "constraints": {
+    "reservation": "not_required_for_general_admission",
+    "closed_days": [],
+    "opening_hours": "09:00–17:30; final admission 16:00"
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.gyokusendo.co.jp/okinawaworld/fee/",
+      "verified_at": "2026-09-17",
+      "fields": ["opening_hours", "final_admission"]
+    },
+    {
+      "type": "official",
+      "url": "https://www.gyokusendo.co.jp/okinawaworld/access/",
+      "verified_at": "2026-09-17",
+      "fields": ["address", "phone", "access"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}

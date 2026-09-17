@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "place_id": "naha_omo5",
+  "identity": {
+    "name": "OMO5 沖縄那覇 by 星野リゾート",
+    "local_name": "OMO5 沖縄那覇 by 星野リゾート",
+    "aliases": ["OMO5 那霸", "OMO5 沖縄那覇"]
+  },
+  "category": "hotel",
+  "location": {
+    "country": "Japan",
+    "prefecture": "Okinawa",
+    "city": "Naha",
+    "area": "Matsuyama",
+    "address": "沖縄県那覇市松山1-3-16",
+    "lat": null,
+    "lng": null,
+    "maps_query": "OMO5 沖縄那覇 by 星野リゾート"
+  },
+  "contact": {
+    "phone": null,
+    "website": "https://hoshinoresorts.com/zh_tw/hotels/omo5okinawanaha/access/",
+    "reservation_url": "https://hoshinoresorts.com/zh_tw/hotels/omo5okinawanaha/"
+  },
+  "planning": {
+    "planning_ready": true,
+    "priority": "high",
+    "duration_min": 30,
+    "meal_slots": [],
+    "weather_dependency": "none"
+  },
+  "constraints": {
+    "reservation": "required_for_stay",
+    "closed_days": [],
+    "opening_hours": null
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://hoshinoresorts.com/zh_tw/hotels/omo5okinawanaha/access/",
+      "verified_at": "2026-09-17",
+      "fields": ["identity", "address", "access", "parking"]
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "verified_at": "2026-09-17"
+  }
+}
