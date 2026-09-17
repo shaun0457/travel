@@ -1,127 +1,28 @@
-          <div class="text-[10px] font-medium opacity-90">Day ${d.dayNumber || i + 1}</div><div class="text-xs font-bold font-outfit">${d.dayLabel || `Day ${i + 1}`}</div>
-        </button>`).join("");
-    }
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+function b64encode(str){const bytes=new TextEncoder().encode(str);let bin='';bytes.forEach(b=>bin+=String.fromCharCode(b));return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+function b64decode(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';const bin=atob(s);return new TextDecoder().decode(Uint8Array.from(bin,ch=>ch.charCodeAt(0)))}
+const baseUrl=()=>window.location.href.split('#')[0];
+function generateShareUrl(){return `${baseUrl()}#trip=${b64encode(JSON.stringify(buildStatePayload()))}`}
+function checkSharedStateFromUrl(){const m=window.location.hash.match(/trip=([A-Za-z0-9_\-+/=]+)/);if(!m)return false;try{applyStatePayload(JSON.parse(b64decode(decodeURIComponent(m[1]))));persistState();history.replaceState(null,'',baseUrl());setTimeout(()=>showToast('已載入分享的旅程進度'),250);return true}catch(e){console.warn('無法解析分享數據',e);return false}}
+function openShareModal(){const modal=document.getElementById('share-modal'),box=document.getElementById('share-qrcode');modal.classList.remove('hidden');modal.classList.add('flex');try{if(typeof qrcode==='function'){const qr=qrcode(0,'L');qr.addData(generateShareUrl());qr.make();box.innerHTML=qr.createSvgTag({scalable:true,margin:0})}else box.innerHTML='<div class="text-xs text-slate-500 p-3">QR 元件未載入，可使用下方分享按鈕。</div>'}catch{box.innerHTML='<div class="text-xs text-slate-500 p-3">連結較長，請使用下方分享按鈕。</div>'}if(!navigator.share)document.getElementById('native-share-btn').hidden=true}
+function closeShareModal(){const m=document.getElementById('share-modal');m.classList.add('hidden');m.classList.remove('flex')}
+async function copyShareUrl(clean=false){const ok=await copyText(clean?baseUrl():generateShareUrl());showToast(ok?(clean?'已複製乾淨網址':'已複製互動連結'):'複製失敗');if(ok)closeShareModal()}
+function triggerNativeShare(){if(navigator.share)navigator.share({title:travelMeta.shareTitle||travelMeta.title||'Travel Plan',text:travelMeta.shareText||'旅行行程',url:generateShareUrl()}).catch(()=>{});else copyShareUrl()}
 
-    // ---------- 分享連結（進度編碼在網址 #trip=） ----------
-    function b64encode(str) {
-      const bytes = new TextEncoder().encode(str);
-      let bin = ""; bytes.forEach(b => bin += String.fromCharCode(b));
-      return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-    }
-    function b64decode(s) {
-      s = s.replace(/-/g, "+").replace(/_/g, "/");
-      while (s.length % 4) s += "=";
-      const bin = atob(s);
-      return new TextDecoder().decode(Uint8Array.from(bin, ch => ch.charCodeAt(0)));
-    }
-    const baseUrl = () => window.location.href.split('#')[0];
-    function generateShareUrl() {
-      return `${baseUrl()}#trip=${b64encode(JSON.stringify(buildStatePayload()))}`;
-    }
-    function checkSharedStateFromUrl() {
-      const m = window.location.hash.match(/trip=([A-Za-z0-9_\-+/=]+)/);
-      if (!m) return false;
-      try {
-        applyStatePayload(JSON.parse(b64decode(decodeURIComponent(m[1]))));
-        persistState();
-        history.replaceState(null, "", baseUrl());
-        setTimeout(() => showToast("已成功載入分享的行程進度！"), 300);
-        return true;
-      } catch (e) {
-        console.warn("無法解析分享數據：", e);
-        return false;
-      }
-    }
+function openNavigationSheet(item){activeNavigationItem=item;if(!item)return;document.getElementById('navigation-title').textContent=itemTitle(item);const loc=itemLocation(item);document.getElementById('navigation-destination').textContent=loc.address||loc.maps_query||destinationFor(item)||'地址待確認';const sheet=document.getElementById('navigation-sheet');sheet.classList.remove('hidden');sheet.classList.add('flex')}
+function closeNavigationSheet(){const sheet=document.getElementById('navigation-sheet');sheet.classList.add('hidden');sheet.classList.remove('flex')}
+function navigateGoogle(){if(!activeNavigationItem)return;window.open(googleUrl(activeNavigationItem),'_blank','noopener')}
+function navigateApple(){if(!activeNavigationItem)return;window.open(appleUrl(activeNavigationItem),'_blank','noopener')}
+async function copyNavigationAddress(){if(!activeNavigationItem)return;const loc=itemLocation(activeNavigationItem);const value=loc.address||loc.maps_query||destinationFor(activeNavigationItem);showToast(await copyText(value)?'已複製地址 / 搜尋字串':'複製失敗')}
+async function shareNavigationPlace(){if(!activeNavigationItem)return;const data={title:itemTitle(activeNavigationItem),text:itemLocation(activeNavigationItem).address||'',url:googleUrl(activeNavigationItem)};if(navigator.share)navigator.share(data).catch(()=>{});else showToast(await copyText(data.url)?'已複製 Google 地圖連結':'複製失敗')}
+function openSpotNav(dayIdx,spotIdx){openNavigationSheet(tripData[dayIdx]?.spots?.[spotIdx])}
+function googleSpot(dayIdx,spotIdx){const s=tripData[dayIdx]?.spots?.[spotIdx];if(s)window.open(googleUrl(s),'_blank','noopener')}
+function openCandidateNav(id){const c=candidateDatabase.find(x=>candidateId(x)===id);if(c)openNavigationSheet(c)}
+function openNextStopNavigation(){const next=getNextStop();if(next)openNavigationSheet(next.spot)}
 
-    async function copyText(text) {
-      try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
-      try {
-        const ta = document.createElement("textarea");
-        ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
-        document.body.appendChild(ta); ta.select();
-        const ok = document.execCommand("copy");
-        document.body.removeChild(ta);
-        return ok;
-      } catch (e) { return false; }
-    }
-
-    function openShareModal() {
-      const box = document.getElementById("share-qrcode");
-      try {
-        const qr = qrcode(0, "L");
-        qr.addData(generateShareUrl());
-        qr.make();
-        box.innerHTML = qr.createSvgTag({ scalable: true, margin: 0 });
-      } catch (e) {
-        box.innerHTML = '<div class="text-[11px] text-slate-500 p-2">連結太長無法產生 QR code，請改用下方按鈕傳送</div>';
-      }
-      document.getElementById("share-modal").classList.remove("hidden");
-      if (!navigator.share) document.getElementById("native-share-btn").hidden = true;
-    }
-    function closeShareModal() { document.getElementById("share-modal").classList.add("hidden"); }
-    document.getElementById("share-modal").addEventListener("click", (e) => { if (e.target.id === "share-modal") closeShareModal(); });
-
-    async function copyShareUrl(clean) {
-      const ok = await copyText(clean ? baseUrl() : generateShareUrl());
-      showToast(ok ? (clean ? "已複製網址" : "已複製互動分享連結！") : "複製失敗，請改用 LINE 傳送");
-      if (ok) closeShareModal();
-    }
-
-    function triggerNativeShare() {
-      if (navigator.share) {
-        navigator.share({
-          title: travelMeta.shareTitle || travelMeta.title || "Travel Plan",
-          text: travelMeta.shareText || "這是我們的旅行行程表，點開即可查看！",
-          url: generateShareUrl()
-        }).catch(() => {});
-      } else copyShareUrl();
-    }
-
-    function resetAllProgress() {
-      if (!confirm("確定要清除這支裝置上的打勾、待辦與加入的備選嗎？")) return;
-      tripData = clone(defaultTripData); pendingTasks = clone(defaultPendingTasks); packingList = clone(defaultPackingList);
-      persistState();
-      renderCurrentDay(); renderCandidates(); renderTasks(); renderPackingList(); updateGlobalCounters();
-      closeShareModal();
-      showToast("已重設進度");
-    }
-
-    // ---------- 行程 ----------
-    function switchDay(index) {
-      currentDayIndex = index;
-      renderDayTabs();
-      renderCurrentDay();
-    }
-
-    const catBadgeColors = {
-      flight: "bg-indigo-50 text-indigo-700 border-indigo-200",
-      food: "bg-amber-50 text-amber-700 border-amber-200",
-      shrine: "bg-rose-50 text-rose-700 border-rose-200",
-      shopping: "bg-sky-50 text-sky-700 border-sky-200",
-      hotel: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      view: "bg-teal-50 text-teal-700 border-teal-200"
-    };
-    const typeTagStyles = {
-      "必備": "bg-slate-100 text-slate-700", "核心餐廳": "bg-rose-500 text-white font-bold", "核心景點": "bg-brand-600 text-white font-bold",
-      "御朱印核心": "bg-rose-600 text-white font-bold", "御朱印名社": "bg-rose-600 text-white font-bold", "人氣麵包": "bg-amber-500 text-white font-bold",
-      "甜點必吃": "bg-amber-600 text-white font-bold", "深夜宵夜": "bg-rose-600 text-white font-bold", "順路午餐": "bg-emerald-600 text-white font-bold",
-      "重點活動": "bg-teal-600 text-white font-bold", "彈性可刪": "bg-slate-200 text-slate-600", "彈性候補": "bg-slate-200 text-slate-600",
-      "Plan B 備案": "bg-amber-500 text-white font-bold", "二選一": "bg-indigo-500 text-white font-bold", "自由漫步": "bg-emerald-50 text-emerald-700",
-      "放鬆核心": "bg-sky-100 text-sky-800", "簡餐": "bg-slate-100 text-slate-600", "順路可去": "bg-slate-100 text-slate-600",
-      "核心午餐": "bg-rose-500 text-white font-bold", "自駕還車": "bg-indigo-600 text-white", "悠閒出發": "bg-slate-100 text-slate-600",
-      "住宿 Check-in": "bg-emerald-600 text-white", "退房出發": "bg-slate-100 text-slate-600", "搭機返台": "bg-indigo-700 text-white",
-      "自選加入": "bg-purple-600 text-white font-bold", "超商補給": "bg-blue-600 text-white font-bold", "超商尋寶": "bg-emerald-600 text-white font-bold"
-    };
-
-    function renderCurrentDay() {
-      const day = tripData[currentDayIndex];
-      document.getElementById("canvas-map-title").innerText = currentHighlightedCandidate
-        ? `紅點標記中：${currentHighlightedCandidate.name}`
-        : `Day ${day.dayNumber} 自駕動線地圖 (${day.dayLabel})`;
-
-      document.getElementById("day-summary-card").innerHTML = `
-        <div>
-          <span class="text-[11px] font-bold text-brand-600 uppercase tracking-wider font-outfit">Day ${day.dayNumber} · ${day.dayLabel}</span>
-          <h2 class="text-sm font-extrabold text-slate-900 mt-0.5">${day.title}</h2>
-        </div>
+function verificationLabel(item){const v=item?.verification?.status||item?.verification?.state;if(v==='verified'||item?.planning_ready)return '已查證';if(v==='conflicting')return '資訊衝突';if(v==='stale')return '資料可能過期';return '待查證'}
+function sourceLabel(item){const src=asArray(item?.sources)[0];if(!src)return '';return src.platform==='instagram'?'Instagram source':(src.platform||src.type||'source')}
+function detailRows(item){const loc=itemLocation(item),contact=item.contact||{},constraints=item.constraints||{};const rows=[];if(itemRegion(item))rows.push(['區域',itemRegion(item)]);if(loc.address)rows.push(['地址',loc.address]);if(constraints.opening_hours)rows.push(['營業時間',Array.isArray(constraints.opening_hours)?constraints.opening_hours.join(' / '):constraints.opening_hours]);if(constraints.reservation)rows.push(['預約',constraints.reservation]);if(item.duration_min)rows.push(['停留時間',`約 ${item.duration_min} 分鐘`]);if(item.price||item.budget)rows.push(['預算',item.price||item.budget]);if(item.mapcode)rows.push(['MapCode',item.mapcode]);if(contact.phone)rows.push(['電話',contact.phone]);return rows}
+function openPlaceDetail(kind,key,idx){let item=null;if(kind==='spot')item=tripData[key]?.spots?.[idx];else item=candidateDatabase.find(x=>candidateId(x)===key);if(!item)return;activeDetailItem=item;document.getElementById('place-detail-kicker').textContent=`${itemCategory(item)} · ${itemRegion(item)||verificationLabel(item)}`;document.getElementById('place-detail-title').textContent=itemTitle(item);const rows=detailRows(item).map(([k,v])=>`<div class="grid grid-cols-[82px_1fr] gap-2"><span class="text-slate-400 text-xs">${esc(k)}</span><span class="text-slate-700 text-xs font-medium">${esc(v)}</span></div>`).join('');const notes=itemNotes(item);const src=sourceLabel(item);const loc=itemLocation(item);document.getElementById('place-detail-body').innerHTML=`<div class="h-28 rounded-2xl bg-gradient-to-br from-sky-100 to-white border border-sky-100 flex items-center justify-center text-brand-500"><i class="fa-solid fa-location-dot text-3xl"></i></div>${rows||'<p class="text-xs text-slate-400">地址待確認；仍可使用名稱開啟地圖搜尋。</p>'}${notes?`<div class="pt-2 border-t border-slate-100"><p class="text-[11px] font-bold text-slate-400 mb-1">旅程筆記</p><p class="text-xs text-slate-600 whitespace-pre-line leading-relaxed">${esc(notes)}</p></div>`:''}${src?`<div class="text-[11px] text-slate-400">來源：${esc(src)} · ${esc(verificationLabel(item))}</div>`:''}${loc.address||loc.maps_query?`<a class="tap-target rounded-xl bg-sky-50 text-brand-700 font-bold text-xs px-3 flex items-center" target="_blank" rel="noopener" href="${googleUrl(item)}"><i class="fa-solid fa-map mr-2"></i>Map preview / Google Maps</a>`:''}`;const secondary=document.getElementById('place-detail-secondary');secondary.textContent=item?.contact?.reservation_url?'預約':item?.contact?.website?'官網':item?.contact?.phone?'撥號':'複製地點';const sheet=document.getElementById('place-detail-sheet');sheet.classList.remove('hidden');sheet.classList.add('flex')}
+function closePlaceDetail(){const s=document.getElementById('place-detail-sheet');s.classList.add('hidden');s.classList.remove('flex')}
+function openNavigationForDetail(){if(activeDetailItem){closePlaceDetail();openNavigationSheet(activeDetailItem)}}
+async function runPlaceSecondaryAction(){if(!activeDetailItem)return;const c=activeDetailItem.contact||{};if(c.reservation_url)return window.open(c.reservation_url,'_blank','noopener');if(c.website)return window.open(c.website,'_blank','noopener');if(c.phone)return location.href=`tel:${c.phone}`;showToast(await copyText(destinationFor(activeDetailItem))?'已複製地點':'複製失敗')}

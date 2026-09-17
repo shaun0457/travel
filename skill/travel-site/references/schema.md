@@ -1,88 +1,83 @@
 # Source schema
 
-A trip folder separates factual data, discovery evidence, planning drafts, and presentation decisions.
-
 ```text
 trips/<slug>/
   meta.json
   days/day-N.json
-  candidates.json
+  discovery/
+    inbox.json
+    claims.json
+    places/<place-id>.json
+    inbox/                  # legacy per-share records; read-only compatibility
+  planning/
+    candidates.json
+    draft-plan.json
+  candidates.json           # legacy fallback
   tasks.json
   packing.json
   ui-brief.json
   media-brief.json
-  discovery/
-    config.json
-    inbox/<share-id>.json
-    places/<place-id>.json
-  planning/
-    draft-plan.json        # optional agent proposal; never treated as confirmed itinerary
 ```
 
-## Confirmed trip source
-- `meta.json`: schema version + trip-level facts/status/template/features/assumptions/uncertainties.
-- `days/day-N.json`: confirmed executable day, route points and itinerary items.
-- `candidates.json`: curated shortlist compatible with the current runtime; this is downstream of discovery, not the raw inbox.
-- `tasks.json`: booking/pre-trip tasks.
-- `packing.json`: checklist items.
-- `ui-brief.json`: confirmed visual contract and style policy.
-- `media-brief.json`: image/media decisions.
-
-## Discovery inbox record
-Raw evidence from Instagram or another shared source. It may be incomplete and must not be scheduled directly.
+## CaptureEvent — `discovery/inbox.json`
 
 ```json
 {
   "schema_version": 1,
-  "id": "share-20260917-abc123",
-  "status": "received",
-  "target_trip": "okinawa",
-  "source": {
-    "platform": "instagram",
-    "url": "https://www.instagram.com/p/...",
-    "author": null,
-    "shared_at": "2026-09-17T10:00:00Z"
-  },
-  "raw": {"caption": null, "note": null},
-  "extraction": {"state": "pending", "place_ids": [], "errors": []}
+  "events": [{
+    "event_id": "capture_20260917_001",
+    "source": {"platform":"instagram","url":"https://...","author":null},
+    "captured_at": "2026-09-17T18:20:00+08:00",
+    "trip_hint": "okinawa",
+    "user_note": "這間看起來很猛",
+    "attachments": [],
+    "status": "received"
+  }]
 }
 ```
 
-Inbox status: `received | parsing | parsed | needs_review | archived`.
+Allowed status: `received | processing | needs_review | processed | duplicate | rejected`. Original source URL is immutable evidence.
 
-## Discovery place record
-One normalized real-world place. Multiple posts may point to the same record.
+## Claim — `discovery/claims.json`
 
 ```json
 {
   "schema_version": 1,
-  "id": "naha-uraonikai",
-  "name": "琉球鮨 うらおにかい",
-  "local_name": "琉球鮨うらおにかい",
+  "claims": [{
+    "claim_id":"claim_001",
+    "event_id":"capture_20260917_001",
+    "field":"opening_hours",
+    "value":"17:00–23:00",
+    "source_type":"instagram_caption",
+    "confidence":0.72,
+    "verification":{"status":"unverified","verified_at":null}
+  }]
+}
+```
+
+Verification: `unverified | verified | conflicting | stale`.
+
+## PlaceEntity — `discovery/places/<place-id>.json`
+
+```json
+{
+  "schema_version": 1,
+  "place_id": "naha_uraonikai",
+  "identity": {"name":"琉球鮨 うらおにかい","local_name":"琉球鮨うらおにかい","aliases":[]},
   "category": "restaurant",
-  "area": "Naha / Kumoji",
-  "status": "enriched",
-  "sources": [{"platform":"instagram","url":"https://www.instagram.com/p/..."}],
-  "location": {"address": null, "lat": null, "lng": null, "maps_url": null},
-  "planning": {
-    "priority": "normal",
-    "visit_duration_min": null,
-    "meal_slot": "dinner",
-    "reservation": "unknown",
-    "weather_dependency": "none",
-    "scheduled_day": null
-  },
-  "verification": {
-    "needs_verification": ["opening_hours", "closed_days", "reservation"],
-    "verified_at": null,
-    "notes": []
-  }
+  "location": {"country":"Japan","prefecture":"Okinawa","city":"Naha","area":"Kumoji","address":null,"lat":null,"lng":null,"maps_query":null},
+  "contact": {"phone":null,"website":null,"reservation_url":null},
+  "planning": {"planning_ready":false,"priority":"normal","duration_min":90,"meal_slots":["dinner"],"weather_dependency":"none"},
+  "constraints": {"reservation":"unknown","closed_days":[],"opening_hours":null},
+  "sources": [],
+  "verification": {}
 }
 ```
 
-Place status: `needs_review | enriched | shortlisted | scheduled | rejected | archived`.
+Legacy place fields (`id`, `name`, `area`) remain readable during migration, but new writes use the schema above.
 
-## Planning draft
-`planning/draft-plan.json` is an agent proposal generated from confirmed constraints + normalized discovery places. It may be regenerated freely. It must never overwrite `days/` without an explicit promotion instruction from the user.
+## Day spot
+Required fields remain `id`, `time`, `title`, `notes`. Optional reusable fields: `place_id`, `location`, `contact`, `duration_min`, `transport_to_next`, `visited`. When `place_id` exists, build resolves PlaceEntity metadata and spot-level values override joined defaults.
 
-Every confirmed itinerary item needs a stable `id`, user-facing `time`, `title`, and useful `notes`. Preserve map codes/links when supplied. A folder name and `meta.slug` must match.
+## Candidate Pool
+`planning/candidates.json` is authoritative when present; root `candidates.json` is the fallback. A candidate may embed presentation fields or reference `place_id`. Only planning-ready PlaceEntities may be automatically proposed by an Agent.

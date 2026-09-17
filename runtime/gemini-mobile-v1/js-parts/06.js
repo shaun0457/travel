@@ -1,55 +1,6 @@
-    function toggleTaskDone(index) {
-      pendingTasks[index].done = !pendingTasks[index].done;
-      persistState();
-      renderTasks();
-    }
-    function updateTasksBadge() {
-      document.getElementById("tasks-badge").classList.toggle("hidden", !pendingTasks.some(t => !t.done));
-    }
-
-    function renderPackingList() {
-      document.getElementById("packing-checklist").innerHTML = packingList.map((item, idx) => `
-        <label for="pack-${item.id}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 border border-slate-100 cursor-pointer">
-          <input id="pack-${item.id}" type="checkbox" ${item.checked ? 'checked' : ''} onchange="togglePacking(${idx})" class="w-4 h-4 rounded accent-sky-600">
-          <span class="text-xs font-medium ${item.checked ? 'line-through text-slate-400' : 'text-slate-700'}">${item.text}</span>
-        </label>`).join('');
-    }
-    function togglePacking(index) {
-      packingList[index].checked = !packingList[index].checked;
-      persistState();
-      renderPackingList();
-    }
-
-    function switchMainTab(tab) {
-      ['itinerary', 'shrine', 'backup', 'tasks', 'tools'].forEach(t => {
-        document.getElementById(`tab-content-${t}`).classList.toggle("hidden", t !== tab);
-        const btn = document.getElementById(`nav-btn-${t}`);
-        btn.classList.toggle("text-brand-600", t === tab);
-        btn.classList.toggle("text-slate-400", t !== tab);
-      });
-      setTimeout(drawRouteMap, 40);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // ---------- 匯率 ----------
-    let currentRate = 0.215;
-    function updateRate() {
-      currentRate = parseFloat(document.getElementById("custom-rate").value) || 0.215;
-      convertCurrency('jpy');
-    }
-    function convertCurrency(type) {
-      const jpy = document.getElementById("calc-jpy"), twd = document.getElementById("calc-twd");
-      if (type === 'jpy') twd.value = Math.round((parseFloat(jpy.value) || 0) * currentRate);
-      else jpy.value = currentRate > 0 ? Math.round((parseFloat(twd.value) || 0) / currentRate) : 0;
-    }
-    function setCalcValue(v) {
-      document.getElementById("calc-jpy").value = v;
-      convertCurrency('jpy');
-    }
-
-    function updateGlobalCounters() {
-      let total = 0, completed = 0;
-      tripData.forEach(d => d.spots.forEach(s => { total++; if (s.visited) completed++; }));
-      document.getElementById("header-completed-count").innerText = completed;
-      document.getElementById("header-total-count").innerText = total;
-    }
+function applyMetaAndFeatures(){document.title=travelMeta.title||document.title;const title=document.getElementById('header-title'),emoji=document.getElementById('header-emoji');if(title)title.textContent=travelMeta.shortTitle||travelMeta.title||'Travel Plan';if(emoji)emoji.textContent=travelMeta.emoji||'✈️';const badges=document.getElementById('header-badges');if(badges)badges.innerHTML=asArray(travelMeta.badges).map((b,i)=>`<span class="shrink-0 inline-flex items-center gap-1 text-[10px] font-bold px-2 py-1 rounded-full ${i===0?'bg-brand-100 text-brand-700':'bg-emerald-50 text-emerald-700 border border-emerald-100'}">${b.icon?`<i class="fa-solid fa-${esc(b.icon)}"></i>`:''}${esc(b.text||'')}</span>`).join('');const savedDisabled=travelFeatures.candidates===false&&travelFeatures.inbox===false;if(savedDisabled){document.getElementById('nav-btn-saved')?.setAttribute('disabled','');document.getElementById('nav-btn-saved')?.classList.add('opacity-40')}applyMoreFeatures()}
+function switchMainTab(tab){if(!['today','itinerary','saved','tasks','more'].includes(tab))tab='today';if(tab==='saved'&&travelFeatures.candidates===false&&travelFeatures.inbox===false){showToast('此旅程尚未啟用收藏');return}currentMainTab=tab;persistState();['today','itinerary','saved','tasks','more'].forEach(t=>{document.getElementById(`tab-content-${t}`)?.classList.toggle('hidden',t!==tab);const b=document.getElementById(`nav-btn-${t}`);b?.classList.toggle('text-brand-600',t===tab);b?.classList.toggle('text-slate-400',t!==tab)});if(tab==='saved')switchSavedPanel(savedPanel);if(tab==='itinerary'&&dayViewMode==='map')setTimeout(drawRouteMap,30);window.scrollTo({top:0,behavior:'smooth'})}
+function updateGlobalCounters(){updateTasksBadge()}
+function renderAll(){renderDayTabs();renderToday();renderItinerary();renderCandidates();renderInbox();renderTasks();renderPackingList();renderNextStopBar();updateGlobalCounters();applyMoreFeatures();switchSavedPanel(savedPanel)}
+function init(){if(!defaultTripData.length)throw new Error('TRAVEL_TRIP_DATA.defaultTripData is empty. Rebuild from trips/<slug>/days/.');applyMetaAndFeatures();loadState();checkSharedStateFromUrl();renderAll();switchMainTab(currentMainTab);document.getElementById('share-modal')?.addEventListener('click',e=>{if(e.target.id==='share-modal')closeShareModal()});document.getElementById('navigation-sheet')?.addEventListener('click',e=>{if(e.target.id==='navigation-sheet')closeNavigationSheet()});document.getElementById('place-detail-sheet')?.addEventListener('click',e=>{if(e.target.id==='place-detail-sheet')closePlaceDetail()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeShareModal();closeNavigationSheet();closePlaceDetail()}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();

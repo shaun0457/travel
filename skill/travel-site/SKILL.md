@@ -1,170 +1,100 @@
 ---
 name: travel-site
-description: Maintain this repository's source-first, mobile-first personal travel websites. Use for starting trips, importing saved content, maintaining discovery pools, planning itineraries, validating, building, or deploying a trip.
+description: Maintain the source-first, mobile-first travel app framework: create/update trips, capture inspiration, verify places, plan itineraries, improve reusable UX, build and deploy.
 ---
 
 # Travel Site Skill
 
-This repo follows a **stable runtime + structured trip source + discovery pool + agent planning + generated output** architecture inspired by `OWENLEEzy/happy-trip-site`, adapted for this user's long-lived GitHub Pages travel workspace and the user-approved Gemini mobile design.
+This repository is a **stable runtime + structured trip source + discovery/planning pipeline + generated output** system. The deployed product is used on a phone while travelling. Preserve the user-approved `gemini-mobile-v1` blue/white visual language unless a redesign is explicitly requested.
 
-## Non-negotiable contract
-
-1. `trips/<slug>/` is the source of truth.
-2. `runtime/<id>/` is shared UI/runtime. A new restaurant, Instagram save, or changed time does **not** justify editing runtime.
-3. `dist/` is disposable generated output. Never hand-edit it.
-4. Trip facts, discovery evidence, planning drafts, UI choices, and media choices stay separated.
-5. Preserve exact user-provided times, place names, links, captions, and notes. Do not silently invent missing facts.
-6. Existing UI with `style_policy: preserve-confirmed` or `locked: true` is preserved unless the user explicitly asks for redesign.
-7. Raw social posts are evidence, not verified planning facts. Never schedule a raw inbox record directly.
-8. Every trip change must pass source verify → build → generated verify. Do not claim mobile browser verification unless the Playwright gate actually passes.
-
-## Repository model
+## Non-negotiable architecture
 
 ```text
-trips/<slug>/
-  meta.json
-  days/day-1.json ...              # confirmed itinerary
-  candidates.json                  # curated shortlist used by current runtime
-  tasks.json
-  packing.json
-  ui-brief.json
-  media-brief.json
-  discovery/
-    config.json
-    inbox/<share-id>.json          # raw Instagram/link/screenshot evidence
-    places/<place-id>.json         # normalized deduplicated place pool
-  planning/
-    draft-plan.json                # regenerable agent proposal
-runtime/<runtime-id>/
-  runtime.json
-  template-parts/
-  js-parts/
-scripts/
-  inbox-add.mjs
-  pool-list.mjs
-  build.mjs
-  verify.mjs
-  verify-mobile-runtime.mjs
-dist/                              # generated; gitignored
+Trip source
+  ↓
+Runtime
+  ↓
+Build
+  ↓
+dist/
+  ↓
+GitHub Pages
 ```
+
+- `trips/<slug>/` is the source of truth.
+- `runtime/<id>/` is reusable product code, never a destination-specific data store.
+- `dist/` is disposable generated output. Never hand-edit it.
+- Source facts, discovery evidence, planning drafts, UI contracts and media decisions remain separated.
+- Keep existing Day data, Tasks, Packing, Candidates, local progress, Share/QR, currency and emergency capabilities during migrations.
 
 ## Four operating modes
 
-### 1. Clone Mode — default for most new trips
-Use when the user wants a new trip but is happy to reuse an existing confirmed runtime/style.
+### `trip:new`
+Create a new trip. Establish `trips/<slug>/`, standard source files, reuse an approved runtime/UI contract when requested, verify, build and deploy. A new destination does not justify a new runtime.
 
-- Create `trips/<new-slug>/`.
-- Reuse the chosen runtime and confirmed visual contract.
-- Do not run a new UI selection flow.
-- Build a draft trip immediately even when facts are incomplete; expose uncertainties rather than blocking cold start.
+### `trip:update`
+Modify an existing trip. Edit only the smallest necessary source, normally one day/task/packing/planning file. Never edit generated HTML.
 
-### 2. Design Mode — only when the user wants a new visual direction
-- Keep factual Trip Brief separate from UI Brief.
-- Prepare exactly three materially different choices: `sensory`, `editorial`, `navigator`.
-- Use real trip content in previews.
-- Record and lock the selected option before production generation.
+### `trip:design`
+Improve reusable UI/UX. If `ui-brief.json` is locked/confirmed, visual language is immutable: only UX, accessibility, navigation, progressive disclosure and reusable capabilities may change. Only explicit redesign intent unlocks visual redesign.
 
-### 3. Import Mode — existing itinerary/source material
-Use for Gemini plans, spreadsheets, emails, booking confirmations, pasted notes, screenshots, or mixed source material.
-- Extract facts first.
-- Preserve provenance and unresolved items.
-- Map confirmed items to `days/`, optional items to candidates/discovery, bookings to tasks/meta.
-- Never overwrite a locked UI merely because imported material has its own styling.
+### `trip:inbox`
+Process Instagram, URLs, screenshots or other inspiration through the gated pipeline:
 
-### 4. Inbox Mode — Instagram / saved-post discovery stream
-Use when the user shares Instagram posts, Reels, map links, screenshots, blogs, or other inspiration.
-
-Pipeline:
 ```text
-share
-  → discovery/inbox/      raw source, may be incomplete
-  → identify + dedupe
-  → discovery/places/     normalized place entity
-  → enrich + verify planning constraints
-  → planning/draft-plan.json
-  → explicit promotion
-  → days/day-N.json
+CaptureEvent → Claim → PlaceEntity → verification → Candidate Pool → draft planner → confirmed itinerary
 ```
 
-Rules:
-- If the target trip is clear from conversation, do not ask which day it belongs to.
-- Save the source URL first. If readable, extract caption/author/place hints; if inaccessible, keep the record and mark `needs_review` rather than guessing.
-- One post can contain multiple places. Multiple posts can point to one place.
-- Deduplicate by canonical place identity, not post URL.
-- Verify changing facts that materially affect scheduling: address/location, opening/closed days, time-sensitive hours, reservations/tickets, weather/sea dependency.
-- Record verification time and unresolved facts.
-- After an intake batch, refresh `planning/draft-plan.json` when enough trip context exists.
-- Default is **draft-first auto replan**: new saves may change the draft, but do not mutate confirmed `days/` automatically.
-- Promote to confirmed days only when the user says `排進去`, `套用這版`, `更新正式行程`, or explicitly delegates automatic promotion.
+The original URL is always retained. A social post is evidence, not truth.
 
-For raw CLI intake:
-```bash
-npm run inbox:add -- <trip-slug> <shared-url> "optional note"
-npm run pool:list -- <trip-slug>
-```
+## Three information layers
 
-## Facts and planning
+1. **Raw Inspiration** — `discovery/inbox.json` (`CaptureEvent`).
+2. **Clean Place Knowledge** — `discovery/claims.json` + `discovery/places/<place-id>.json` (`PlaceEntity`).
+3. **Planned Travel** — `planning/candidates.json`, `planning/draft-plan.json`, then explicit promotion to `days/day-N.json`.
 
-### Confirmed source
-`meta.json` and `days/` describe the executable trip. Treat fixed flights, hotels, bookings, and explicit user choices as constraints.
+Root `candidates.json` is a backwards-compatible fallback only. New work writes `planning/candidates.json`.
 
-### Discovery source
-Read `references/discovery-pool.md` before processing a large batch of saved posts. The discovery pool is a set of possibilities, not a checklist.
+## Planning-ready gate
 
-### Planner priorities
-When turning the pool into a draft:
-1. fixed bookings and transport constraints;
-2. opening/closed days and reservation windows;
-3. geographic clustering and route direction;
-4. user priority and repeated saves;
-5. meal/activity slot fit;
-6. avoid unnecessary detours and duplicate experiences.
+Never schedule a place merely because a post mentioned it. Only `planning.planning_ready: true` may automatically enter a draft.
 
-For meals, default to at most one deliberate destination restaurant per day unless the user explicitly wants a food crawl.
+Minimum verification:
+- Restaurant: identity, navigable location/area, opening day constraints, meal slot.
+- Attraction: identity, navigable location, opening constraints, estimated duration.
+- Activity: attraction requirements plus meeting point/location, reservation requirement and weather dependency.
 
-## Visual contract: `ui-brief.json`
-Do not mix styling into itinerary facts. Existing confirmed designs are authoritative. Okinawa is locked to the user-approved `gemini-mobile-v1` experience.
+If evidence is missing or conflicting, preserve the uncertainty and keep `planning_ready: false`.
 
-For a new trip:
-- if the user says to reuse an existing style/runtime, clone its confirmed UI contract;
-- if the user asks for a fresh design, use Design Mode.
+## Navigation-first mobile contract
 
-## Media: `media-brief.json`
-Keep media decisions separate from facts. If images are added, use named-place imagery from verifiable sources. Do not use unrelated generic hero images as filler.
+For every itinerary place with location data:
+- primary CTA is **Google 地圖導航**;
+- destination priority is `lat/lng → address → maps_query → title`;
+- navigation sheet offers Google Maps, Apple Maps, copy address and share;
+- minimum interactive target is approximately 44×44 px;
+- do not disable a whole card when an address is incomplete; show the unresolved state.
 
-## Normal edit workflow
+Day screens prioritize: current context → next stop → route summary → itinerary. Large maps must not consume the initial mobile viewport. Use progressive disclosure for notes and details. The five primary tabs are `今日 / 行程 / 收藏 / 待辦 / 更多`.
 
-1. Read relevant trip source and UI brief.
-2. Classify input: confirmed factual change / discovery share / candidate / task / packing / UI / media.
-3. Make the smallest source edit and preserve unrelated content.
-4. If discovery input, run the Inbox Mode pipeline before planning.
-5. For route changes, keep driving/walking order geographically coherent.
-6. Record unresolved facts under uncertainties/verification fields rather than inventing them.
-7. Run:
-   ```bash
-   npm run verify
-   npm run build
-   npm run verify:build
-   ```
-8. When Playwright is available, also run:
-   ```bash
-   npm run verify:mobile -- dist/<slug>/index.html
-   ```
-9. Only then commit/deploy.
+## Local state rule
 
-## Runtime change rule
+LocalStorage may persist progress/UI state only: visited, tasks, packing, current trip/day, last viewed tab, dismissed recommendations and device-local candidate additions. Repository source remains authoritative for itinerary facts.
 
-Change runtime only for a reusable capability: a generic map component, accessibility fix, discovery-pool view, or new shared itinerary field. A runtime change must not hardcode one destination. Current `gemini-mobile-v1` still contains some optional Okinawa-oriented guide/tool panes; they are feature-gated and should be disabled for unrelated trips until generalized.
+## Normal workflow
 
-## Mobile contract
-
-The deployed site is used on a phone while traveling. Prefer one-tap navigation, visible route context, readable cards, persistent check-off state, and tap targets around 44×44 px or larger. Static inspection is not a substitute for a real browser gate when Playwright is available.
+1. Read relevant trip source + `ui-brief.json`.
+2. Identify the operating mode.
+3. Make the smallest source edit.
+4. For inbox input: preserve raw source → extract claims → resolve/dedupe → verify → set planning-ready → candidate/draft.
+5. Preserve confirmed days unless the user explicitly promotes a draft.
+6. Run `npm run verify`, `npm run build`, `npm run verify:build`.
+7. When Playwright is available, run `npm run verify:mobile -- dist/<slug>/index.html`.
+8. Only then merge/deploy.
 
 ## References
-
-Read only as needed:
-- `references/architecture.md` — system boundaries and data flow
-- `references/schema.md` — source file contract
-- `references/extraction-rules.md` — converting notes/social posts into trip source
-- `references/discovery-pool.md` — Inbox Mode, dedupe, enrichment and planning
-- `references/design-principles.md` — when a new UI must be designed
+- `references/architecture.md`
+- `references/schema.md`
+- `references/extraction-rules.md`
+- `references/discovery-pool.md`
+- `references/design-principles.md`

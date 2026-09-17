@@ -6,72 +6,115 @@
 <meta name="theme-color" content="#f0f9ff">
 <title>Travel Plan</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Travel Plan">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1'}},fontFamily:{sans:['Noto Sans TC','sans-serif'],outfit:['Outfit','sans-serif']}}}}</script>
 <style>
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px)}body{margin:0;-webkit-tap-highlight-color:transparent;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 85px);background:linear-gradient(to bottom,#f0f9ff,#f5fbff 40%,#f1f5f9);min-height:100vh}html{background:#f1f5f9}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.card-shadow{box-shadow:0 4px 20px -2px rgba(14,165,233,.08),0 2px 6px -1px rgba(0,0,0,.04)}.sticky-top{top:env(safe-area-inset-top,0px)}.nav-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 6px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #0284c7;outline-offset:2px}.toast-anim{animation:toastIn 2.2s cubic-bezier(.16,1,.3,1) forwards}@keyframes toastIn{0%{opacity:0;transform:translate(-50%,20px)}15%{opacity:1;transform:translate(-50%,0)}80%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-20px)}}@media(prefers-reduced-motion:reduce){.toast-anim,.animate-ping{animation:none}}
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0)}html{background:#f1f5f9}body{margin:0;min-height:100vh;background:linear-gradient(#f0f9ff,#f8fafc 42%,#f1f5f9);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 150px);-webkit-tap-highlight-color:transparent}.card-shadow{box-shadow:0 5px 22px -4px rgba(14,165,233,.12),0 2px 7px rgba(15,23,42,.04)}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{scrollbar-width:none}.tap-target,.primary-nav,.bottom-nav-btn,.day-tab-btn{min-height:44px;min-width:44px}.sticky-top{top:env(safe-area-inset-top,0)}.nav-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 7px)}.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sheet-backdrop{background:rgba(15,23,42,.52);backdrop-filter:blur(3px)}.sheet-panel{border-radius:28px 28px 0 0;max-height:82vh}.safe-bottom{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #0284c7;outline-offset:2px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
-
-
 </head>
 <body>
 <div class="text-slate-800 font-sans">
+  <div id="toast" class="fixed bottom-36 left-1/2 -translate-x-1/2 bg-slate-900/95 text-white text-xs font-medium px-4 py-3 rounded-full shadow-2xl pointer-events-none z-[80] hidden max-w-[88vw] text-center" role="status" aria-live="polite"><span id="toast-text">完成</span></div>
 
-  <!-- Toast -->
-  <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-slate-900/95 text-white text-xs font-medium px-4 py-2.5 rounded-full shadow-2xl pointer-events-none z-50 hidden backdrop-blur-md flex items-center gap-2" role="status" aria-live="polite">
-    <i class="fa-solid fa-check text-sky-400"></i>
-    <span id="toast-text">已複製</span>
-  </div>
-
-  <!-- 分享與同步 Modal -->
-  <div id="share-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div id="share-modal" class="fixed inset-0 z-[70] sheet-backdrop hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="share-title">
     <div class="bg-white rounded-3xl p-5 max-w-sm w-full card-shadow space-y-4 relative max-h-[90vh] overflow-y-auto">
-      <button onclick="closeShareModal()" aria-label="關閉" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-sm w-7 h-7 flex items-center justify-center rounded-full bg-slate-100 transition-colors">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-sm font-bold shadow-sm"><i class="fa-solid fa-share-nodes"></i></div>
-        <div>
-          <h3 class="font-extrabold text-slate-900 text-sm">分享與同步行程</h3>
-          <p class="text-[11px] text-slate-500">傳送給女友，手機同步開啟互動！</p>
-        </div>
-      </div>
-      <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center space-y-2">
-        <div id="share-qrcode" class="bg-white p-2.5 rounded-xl shadow-sm border border-slate-200 inline-block w-40 h-40 [&>svg]:w-full [&>svg]:h-full"></div>
-        <span class="text-[11px] text-slate-500 font-medium">用女友手機相機掃描即可開啟（含你目前的進度）</span>
-      </div>
-      <div class="space-y-2 pt-1">
-        <button onclick="copyShareUrl()" class="w-full py-2.5 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 active:scale-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
-          <i class="fa-solid fa-copy"></i><span>複製專屬互動連結 (已含最新進度)</span>
-        </button>
-        <button id="native-share-btn" onclick="triggerNativeShare()" class="w-full py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-2 transition-all">
-          <i class="fa-solid fa-arrow-up-from-bracket text-brand-600"></i><span>以 LINE / AirDrop 傳送</span>
-        </button>
-        <button onclick="copyShareUrl(true)" class="w-full py-2 px-3 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-bold text-xs flex items-center justify-center gap-2 transition-all">
-          <i class="fa-solid fa-link text-slate-400"></i><span>只複製乾淨網址（不含進度）</span>
-        </button>
-      </div>
-      <button onclick="resetAllProgress()" class="w-full text-[10px] text-slate-400 hover:text-rose-500 font-medium">重設此手機上的所有進度</button>
+      <button onclick="closeShareModal()" class="tap-target absolute top-2 right-2 w-11 rounded-full bg-slate-100 text-slate-500" aria-label="關閉分享"><i class="fa-solid fa-xmark"></i></button>
+      <div class="pr-12"><h3 id="share-title" class="font-extrabold text-slate-900">分享旅程</h3><p class="text-xs text-slate-500 mt-1">可分享乾淨網址，或把這支手機上的打卡進度一起帶過去。</p></div>
+      <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center gap-2"><div id="share-qrcode" class="bg-white p-2 rounded-xl shadow-sm border border-slate-200 w-40 h-40"></div><span class="text-[11px] text-slate-500">掃描 QR 開啟旅程</span></div>
+      <button onclick="copyShareUrl()" class="tap-target w-full rounded-xl bg-brand-600 text-white font-bold text-sm">複製互動連結</button>
+      <button id="native-share-btn" onclick="triggerNativeShare()" class="tap-target w-full rounded-xl bg-slate-100 text-slate-700 font-bold text-sm">LINE / AirDrop 分享</button>
+      <button onclick="copyShareUrl(true)" class="tap-target w-full rounded-xl border border-slate-200 text-slate-600 font-bold text-sm">複製乾淨網址</button>
+      <button onclick="resetAllProgress()" class="tap-target w-full text-xs text-slate-400">重設此裝置進度</button>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="sticky sticky-top z-30 bg-white/90 backdrop-blur-md border-b border-sky-100 px-4 pt-3 pb-3">
-    <div class="max-w-md mx-auto flex items-center justify-between gap-2">
-      <div class="min-w-0">
-        <div id="header-badges" class="flex items-center gap-2 flex-wrap"></div>
-        <h1 class="text-lg font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5 mt-0.5">
-          <span id="header-title">Travel Plan</span> <span id="header-emoji" class="text-base">✈️</span>
-        </h1>
+  <div id="navigation-sheet" class="fixed inset-0 z-[75] sheet-backdrop hidden items-end" role="dialog" aria-modal="true" aria-labelledby="navigation-title">
+    <div class="sheet-panel bg-white w-full max-w-md mx-auto p-5 safe-bottom card-shadow">
+      <div class="flex items-start justify-between gap-3 mb-4"><div><p class="text-[11px] font-bold text-brand-600">選擇導航方式</p><h3 id="navigation-title" class="font-extrabold text-slate-900 mt-1">目的地</h3><p id="navigation-destination" class="text-xs text-slate-500 mt-1 line-clamp-2"></p></div><button data-sheet-close onclick="closeNavigationSheet()" class="tap-target w-11 rounded-full bg-slate-100 text-slate-500" aria-label="關閉導航選單"><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="space-y-2">
+        <button onclick="navigateGoogle()" class="tap-target w-full rounded-2xl bg-brand-600 text-white font-extrabold text-sm flex items-center justify-between px-4"><span><i class="fa-solid fa-diamond-turn-right mr-2"></i>Google 地圖</span><span class="text-[10px] bg-white/20 px-2 py-1 rounded-full">建議</span></button>
+        <button onclick="navigateApple()" class="tap-target w-full rounded-2xl bg-slate-100 text-slate-800 font-bold text-sm flex items-center px-4"><i class="fa-brands fa-apple mr-2"></i>Apple 地圖</button>
+        <button onclick="copyNavigationAddress()" class="tap-target w-full rounded-2xl bg-slate-100 text-slate-800 font-bold text-sm flex items-center px-4"><i class="fa-regular fa-copy mr-2"></i>複製地址</button>
+        <button onclick="shareNavigationPlace()" class="tap-target w-full rounded-2xl bg-slate-100 text-slate-800 font-bold text-sm flex items-center px-4"><i class="fa-solid fa-share-nodes mr-2"></i>分享這個地點</button>
       </div>
-      <div class="text-right flex items-center gap-2 shrink-0">
-        <button onclick="openShareModal()" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:scale-95 transition-all">
-          <i class="fa-solid fa-share-nodes text-[11px]"></i><span>分享</span>
-        </button>
-        <div>
-          <div class="text-[9px] text-slate-400 font-medium">完成度</div>
+    </div>
+  </div>
+
+  <div id="place-detail-sheet" class="fixed inset-0 z-[72] sheet-backdrop hidden items-end" role="dialog" aria-modal="true" aria-labelledby="place-detail-title">
+    <div class="sheet-panel bg-white w-full max-w-md mx-auto overflow-hidden card-shadow flex flex-col">
+      <div class="p-5 pb-3 border-b border-slate-100 flex items-start justify-between gap-3"><div class="min-w-0"><p id="place-detail-kicker" class="text-[11px] font-bold text-brand-600">地點詳細資訊</p><h3 id="place-detail-title" class="font-extrabold text-slate-900 mt-1"></h3></div><button onclick="closePlaceDetail()" class="tap-target w-11 rounded-full bg-slate-100 text-slate-500 shrink-0" aria-label="關閉地點詳細資訊"><i class="fa-solid fa-xmark"></i></button></div>
+      <div id="place-detail-body" class="p-5 overflow-y-auto space-y-3 text-sm"></div>
+      <div class="p-3 safe-bottom border-t border-slate-100 grid grid-cols-2 gap-2 bg-white"><button onclick="openNavigationForDetail()" class="tap-target rounded-xl bg-brand-600 text-white font-extrabold">導航</button><button id="place-detail-secondary" onclick="runPlaceSecondaryAction()" class="tap-target rounded-xl bg-slate-100 text-slate-700 font-bold">官網 / 預約</button></div>
+    </div>
+  </div>
+
+  <header class="sticky sticky-top z-40 bg-white/92 backdrop-blur-md border-b border-sky-100 px-4 py-3">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-3"><div class="min-w-0"><div id="header-badges" class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar"></div><h1 class="font-extrabold text-slate-900 mt-1 truncate"><span id="header-title">Travel Plan</span> <span id="header-emoji">✈️</span></h1></div><button onclick="openShareModal()" class="tap-target shrink-0 px-3 rounded-full bg-brand-600 text-white text-xs font-bold"><i class="fa-solid fa-share-nodes mr-1"></i>分享</button></div>
+  </header>
+  <main class="max-w-md mx-auto px-4 pt-3 space-y-4">
+    <div id="day-tabs" class="flex gap-2 overflow-x-auto hide-scrollbar py-1"></div>
+
+    <section id="tab-content-today" class="space-y-4">
+      <div id="today-summary"></div>
+      <div id="today-upcoming" class="space-y-3"></div>
+    </section>
+
+    <section id="tab-content-itinerary" class="space-y-4 hidden">
+      <div class="bg-white rounded-2xl p-2 card-shadow border border-sky-100 grid grid-cols-3 gap-1">
+        <button id="view-mode-list" onclick="setDayViewMode('list')" class="tap-target rounded-xl bg-brand-600 text-white text-xs font-bold">行程列表</button>
+        <button id="view-mode-map" onclick="setDayViewMode('map')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">地圖路線</button>
+        <button id="view-mode-notes" onclick="setDayViewMode('notes')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">旅程筆記</button>
+      </div>
+      <div id="route-summary"></div>
+      <div id="route-map-panel" class="hidden bg-white rounded-2xl p-3 card-shadow border border-sky-100">
+        <div class="flex items-center justify-between mb-2"><span class="text-xs font-bold text-slate-800"><i class="fa-solid fa-route text-brand-600 mr-1"></i>今日路線</span><span class="text-[10px] text-slate-400">compact map</span></div>
+        <canvas id="routeCanvas" width="380" height="180" class="w-full h-[160px] rounded-xl bg-sky-50 border border-sky-100"></canvas>
+      </div>
+      <div id="trip-notes-panel" class="hidden"></div>
+      <div id="spots-timeline-container" class="space-y-3"></div>
+    </section>
+
+    <section id="tab-content-saved" class="space-y-4 hidden">
+      <div class="bg-white rounded-2xl p-2 card-shadow border border-sky-100 grid grid-cols-2 gap-1"><button id="saved-tab-candidates" onclick="switchSavedPanel('candidates')" class="tap-target rounded-xl bg-brand-600 text-white text-xs font-bold">候選池</button><button id="saved-tab-inbox" onclick="switchSavedPanel('inbox')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">靈感 Inbox</button></div>
+      <div id="saved-panel-candidates" class="space-y-3">
+        <div id="agent-suggestion-card"></div>
+        <div class="bg-white rounded-2xl p-3 card-shadow border border-sky-100 space-y-3"><div><p class="text-[11px] font-bold text-brand-600">Candidate Pool</p><h2 class="font-extrabold text-slate-900">已整理的候選地點</h2></div><div id="candidate-category-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div><div id="candidate-region-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div></div>
+        <div id="candidates-list-container" class="space-y-3"></div>
+      </div>
+      <div id="saved-panel-inbox" class="space-y-3 hidden">
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100"><p class="text-[11px] font-bold text-brand-600">Raw Inspiration</p><div class="flex items-end justify-between gap-3 mt-1"><div><h2 class="font-extrabold text-slate-900">靈感 Inbox</h2><p class="text-xs text-slate-500 mt-1">原始貼文只是 evidence；查證後才會進候選池。</p></div><button onclick="batchInboxToCandidate()" class="tap-target px-3 rounded-xl bg-brand-50 text-brand-700 text-xs font-bold shrink-0">批次整理到候選池</button></div></div>
+        <div id="inbox-list-container" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <section id="tab-content-tasks" class="space-y-4 hidden"><div class="bg-white rounded-2xl p-4 card-shadow border border-amber-100"><p class="text-[11px] font-bold text-amber-600">Tasks</p><h2 class="font-extrabold text-slate-900">預約與出發前待辦</h2></div><div id="action-tasks-container" class="space-y-3"></div></section>
+    <section id="tab-content-more" class="space-y-4 hidden">
+      <div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100 space-y-3"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-list-check"></i></div><div><p class="text-[11px] font-bold text-brand-600">Packing</p><h2 class="font-extrabold text-slate-900">行李清單</h2></div></div><div id="packing-checklist" class="space-y-2"></div></div>
+
+      <div id="currency-tool" class="bg-white rounded-2xl p-4 card-shadow border border-sky-100 space-y-3"><div class="flex items-center justify-between"><h3 class="font-bold text-slate-900"><i class="fa-solid fa-calculator text-brand-600 mr-1"></i>日幣 ➔ 台幣</h3><div class="text-xs text-slate-500">匯率 <input id="custom-rate" type="number" value="0.215" step="0.001" inputmode="decimal" oninput="updateRate()" class="w-16 bg-slate-100 rounded-lg px-2 py-1 font-bold"></div></div><div class="grid grid-cols-2 gap-2"><label class="text-[10px] font-bold text-slate-400">JPY<input id="calc-jpy" type="number" value="1000" inputmode="numeric" oninput="convertCurrency('jpy')" class="mt-1 w-full min-h-[44px] bg-slate-50 border border-slate-200 rounded-xl px-3 text-sm font-bold"></label><label class="text-[10px] font-bold text-slate-400">TWD<input id="calc-twd" type="number" value="215" inputmode="numeric" oninput="convertCurrency('twd')" class="mt-1 w-full min-h-[44px] bg-slate-50 border border-slate-200 rounded-xl px-3 text-sm font-bold text-emerald-600"></label></div></div>
+
+      <div id="shrine-guide" class="hidden bg-gradient-to-br from-rose-50 via-white to-amber-50 rounded-2xl p-4 card-shadow border border-rose-200/80 space-y-3"><div><p class="text-[11px] font-bold text-rose-600">御朱印</p><h3 class="font-extrabold text-slate-900">沖繩順路御朱印攻略</h3><p class="text-xs text-slate-500 mt-1">保留既有主題攻略，收進「更多」避免佔用主要導航。</p></div><div class="space-y-2 text-xs text-slate-700"><div class="bg-white/80 rounded-xl p-3"><strong>普天滿宮</strong><p class="mt-1">Day 1 順路；現場手寫直書き與奧宮神穴。</p></div><div class="bg-white/80 rounded-xl p-3"><strong>波上宮 ＋ 護國寺</strong><p class="mt-1">Day 3 可一起參拜，兩處步行距離極近。</p></div><div class="bg-white/80 rounded-xl p-3"><strong>沖宮</strong><p class="mt-1">Day 4 奧武山公園順路。</p></div></div></div>
+
+      <div id="okinawa-emergency" class="hidden bg-slate-900 text-white rounded-2xl p-4 shadow-xl space-y-3"><div><p class="text-[11px] font-bold text-rose-400">Emergency</p><h3 class="font-extrabold">沖繩緊急求助</h3></div><div class="grid grid-cols-2 gap-2"><a href="tel:110" class="tap-target bg-white/10 rounded-xl px-3 flex flex-col justify-center"><span class="text-[10px] text-slate-400">報警</span><strong>110</strong></a><a href="tel:119" class="tap-target bg-white/10 rounded-xl px-3 flex flex-col justify-center"><span class="text-[10px] text-slate-400">救護 / 火警</span><strong>119</strong></a></div><div class="bg-white/10 rounded-xl p-3 text-xs"><div class="text-slate-400">台北駐日經濟文化代表處 那霸分處</div><a href="tel:0988627008" class="tap-target flex items-center font-bold">098-862-7008</a><a href="tel:09019422007" class="tap-target flex items-center text-amber-300">090-1942-2007 緊急專線</a></div></div>
+    </section>
+  </main>
+
+  <div id="next-stop-bar" class="fixed left-0 right-0 bottom-[67px] z-30 px-3 pointer-events-none"><div class="max-w-md mx-auto bg-slate-900/96 text-white rounded-2xl shadow-2xl p-3 flex items-center gap-3 pointer-events-auto"><div class="min-w-0 flex-1"><p class="text-[9px] text-sky-300 font-bold">下一站</p><div id="next-stop-title" class="font-extrabold text-sm truncate">—</div><div id="next-stop-meta" class="text-[10px] text-slate-300 mt-0.5"></div></div><button onclick="openNextStopNavigation()" class="primary-nav min-h-[44px] px-4 rounded-xl bg-brand-600 text-white text-xs font-extrabold shrink-0">開始導航</button></div></div>
+  <nav id="bottom-navigation" class="fixed bottom-0 left-0 right-0 z-40 bg-white/96 backdrop-blur-md border-t border-slate-200 nav-safe">
+    <div class="bottom-nav max-w-md mx-auto grid grid-cols-5 text-center px-1 pt-1">
+      <button onclick="switchMainTab('today')" id="nav-btn-today" class="bottom-nav-btn flex flex-col items-center justify-center text-brand-600"><i class="fa-solid fa-location-arrow text-sm"></i><span class="text-[9px] font-bold mt-0.5">今日</span></button>
+      <button onclick="switchMainTab('itinerary')" id="nav-btn-itinerary" class="bottom-nav-btn flex flex-col items-center justify-center text-slate-400"><i class="fa-solid fa-calendar-days text-sm"></i><span class="text-[9px] font-bold mt-0.5">行程</span></button>
+      <button onclick="switchMainTab('saved')" id="nav-btn-saved" class="bottom-nav-btn flex flex-col items-center justify-center text-slate-400"><i class="fa-solid fa-bookmark text-sm"></i><span class="text-[9px] font-bold mt-0.5">收藏</span></button>
+      <button onclick="switchMainTab('tasks')" id="nav-btn-tasks" class="bottom-nav-btn flex flex-col items-center justify-center text-slate-400 relative"><i class="fa-solid fa-list-check text-sm"></i><span class="text-[9px] font-bold mt-0.5">待辦</span><span id="tasks-badge" class="absolute top-1 right-[22%] w-2 h-2 rounded-full bg-rose-500"></span></button>
+      <button onclick="switchMainTab('more')" id="nav-btn-more" class="bottom-nav-btn flex flex-col items-center justify-center text-slate-400"><i class="fa-solid fa-ellipsis text-sm"></i><span class="text-[9px] font-bold mt-0.5">更多</span></button>
+    </div>
+  </nav>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="./assets/js/travel-data.js"></script>
+<script src="../runtime/gemini-mobile-v1/travel.js"></script>
+</body>
+</html>
