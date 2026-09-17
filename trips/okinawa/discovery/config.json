@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "mode": "inbox-pool",
+  "accepted_sources": ["instagram", "web", "maps", "screenshot", "chat"],
+  "planning_policy": {
+    "auto_update_draft": true,
+    "confirmed_days_mutation": "explicit-promotion-only",
+    "cluster_by_geography": true,
+    "max_destination_restaurants_per_day": 1,
+    "verify_before_scheduling": [
+      "location",
+      "opening_days",
+      "time_sensitive_hours",
+      "reservation_or_ticket_requirements"
+    ]
+  }
+}

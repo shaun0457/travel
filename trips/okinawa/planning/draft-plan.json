@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "not_generated",
+  "generated_at": null,
+  "based_on": {
+    "confirmed_itinerary": true,
+    "discovery_place_ids": []
+  },
+  "proposals": [],
+  "notes": [
+    "This file is an agent planning workspace. It does not replace confirmed days until explicitly promoted."
+  ]
+}

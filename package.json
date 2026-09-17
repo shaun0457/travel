@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "inbox:add": "node scripts/inbox-add.mjs",
+    "pool:list": "node scripts/pool-list.mjs",
     "verify": "node scripts/verify.mjs",
     "build": "node scripts/build.mjs",
     "verify:build": "node scripts/verify.mjs --build",
