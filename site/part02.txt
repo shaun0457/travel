@@ -1,0 +1,233 @@
+trong>：09:30～17:00</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-rose-100 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5"><span class="text-rose-600 font-outfit">02.</span> 波上宮 (那霸・琉球總鎮守)</span>
+            <span class="text-[10px] bg-rose-50 text-rose-700 px-2 py-0.5 rounded-full font-bold shrink-0">Day 3 核心</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">• <strong>特色</strong>：矗立於珊瑚礁斷崖上的絕景神社！神職常駐親筆手寫。社務所亦可代授天久宮、末吉宮等兼務社御朱印。<br>• <strong>情侶必收</strong>：紅藍對稱的「紅型良緣結び守」。<br>• <strong>授與所時間</strong>：09:00～17:00</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-rose-100 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5"><span class="text-rose-600 font-outfit">03.</span> 波上山 護國寺 (沖繩最古老佛寺)</span>
+            <span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full font-bold shrink-0">波上宮旁</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">• <strong>特色</strong>：<strong>就在波上宮鳥居正對面！</strong>徒步 10 秒即可走入。沖繩最古老的真言宗佛寺，住持親筆現寫極有力量的梵字與墨寶。<br>• <strong>建議</strong>：停好車一口氣參拜完波上宮與護國寺，集滿雙份墨寶。</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-rose-100 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5"><span class="text-rose-600 font-outfit">04.</span> 沖宮 (奧武山公園・琉球八社)</span>
+            <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full font-bold shrink-0">Day 4 順路</span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">• <strong>特色</strong>：沖繩御朱印款式最豐富的名社！葛飾北齋「琉球八景」刺繡御朱印帳極為精美。參拜完可牽手登上後方的天燈山眺望那霸。<br>• <strong>隔壁順訪</strong>：園區步行 2 分鐘即為「沖繩縣護國神社」，亦常態提供手寫朱印。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 頁籤 4: 待處理 -->
+    <div id="tab-content-tasks" class="space-y-4 hidden">
+      <div class="bg-white rounded-2xl p-4 card-shadow border border-amber-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm shrink-0"><i class="fa-solid fa-clipboard-check"></i></div>
+          <div>
+            <h2 class="text-sm font-bold text-slate-800">必辦事項與關鍵預約</h2>
+            <p class="text-[11px] text-slate-500">琉球鮨・大家阿古豬・透明獨木舟・御朱印硬幣</p>
+          </div>
+        </div>
+      </div>
+      <div id="action-tasks-container" class="space-y-3"></div>
+    </div>
+
+    <!-- 頁籤 5: 超商・工具 -->
+    <div id="tab-content-tools" class="space-y-4 hidden">
+      <div class="bg-gradient-to-br from-blue-50 via-white to-sky-50 rounded-2xl p-4 card-shadow border border-sky-200 space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xs shadow-sm shrink-0"><i class="fa-solid fa-store"></i></div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">每日回家前的超商尋寶指南</h3>
+              <p class="text-[10px] text-slate-500">回飯店前買炸物與宵夜啤酒</p>
+            </div>
+          </div>
+          <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full shrink-0">必訪</span>
+        </div>
+        <div class="space-y-2 text-xs text-slate-700">
+          <div class="p-3 bg-white rounded-xl border border-sky-100 space-y-1.5 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-900 flex items-center gap-1"><i class="fa-solid fa-house-chimney text-[11px] text-brand-600"></i> Day 1 & 2 恩納住宿周邊</span>
+              <span class="text-[10px] text-slate-400 font-mono">開車 2-4 分</span>
+            </div>
+            <div class="text-[11px] text-slate-600 leading-relaxed space-y-1">
+              <div class="flex items-center justify-between gap-2 bg-slate-50 p-1.5 rounded-lg">
+                <div><span class="font-bold text-blue-600">🏪 Lawson 恩納伊武部海灘店</span><p class="text-[10px] text-slate-500">近 Halekulani 酒店，超大停車場好停好買！</p></div>
+                <button onclick="copyMapcode('206 381 834*11')" class="text-[10px] bg-sky-100 text-brand-700 px-2 py-1 rounded font-bold shrink-0">複製代碼</button>
+              </div>
+              <div class="flex items-center justify-between gap-2 bg-slate-50 p-1.5 rounded-lg">
+                <div><span class="font-bold text-emerald-600">🏪 FamilyMart 名護幸喜店</span><p class="text-[10px] text-slate-500">必吃全家炸雞 (Famichiki) 與泡盛咖啡。</p></div>
+                <button onclick="copyMapcode('206 441 512*88')" class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-bold shrink-0">複製代碼</button>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-xl border border-sky-100 space-y-1.5 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-900 flex items-center gap-1"><i class="fa-solid fa-hotel text-[11px] text-brand-600"></i> Day 3 那霸住宿 (星野 OMO5)</span>
+              <span class="text-[10px] text-slate-400 font-mono">步行 1-2 分</span>
+            </div>
+            <div class="text-[11px] text-slate-600 leading-relaxed space-y-1">
+              <div class="flex items-center justify-between gap-2 bg-slate-50 p-1.5 rounded-lg">
+                <div><span class="font-bold text-emerald-600">🏪 全家 那霸松山一丁目店</span><p class="text-[10px] text-slate-500">就在 OMO5 斜對角，過斑馬線 40 秒即達！</p></div>
+                <span class="text-[10px] text-emerald-600 font-bold px-2 py-1 shrink-0">步行 1 分</span>
+              </div>
+              <div class="flex items-center justify-between gap-2 bg-slate-50 p-1.5 rounded-lg">
+                <div><span class="font-bold text-blue-600">🏪 Lawson 那霸松山店</span><p class="text-[10px] text-slate-500">自 OMO5 步行 2 分鐘（約 150m），甜點櫃極推。</p></div>
+                <span class="text-[10px] text-blue-600 font-bold px-2 py-1 shrink-0">步行 2 分</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100 space-y-3">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-solid fa-calculator"></i></div>
+            <h3 class="font-bold text-slate-800 text-sm">日幣 ➔ 台幣換算機</h3>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] font-mono text-slate-500">
+            <label for="custom-rate">匯率:</label>
+            <input type="number" id="custom-rate" value="0.215" step="0.001" inputmode="decimal" oninput="updateRate()" class="w-16 px-1.5 py-0.5 bg-slate-100 rounded text-center font-bold text-slate-700">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label for="calc-jpy" class="text-[10px] font-bold text-slate-400 block mb-1">日圓 (JPY ¥)</label>
+            <input type="number" id="calc-jpy" value="1000" inputmode="numeric" oninput="convertCurrency('jpy')" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-sm font-bold font-outfit text-slate-800 focus:outline-none focus:border-brand-500">
+          </div>
+          <div>
+            <label for="calc-twd" class="text-[10px] font-bold text-slate-400 block mb-1">新台幣 (TWD NT$)</label>
+            <input type="number" id="calc-twd" value="215" inputmode="numeric" oninput="convertCurrency('twd')" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-sm font-bold font-outfit text-emerald-600 focus:outline-none focus:border-brand-500">
+          </div>
+        </div>
+        <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pt-1">
+          <button onclick="setCalcValue(500)" class="px-2.5 py-1 rounded-lg bg-slate-100 text-[11px] font-semibold text-slate-600 shrink-0">¥500 (御朱印)</button>
+          <button onclick="setCalcValue(1000)" class="px-2.5 py-1 rounded-lg bg-slate-100 text-[11px] font-semibold text-slate-600 shrink-0">¥1,000</button>
+          <button onclick="setCalcValue(3000)" class="px-2.5 py-1 rounded-lg bg-slate-100 text-[11px] font-semibold text-slate-600 shrink-0">¥3,000</button>
+          <button onclick="setCalcValue(5500)" class="px-2.5 py-1 rounded-lg bg-slate-100 text-[11px] font-semibold text-slate-600 shrink-0">¥5,500 (免稅)</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 card-shadow border border-sky-100 space-y-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-xs"><i class="fa-solid fa-list-check"></i></div>
+          <h3 class="font-bold text-slate-800 text-sm">自駕隨身與行李清單</h3>
+        </div>
+        <div id="packing-checklist" class="space-y-2"></div>
+      </div>
+
+      <div class="bg-slate-900 text-white rounded-2xl p-4 shadow-xl space-y-2.5">
+        <div class="flex items-center gap-2 text-rose-400">
+          <i class="fa-solid fa-phone-volume text-sm"></i>
+          <h4 class="font-bold text-xs tracking-wide uppercase">沖繩緊急求助通訊錄</h4>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-[11px]">
+          <a href="tel:110" class="bg-white/10 rounded-xl p-2 block"><div class="text-slate-400">報警 (Police)</div><div class="font-bold text-sm font-outfit text-white">110</div></a>
+          <a href="tel:119" class="bg-white/10 rounded-xl p-2 block"><div class="text-slate-400">救護車 / 火警</div><div class="font-bold text-sm font-outfit text-white">119</div></a>
+        </div>
+        <div class="bg-white/10 rounded-xl p-2.5 text-[11px] space-y-1">
+          <div class="text-slate-400">台北駐日經濟文化代表處 那霸分處</div>
+          <a href="tel:0988627008" class="font-bold text-white text-xs block">098-862-7008</a>
+          <a href="tel:09019422007" class="text-amber-300 text-[10px] block">緊急求助專線：090-1942-2007</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部導航 -->
+  <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/80 px-1 pt-1.5 nav-safe">
+    <div class="max-w-md mx-auto grid grid-cols-5 gap-0.5 text-center">
+      <button onclick="switchMainTab('itinerary')" id="nav-btn-itinerary" class="nav-btn flex flex-col items-center py-1 text-brand-600 transition-colors">
+        <i class="fa-solid fa-calendar-day text-sm"></i><span class="text-[9px] font-bold mt-1">行程表</span>
+      </button>
+      <button onclick="switchMainTab('shrine')" id="nav-btn-shrine" class="nav-btn flex flex-col items-center py-1 text-slate-400 transition-colors">
+        <i class="fa-solid fa-torii-gate text-sm"></i><span class="text-[9px] font-medium mt-1">御朱印</span>
+      </button>
+      <button onclick="switchMainTab('backup')" id="nav-btn-backup" class="nav-btn flex flex-col items-center py-1 text-slate-400 transition-colors">
+        <i class="fa-solid fa-layer-group text-sm"></i><span class="text-[9px] font-medium mt-1">備選庫</span>
+      </button>
+      <button onclick="switchMainTab('tasks')" id="nav-btn-tasks" class="nav-btn flex flex-col items-center py-1 text-slate-400 relative transition-colors">
+        <i class="fa-solid fa-clock text-sm"></i><span class="text-[9px] font-medium mt-1">待處理</span>
+        <span id="tasks-badge" class="absolute top-0 right-3 w-2 h-2 rounded-full bg-rose-500"></span>
+      </button>
+      <button onclick="switchMainTab('tools')" id="nav-btn-tools" class="nav-btn flex flex-col items-center py-1 text-slate-400 transition-colors">
+        <i class="fa-solid fa-store text-sm"></i><span class="text-[9px] font-medium mt-1">超商・工具</span>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<script>
+//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//  http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+
+var qrcode = function() {
+
+  //---------------------------------------------------------------------
+  // qrcode
+  //---------------------------------------------------------------------
+
+  /**
+   * qrcode
+   * @param typeNumber 1 to 40
+   * @param errorCorrectionLevel 'L','M','Q','H'
+   */
+  var qrcode = function(typeNumber, errorCorrectionLevel) {
+
+    var PAD0 = 0xEC;
+    var PAD1 = 0x11;
+
+    var _typeNumber = typeNumber;
+    var _errorCorrectionLevel = QRErrorCorrectionLevel[errorCorrectionLevel];
+    var _modules = null;
+    var _moduleCount = 0;
+    var _dataCache = null;
+    var _dataList = [];
+
+    var _this = {};
+
+    var makeImpl = function(test, maskPattern) {
+
+      _moduleCount = _typeNumber * 4 + 17;
+      _modules = function(moduleCount) {
+        var modules = new Array(moduleCount);
+        for (var row = 0; row < moduleCount; row += 1) {
+          modules[row] = new Array(moduleCount);
+          for (var col = 0; col < moduleCount; col += 1) {
+            modules[row][col] = null;
+          }
+        }
+        return modules;
+      }(_moduleCount);
+
+      setupPositionProbePattern(0, 0);
+      setupPositionProbePattern(_moduleCount - 7, 0);
+      setupPositionProbePattern(0, _moduleCount - 7);
+      setupPositionAdjustPattern();
+      setupTimingPattern();
+      setupTypeInfo(test, maskPattern);
+
+      if (_typeNumber >= 7) {
+        setupTypeNumber(te
