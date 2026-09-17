@@ -1,0 +1,18 @@
+{
+  "dayNumber": 1,
+  "dayLabel": "10/26 (一)",
+  "title": "那霸取車 ➔ 首里下門麵 ➔ 普天滿宮 ➔ Hoppepan 麵包 ➔ shima_buns 肉桂捲 ➔ 恩納住宿",
+  "stay": "恩納村 With Sea / 30 Nakama 一帶",
+  "bannerAlert": "🥐 今日高光：中午吃首里【沖繩麵 下門】。下午參拜完普天滿宮後，順路買宜野灣神級【Hoppepan麵包】與【shima_buns肉桂捲】，在開往恩納看海的車上享用奢華下午茶！",
+  "routePoints": [{"name":"那霸機場","x":70,"y":175,"time":"08:55"},{"name":"沖繩麵 下門","x":95,"y":165,"time":"11:15"},{"name":"普天滿宮","x":145,"y":138,"time":"12:45"},{"name":"Hoppepan","x":140,"y":140,"time":"13:45"},{"name":"肉桂捲","x":132,"y":144,"time":"14:15"},{"name":"PARCO(彈性)","x":105,"y":155,"time":"15:00"},{"name":"恩納Lawson","x":232,"y":82,"time":"17:30"},{"name":"恩納住宿","x":235,"y":80,"time":"18:00"}],
+  "spots": [
+    {"id":"d1-1","time":"08:55","category":"flight","typeTag":"必備","categoryLabel":"航班抵達","title":"那霸機場 (OKA) 抵達 ＆ 辦理取車","mapcode":"33 123 279*00","visited":false,"notes":"班機：IT230 (06:35 TPE ➔ 08:55 OKA)。出關領行李後搭乘租車接駁車，預估 10:30～11:00 完成取車出發。"},
+    {"id":"d1-2","time":"11:15","category":"food","typeTag":"核心餐廳","categoryLabel":"首里豚肉麵名店","title":"沖繩麵 下門 (首里末吉町)","mapcode":"33 192 682*55","visited":false,"notes":"【今日唯一重點餐廳・無牛肉】11:00–15:00 營業（週二、週三固定公休）。\n地址：那霸市首里末吉町2-124-2。濃郁天然柴魚昆布豚骨高湯、超入味軟嫩三枚肉與豬軟骨（ソーキ）。"},
+    {"id":"d1-3","time":"12:45","category":"shrine","typeTag":"御朱印核心","categoryLabel":"琉球八社・神穴","title":"普天滿宮 (情侶手寫直書き・奧宮鐘乳石洞)","mapcode":"33 438 614*20","visited":false,"notes":"【情侶御朱印第一站】順路經過宜野灣！\n• 社務所神職常態手寫直書き（約500円）。\n• 登記後由巫女免費帶領進入神聖的「奧宮鐘乳石洞穴」參拜祈福，體驗神秘莊嚴氛圍。"},
+    {"id":"d1-hoppepan","time":"13:45","category":"food","typeTag":"人氣麵包","categoryLabel":"在地神級烘焙","title":"hoppepan (ほっぺパン) 宜野灣麵包店","mapcode":"33 406 339*22","visited":false,"notes":"【普天滿宮後順路買】宜野灣在地神級排隊麵包店！推薦明太子法國麵包、各種甜鹹調理麵包，買上車當下午茶。"},
+    {"id":"d1-shimabuns","time":"14:15","category":"food","typeTag":"甜點必吃","categoryLabel":"手工肉桂捲","title":"shima_buns (手作肉桂捲専門店)","mapcode":"33 376 002*11","visited":false,"notes":"【車上的極致甜點】超受歡迎的沖繩手作肉桂捲！外酥內鬆軟、糖霜濃郁。帶著在開去恩納看海的路上配咖啡剛剛好。"},
+    {"id":"d1-4","time":"15:00","category":"shopping","typeTag":"彈性候補","categoryLabel":"大型商場","title":"SAN-A 浦添西海岸 PARCO CITY","mapcode":"33 339 060*34","visited":false,"notes":"【購物彈性停留】目的明確才逛：\n• 3F 綠區：自嘲熊 (ナガノマーケット)\n• 3F：OOFOS 雲朵拖鞋 (ABC-MART / Murasaki)\n• 2F：Salomon 選物 (VASE WONDERCUBE)\n若不想逛街可直接跳過提早前往恩納海邊。"},
+    {"id":"d1-5","time":"17:30","category":"shopping","typeTag":"超商補給","categoryLabel":"超商控必去","title":"Lawson 恩納伊武部海灘店 (回民宿前補給)","mapcode":"206 381 834*11","visited":false,"notes":"【回家前先去超商！】位於 Halekulani 飯店旁，附設超大停車場！\n必買推薦：炸雞君 (からあげクン)、沖繩限定 Orion 啤酒與海鹽冰品。"},
+    {"id":"d1-6","time":"18:00","category":"hotel","typeTag":"放鬆核心","categoryLabel":"辦理入住","title":"抵達恩納住宿 (With Sea / 30 Nakama 一帶)","mapcode":"206 381 685*45","visited":false,"notes":"辦理入住後海邊散步看晚霞。晚餐在周邊輕鬆享用沖繩傳統鄉土料理（苦瓜炒豆腐、阿古豬料理、海葡萄），無負擔迎接 Day 2。"}
+  ]
+}

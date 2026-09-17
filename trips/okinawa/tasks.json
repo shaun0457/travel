@@ -1,0 +1,8 @@
+[
+  {"id":"task-0","dateTag":"9月下旬 優先預約","priority":"urgent","title":"琉球鮨 うらおにかい (10/28 那霸晚餐) 訂位","detail":"【已列入 Day 3 必吃・純海鮮無牛肉】久茂地超人氣江戶前熟成壽司！席位極少，請於官網搶訂 10/28 (三) 18:00 席位。（若滿席切換為備案 Yakizen 焼膳）。","done":false},
+  {"id":"task-1","dateTag":"9月26日 準時開搶","priority":"urgent","title":"百年古家 大家（10/27 阿古豬火鍋晚餐）訂位","detail":"大家官網於『1個月前』開放預約 10/27 晚餐席位，純阿古豬涮涮鍋名額極搶手，請設好行事曆提醒！","done":false},
+  {"id":"task-2","dateTag":"出發前 1～2 個月","priority":"urgent","title":"瀨底透明獨木舟 (沖縄マリンスタジオ) 預約","detail":"【已在行程中・Plan A】確認 10/27 (二) 上午場次（建議 09:00～09:30）、確認海況取消退款規則與淋浴設備。","done":false},
+  {"id":"task-3","dateTag":"行前必備物品","priority":"medium","title":"情侶御朱印帳 ＆ 準備多枚 500 円硬幣","detail":"準備好各自的御朱印帳隨身攜帶（普天滿宮、波上宮、護國寺、沖宮初穗料多為 500 円，多備百圓零錢方便支付）。","done":false},
+  {"id":"task-4","dateTag":"行前必備證件","priority":"normal","title":"台灣駕照正本 ＋ 監理所日文譯本","detail":"至台灣監理所申辦日文譯本（規費 100 元）。租車現場必須同時出示『台灣駕照正本』與『日文譯本』，兩者缺一不可！","done":false},
+  {"id":"task-5","dateTag":"出發前 3 天","priority":"normal","title":"填寫 Visit Japan Web (入境與海關申報)","detail":"登入 VJW 填寫入境與申報資料，產出 QR Code 截圖存手機以利快速通關。","done":false}
+]

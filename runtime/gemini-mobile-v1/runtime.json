@@ -1,0 +1,11 @@
+{
+  "id": "gemini-mobile-v1",
+  "status": "stable",
+  "style_lock_policy": "preserve-unless-user-requests-redesign",
+  "template_parts": "template-parts/*.html",
+  "js_parts": "js-parts/*.js",
+  "notes": [
+    "Derived from the user-approved Gemini mobile design.",
+    "Trip facts live under trips/<slug>; generated HTML is disposable."
+  ]
+}

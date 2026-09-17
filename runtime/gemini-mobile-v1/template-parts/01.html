@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f0f9ff">
+<title>Travel Plan</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Travel Plan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1'}},fontFamily:{sans:['Noto Sans TC','sans-serif'],outfit:['Outfit','sans-serif']}}}}</script>
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px)}body{margin:0;-webkit-tap-highlight-color:transparent;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 85px);background:linear-gradient(to bottom,#f0f9ff,#f5fbff 40%,#f1f5f9);min-height:100vh}html{background:#f1f5f9}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.card-shadow{box-shadow:0 4px 20px -2px rgba(14,165,233,.08),0 2px 6px -1px rgba(0,0,0,.04)}.sticky-top{top:env(safe-area-inset-top,0px)}.nav-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 6px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #0284c7;outline-offset:2px}.toast-anim{animation:toastIn 2.2s cubic-bezier(.16,1,.3,1) forwards}@keyframes toastIn{0%{opacity:0;transform:translate(-50%,20px)}15%{opacity:1;transform:translate(-50%,0)}80%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-20px)}}@media(prefers-reduced-motion:reduce){.toast-anim,.animate-ping{animation:none}}
+</style>
+
+
+</head>
+<body>
+<div class="text-slate-800 font-sans">
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-slate-900/95 text-white text-xs font-medium px-4 py-2.5 rounded-full shadow-2xl pointer-events-none z-50 hidden backdrop-blur-md flex items-center gap-2" role="status" aria-live="polite">
+    <i class="fa-solid fa-check text-sky-400"></i>
+    <span id="toast-text">已複製</span>
+  </div>
+
+  <!-- 分享與同步 Modal -->
+  <div id="share-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-5 max-w-sm w-full card-shadow space-y-4 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeShareModal()" aria-label="關閉" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-sm w-7 h-7 flex items-center justify-center rounded-full bg-slate-100 transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-sm font-bold shadow-sm"><i class="fa-solid fa-share-nodes"></i></div>
+        <div>
+          <h3 class="font-extrabold text-slate-900 text-sm">分享與同步行程</h3>
+          <p class="text-[11px] text-slate-500">傳送給女友，手機同步開啟互動！</p>
+        </div>
+      </div>
+      <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center justify-center text-center space-y-2">
+        <div id="share-qrcode" class="bg-white p-2.5 rounded-xl shadow-sm border border-slate-200 inline-block w-40 h-40 [&>svg]:w-full [&>svg]:h-full"></div>
+        <span class="text-[11px] text-slate-500 font-medium">用女友手機相機掃描即可開啟（含你目前的進度）</span>
+      </div>
+      <div class="space-y-2 pt-1">
+        <button onclick="copyShareUrl()" class="w-full py-2.5 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 active:scale-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all">
+          <i class="fa-solid fa-copy"></i><span>複製專屬互動連結 (已含最新進度)</span>
+        </button>
+        <button id="native-share-btn" onclick="triggerNativeShare()" class="w-full py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+          <i class="fa-solid fa-arrow-up-from-bracket text-brand-600"></i><span>以 LINE / AirDrop 傳送</span>
+        </button>
+        <button onclick="copyShareUrl(true)" class="w-full py-2 px-3 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-bold text-xs flex items-center justify-center gap-2 transition-all">
+          <i class="fa-solid fa-link text-slate-400"></i><span>只複製乾淨網址（不含進度）</span>
+        </button>
+      </div>
+      <button onclick="resetAllProgress()" class="w-full text-[10px] text-slate-400 hover:text-rose-500 font-medium">重設此手機上的所有進度</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky sticky-top z-30 bg-white/90 backdrop-blur-md border-b border-sky-100 px-4 pt-3 pb-3">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-2">
+      <div class="min-w-0">
+        <div id="header-badges" class="flex items-center gap-2 flex-wrap"></div>
+        <h1 class="text-lg font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5 mt-0.5">
+          <span id="header-title">Travel Plan</span> <span id="header-emoji" class="text-base">✈️</span>
+        </h1>
+      </div>
+      <div class="text-right flex items-center gap-2 shrink-0">
+        <button onclick="openShareModal()" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:scale-95 transition-all">
+          <i class="fa-solid fa-share-nodes text-[11px]"></i><span>分享</span>
+        </button>
+        <div>
+          <div class="text-[9px] text-slate-400 font-medium">完成度</div>

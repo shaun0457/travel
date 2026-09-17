@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "slug": "okinawa",
+    "title": "沖繩自駕漫遊 2026",
+    "shortTitle": "沖繩自駕漫遊",
+    "emoji": "🌺",
+    "date_range": "2026-10-26 to 2026-10-29",
+    "language": "zh-TW",
+    "status": "planned",
+    "publish": true,
+    "shareTitle": "沖繩自駕漫遊 🌺 Okinawa Road Trip 2026",
+    "shareText": "這是我們 2026 沖繩自駕行程表，點開即可查看！",
+    "badges": [
+      {"icon": "plane-departure", "text": "虎航 IT230 / IT233"},
+      {"icon": "ban", "text": "無牛肉安心行程"}
+    ],
+    "features": {"itinerary": true,"routeCanvas": true,"shrineGuide": true,"candidates": true,"tasks": true,"tools": true},
+    "tabLabels": {"itinerary": "行程表","shrine": "御朱印","backup": "備選庫","tasks": "待處理","tools": "超商・工具"},
+    "template": "gemini-mobile-v1",
+    "planning_notes": ["餐廳安排以地理順路為主，避免單日塞入過多需要特地前往的正式餐廳。","候補餐廳與景點應保留為 Plan B，不為了打卡而折返。"],
+    "assumptions": ["目前為既有 Gemini 版型的架構遷移；主行程內容保持原頁面資料，不在本次架構重整中重新規劃。"],
+    "uncertain_items": ["租車公司與實際租車訂單尚未在此資料檔中確認。"],
+    "source_format": "split-json-v1"
+  }
+}

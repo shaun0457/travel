@@ -1,0 +1,9 @@
+[
+  {"id":"p-1","text":"護照（效期 6 個月以上）","checked":true},
+  {"id":"p-2","text":"台灣駕照正本 ＋ 日文譯本（自駕核心）","checked":true},
+  {"id":"p-3","text":"御朱印帳（隨身攜帶供現場手寫直書き）","checked":false},
+  {"id":"p-4","text":"日幣百圓/五百圓硬幣（神社御朱印多僅收現金）","checked":false},
+  {"id":"p-5","text":"獨木舟換洗衣物 ＆ 吸水毛巾（放車上備用）","checked":false},
+  {"id":"p-6","text":"車用手機支架 ＆ 雙孔車充線","checked":false},
+  {"id":"p-7","text":"太陽眼鏡 ＆ 物理防曬薄外套","checked":false}
+]

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "policy": "legacy-no-hero-media",
+  "siteHero": null,
+  "dayHeroes": {},
+  "notes": ["gemini-mobile-v1 目前不依賴 hero 圖；未來 runtime 增加圖片時再依 skill 規範填入可驗證來源。"]
+}

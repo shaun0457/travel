@@ -1,0 +1,11 @@
+{
+  "name": "travel-plans",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify.mjs",
+    "build": "node scripts/build.mjs",
+    "verify:build": "node scripts/verify.mjs --build",
+    "verify:mobile": "node scripts/verify-mobile-runtime.mjs"
+  }
+}

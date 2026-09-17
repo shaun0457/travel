@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "style_policy": "preserve-confirmed",
+  "recommended_option_id": "gemini-sky-mobile",
+  "confirmed_option_id": "gemini-sky-mobile",
+  "locked": true,
+  "sharing_context": {"id": "trip-group","label": "自己旅行當天用／同行人分享","source": "existing-site-migration"},
+  "ui_options": [{
+    "id": "gemini-sky-mobile",
+    "name": "Gemini 原版・天空藍行程工具",
+    "fit_statement": "保留你已確認喜歡的原始 Gemini 手機版視覺與操作方式。",
+    "archetype": "navigator",
+    "layout_profile": "okinawa-sky-roadtrip",
+    "density": "compact",
+    "navigation": "bottom-tabbar",
+    "hero_treatment": "route-canvas",
+    "card_treatment": "timeline-cards",
+    "link_treatment": "mapcode-actions",
+    "map_treatment": "route-canvas-first",
+    "motion_level": "subtle",
+    "palette": {"background": "#f0f9ff","surface": "#ffffff","ink": "#0f172a","muted": "#64748b","accent": "#0284c7","accent2": "#059669","line": "#bae6fd"},
+    "typography": {"sans": "Noto Sans TC","display": "Outfit","serif": "Noto Sans TC"},
+    "motifs": ["ocean","road-trip","clean-mobile-cards"],
+    "beginner_traits": ["手機優先","藍白清爽","每日卡片","路線圖優先","可勾選進度"]
+  }],
+  "completion_states": {"sharing_context_confirmed": true,"style_selected": true,"style_revision_recorded": true},
+  "style_revision": {"requested": true,"applied_to_option_id": "gemini-sky-mobile","summary": "使用者明確要求保留原本 Gemini 設計，不重新設計。"}
+}

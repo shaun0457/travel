@@ -1,0 +1,17 @@
+{
+  "dayNumber": 4,
+  "dayLabel": "10/29 (四)",
+  "title": "沖宮&護國神社(雙朱印) ➔ 玉泉洞 ➔ 糸滿魚市場海鮮 ➔ (瀨長島/Outlet二選一) ➔ 機場還車返台",
+  "stay": "溫暖的家 ✈️",
+  "bannerAlert": "🌊 一路向南不回頭！早晨收齊奧武山公園雙社御朱印，午餐糸滿魚市場大嗑現剖海鮮焗龍蝦，下午二選一放鬆後 15:00 啟動還車。",
+  "routePoints": [{"name":"OMO5退房","x":92,"y":165,"time":"08:30"},{"name":"沖宮/護國神社","x":88,"y":172,"time":"08:45"},{"name":"玉泉洞","x":120,"y":215,"time":"10:15"},{"name":"糸滿魚市場","x":65,"y":220,"time":"12:30"},{"name":"瀨長島/Outlet","x":65,"y":195,"time":"13:45"},{"name":"還車營業所","x":70,"y":180,"time":"15:00"},{"name":"那霸機場","x":70,"y":175,"time":"16:00"}],
+  "spots": [
+    {"id":"d4-1","time":"08:30","category":"hotel","typeTag":"退房出發","categoryLabel":"行李上車","title":"OMO5 退房出發 ➔ 一路向南行駛","mapcode":"33 156 612*25","visited":false,"notes":"行李全部放上車，直接開車往南，避開市區塞車。"},
+    {"id":"d4-2","time":"08:45","category":"shrine","typeTag":"御朱印名社","categoryLabel":"八社手寫首選","title":"沖宮 ＆ 沖繩縣護國神社 (奧武山公園)","mapcode":"33 096 701*82","visited":false,"notes":"【情侶御朱印最終章・順路南下第一站】\n• 沖宮：手寫種類最豐富，葛飾北齋八景朱印帳極精緻。\n• 隔壁護國神社：同在園區內步行 2 分鐘，雙社手寫一次圓滿收集！"},
+    {"id":"d4-3","time":"10:15","category":"view","typeTag":"核心景點","categoryLabel":"鐘乳石奇景","title":"沖繩世界文化王國 ＆ 玉泉洞","mapcode":"232 495 330*28","visited":false,"notes":"【最後一天主要景點】停留約 1.5～2 小時，穿梭壯觀的天然鐘乳石洞「玉泉洞」與琉球王國園區。"},
+    {"id":"d4-4","time":"12:30","category":"food","typeTag":"核心午餐","categoryLabel":"極鮮生猛市場","title":"糸滿魚市場 (今日正式海鮮大餐・無牛安心)","mapcode":"232 484 136*85","visited":false,"notes":"【今日唯一正式午餐・生猛海鮮饗宴】大啖現剖生魚片拼盤、海膽、焗烤龍蝦、酥炸鮪魚串與大干貝，不吃牛的最佳天堂。"},
+    {"id":"d4-5","time":"13:45","category":"view","typeTag":"二選一","categoryLabel":"登機前放鬆","title":"【二選一】Option A: 瀨長島 / Option B: ASHIBINAA","mapcode":"33 002 602*06","visited":false,"notes":"【切勿兩者皆趕・二選一即可】\n• Option A 瀨長島：白色希臘風看海、喝咖啡、近距離看飛機起降。\n• Option B ASHIBINAA Outlet：採購 BEAMS OUTLET、Salomon 直營店。"},
+    {"id":"d4-6","time":"15:00","category":"flight","typeTag":"自駕還車","categoryLabel":"加油與手續","title":"營業所周邊加油 ＆ 辦理還車手續","mapcode":"232 543 200*11","visited":false,"notes":"15:00 準時啟動還車流程：加油、驗車、交車，搭乘租車公司免費專車接駁至那霸機場航廈。"},
+    {"id":"d4-7","time":"16:00","category":"flight","typeTag":"搭機返台","categoryLabel":"國際線出發","title":"抵達機場 ➔ 虎航 IT233 返台 (18:40 起飛)","mapcode":"33 123 279*00","visited":false,"notes":"16:00 前抵達國際線櫃檯辦理 Check-in、托運行李、安檢，18:40 起飛，19:30 平安抵達桃園 TPE。"}
+  ]
+}
