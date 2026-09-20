@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "draft",
-  "generated_at": "2026-09-20T13:42:00Z",
+  "generated_at": "2026-09-20T14:05:00Z",
   "based_on": {
     "confirmed_itinerary": false,
     "discovery_place_ids": []
@@ -25,74 +25,77 @@
     }
   },
   "strategy": {
-    "lodging_pattern": "1/2/1",
-    "travel_style": "slow family resort trip; hotels are part of the experience; avoid shopping-heavy city days",
-    "night_1": "Tsukiji / Higashi-Ginza / Shiodome fringe rather than Ginza shopping core",
-    "night_2_3": "Kawaguchiko: prefer Fuji-view hotel with in-house onsen and relaxed breakfast/dinner, stay two nights",
-    "night_4": "Asakusa / Oshiage for Edo atmosphere and easy Narita departure",
-    "route": "Haneda -> Higashi-Ginza/Shiodome -> Tsukiji morning -> Odawara rental car -> Hakone -> Kawaguchiko/Oshino Hakkai -> return rental car -> Asakusa/Skytree -> Narita",
-    "priority": "Family vacation feeling, see Mt. Fuji, minimal hotel changes, minimal city shopping, and use a car only for satellite-city travel",
-    "car_policy": "Do not rent in Tokyo for all five days. Preferred pattern is public transit in Tokyo, then rent around Odawara for Hakone/Fuji area and return around Kawaguchiko or Otsuki before re-entering Tokyo.",
-    "tsukiji_policy": "Do not rely on Sunday 10/18 for the full Tsukiji experience because many shops close on Sundays. Preferred slot is Day 2 morning around 09:00 before leaving Tokyo."
+    "lodging_pattern": "2/1/1",
+    "travel_style": "slow family resort trip; avoid shopping-heavy city days; keep Fuji-area driving local only",
+    "night_1_2": "Tokyo central/east: Tsukiji / Higashi-Ginza / Shiodome side, two nights",
+    "night_3": "Kawaguchiko only on 2026-10-16, one night with in-house onsen preferred",
+    "night_4": "Asakusa / Oshiage for Edo atmosphere, yakitori dinner, and easy Narita departure",
+    "route": "Haneda -> Tokyo two nights -> Kawaguchiko/Oshino Hakkai one night -> Asakusa/Skytree -> Narita",
+    "priority": "Family vacation feeling, Mt. Fuji scenery, low hotel-change burden, minimal city shopping",
+    "car_policy": "Do not rent in Tokyo for the full trip. Preferred option is public transit from Tokyo to the Fuji area, then a short local rental around Kawaguchiko/Fujiyoshida for 10/16-10/17 if useful.",
+    "tsukiji_policy": "Use Day 2 morning for Tsukiji; do not rely on Sunday 10/18 for the full Tsukiji experience.",
+    "hakone_policy": "Hakone removed from this trip. Do not route through Odawara or Gotemba unless later needed for another confirmed stop."
   },
   "proposals": [
     {
       "day": 1,
       "date": "2026-10-14",
-      "title": "松山 -> 羽田 13:10 -> 東京第一晚慢慢進入狀態",
-      "overnight": "Tsukiji / Higashi-Ginza / Shiodome fringe",
+      "title": "松山 -> 羽田 13:10 -> 東京慢慢開始",
+      "overnight": "Tokyo central/east",
       "items": [
         "CI220 松山 09:00 出發，羽田 T3 13:10 抵達",
-        "入境、領行李後進東京，不租車；預期真正到飯店約 15:00 前後或更晚，避免安排築地主要行程",
-        "入住築地／東銀座／汐留外圍一帶，先休息",
-        "傍晚只做低強度散步：濱離宮周邊、東銀座或銀座街景擇一；銀座不安排百貨巡禮",
-        "晚餐保持彈性，不把第一晚排成正式長套餐",
-        "若兩間東京飯店都可代收宅配，可把大行李從第一晚飯店直接寄往 Day 4 淺草／押上飯店，中間兩晚只帶小行李"
+        "入境、領行李後搭大眾運輸進東京，不租車；預期約 15:00-16:00 到飯店",
+        "入住築地／東銀座／汐留一帶，先休息",
+        "傍晚只安排低強度散步：東銀座、銀座街景或濱離宮周邊擇一",
+        "銀座只作城市散步與晚餐，不排百貨巡禮或長時間購物",
+        "第一晚晚餐保持彈性"
       ],
-      "planning_note": "13:10 抵達羽田後再前往築地，會錯過多數市場最有氣氛的時段，因此不把築地塞在 Day 1。"
+      "planning_note": "抵達日不塞築地與遠距離景點，維持家人度假節奏。"
     },
     {
       "day": 2,
       "date": "2026-10-15",
-      "title": "築地早餐／早午餐 -> 小田原取車 -> 箱根慢遊 -> 河口湖度假飯店",
-      "overnight": "Kawaguchiko",
+      "title": "築地早餐 -> 東京慢遊日",
+      "overnight": "Tokyo central/east",
       "items": [
-        "約 09:00 到築地場外市場，安排 1 至 1.5 小時早餐／早午餐與市場散步；不做大量排隊店蒐集",
-        "約 10:30 前後離開築地，搭大眾運輸前往小田原",
-        "到小田原站周邊才取租車，避免在東京都心駕駛與停車",
-        "箱根不跑完整大迴圈；核心選蘆之湖／箱根神社，時間、體力與天氣都好再加大涌谷",
-        "下午經御殿場方向開往河口湖，不安排 Outlet 購物",
-        "傍晚入住河口湖飯店，泡館內溫泉、吃飯、休息；若富士山露出就直接在飯店或湖畔看山"
+        "約 09:00 到築地場外市場，安排早餐／早午餐與市場散步",
+        "之後可接濱離宮或東銀座，避免跨城趕場",
+        "下午保留咖啡、休息、散步時間；銀座只挑真正有興趣的一兩個點",
+        "晚餐自由安排，不另外加入高密度購物行程",
+        "若 Day 4 住宿確定在淺草／押上，可考慮把大型行李提前寄往 Day 4 飯店；10/16 河口湖只帶一晚小行李"
       ],
-      "planning_note": "Day 2 因加入築地，箱根必須維持精華版而非完整環線；租車實際取車時間待飯店位置與鐵路班次確定後再鎖定。"
+      "planning_note": "這天作為完整東京日，節奏比原本築地後趕箱根輕鬆很多。"
     },
     {
       "day": 3,
       "date": "2026-10-16",
-      "title": "富士山慢旅：河口湖 + 忍野八海 + 飯店溫泉",
+      "title": "東京 -> 河口湖：富士山度假日",
       "overnight": "Kawaguchiko",
       "items": [
-        "不設過早固定出發時間；起床先看富士山能見度，天氣好就先看山再吃早餐",
-        "上午以河口湖北岸／湖畔景觀為主，保留咖啡、散步與停留時間",
-        "中午前後開車前往忍野八海，體驗傳統聚落、泉水與富士山景觀",
-        "下午只再選一個低負擔景點或咖啡店，不追求景點數量",
-        "約 16:00-17:00 回飯店，留足時間泡館內溫泉、休息與吃晚餐"
+        "早上由東京搭巴士或鐵路前往河口湖／富士吉田方向",
+        "若採租車，優先在河口湖／富士吉田附近取車，而不是從東京都心一路自駕",
+        "抵達後以富士山能見度決定順序：天氣好就先去河口湖北岸／大石公園等觀景點",
+        "同日安排忍野八海；若體力或天氣不理想，可縮成河口湖湖畔＋飯店",
+        "下午只再加一個低負擔景點或咖啡，不追求景點數量",
+        "約 16:00-17:00 入住河口湖飯店，館內溫泉、晚餐、休息"
       ],
-      "planning_note": "溫泉不另設專門行程；住宿本身需具備好用的館內溫泉／大浴場，最好兼具富士山或河口湖景觀。"
+      "planning_note": "河口湖只住一晚，因此優先把『看富士山＋忍野八海＋飯店休息』做好，不塞箱根或其他遠距離點。"
     },
     {
       "day": 4,
       "date": "2026-10-17",
-      "title": "河口湖悠閒早晨 -> 還車 -> 淺草江戶散策 -> 晴空塔",
+      "title": "河口湖清晨富士山 -> 回東京 -> 淺草江戶散策 -> 晴空塔 -> TORIYOSHI",
       "overnight": "Asakusa / Oshiage",
       "items": [
-        "早餐與最後一次富士山景觀時間保留，不急著清晨離開",
-        "上午退房後在河口湖或大月方向還車，再用大眾運輸回東京；不把租車帶進東京都心",
+        "早晨保留第二次看富士山的機會；天氣好就先看山再吃早餐",
+        "早餐後可再短停湖畔；若有租車，在河口湖／富士吉田附近還車",
+        "中午前後搭大眾運輸返回東京，不把租車帶進東京都心",
         "下午入住淺草／押上並取回大型行李",
-        "淺草以江戶／下町氛圍為主：雷門、仲見世、淺草寺，加上巷弄散步與坐下喝茶",
-        "傍晚視體力前往晴空塔",
-        "晚餐目前優先選浅草 TORIYOSHI：休閒燒鳥／雞料理，比高階 omakase 更符合家人度假節奏；訂位前再確認無牛需求"
-      ]
+        "淺草以江戶／下町氛圍為主：雷門、仲見世、淺草寺、巷弄散步與坐下喝茶",
+        "傍晚視家人體力前往晴空塔看夕景／夜景",
+        "晚餐優先選浅草 TORIYOSHI，維持休閒燒鳥／雞料理路線；訂位前再確認無牛需求"
+      ],
+      "planning_note": "如果早上富士山狀態很好，可延後離開河口湖；晴空塔是可彈性刪減項，不犧牲度假感去趕。"
     },
     {
       "day": 5,
@@ -100,77 +103,51 @@
       "title": "淺草／押上慢早晨 -> 成田 T2 -> 桃園",
       "overnight": null,
       "items": [
-        "10/18 為星期日；築地場外市場雖仍有部分店營業，但不當作主要築地日",
-        "睡晚一點、早餐或在隅田川附近短散步",
-        "下午保留充足緩衝，由淺草／押上方向前往成田機場 T2",
-        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達；建議約 17:00 前後抵達機場"
-      ]
+        "睡晚一點，安排淺草／隅田川附近早餐與短散步",
+        "若 Day 4 因回東京較晚沒完整逛淺草，可把部分淺草行程補到上午",
+        "中午至下午保留自由時間與休息，不再硬塞遠距離景點",
+        "約 16:00-16:30 從淺草／押上方向前往成田機場 T2",
+        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達"
+      ],
+      "planning_note": "10/18 是星期日，不把築地作為最後一天的主要行程。"
     }
   ],
   "rental_car_option": {
-    "recommended": true,
-    "scope": "Day 2 after Tsukiji to Day 4 morning only",
-    "preferred_pickup": "Odawara Station area",
-    "preferred_return": "Kawaguchiko; Otsuki is a backup if train connection or rental conditions are better",
+    "recommended": "optional",
+    "scope": "Fuji area only, roughly 10/16 arrival to 10/17 morning/noon",
+    "preferred_pickup": "Kawaguchiko or Fujiyoshida area",
+    "preferred_return": "Same local area before returning to Tokyo",
     "why": [
-      "Avoid Tokyo city driving and parking",
-      "Hakone, Kawaguchiko and Oshino Hakkai become much easier with family luggage and fewer transfers",
-      "Allows spontaneous stops when Mt. Fuji visibility is good",
-      "Fits the requested satellite-city-only rental policy"
+      "No need to drive from Tokyo or through Hakone now that Hakone is removed",
+      "A local car makes Kawaguchiko, Oshino Hakkai and flexible Fuji-view stops easier for family travel",
+      "Same-area pickup/return avoids unnecessary one-way rental fees and city driving",
+      "Lets the group change plans quickly based on Mt. Fuji visibility"
     ],
+    "public_transit_alternative": "Tokyo -> Kawaguchiko by highway bus or rail, then local buses/taxis for Kawaguchiko and Oshino Hakkai if the group prefers not to drive.",
     "verify_before_booking": [
-      "one-way fee and permitted return branch",
+      "local branch opening hours",
       "car class availability",
-      "ETC card option",
-      "international / Japanese translation driving document requirements for the actual driver",
+      "ETC needs if any",
+      "Japanese driving document requirements for the actual driver",
       "hotel parking"
     ]
   },
   "food_preferences": {
     "yakitori": "Current preferred restaurant is 浅草 TORIYOSHI. User prefers a casual true yakitori / chicken-focused meal over a high-end omakase experience and wants to avoid beef. Reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
   },
-  "kawaguchiko_hotel_research": {
-    "dates": "2026-10-15 to 2026-10-17",
-    "target_budget": "about TWD 20,000 total for two nights",
-    "rate_basis": "Published comparison rates checked 2026-09-20; exact examples below are for 2 guests / 1 room and are dynamic. Family occupancy or multiple rooms can materially change the total.",
-    "shortlist": [
-      {
-        "name": "Fuji View Hotel",
-        "fit": "Best overall resort feeling within/near budget: large garden, Mt. Fuji-view rooms available, natural onsen with indoor/outdoor baths.",
-        "published_rate": "2026-10-15 about USD 370 + 2026-10-16 about USD 261 for 2 guests, taxes/fees included in the comparison source; roughly at the TWD 20k ceiling depending on exchange rate and room type.",
-        "priority": "first choice if the live total stays at or below budget"
-      },
-      {
-        "name": "HOTEL MYSTAYS Fuji Onsen Resort",
-        "fit": "Best value: top-floor natural onsen and outdoor bath have Mt. Fuji views; Fuji-view rooms available. Less lake-resort atmosphere than Fuji View Hotel but very practical with a rental car.",
-        "published_rate": "2026-10-15 about USD 174 + 2026-10-16 about USD 203 for 2 guests, taxes/fees included in the comparison source.",
-        "priority": "best value / safest budget choice"
-      },
-      {
-        "name": "Hotel Route-Inn Kawaguchiko",
-        "fit": "Budget backup directly by Lake Kawaguchi. Top-floor natural onsen overlooks the lake with Mt. Fuji in the background; breakfast included. More functional/business-hotel feeling and smaller rooms.",
-        "published_rate": "2026-10-15 about USD 114 + 2026-10-16 about USD 95 for 2 guests, taxes/fees included in the comparison source.",
-        "priority": "budget backup"
-      },
-      {
-        "name": "Kasuitei Ooya",
-        "fit": "Traditional ryokan feeling, lakefront, public baths and private/open-air bath room options, meals can be part of the stay; strong vacation atmosphere.",
-        "published_rate": "Official standard plans advertise from JPY 19,800 per person; exact 10/15-10/17 live quote was not found in the current search, so budget fit must be confirmed for the actual party size.",
-        "priority": "ryokan alternative if live price fits"
-      }
-    ]
+  "hotel_research": {
+    "status": "paused",
+    "note": "Previous two-night Kawaguchiko hotel research is obsolete because the plan changed to one night only on 2026-10-16. Do not treat earlier two-night prices as current planning facts."
   },
   "open_questions": [
     "同行家人人數與年齡／步行耐受度",
-    "誰會開車，以及是否能接受日本右駕／左側通行",
-    "河口湖住宿預算 NT$20,000 是整個家庭兩晚總額，還是每間房兩晚總額；需要確認人數與房間數才能鎖定真實可訂價格",
-    "房間是否一定要直接看到富士山，或公共空間／大浴場有景即可",
-    "是否希望河口湖飯店包含一泊二食，進一步提高度假感",
+    "10/16-10/17 富士山區是否確定要租車，或先以大眾運輸版本為主",
     "無牛是單純飲食偏好，還是需要連牛油／牛高湯／交叉接觸都完全避免",
     "Google Maps share https://maps.app.goo.gl/ZrFejLQJLHSes9cp8?g_st=ic 尚未能解析地點名稱，已存 discovery inbox 等待辨識"
   ],
   "notes": [
     "此檔案為規劃草案，不會覆蓋 confirmed days，待使用者明確表示套用後再升級為正式行程。",
-    "城市段刻意降低購物與景點密度；郊區段把飯店休息、溫泉與景觀本身視為主要行程。"
+    "箱根已移除；河口湖改為 10/16-10/17 一晚。",
+    "住宿節奏由 1/2/1 改為 2/1/1。"
   ]
 }
