@@ -1,10 +1,28 @@
 {
   "schema_version": 1,
   "status": "draft",
-  "generated_at": "2026-09-20T13:20:00Z",
+  "generated_at": "2026-09-20T13:35:00Z",
   "based_on": {
     "confirmed_itinerary": false,
     "discovery_place_ids": []
+  },
+  "confirmed_transport": {
+    "outbound": {
+      "date": "2026-10-14",
+      "flight": "CI220",
+      "from": "Taipei Songshan T1",
+      "to": "Tokyo Haneda T3",
+      "departure": "09:00",
+      "arrival": "13:10"
+    },
+    "return": {
+      "date": "2026-10-18",
+      "flight": "CI109",
+      "from": "Tokyo Narita T2",
+      "to": "Taipei Taoyuan T2",
+      "departure": "20:00",
+      "arrival": "22:45"
+    }
   },
   "strategy": {
     "lodging_pattern": "1/2/1",
@@ -12,39 +30,41 @@
     "night_1": "Tsukiji / Higashi-Ginza / Shiodome fringe rather than Ginza shopping core",
     "night_2_3": "Kawaguchiko: prefer Fuji-view hotel with in-house onsen and relaxed breakfast/dinner, stay two nights",
     "night_4": "Asakusa / Oshiage for Edo atmosphere and easy Narita departure",
-    "route": "Haneda -> Tsukiji/Higashi-Ginza -> Odawara rental car -> Hakone -> Kawaguchiko/Oshino Hakkai -> return rental car -> Asakusa/Skytree -> Narita",
+    "route": "Haneda -> Higashi-Ginza/Shiodome -> Tsukiji morning -> Odawara rental car -> Hakone -> Kawaguchiko/Oshino Hakkai -> return rental car -> Asakusa/Skytree -> Narita",
     "priority": "Family vacation feeling, see Mt. Fuji, minimal hotel changes, minimal city shopping, and use a car only for satellite-city travel",
-    "car_policy": "Do not rent in Tokyo for all five days. Preferred pattern is public transit in Tokyo, then rent around Odawara for Hakone/Fuji area and return around Kawaguchiko or Otsuki before re-entering Tokyo."
+    "car_policy": "Do not rent in Tokyo for all five days. Preferred pattern is public transit in Tokyo, then rent around Odawara for Hakone/Fuji area and return around Kawaguchiko or Otsuki before re-entering Tokyo.",
+    "tsukiji_policy": "Do not rely on Sunday 10/18 for the full Tsukiji experience because many shops close on Sundays. Preferred slot is Day 2 morning around 09:00 before leaving Tokyo."
   },
   "proposals": [
     {
       "day": 1,
       "date": "2026-10-14",
-      "title": "羽田抵達 -> 築地慢慢吃 -> 東京第一晚",
+      "title": "松山 -> 羽田 13:10 -> 東京第一晚慢慢進入狀態",
       "overnight": "Tsukiji / Higashi-Ginza / Shiodome fringe",
       "items": [
-        "羽田機場抵達後進東京，不租車",
-        "若中午前後抵達：先寄放行李，再到築地場外市場吃午餐、海鮮與小吃；以坐下吃與慢慢逛為主，不做趕場式打卡",
-        "若抵達已偏晚：築地延到 Day 2 早上，Day 1 只安排飯店休息、附近散步與晚餐",
-        "下午可在築地、濱離宮、東銀座一帶散步或直接回飯店休息",
-        "銀座只保留輕量散步或一間真正想逛的店，不安排長時間購物巡禮",
+        "CI220 松山 09:00 出發，羽田 T3 13:10 抵達",
+        "入境、領行李後進東京，不租車；預期真正到飯店約 15:00 前後或更晚，避免安排築地主要行程",
+        "入住築地／東銀座／汐留外圍一帶，先休息",
+        "傍晚只做低強度散步：濱離宮周邊、東銀座或銀座街景擇一；銀座不安排百貨巡禮",
+        "晚餐可安排東京第一餐；若想吃燒鳥，可從銀座／淺草／押上的無牛候選中依住宿與訂位狀況選擇",
         "若兩間東京飯店都可代收宅配，可把大行李從第一晚飯店直接寄往 Day 4 淺草／押上飯店，中間兩晚只帶小行李"
       ],
-      "planning_note": "築地一般觀光客最適合約 09:00-14:00；實際安排取決於羽田抵達時間。"
+      "planning_note": "13:10 抵達羽田後再前往築地，會錯過多數市場最有氣氛的時段，因此不把築地塞在 Day 1。"
     },
     {
       "day": 2,
       "date": "2026-10-15",
-      "title": "東京 -> 小田原取車 -> 箱根慢遊 -> 河口湖度假飯店",
+      "title": "築地早餐／早午餐 -> 小田原取車 -> 箱根慢遊 -> 河口湖度假飯店",
       "overnight": "Kawaguchiko",
       "items": [
-        "若 Day 1 未去築地，早上先用約 1.5 小時完成築地早餐／早午餐，再前往小田原；若 Day 1 已完成築地，則睡晚一點再出發",
-        "東京搭電車到小田原後才取車，避免在東京都心駕駛與停車",
-        "箱根不跑完整大迴圈；核心只選蘆之湖／箱根神社，體力與天氣好再加大涌谷",
-        "下午經御殿場方向開往河口湖，不另外安排購物 Outlet",
-        "傍晚提早入住河口湖飯店，泡館內溫泉、吃飯、休息；若富士山露出就直接在飯店或湖畔看山"
+        "約 09:00 到築地場外市場，安排 1 至 1.5 小時早餐／早午餐與市場散步；不做大量排隊店蒐集",
+        "約 10:30 前後離開築地，搭大眾運輸前往小田原",
+        "到小田原站周邊才取租車，避免在東京都心駕駛與停車",
+        "箱根不跑完整大迴圈；核心選蘆之湖／箱根神社，時間、體力與天氣都好再加大涌谷",
+        "下午經御殿場方向開往河口湖，不安排 Outlet 購物",
+        "傍晚入住河口湖飯店，泡館內溫泉、吃飯、休息；若富士山露出就直接在飯店或湖畔看山"
       ],
-      "planning_note": "租車偏好：小田原取車，之後在河口湖或大月一帶異地還車；實際店點、異地還車費與車型需訂車時確認。"
+      "planning_note": "Day 2 因加入築地，箱根必須維持精華版而非完整環線；租車實際取車時間待飯店位置與鐵路班次確定後再鎖定。"
     },
     {
       "day": 3,
@@ -70,24 +90,25 @@
         "上午退房後在河口湖或大月方向還車，再用大眾運輸回東京；不把租車帶進東京都心",
         "下午入住淺草／押上並取回大型行李",
         "淺草以江戶／下町氛圍為主：雷門、仲見世、淺草寺，加上巷弄散步與坐下喝茶",
-        "傍晚再前往晴空塔；若家人累，可以淺草與晴空塔二擇一延長停留，不硬趕"
+        "傍晚前往晴空塔；晚餐可優先評估押上的高階純燒鳥候選，如果訂不到則改淺草較休閒的雞料理／燒鳥"
       ]
     },
     {
       "day": 5,
       "date": "2026-10-18",
-      "title": "淺草／押上慢早晨 -> 成田機場",
+      "title": "淺草／押上慢早晨 -> 成田 T2 -> 桃園",
       "overnight": null,
       "items": [
-        "依回程班機時間睡晚一點、吃早餐或在隅田川附近短散步",
-        "由淺草／押上方向利用京成系統前往成田機場",
-        "不在最後一天塞購物行程，保留機場交通與家人體力緩衝"
+        "10/18 為星期日；築地場外市場雖仍有部分店營業，但不當作主要築地日",
+        "睡晚一點、早餐或在隅田川附近短散步",
+        "下午保留充足緩衝，由淺草／押上方向前往成田機場 T2",
+        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達；建議約 17:00 前後抵達機場"
       ]
     }
   ],
   "rental_car_option": {
     "recommended": true,
-    "scope": "Day 2 to Day 4 morning only",
+    "scope": "Day 2 after Tsukiji to Day 4 morning only",
     "preferred_pickup": "Odawara Station area",
     "preferred_return": "Kawaguchiko; Otsuki is a backup if train connection or rental conditions are better",
     "why": [
@@ -104,12 +125,15 @@
       "hotel parking"
     ]
   },
+  "food_preferences": {
+    "yakitori": "User wants a true yakitori / chicken-focused restaurant and wants to avoid beef. Prefer places whose published course/menu is chicken-centered and directly reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
+  },
   "open_questions": [
-    "羽田抵達時間與成田回程航班時間",
     "同行家人人數與年齡／步行耐受度",
     "誰會開車，以及是否能接受日本右駕／左側通行",
     "河口湖兩晚住宿預算；房間是否一定要直接看到富士山，或公共空間／大浴場有景即可",
-    "是否希望河口湖飯店包含一泊二食，進一步提高度假感"
+    "是否希望河口湖飯店包含一泊二食，進一步提高度假感",
+    "無牛是單純飲食偏好，還是需要連牛油／牛高湯／交叉接觸都完全避免"
   ],
   "notes": [
     "此檔案為規劃草案，不會覆蓋 confirmed days，待使用者明確表示套用後再升級為正式行程。",
