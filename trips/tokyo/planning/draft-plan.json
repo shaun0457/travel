@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "draft",
-  "generated_at": "2026-09-20T14:05:00Z",
+  "generated_at": "2026-09-20T14:12:00Z",
   "based_on": {
     "confirmed_itinerary": false,
     "discovery_place_ids": []
@@ -24,13 +24,26 @@
       "arrival": "22:45"
     }
   },
+  "confirmed_lodging": {
+    "kawaguchiko": {
+      "name_zh": "富士之宿溫泉旅館 大池飯店",
+      "name_ja": "富士山の見える温泉旅館 大池ホテル",
+      "name_en": "Oike Hotel",
+      "address": "6713-103 Funatsu, Fujikawaguchiko, Yamanashi 401-0301, Japan",
+      "check_in": "2026-10-16 15:00-18:00",
+      "check_out": "2026-10-17 before 10:00",
+      "nights": 1,
+      "status": "booked",
+      "note": "Do not store booking reference, PIN, payment card, or other sensitive reservation credentials in the repository."
+    }
+  },
   "strategy": {
     "lodging_pattern": "2/1/1",
     "travel_style": "slow family resort trip; avoid shopping-heavy city days; keep Fuji-area driving local only",
     "night_1_2": "Tokyo central/east: Tsukiji / Higashi-Ginza / Shiodome side, two nights",
-    "night_3": "富士之宿, Kawaguchiko, 2026-10-16 one night; exact property name still to confirm because multiple Kawaguchiko hotels use similar Chinese names",
+    "night_3": "富士之宿溫泉旅館 大池飯店 (Oike Hotel), Kawaguchiko, booked for 2026-10-16",
     "night_4": "Asakusa / Oshiage for Edo atmosphere, yakitori dinner, and easy Narita departure",
-    "route": "Haneda -> Tokyo two nights -> Kawaguchiko/Oshino Hakkai one night -> Asakusa/Skytree -> Narita",
+    "route": "Haneda -> Tokyo two nights -> Kawaguchiko/Oshino Hakkai one night at Oike Hotel -> Asakusa/Skytree -> Narita",
     "priority": "Family vacation feeling, Mt. Fuji scenery, low hotel-change burden, minimal city shopping",
     "car_policy": "Do not rent in Tokyo for the full trip. Preferred option is public transit from Tokyo to the Fuji area, then a short local rental around Kawaguchiko/Fujiyoshida for 10/16-10/17 if useful.",
     "tsukiji_policy": "Use Day 2 morning for Tsukiji; do not rely on Sunday 10/18 for the full Tsukiji experience.",
@@ -70,14 +83,14 @@
       "day": 3,
       "date": "2026-10-16",
       "title": "東京 -> 河口湖：富士山度假日",
-      "overnight": "富士之宿（河口湖；完整飯店名稱待確認）",
+      "overnight": "富士之宿溫泉旅館 大池飯店 (Oike Hotel)",
       "items": [
         "早上由東京搭巴士或鐵路前往河口湖／富士吉田方向",
         "若採租車，優先在河口湖／富士吉田附近取車，而不是從東京都心一路自駕",
         "抵達後以富士山能見度決定順序：天氣好就先去河口湖北岸／大石公園等觀景點",
         "同日安排忍野八海；若體力或天氣不理想，可縮成河口湖湖畔＋飯店",
         "下午只再加一個低負擔景點或咖啡，不追求景點數量",
-        "約 16:00-17:00 入住富士之宿，之後以飯店休息、館內設施與晚餐為主"
+        "15:00-18:00 之間入住富士之宿溫泉旅館 大池飯店，之後以館內溫泉、晚餐與休息為主"
       ],
       "planning_note": "河口湖只住一晚，因此優先把『看富士山＋忍野八海＋飯店休息』做好，不塞箱根或其他遠距離點。"
     },
@@ -87,15 +100,15 @@
       "title": "河口湖清晨富士山 -> 回東京 -> 淺草江戶散策 -> 晴空塔 -> TORIYOSHI",
       "overnight": "Asakusa / Oshiage",
       "items": [
-        "在富士之宿早晨保留第二次看富士山的機會；天氣好就先看山再吃早餐",
-        "早餐後可再短停湖畔；若有租車，在河口湖／富士吉田附近還車",
+        "早晨保留第二次看富士山的機會；天氣好就先看山再吃早餐",
+        "10:00 前從富士之宿溫泉旅館 大池飯店退房；若有租車，在河口湖／富士吉田附近還車",
         "中午前後搭大眾運輸返回東京，不把租車帶進東京都心",
         "下午入住淺草／押上並取回大型行李",
         "淺草以江戶／下町氛圍為主：雷門、仲見世、淺草寺、巷弄散步與坐下喝茶",
         "傍晚視家人體力前往晴空塔看夕景／夜景",
         "晚餐優先選浅草 TORIYOSHI，維持休閒燒鳥／雞料理路線；訂位前再確認無牛需求"
       ],
-      "planning_note": "如果早上富士山狀態很好，可延後離開河口湖；晴空塔是可彈性刪減項，不犧牲度假感去趕。"
+      "planning_note": "如果早上富士山狀態很好，可在退房前把飯店與周邊景觀時間用足；晴空塔是可彈性刪減項，不犧牲度假感去趕。"
     },
     {
       "day": 5,
@@ -129,20 +142,19 @@
       "car class availability",
       "ETC needs if any",
       "Japanese driving document requirements for the actual driver",
-      "hotel parking and any hotel shuttle once the exact 富士之宿 property is confirmed"
+      "Oike Hotel parking and arrival procedure"
     ]
   },
   "food_preferences": {
     "yakitori": "Current preferred restaurant is 浅草 TORIYOSHI. User prefers a casual true yakitori / chicken-focused meal over a high-end omakase experience and wants to avoid beef. Reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
   },
   "hotel_research": {
-    "status": "selected",
-    "selected_hotel": "富士之宿",
-    "stay_date": "2026-10-16 to 2026-10-17",
-    "note": "User selected 富士之宿 for the one-night Kawaguchiko stay. Exact property name/address still needs confirmation because 富士之宿 大橋 and 湯煙富士之宿 大池 are both plausible Chinese-name matches. Previous hotel shortlist should no longer drive recommendations."
+    "status": "confirmed",
+    "selected": "富士之宿溫泉旅館 大池飯店 (Oike Hotel)",
+    "dates": "2026-10-16 to 2026-10-17",
+    "note": "Other Kawaguchiko hotel candidates are no longer active planning options unless the booking changes."
   },
   "open_questions": [
-    "富士之宿的完整飯店名稱或訂房連結，用來確認是富士之宿 大橋、湯煙富士之宿 大池或其他住宿，之後才能精確安排接送與停車",
     "同行家人人數與年齡／步行耐受度",
     "10/16-10/17 富士山區是否確定要租車，或先以大眾運輸版本為主",
     "無牛是單純飲食偏好，還是需要連牛油／牛高湯／交叉接觸都完全避免",
@@ -152,6 +164,6 @@
     "此檔案為規劃草案，不會覆蓋 confirmed days，待使用者明確表示套用後再升級為正式行程。",
     "箱根已移除；河口湖改為 10/16-10/17 一晚。",
     "住宿節奏由 1/2/1 改為 2/1/1。",
-    "河口湖住宿已由使用者選為富士之宿；待確認完整飯店名稱。"
+    "10/16 河口湖住宿已確認為富士之宿溫泉旅館 大池飯店。"
   ]
 }
