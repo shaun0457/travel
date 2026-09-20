@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "draft",
-  "generated_at": "2026-09-20T13:35:00Z",
+  "generated_at": "2026-09-20T13:42:00Z",
   "based_on": {
     "confirmed_itinerary": false,
     "discovery_place_ids": []
@@ -46,7 +46,7 @@
         "入境、領行李後進東京，不租車；預期真正到飯店約 15:00 前後或更晚，避免安排築地主要行程",
         "入住築地／東銀座／汐留外圍一帶，先休息",
         "傍晚只做低強度散步：濱離宮周邊、東銀座或銀座街景擇一；銀座不安排百貨巡禮",
-        "晚餐可安排東京第一餐；若想吃燒鳥，可從銀座／淺草／押上的無牛候選中依住宿與訂位狀況選擇",
+        "晚餐保持彈性，不把第一晚排成正式長套餐",
         "若兩間東京飯店都可代收宅配，可把大行李從第一晚飯店直接寄往 Day 4 淺草／押上飯店，中間兩晚只帶小行李"
       ],
       "planning_note": "13:10 抵達羽田後再前往築地，會錯過多數市場最有氣氛的時段，因此不把築地塞在 Day 1。"
@@ -90,7 +90,8 @@
         "上午退房後在河口湖或大月方向還車，再用大眾運輸回東京；不把租車帶進東京都心",
         "下午入住淺草／押上並取回大型行李",
         "淺草以江戶／下町氛圍為主：雷門、仲見世、淺草寺，加上巷弄散步與坐下喝茶",
-        "傍晚前往晴空塔；晚餐可優先評估押上的高階純燒鳥候選，如果訂不到則改淺草較休閒的雞料理／燒鳥"
+        "傍晚視體力前往晴空塔",
+        "晚餐目前優先選浅草 TORIYOSHI：休閒燒鳥／雞料理，比高階 omakase 更符合家人度假節奏；訂位前再確認無牛需求"
       ]
     },
     {
@@ -126,7 +127,7 @@
     ]
   },
   "food_preferences": {
-    "yakitori": "User wants a true yakitori / chicken-focused restaurant and wants to avoid beef. Prefer places whose published course/menu is chicken-centered and directly reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
+    "yakitori": "Current preferred restaurant is 浅草 TORIYOSHI. User prefers a casual true yakitori / chicken-focused meal over a high-end omakase experience and wants to avoid beef. Reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
   },
   "open_questions": [
     "同行家人人數與年齡／步行耐受度",
