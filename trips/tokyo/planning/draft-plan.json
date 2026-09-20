@@ -1,8 +1,90 @@
 {
   "schema_version": 1,
-  "status": "not_generated",
-  "generated_at": null,
-  "based_on": {"confirmed_itinerary": true, "discovery_place_ids": []},
-  "proposals": [],
-  "notes": ["東京家族 5 日遊目前只有日期與家人同行條件；待加入航班、住宿或候選景點後再產生規劃草案。"]
+  "status": "draft",
+  "generated_at": "2026-09-20T12:49:00Z",
+  "based_on": {
+    "confirmed_itinerary": false,
+    "discovery_place_ids": []
+  },
+  "strategy": {
+    "lodging_pattern": "1/2/1",
+    "night_1": "Ginza / Higashi-Ginza",
+    "night_2_3": "Kawaguchiko (prefer Fuji-view onsen hotel with station shuttle)",
+    "night_4": "Asakusa / Oshiage",
+    "route": "Haneda -> Ginza -> Hakone -> Kawaguchiko/Oshino Hakkai -> Asakusa/Skytree -> Narita",
+    "priority": "See Mt. Fuji while minimizing hotel changes and luggage burden for a family trip"
+  },
+  "proposals": [
+    {
+      "day": 1,
+      "date": "2026-10-14",
+      "title": "羽田抵達 -> 銀座",
+      "overnight": "Ginza / Higashi-Ginza",
+      "items": [
+        "羽田機場抵達，進東京市區",
+        "入住銀座／東銀座一帶",
+        "依抵達時間安排銀座四丁目、GINZA SIX、歌舞伎座外觀與晚餐",
+        "若飯店支援宅配，將大型行李直接寄往 Day 4 淺草／押上飯店；中間兩晚只帶輕便行李"
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-10-15",
+      "title": "東京 -> 箱根精華 -> 河口湖",
+      "overnight": "Kawaguchiko",
+      "items": [
+        "早上由銀座前往小田原／箱根",
+        "箱根以半日精華為主，不做完整大迴圈：蘆之湖、箱根神社或大涌谷依交通與體力二選一至二",
+        "下午由箱根側往御殿場，再轉往河口湖",
+        "傍晚入住河口湖富士山景觀溫泉旅館，連住兩晚"
+      ],
+      "planning_note": "若完全使用大眾運輸，這天轉乘較多；家人同行若希望更輕鬆，可考慮箱根至河口湖段包車或租車。"
+    },
+    {
+      "day": 3,
+      "date": "2026-10-16",
+      "title": "富士山主日：河口湖 + 忍野八海",
+      "overnight": "Kawaguchiko",
+      "items": [
+        "清晨優先看富士山，視能見度安排河口湖北岸／大石公園一帶",
+        "河口湖湖畔與富士山景觀",
+        "忍野八海，安排傳統聚落與富士山視角",
+        "依家人體力選擇富士山景觀纜車或其他低負擔景點",
+        "回同一間旅館泡湯休息"
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-10-17",
+      "title": "河口湖 -> 淺草江戶散策 -> 晴空塔夜景",
+      "overnight": "Asakusa / Oshiage",
+      "items": [
+        "早餐後由河口湖返回東京東側",
+        "入住淺草／押上一帶並取回先前宅配的大型行李",
+        "雷門、仲見世、淺草寺，安排江戶／下町體驗",
+        "傍晚沿隅田川方向前往東京晴空塔",
+        "晴空塔看夕陽至夜景"
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-10-18",
+      "title": "淺草／押上 -> 成田機場",
+      "overnight": null,
+      "items": [
+        "依班機時間安排淺草早晨散步或早餐",
+        "由淺草／押上搭京成成田 SKY ACCESS 系統前往成田機場",
+        "預留國際線報到與機場交通緩衝"
+      ]
+    }
+  ],
+  "open_questions": [
+    "羽田抵達時間與成田回程航班時間",
+    "同行家人人數與年齡／步行耐受度",
+    "是否願意在箱根－富士五湖區租車或包車",
+    "河口湖兩晚住宿預算與是否要求房內或露天風呂直接看富士山"
+  ],
+  "notes": [
+    "此檔案為規劃草案，不會覆蓋 confirmed days，待使用者明確表示套用後再升級為正式行程。"
+  ]
 }
