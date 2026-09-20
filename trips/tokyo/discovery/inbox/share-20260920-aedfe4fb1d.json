@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "share-20260920-aedfe4fb1d",
+  "status": "needs_review",
+  "target_trip": "tokyo",
+  "source": {
+    "platform": "maps",
+    "url": "https://maps.app.goo.gl/ZrFejLQJLHSes9cp8?g_st=ic",
+    "shared_at": "2026-09-20T20:59:00+08:00"
+  },
+  "raw": {
+    "caption": null,
+    "note": "User said they also want to visit this place during the Tokyo family trip. Google Maps short link could not be resolved in the current environment, so do not schedule until place identity is confirmed."
+  },
+  "extraction": {
+    "state": "needs_review",
+    "place_ids": [],
+    "errors": ["maps_shortlink_unresolved"]
+  }
+}
