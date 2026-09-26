@@ -6,7 +6,7 @@
     "inbox:add": "node scripts/inbox-add.mjs",
     "pool:list": "node scripts/pool-list.mjs",
     "verify": "node scripts/verify.mjs",
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && node scripts/postprocess-ui.mjs",
     "verify:build": "node scripts/verify.mjs --build",
     "verify:mobile": "node scripts/verify-mobile-runtime.mjs"
   }
