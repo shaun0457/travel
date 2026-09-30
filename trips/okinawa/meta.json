@@ -18,6 +18,7 @@
     "features": {"itinerary": true,"routeCanvas": true,"shrineGuide": true,"candidates": true,"tasks": true,"tools": true},
     "tabLabels": {"itinerary": "行程表","shrine": "御朱印","backup": "備選庫","tasks": "待處理","tools": "超商・工具"},
     "template": "gemini-mobile-v1",
+    "sync": {"enabled": false,"apiBase": ""},
     "planning_notes": ["餐廳安排以地理順路為主，避免單日塞入過多需要特地前往的正式餐廳。","候補餐廳與景點應保留為 Plan B，不為了打卡而折返。"],
     "assumptions": ["目前為既有 Gemini 版型的架構遷移；主行程內容保持原頁面資料，不在本次架構重整中重新規劃。"],
     "uncertain_items": ["租車公司與實際租車訂單尚未在此資料檔中確認。"],

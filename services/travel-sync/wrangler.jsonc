@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "travel-sync",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGIN": "https://shaun0457.github.io"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "travel-state",
+      "database_id": "__D1_DATABASE_ID__"
+    }
+  ]
+}
