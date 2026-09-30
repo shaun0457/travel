@@ -1,11 +1,14 @@
 {
   "dayNumber": 1,
   "dayLabel": "10/14 (三)",
-  "title": "東京 Day 1｜抵達日待規劃",
-  "stay": "待確認",
-  "bannerAlert": "目前僅確認旅行日期；航班、住宿與當日行程待補。",
+  "title": "東京 Day 1｜松山 ➔ 羽田 T3 ➔ 五反田入住",
+  "stay": "三井花園飯店五反田 / 東京（10/14–10/16）",
+  "bannerAlert": "✈️ 航班與住宿已確認：CI220 09:00 松山 T1 起飛、13:10 羽田 T3 抵達；三井花園飯店五反田 15:00 起可入住。機場到飯店的交通與晚間行程待排。",
   "routePoints": [],
   "spots": [
-    {"id":"tokyo-d1-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/14 東京行程待規劃","visited":false,"notes":"已確認此日為東京家族 5 日遊 Day 1。待補航班、住宿、景點、餐廳與交通資訊。"}
+    {"id":"tokyo-d1-flight","time":"09:00","category":"flight","typeTag":"已確認","categoryLabel":"國際航班","title":"CI220｜台北松山 T1 ➔ 東京羽田 T3","visited":false,"notes":"09:00 TSA 起飛，13:10 HND 抵達；飛行時間約 3 小時 10 分。現有電子機票顯示 1PC 託運行李。"},
+    {"id":"tokyo-d1-transfer","time":"13:10","category":"transport","typeTag":"待規劃","categoryLabel":"機場移動","title":"羽田機場 T3 ➔ 五反田","visited":false,"notes":"出關、領行李後前往五反田。交通方式尚未定案，需以家人同行與行李負擔優先。"},
+    {"id":"tokyo-d1-hotel","time":"15:00","category":"hotel","typeTag":"已確認","categoryLabel":"東京住宿","title":"三井花園飯店五反田 / 東京｜辦理入住","visited":false,"notes":"入住 10/14–10/16，共 2 晚；地址：〒141-0022 東京都品川区東五反田 2-2-6。房型為 3 張單人床、3 位成人，無餐點；10/16 11:00 前退房。"},
+    {"id":"tokyo-d1-plan","time":"晚間","category":"plan","typeTag":"待規劃","categoryLabel":"抵達日","title":"五反田周邊／東京晚間行程待排","visited":false,"notes":"抵達日以不趕行程為原則；晚餐與是否安排銀座等市區活動後續再定。"}
   ]
 }
