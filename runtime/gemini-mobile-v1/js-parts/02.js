@@ -1,7 +1,7 @@
 function b64encode(str){const bytes=new TextEncoder().encode(str);let bin='';bytes.forEach(b=>bin+=String.fromCharCode(b));return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
 function b64decode(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';const bin=atob(s);return new TextDecoder().decode(Uint8Array.from(bin,ch=>ch.charCodeAt(0)))}
 const baseUrl=()=>window.location.href.split('#')[0];
-function generateShareUrl(){return `${baseUrl()}#trip=${b64encode(JSON.stringify(buildStatePayload()))}`}
+function generateShareUrl(){return `${baseUrl()}#trip=${b64encode(JSON.stringify(buildStatePayload()))}${typeof syncShareParam==='function'?syncShareParam():''}`}
 function checkSharedStateFromUrl(){const m=window.location.hash.match(/trip=([A-Za-z0-9_\-+/=]+)/);if(!m)return false;try{applyStatePayload(JSON.parse(b64decode(decodeURIComponent(m[1]))));persistState();history.replaceState(null,'',baseUrl());setTimeout(()=>showToast('已載入分享的旅程進度'),250);return true}catch(e){console.warn('無法解析分享數據',e);return false}}
 function openShareModal(){const modal=document.getElementById('share-modal'),box=document.getElementById('share-qrcode');modal.classList.remove('hidden');modal.classList.add('flex');try{if(typeof qrcode==='function'){const qr=qrcode(0,'L');qr.addData(generateShareUrl());qr.make();box.innerHTML=qr.createSvgTag({scalable:true,margin:0})}else box.innerHTML='<div class="text-xs text-slate-500 p-3">QR 元件未載入，可使用下方分享按鈕。</div>'}catch{box.innerHTML='<div class="text-xs text-slate-500 p-3">連結較長，請使用下方分享按鈕。</div>'}if(!navigator.share)document.getElementById('native-share-btn').hidden=true}
 function closeShareModal(){const m=document.getElementById('share-modal');m.classList.add('hidden');m.classList.remove('flex')}
