@@ -1,11 +1,12 @@
 {
   "dayNumber": 2,
   "dayLabel": "10/15 (四)",
-  "title": "東京 Day 2｜待規劃",
-  "stay": "待確認",
-  "bannerAlert": "此日尚未安排正式行程。",
+  "title": "東京 Day 2｜東京市區完整日",
+  "stay": "三井花園飯店五反田 / 東京",
+  "bannerAlert": "🏙️ 五反田住宿第 2 晚已確認；今天保留為東京市區完整一天，景點與餐廳順序仍待定案。",
   "routePoints": [],
   "spots": [
-    {"id":"tokyo-d2-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/15 東京行程待規劃","visited":false,"notes":"已保留完整一天供家族行程規劃；景點、餐廳與移動路線待確認。"}
+    {"id":"tokyo-d2-plan","time":"全天","category":"plan","typeTag":"待規劃","categoryLabel":"東京市區","title":"10/15 東京完整一天待規劃","visited":false,"notes":"目前尚未鎖定景點順序。可從既有備選庫中的淺草、晴空塔、銀座與燒鳥候選再組合最順路版本。"},
+    {"id":"tokyo-d2-hotel","time":"晚間","category":"hotel","typeTag":"已確認","categoryLabel":"住宿","title":"返回三井花園飯店五反田","visited":false,"notes":"第 2 晚住宿已確認；隔日 10/16 11:00 前退房並前往河口湖。"}
   ]
 }

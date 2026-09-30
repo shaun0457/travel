@@ -1,11 +1,14 @@
 {
   "dayNumber": 3,
   "dayLabel": "10/16 (五)",
-  "title": "東京 Day 3｜待規劃",
-  "stay": "待確認",
-  "bannerAlert": "此日尚未安排正式行程。",
+  "title": "東京 Day 3｜五反田退房 ➔ 河口湖 ➔ 大池飯店",
+  "stay": "富士之宿溫泉旅館 大池飯店（10/16–10/17）",
+  "bannerAlert": "🗻 河口湖 1 泊已確認。大池飯店 15:00–18:00 入住；若預計 18:00 後抵達需先電話通知。當晚含 3 人晚餐，隔日含 3 人早餐。",
   "routePoints": [],
   "spots": [
-    {"id":"tokyo-d3-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/16 東京行程待規劃","visited":false,"notes":"已保留完整一天供家族行程規劃；景點、餐廳與移動路線待確認。"}
+    {"id":"tokyo-d3-checkout","time":"11:00 前","category":"hotel","typeTag":"已確認","categoryLabel":"退房","title":"三井花園飯店五反田退房","visited":false,"notes":"10/16 11:00 前完成退房；攜帶行李前往河口湖。"},
+    {"id":"tokyo-d3-transfer","time":"中午","category":"transport","typeTag":"待定案","categoryLabel":"東京→河口湖","title":"五反田／東京 ➔ 河口湖","visited":false,"notes":"交通方式尚未定案；目前需在高速巴士、鐵路與河口湖當地租車方案中選擇最適合 3 位成人＋行李的組合。"},
+    {"id":"tokyo-d3-hotel","time":"15:00–18:00","category":"hotel","typeTag":"已確認","categoryLabel":"河口湖住宿","title":"富士之宿溫泉旅館 大池飯店｜辦理入住","visited":false,"notes":"地址：〒401-0301 山梨県富士河口湖町船津 6713-103。入住 1 晚；房型為富士山側和室 10 帖。若 18:00 後抵達，需提前聯絡飯店。"},
+    {"id":"tokyo-d3-dinner","time":"晚間","category":"food","typeTag":"已包含","categoryLabel":"旅館晚餐","title":"大池飯店晚餐（3 位）","visited":false,"notes":"住宿方案已包含 10/16 每房 3 客晚餐；實際用餐時間依飯店現場安排。"}
   ]
 }

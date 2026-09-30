@@ -1,1 +1,9 @@
-[]
+[
+  {"id":"tokyo-task-0","dateTag":"出發前先定案","priority":"urgent","title":"10/16 東京 → 河口湖交通方案定案","detail":"大池飯店 15:00–18:00 可入住，18:00 後抵達需事先聯絡。請在高速巴士、鐵路與河口湖當地租車之間選定 3 位成人＋行李最順的組合，並保留足夠入住緩衝。","done":false},
+  {"id":"tokyo-task-1","dateTag":"出發前先定案","priority":"urgent","title":"10/17 河口湖 → 上野交通＋行李方案定案","detail":"大池飯店 10:00 前退房，Minn Ueno 15:00 起入住。需決定回東京的交通方式，以及抵達上野前後的行李寄放／攜帶策略。","done":false},
+  {"id":"tokyo-task-2","dateTag":"10/16 當天注意","priority":"urgent","title":"大池飯店 18:00 前抵達；若延誤先聯絡飯店","detail":"住宿確認信明確要求：若預計入住日 18:00 後抵達，需提前電話聯絡住宿。當晚方案已含 3 人晚餐，因此不要把東京 → 河口湖的交通排得太緊。","done":false},
+  {"id":"tokyo-task-3","dateTag":"出發前 1 週","priority":"normal","title":"10/18 上野退房後：最後半天＋行李＋成田 T2 動線","detail":"Minn Ueno 10:00 前退房，CI109 20:00 由成田 T2 起飛。需一起決定白天行程、行李寄放與前往成田的交通，避免壓縮國際線報到時間。","done":false},
+  {"id":"tokyo-task-4","dateTag":"出發前 3 天","priority":"normal","title":"填寫 Visit Japan Web 並離線保存 QR Code","detail":"完成日本入境與海關申報；將 QR Code、住宿地址與返程航班資訊截圖存手機，避免現場網路不穩。","done":false},
+  {"id":"tokyo-task-5","dateTag":"航班開放報到後","priority":"normal","title":"華航線上報到／座位確認＋電子機票離線備份","detail":"已確認 CI220（10/14 TSA→HND）與 CI109（10/18 NRT→TPE）。出發前確認座位、報到規則與行李額度，並把登機所需文件離線保存。","done":false},
+  {"id":"tokyo-task-6","dateTag":"有空再補","priority":"medium","title":"確認同行家人的機票資料是否需要補進旅程摘要","detail":"目前 Email 中只驗證到一份 Cheng-Ting 的華航電子機票；住宿則都是 3 位成人。若希望 repo 顯示全員航班資料，可再補齊其他同行者的機票確認信。","done":false}
+]
