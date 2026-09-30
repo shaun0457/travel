@@ -1,11 +1,14 @@
 {
   "dayNumber": 4,
   "dayLabel": "10/17 (六)",
-  "title": "東京 Day 4｜待規劃",
-  "stay": "待確認",
-  "bannerAlert": "此日尚未安排正式行程。",
+  "title": "東京 Day 4｜河口湖退房 ➔ 東京上野 ➔ Minn Ueno",
+  "stay": "Minn Ueno（10/17–10/18）",
+  "bannerAlert": "🏨 早上於大池飯店用早餐並於 10:00 前退房；返回東京後入住 Minn Ueno，15:00 起可入住。東京回程交通與白天安排仍待定。",
   "routePoints": [],
   "spots": [
-    {"id":"tokyo-d4-plan","time":"待定","category":"plan","typeTag":"待規劃","categoryLabel":"行程骨架","title":"10/17 東京行程待規劃","visited":false,"notes":"已保留完整一天供家族行程規劃；景點、餐廳與移動路線待確認。"}
+    {"id":"tokyo-d4-breakfast","time":"07:30–09:00","category":"food","typeTag":"已包含","categoryLabel":"旅館早餐","title":"大池飯店早餐（3 位）","visited":false,"notes":"住宿方案含 10/17 每房 3 客早餐；Email 所列早餐開放時間為 07:30–09:00。"},
+    {"id":"tokyo-d4-checkout","time":"10:00 前","category":"hotel","typeTag":"已確認","categoryLabel":"退房","title":"大池飯店退房","visited":false,"notes":"10:00 前退房。接著返回東京；行李與交通方式待定案。"},
+    {"id":"tokyo-d4-transfer","time":"上午／中午","category":"transport","typeTag":"待定案","categoryLabel":"河口湖→東京","title":"河口湖 ➔ 上野","visited":false,"notes":"返回東京方式尚未定案；需考量 3 位成人與行李，並銜接上野住宿。"},
+    {"id":"tokyo-d4-hotel","time":"15:00 起","category":"hotel","typeTag":"已確認","categoryLabel":"東京住宿","title":"Minn Ueno｜辦理入住","visited":false,"notes":"入住 10/17–10/18，共 1 晚；地址：東京都台東区東上野 1-19-5。3 位成人，高級加大雙人床房；10/18 含早餐，10:00 前退房。"}
   ]
 }
