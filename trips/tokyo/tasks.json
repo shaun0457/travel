@@ -1,9 +1,82 @@
 [
-  {"id":"tokyo-task-0","dateTag":"出發前先定案","priority":"urgent","title":"10/16 東京 → 河口湖交通方案定案","detail":"大池飯店 15:00–18:00 可入住，18:00 後抵達需事先聯絡。請在高速巴士、鐵路與河口湖當地租車之間選定 3 位成人＋行李最順的組合，並保留足夠入住緩衝。","done":false},
-  {"id":"tokyo-task-1","dateTag":"出發前先定案","priority":"urgent","title":"10/17 河口湖 → 上野交通＋行李方案定案","detail":"大池飯店 10:00 前退房，Minn Ueno 15:00 起入住。需決定回東京的交通方式，以及抵達上野前後的行李寄放／攜帶策略。","done":false},
-  {"id":"tokyo-task-2","dateTag":"10/16 當天注意","priority":"urgent","title":"大池飯店 18:00 前抵達；若延誤先聯絡飯店","detail":"住宿確認信明確要求：若預計入住日 18:00 後抵達，需提前電話聯絡住宿。當晚方案已含 3 人晚餐，因此不要把東京 → 河口湖的交通排得太緊。","done":false},
-  {"id":"tokyo-task-3","dateTag":"出發前 1 週","priority":"normal","title":"10/18 上野退房後：最後半天＋行李＋成田 T2 動線","detail":"Minn Ueno 10:00 前退房，CI109 20:00 由成田 T2 起飛。需一起決定白天行程、行李寄放與前往成田的交通，避免壓縮國際線報到時間。","done":false},
-  {"id":"tokyo-task-4","dateTag":"出發前 3 天","priority":"normal","title":"填寫 Visit Japan Web 並離線保存 QR Code","detail":"完成日本入境與海關申報；將 QR Code、住宿地址與返程航班資訊截圖存手機，避免現場網路不穩。","done":false},
-  {"id":"tokyo-task-5","dateTag":"航班開放報到後","priority":"normal","title":"華航線上報到／座位確認＋電子機票離線備份","detail":"已確認 CI220（10/14 TSA→HND）與 CI109（10/18 NRT→TPE）。出發前確認座位、報到規則與行李額度，並把登機所需文件離線保存。","done":false},
-  {"id":"tokyo-task-6","dateTag":"有空再補","priority":"medium","title":"確認同行家人的機票資料是否需要補進旅程摘要","detail":"目前 Email 中只驗證到一份 Cheng-Ting 的華航電子機票；住宿則都是 3 位成人。若希望 repo 顯示全員航班資料，可再補齊其他同行者的機票確認信。","done":false}
+  {
+    "id": "tokyo-task-0",
+    "dateTag": "出發前先定案",
+    "priority": "urgent",
+    "title": "10/16 14:00 河口湖 Toyota 取車前的跨城交通定案",
+    "detail": "Toyota 河口湖店（船津4657）已預約 10/16 14:00 取車，並非東京取車；必須確認從五反田退房至河口湖的高速巴士／鐵路車票與行李方案，提前到店辦理取車，之後 15:00–18:00 入住大池飯店。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-1",
+    "dateTag": "出發前先定案",
+    "priority": "urgent",
+    "title": "緊急：10/17 16:00 河口湖還車 → 19:45 新宿晚餐",
+    "detail": "Toyota 河口湖店 16:00 同店還車；鳥たか新宿店已訂 19:45（3 位）。須核對實際車班和車程、上野住宿的行李寄放，確保時段可行。若趕不上，及早調整租車或餐廳預約；餐廳遲到 15 分鐘未聯絡可能取消，取消／變更費用每人 JPY5,000（抵達前 24 小時）。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-2",
+    "dateTag": "10/16 當天注意",
+    "priority": "urgent",
+    "title": "大池飯店 18:00 前抵達；若延誤先聯絡飯店",
+    "detail": "10/16 已訂 14:00 Toyota 富士河口湖取車；大池飯店 15:00–18:00 入住、當晚含 3 人晚餐。預計 18:00 後抵達請先致電 +81-555-72-2563；需準備在飯店現場結算 JPY108,315。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-3",
+    "dateTag": "10/18 返程前",
+    "priority": "normal",
+    "title": "10/18 上野退房後：最後半天＋行李＋成田 T2 動線",
+    "detail": "Minn Ueno 10:00 前退房，CI109 20:00 由成田 T2 起飛。需一起決定白天行程、行李寄放與前往成田的交通，避免壓縮國際線報到時間。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-4",
+    "dateTag": "出發前 3 天",
+    "priority": "normal",
+    "title": "填寫 Visit Japan Web 並離線保存 QR Code",
+    "detail": "完成日本入境與海關申報；將 QR Code、住宿地址與返程航班資訊截圖存手機，避免現場網路不穩。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-5",
+    "dateTag": "航班開放報到後",
+    "priority": "normal",
+    "title": "華航線上報到／座位確認＋電子機票離線備份",
+    "detail": "已確認 CI220（10/14 TSA→HND）與 CI109（10/18 NRT→TPE）。出發前確認座位、報到規則與行李額度，並把登機所需文件離線保存。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-6",
+    "dateTag": "有空再補",
+    "priority": "medium",
+    "title": "確認同行家人的機票資料是否需要補進旅程摘要",
+    "detail": "目前 Email 中只驗證到一份 Cheng-Ting 的華航電子機票；住宿則都是 3 位成人。若希望 repo 顯示全員航班資料，可再補齊其他同行者的機票確認信。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-7",
+    "dateTag": "出發前先確認",
+    "priority": "urgent",
+    "title": "Toyota 租車駕駛證件與取車規則",
+    "detail": "10/16 14:00 富士河口湖店取車：備妥護照、在日本有效的駕照／國際駕照及相關必要文件，確認駕駛人與台灣駕照適用的日本規則；自動查驗通關需留意入境日期證明。車款 C2 Corolla Touring，費用 JPY22,220，WEB 信用卡結算。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-8",
+    "dateTag": "10/17 晚餐前",
+    "priority": "urgent",
+    "title": "確認鳥たか無牛食材並保存餐廳聯絡方式",
+    "detail": "10/17 19:45 新宿鳥たか 3 人已訂位；提前確認烤雞醬汁、湯品不含牛肉／牛油／牛骨高湯及是否共用設備。若遲到請立即聯絡 +81-3-5937-1309；店家列遲到 15 分鐘未通知可能取消；抵達前 24 小時內取消／更改每人 JPY5,000。",
+    "done": false
+  },
+  {
+    "id": "tokyo-task-9",
+    "dateTag": "10/17 入住當天",
+    "priority": "normal",
+    "title": "Minn Ueno 押金與入住時間",
+    "detail": "10/17–10/18 Minn Ueno 15:00–00:00 可入住，Booking.com 訂單已付 JPY54,989 且不可退款；入住備妥 JPY1,000 現金押金，10/18 退房時確認退還；當晚新宿已訂 19:45 晚餐，先規劃行李。",
+    "done": false
+  }
 ]
