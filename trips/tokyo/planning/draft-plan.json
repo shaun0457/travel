@@ -3,7 +3,7 @@
   "status": "draft",
   "generated_at": "2026-09-20T14:25:00Z",
   "based_on": {
-    "confirmed_itinerary": false,
+    "confirmed_itinerary": true,
     "discovery_place_ids": []
   },
   "confirmed_transport": {
@@ -35,17 +35,31 @@
       "nights": 1,
       "status": "booked",
       "note": "Do not store booking reference, PIN, payment card, or other sensitive reservation credentials in the repository."
+    },
+    "gotanda": {
+      "name": "三井花園飯店五反田",
+      "dates": "2026-10-14 to 2026-10-16",
+      "status": "booked",
+      "adults": 3,
+      "breakfast": false
+    },
+    "ueno": {
+      "name": "Minn Ueno",
+      "dates": "2026-10-17 to 2026-10-18",
+      "status": "booked",
+      "adults": 3,
+      "breakfast": true
     }
   },
   "strategy": {
     "lodging_pattern": "2/1/1",
     "travel_style": "slow family resort trip; avoid shopping-heavy city days",
-    "night_1_2": "Tokyo central/east, around Tsukiji / Higashi-Ginza / Shiodome",
+    "night_1_2": "Mitsui Garden Hotel Gotanda (confirmed)",
     "night_3": "Oike Hotel, Kawaguchiko, booked for 2026-10-16",
-    "night_4": "Asakusa / Oshiage",
-    "route": "Haneda -> Tokyo two nights -> Tokyo rental pickup -> Kawaguchiko/Oshino Hakkai one night -> Tokyo rental return -> Asakusa/Skytree -> Narita",
-    "priority": "Family vacation feeling, Mt. Fuji scenery, minimal shopping, and one simple Tokyo-based rental-car segment",
-    "car_policy": "Rent and return the car in Tokyo. Preferred pattern: pick up near Tokyo Station on 10/16 morning, drive to Kawaguchiko, stay one night, return to the same Tokyo-area branch on 10/17 around early afternoon, then continue to Asakusa by public transit or taxi.",
+    "night_4": "Minn Ueno (confirmed)",
+    "route": "Haneda -> Gotanda (2 nights) -> public transit to Kawaguchiko -> Toyota local pickup 10/16 14:00 -> Oike Hotel -> Toyota local return 10/17 16:00 -> return to Tokyo for 19:45 Toritaka Shinjuku -> Minn Ueno -> Narita",
+    "priority": "Family trip, but confirmed car return 10/17 16:00 and Tokyo dinner 19:45 are time-critical; avoid adding sightseeing between them.",
+    "car_policy": "CONFIRMED: Toyota Fuji Kawaguchiko shop, pickup 2026-10-16 14:00, return at SAME shop 2026-10-17 16:00. Tokyo->Kawaguchiko and return train/bus not yet booked.",
     "tsukiji_policy": "Use Day 2 morning for Tsukiji; do not rely on Sunday 10/18 for the full Tsukiji experience.",
     "hakone_policy": "Hakone removed from this trip."
   },
@@ -54,121 +68,111 @@
       "day": 1,
       "date": "2026-10-14",
       "title": "松山 -> 羽田 13:10 -> 東京慢慢開始",
-      "overnight": "Tokyo central/east",
+      "overnight": "Mitsui Garden Hotel Gotanda",
       "items": [
-        "CI220 松山 09:00 出發，羽田 T3 13:10 抵達",
-        "進東京後入住築地／東銀座／汐留一帶，先休息",
-        "傍晚只安排東銀座、銀座街景或濱離宮周邊低強度散步",
-        "銀座不排百貨巡禮，晚餐保持彈性"
+        "CI220 松山 09:00 出發、羽田 T3 13:10 抵達（已確認）",
+        "羽田→五反田交通未訂；15:00 起可入住三井花園飯店五反田（已訂 2 晚、3 位、無早餐）",
+        "傍晚活動按體力彈性安排，尚未確認"
       ]
     },
     {
       "day": 2,
       "date": "2026-10-15",
       "title": "築地早餐 -> 東京慢遊日",
-      "overnight": "Tokyo central/east",
+      "overnight": "Mitsui Garden Hotel Gotanda",
       "items": [
-        "約 09:00 到築地場外市場吃早餐／早午餐並慢慢逛",
-        "之後接濱離宮或東銀座，不跨城趕場",
-        "下午保留咖啡、散步與休息時間",
-        "若 Day 4 住宿確定在淺草／押上，可把大行李寄往 Day 4 飯店；10/16 只帶一晚行李"
+        "10/15 全天東京景點仍待選定，築地、銀座等是備選，不是已預訂",
+        "晚間返回已訂三井花園飯店五反田，10/16 11:00 前退房"
       ]
     },
     {
       "day": 3,
       "date": "2026-10-16",
-      "title": "東京取車 -> 河口湖：富士山度假日",
+      "title": "東京搭交通前往河口湖 -> Toyota 14:00 取車 -> 大池飯店",
       "overnight": "富士之宿溫泉旅館 大池飯店 (Oike Hotel)",
       "items": [
-        "約 08:00 在東京站一帶取車；首選同店租還，避免異地還車費與規則差異",
-        "從東京自駕往河口湖，主路線走首都高速接中央自動車道；依早高峰與高速路況預留彈性",
-        "抵達富士山區後先看能見度：天氣好就優先停富士山景觀點",
-        "安排忍野八海",
-        "午餐簡單處理，不為名店排長隊",
-        "下午前往大石公園／河口湖北岸散步看富士山",
-        "15:00-18:00 之間入住大池飯店",
-        "入住後不再排遠距離景點，以飯店溫泉、晚餐與休息為主"
+        "11:00 前從五反田飯店退房（能否更早出發須另行規劃）",
+        "東京→河口湖的高速巴士／鐵路交通仍未訂，須安排 14:00 前到 Toyota 富士河口湖店",
+        "14:00 Toyota 富士河口湖店取 Corolla Touring（已訂，10/17 16:00 同店還）",
+        "15:00–18:00 大池飯店辦理入住，18:00 後抵達需先電話聯絡",
+        "如果還有時間且天氣適合，可在河口湖附近短程遊覽；忍野八海／大石公園不是已確認行程",
+        "入住後享用住宿已含的 3 人晚餐，翌晨含早餐"
       ],
-      "planning_note": "若富士山完全露出，可把大石公園提早；富士山能見度優先於固定順序。"
+      "planning_note": "上午跨城交通優先，車輛 14:00 才能取；不可沿用東京早上取車的舊草案。"
     },
     {
       "day": 4,
       "date": "2026-10-17",
-      "title": "河口湖慢早晨 -> 自駕回東京還車 -> 淺草 -> 晴空塔 -> TORIYOSHI",
-      "overnight": "Asakusa / Oshiage",
+      "title": "大池飯店退房 -> 河口湖 16:00 還車 -> 新宿 19:45 訂位 -> Minn Ueno",
+      "overnight": "Minn Ueno (confirmed)",
       "items": [
-        "07:00-09:00 起床看富士山、早餐、泡湯，不排遠程景點",
-        "10:00 前從大池飯店退房",
-        "若早晨天氣很好，可在湖畔短停 20-30 分鐘後再離開",
-        "自駕返回東京；週六進東京需為中央道與東京都內壅塞預留時間",
-        "目標約 12:30-14:00 在東京站一帶還車",
-        "還車後搭大眾運輸／計程車前往淺草／押上住宿並休息",
-        "下午雷門、仲見世、淺草寺、下町巷弄慢遊",
-        "晴空塔視家人體力與還車時間決定，必要時刪除",
-        "晚餐優先浅草 TORIYOSHI；訂位前再確認無牛需求"
+        "07:30–09:00 大池飯店已含早餐；10:00 前退房",
+        "退房後在河口湖周邊活動及處理行李，景點未訂／待規劃",
+        "16:00 Toyota 富士河口湖店同店還車（已預約）",
+        "還車後河口湖→新宿／上野的車班與行李方式尚未確定，晚餐時間 19:45，銜接有風險",
+        "19:45 鳥たか新宿店 3 人已訂位，只預留座位，現場自由單點",
+        "當晚住 Minn Ueno；15:00–00:00 可入住，含早餐，入住現金押金 JPY1,000"
       ],
-      "planning_note": "Day 4 優先級：河口湖慢早晨 > 安全回東京還車 > 淺草 > TORIYOSHI > 晴空塔。"
+      "planning_note": "Day 4 僅確定 16:00 河口湖還車、19:45 新宿晚餐、上野住宿。原淺草 TORIYOSHI / 晴空塔不是已訂；優先評估車程並提前更改不合理的預約。"
     },
     {
       "day": 5,
       "date": "2026-10-18",
-      "title": "淺草／押上慢早晨 -> 成田 T2 -> 桃園",
+      "title": "Minn Ueno 早餐退房 -> 東京自由時間 -> 成田 T2 -> 桃園",
       "overnight": null,
       "items": [
-        "睡晚一點，在淺草／隅田川附近早餐與散步",
-        "若 Day 4 沒逛完淺草，上午補完即可",
-        "中午至下午保留自由時間與休息",
-        "約 16:00-16:30 從淺草／押上出發前往成田機場 T2",
-        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達"
+        "Minn Ueno 已含早餐、10:00 前退房；確認 JPY1,000 押金返還",
+        "最後半天活動、行李與成田 T2 交通待定",
+        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達（已確認）"
       ]
     }
   ],
   "fuji_segment_detail": {
-    "recommendation": "Tokyo pickup and Tokyo return, one continuous rental for the Fuji segment.",
+    "recommendation": "Confirmed Toyota rental entirely within Fujikawaguchiko; Tokyo-Kawaguchiko train/bus not booked. Prior Tokyo rental route canceled as plan, not as reservation.",
     "rental_car": {
-      "preferred_area": "Tokyo Station",
-      "preferred_shop": "Toyota Rent a Car Tokyo Station Nihonbashi Exit as first candidate; Tokyo Station Yaesu is a backup",
-      "target_pickup": "2026-10-16 around 08:00",
-      "target_return": "2026-10-17 around 12:30-14:00",
-      "return_policy": "Prefer same-shop return unless another Tokyo branch offers a clearly better verified option.",
-      "reason": "Close to the likely first Tokyo hotel area, convenient after return for onward travel to Asakusa, and avoids needing a Fuji-area rental pickup/return."
+      "shop": "Toyota Rent a Car 富士河口湖店",
+      "address": "4657 Funatsu, Fujikawaguchiko, Yamanashi 401-0301, Japan",
+      "pickup": "2026-10-16 14:00",
+      "return": "2026-10-17 16:00",
+      "vehicle": "Corolla Touring (C2, AT, non-smoking)",
+      "status": "booked",
+      "note": "Same local shop, not Tokyo Station. Need international driver documentation and real transfer timetables."
     },
     "route_order": [
-      "Tokyo Station rental pickup",
-      "drive to Fuji area",
-      "Oshino Hakkai",
-      "simple lunch",
-      "Oishi Park / north shore of Lake Kawaguchi",
-      "Oike Hotel check-in",
-      "hotel onsen and rest",
-      "next morning Oike Hotel Fuji view / optional lakeside stop",
-      "drive back to Tokyo",
-      "Tokyo Station rental return",
-      "Asakusa / Oshiage"
+      "Gotanda check-out",
+      "Tokyo to Kawaguchiko by transit (unbooked)",
+      "Toyota Fujikawaguchiko local pickup 14:00",
+      "Oike Hotel check-in before 18:00",
+      "Oike Hotel dinner and next-day breakfast",
+      "Oike check-out before 10:00",
+      "Local sightseeing / luggage arrangements (unconfirmed)",
+      "Toyota Fujikawaguchiko local return 16:00",
+      "Kawaguchiko to Tokyo transit (unbooked; check 19:45 Tokyo dinner)",
+      "Toritaka Shinjuku 19:45 booked",
+      "Minn Ueno check-in"
     ],
-    "weather_rule": "Mt. Fuji visibility overrides the order once in the Fuji area."
+    "weather_rule": "Weather-dependent optional attractions must not compromise confirmed pickup / return / hotel / dinner times."
   },
   "rental_car_option": {
+    "status": "booked",
     "recommended": true,
-    "scope": "Tokyo pickup on 10/16 morning to Tokyo return on 10/17 early afternoon",
-    "preferred_pickup": "Tokyo Station area",
-    "preferred_return": "Same Tokyo Station-area shop",
+    "scope": "Toyota Fuji Kawaguchiko 2026-10-16 14:00 pickup to 2026-10-17 16:00 local return",
+    "preferred_pickup": "富士河口湖店（確定）",
+    "preferred_return": "富士河口湖店（確定）",
     "why": [
-      "Matches the user's preference to rent and return in Tokyo",
-      "No need to handle luggage on a highway bus",
-      "Keeps full flexibility around Kawaguchiko and Oshino Hakkai",
-      "Same-shop return is operationally simpler than one-way rental"
+      "Confirmed Toyota reservation; Tokyo pickup/return from old proposal is obsolete",
+      "Public transport between Tokyo and Kawaguchiko still requires booking"
     ],
     "verify_before_booking": [
-      "actual 10/16-10/17 vehicle availability and total price",
-      "ETC card rental and expressway tolls",
-      "international driving permit / Japanese license-document requirements for the actual driver",
-      "Oike Hotel parking",
-      "Tokyo branch vehicle-height restrictions if choosing a larger family vehicle"
+      "No additional car booking required unless changing confirmed times",
+      "Driver passport and Japanese-valid driver's license documents",
+      "Confirm 10/16 Tokyo to 14:00 pickup route",
+      "Confirm 10/17 16:00 return to 19:45 Shinjuku dinner feasibility",
+      "ETC / shop rules and hotel parking"
     ]
   },
   "food_preferences": {
-    "yakitori": "Current preferred restaurant is 浅草 TORIYOSHI. User prefers a casual chicken-focused yakitori meal and wants to avoid beef. Reconfirm no beef, beef fat or beef stock before booking if strict avoidance is required."
+    "yakitori": "CONFIRMED 2026-10-17 19:45 Toritaka Shinjuku for 3, seat-only à la carte. Need to confirm beef, beef fat, beef stock and shared utensils. Previous Asakusa TORIYOSHI was only a candidate."
   },
   "hotel_research": {
     "status": "confirmed",
@@ -176,15 +180,37 @@
     "dates": "2026-10-16 to 2026-10-17"
   },
   "open_questions": [
-    "東京前兩晚實際飯店位置，之後可決定東京站日本橋口、八重洲口或其他租車店哪一間最順",
-    "同行家人人數與需要的車型／行李空間",
-    "誰會開車，以及駕照／國際駕照文件",
-    "無牛是偏好還是需要連牛油／牛高湯／交叉接觸都完全避免",
+    "10/14 羽田→五反田移動方式及晚間活動",
+    "10/15 東京市區完整一天規劃",
+    "10/16 五反田退房→河口湖 14:00 Toyota 取車的交通票與行李",
+    "10/17 河口湖 16:00 Toyota 還車→新宿 19:45 晚餐的交通時刻、後續 Minn Ueno 入住與行李",
+    "取車駕駛的護照、在日本可用駕照／國際駕照核驗",
+    "10/18 最後半天行程與前往成田的交通",
+    "需確認鳥たか醬汁／高湯／共用設備完全不含牛來源",
     "Google Maps share https://maps.app.goo.gl/ZrFejLQJLHSes9cp8?g_st=ic 尚未能解析地點名稱，已存 discovery inbox 等待辨識"
   ],
   "notes": [
-    "此檔案為規劃草案，不會覆蓋 confirmed days，待使用者明確表示套用後再升級為正式行程。",
-    "箱根已移除；河口湖為 10/16-10/17 一晚。",
-    "租車策略已改成東京租、東京還。"
-  ]
+    "此檔為草案，仍以 days/ 實際確認行程為準，不能把未訂交通變成已確認。",
+    "箱根已移除，河口湖 10/16–10/17 一晚。",
+    "2026/10 已改為 Toyota 富士河口湖店 10/16 14:00 取、10/17 16:00 還；10/17 鳥たか新宿店 19:45 已訂。"
+  ],
+  "confirmed_rental_car": {
+    "provider": "Toyota Rent a Car",
+    "shop": "富士河口湖店",
+    "address": "4657 Funatsu, Fujikawaguchiko, Yamanashi 401-0301, Japan",
+    "pickup": "2026-10-16 14:00",
+    "return": "2026-10-17 16:00",
+    "vehicle": "Corolla Touring (C2, AT)",
+    "status": "booked",
+    "estimated_total_jpy": 22220
+  },
+  "confirmed_restaurant": {
+    "name": "鳥たか 新宿店 / Toritaka Shinjuku",
+    "date": "2026-10-17",
+    "time": "19:45",
+    "party_size": 3,
+    "booking_type": "seat only / a la carte",
+    "status": "booked",
+    "dietary_verification_pending": true
+  }
 }
