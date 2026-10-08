@@ -1,9 +1,9 @@
 {
   "dayNumber": 4,
   "dayLabel": "10/17 (六)",
-  "title": "東京 Day 4｜河口湖退房 ➔ 東京上野 ➔ Minn Ueno",
+  "title": "東京 Day 4｜河口湖還車 ➔ 東京新宿晚餐 ➔ Minn Ueno",
   "stay": "Minn Ueno（10/17–10/18）",
-  "bannerAlert": "🏨 早上於大池飯店用早餐並於 10:00 前退房；返回東京後入住 Minn Ueno，15:00 起可入住。東京回程交通與白天安排仍待定。",
+  "bannerAlert": "🚗 Toyota 河口湖店 16:00 還車（已預約）；19:45 鳥たか新宿店 3 人燒鳥晚餐（已訂位）。從河口湖返回新宿的車票／動線尚未確定，時間緊迫，須優先安排；Minn Ueno 當晚入住。",
   "routePoints": [],
   "spots": [
     {
@@ -24,27 +24,41 @@
       "categoryLabel": "退房",
       "title": "大池飯店退房",
       "visited": false,
-      "notes": "10:00 前退房。接著返回東京；行李與交通方式待定案。"
+      "notes": "大池飯店 10:00 前退房；當天下午仍需在河口湖活動／移動，16:00 到富士河口湖店還車。先規劃行李保管與取還車動線，並確保晚間可返回東京。"
+    },
+    {
+      "id": "tokyo-d4-toyota-return",
+      "time": "16:00",
+      "category": "transport",
+      "typeTag": "已預約",
+      "categoryLabel": "Toyota 租車還車",
+      "title": "Toyota Rent a Car 富士河口湖店｜還車",
+      "visited": false,
+      "location": {
+        "address": "4657 Funatsu, Fujikawaguchiko, Yamanashi 401-0301, Japan",
+        "maps_query": "トヨタレンタカー 富士河口湖店"
+      },
+      "notes": "10/17（六）16:00 於取車原店還車；地址：山梨県南都留郡富士河口湖町船津4657；TEL +81-555-72-1100。留意滿油還車與店家規則；後續前往新宿 19:45 晚餐的交通還沒有確認。"
     },
     {
       "id": "tokyo-d4-transfer",
-      "time": "上午／中午",
+      "time": "16:00 後（待訂）",
       "category": "transport",
       "typeTag": "待定案",
       "categoryLabel": "河口湖→東京",
-      "title": "河口湖 ➔ 上野",
+      "title": "河口湖 ➔ 新宿晚餐／上野住宿",
       "visited": false,
-      "notes": "返回東京方式尚未定案；需考量 3 位成人與行李，並銜接上野住宿。"
+      "notes": "Toyota 已確認 16:00 在河口湖同店還車，之後才可搭大眾交通返回東京。高速巴士／鐵路車票尚未確認；必須評估 19:45 新宿鳥たか訂位與 3 位成人行李，行程有遲到風險。若難以銜接，應及早變更還車或餐廳時間，勿將未確認轉乘當成已訂票。"
     },
     {
       "id": "tokyo-d4-hotel",
-      "time": "15:00 起",
+      "time": "15:00–00:00（實到待定）",
       "category": "hotel",
       "typeTag": "已確認",
       "categoryLabel": "東京住宿",
       "title": "Minn Ueno｜辦理入住",
       "visited": false,
-      "notes": "入住 10/17–10/18，共 1 晚；地址：東京都台東区東上野 1-19-5。3 位成人，高級加大雙人床房；10/18 含早餐，10:00 前退房。"
+      "notes": "10/17–10/18 已訂房 1 晚，3 位成人，高級加大雙人床房；東京都台東区東上野1-19-5。入住 15:00–00:00，10/18 10:00 前退房。已透過 Booking.com 付款 JPY54,989；含 3 人住宿早餐；確認信要求入住時以現金支付 JPY1,000 可退還押金（退房經檢查後退還）。訂單不可退款。若晚餐前來不及先入住，需另行處理行李與晚間入住。"
     },
     {
       "id": "tokyo-d4-toritaka-dinner",
@@ -55,9 +69,10 @@
       "title": "鳥たか 新宿店（Toritaka Shinjuku）｜單點晚餐（3 位）",
       "visited": false,
       "location": {
-        "maps_query": "鳥たか 新宿店 東京都新宿区西新宿"
+        "address": "7-2-5 Nishi-Shinjuku, 6F TH Nishi-Shinjuku Building, Shinjuku-ku, Tokyo 160-0023, Japan",
+        "maps_query": "鳥たか 新宿店 東京都新宿区西新宿7-2-5"
       },
-      "notes": "2026/10/17（六）19:45，3 位成人；TableCheck 已確認「お席のみのご予約」（僅訂位，現場自由單點，非套餐）。從上野住宿前往新宿的交通時間需另行安排。牛肉、牛油及牛骨高湯等牛來源成分仍應向店家確認；公開 repo 不記錄私人訂位編號。"
+      "notes": "TableCheck 已確認 2026/10/17 19:45，3 位成人，「お席のみのご予約」只訂座位、現場單點。地址：西新宿7-2-5 TH西新宿ビル6F；TEL +81-3-5937-1309。非現金支付；預約時間遲到 15 分鐘且未聯繫，店家可能取消。確認信列抵達前 24 小時內取消／更改費用為每人 JPY5,000（3 人合計 JPY15,000），請以訂位政策為準。牛肉、牛脂與牛骨高湯成分尚待向店家確認。河口湖 16:00 還車後到新宿晚餐，交通需要優先定案。"
     }
   ]
 }
