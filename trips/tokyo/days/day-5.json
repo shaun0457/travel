@@ -6,9 +6,45 @@
   "bannerAlert": "✈️ Minn Ueno 10:00 前退房；CI109 20:00 由成田 T2 起飛、22:45 抵達桃園 T2。白天行程、行李寄放與前往機場時間待排。",
   "routePoints": [],
   "spots": [
-    {"id":"tokyo-d5-breakfast","time":"早餐","category":"food","typeTag":"已包含","categoryLabel":"住宿早餐","title":"Minn Ueno 早餐","visited":false,"notes":"訂房方案已含早餐；用餐後整理行李，10:00 前退房。"},
-    {"id":"tokyo-d5-checkout","time":"10:00 前","category":"hotel","typeTag":"已確認","categoryLabel":"退房","title":"Minn Ueno 退房","visited":false,"notes":"10:00 前退房。白天仍可安排東京行程，但需先處理行李寄放與前往成田的時間。"},
-    {"id":"tokyo-d5-plan","time":"白天","category":"plan","typeTag":"待規劃","categoryLabel":"登機前行程","title":"東京最後半天＋行李處理待定案","visited":false,"notes":"最後半天景點尚未鎖定；需以能順利銜接成田 T2 為優先，避免壓縮國際線報到時間。"},
-    {"id":"tokyo-d5-flight","time":"20:00","category":"flight","typeTag":"已確認","categoryLabel":"返程航班","title":"CI109｜東京成田 T2 ➔ 台北桃園 T2","visited":false,"notes":"20:00 NRT 起飛，22:45 TPE 抵達；飛行時間約 3 小時 45 分。現有電子機票顯示 1PC 託運行李。"}
+    {
+      "id": "tokyo-d5-breakfast",
+      "time": "早餐",
+      "category": "food",
+      "typeTag": "已包含",
+      "categoryLabel": "住宿早餐",
+      "title": "Minn Ueno 早餐",
+      "visited": false,
+      "notes": "訂房方案已含早餐；用餐後整理行李，10:00 前退房。"
+    },
+    {
+      "id": "tokyo-d5-checkout",
+      "time": "10:00 前",
+      "category": "hotel",
+      "typeTag": "已確認",
+      "categoryLabel": "退房",
+      "title": "Minn Ueno 退房",
+      "visited": false,
+      "notes": "10:00 前退房；Minn Ueno 訂房信載明入住時繳付 JPY1,000 現金押金，退房房況檢查後退還，離店前請確認領回。白天需安排行李寄放，並預留前往成田 T2 的時間。"
+    },
+    {
+      "id": "tokyo-d5-plan",
+      "time": "白天",
+      "category": "plan",
+      "typeTag": "待規劃",
+      "categoryLabel": "登機前行程",
+      "title": "東京最後半天＋行李處理待定案",
+      "visited": false,
+      "notes": "最後半天景點尚未鎖定；需以能順利銜接成田 T2 為優先，避免壓縮國際線報到時間。"
+    },
+    {
+      "id": "tokyo-d5-flight",
+      "time": "20:00",
+      "category": "flight",
+      "typeTag": "已確認",
+      "categoryLabel": "返程航班",
+      "title": "CI109｜東京成田 T2 ➔ 台北桃園 T2",
+      "visited": false,
+      "notes": "20:00 NRT 起飛，22:45 TPE 抵達；飛行時間約 3 小時 45 分。現有電子機票顯示 1PC 託運行李。"
+    }
   ]
 }
