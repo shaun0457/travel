@@ -1,9 +1,9 @@
 {
   "dayNumber": 4,
   "dayLabel": "10/17 (六)",
-  "title": "東京 Day 4｜河口湖還車 ➔ 東京新宿晚餐 ➔ Minn Ueno",
+  "title": "東京 Day 4｜忠靈塔・忍野八海・山中湖 → 還車 → 新宿",
   "stay": "Minn Ueno（10/17–10/18）",
-  "bannerAlert": "🚗 Toyota 河口湖店 16:00 還車（已預約）；19:45 鳥たか新宿店 3 人燒鳥晚餐（已訂位）。從河口湖返回新宿的車票／動線尚未確定，時間緊迫，須優先安排；Minn Ueno 當晚入住。",
+  "bannerAlert": "📷 上午忠靈塔＋忍野八海為自駕重點，山中湖視時間選去；🚗 Toyota 16:00前還車，🚆 富士回遊44 16:48→18:46（表定，出票待核），🍽️ Toritaka 19:45已訂。勿因拍照誤車或遲到。",
   "routePoints": [],
   "spots": [
     {
@@ -27,6 +27,68 @@
       "notes": "大池飯店 10:00 前退房；當天下午仍需在河口湖活動／移動，16:00 到富士河口湖店還車。先規劃行李保管與取還車動線，並確保晚間可返回東京。"
     },
     {
+      "id": "tokyo-d4-chureito",
+      "time": "08:30–09:45（建議）",
+      "category": "attraction",
+      "typeTag": "攝影優先",
+      "categoryLabel": "富士山五重塔",
+      "title": "新倉山淺間公園／忠靈塔｜五重塔與富士山",
+      "visited": false,
+      "location": {
+        "maps_query": "新倉山浅間公園 駐車場"
+      },
+      "notes": "建議早起拍攝，可先去再回飯店早餐／退房，但時間需依同行者體力調整；展望台需爬約400階。搜尋指定停車場，切勿違停。導航：https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park+Parking+Lot+1"
+    },
+    {
+      "id": "tokyo-d4-oshino",
+      "time": "10:15–12:00（建議）",
+      "category": "attraction",
+      "typeTag": "優先安排",
+      "categoryLabel": "湧池與村落",
+      "title": "忍野八海｜湧池、茅草屋、水車、午餐散步",
+      "visited": false,
+      "location": {
+        "maps_query": "忍野八海 駐車場"
+      },
+      "notes": "自駕到周邊民營付費停車場後步行遊覽，中心小路不建議開車穿梭。主要池群約60–90分鐘；完整八池需更久。可順道吃午餐。停車導航：https://www.google.com/maps/search/?api=1&query=Oshino+Hakkai+Parking"
+    },
+    {
+      "id": "tokyo-d4-yamanakako",
+      "time": "12:30–13:15（選去）",
+      "category": "attraction",
+      "typeTag": "時間允許才去",
+      "categoryLabel": "富士山湖景",
+      "title": "山中湖・長池親水公園｜湖畔富士山",
+      "visited": false,
+      "location": {
+        "maps_query": "長池親水公園 山中湖"
+      },
+      "notes": "姐姐指定拍照點，須視天氣、路況與午餐時間決定；最晚回河口湖還車16:00，建議更早到店。導航：https://www.google.com/maps/search/?api=1&query=Nagaike+Shinsui+Park+Yamanakako"
+    },
+    {
+      "id": "tokyo-d4-photo-options",
+      "time": "僅取代既有景點（選去）",
+      "category": "attraction",
+      "typeTag": "備選景點",
+      "categoryLabel": "河口湖攝影候選",
+      "title": "紅葉迴廊／紅葉隧道／天空鳥居／河口湖纜車",
+      "visited": false,
+      "notes": "這些是攝影候選，不是額外全部要去的站：紅葉迴廊 https://www.google.com/maps/search/?api=1&query=Momiji+Corridor+Kawaguchiko ；紅葉隧道 https://www.google.com/maps/search/?api=1&query=Momiji+Tunnel+Kawaguchiko ；天空鳥居 https://www.google.com/maps/search/?api=1&query=Tenku+no+Torii+Kawaguchiko ；富士山全景纜車 https://www.google.com/maps/search/?api=1&query=Mt+Fuji+Panoramic+Ropeway 。10月中旬紅葉未必變色，天空鳥居需確認狹窄山路及停車規則。"
+    },
+    {
+      "id": "tokyo-d4-fuel",
+      "time": "15:15–15:45（目標）",
+      "category": "transport",
+      "typeTag": "重要緩衝",
+      "categoryLabel": "還車前",
+      "title": "河口湖加油、提早返回 Toyota 租車店",
+      "visited": false,
+      "location": {
+        "maps_query": "トヨタレンタカー 富士河口湖店"
+      },
+      "notes": "15:30左右目標抵達還車地點，不可依山中湖回程20分鐘保證值估算。16:48列車需要車站步行與行李時間。"
+    },
+    {
       "id": "tokyo-d4-toyota-return",
       "time": "16:00",
       "category": "transport",
@@ -42,13 +104,13 @@
     },
     {
       "id": "tokyo-d4-transfer",
-      "time": "16:00 後（待訂）",
+      "time": "16:48–18:46（表定）",
       "category": "transport",
       "typeTag": "待定案",
       "categoryLabel": "河口湖→東京",
       "title": "河口湖 ➔ 新宿晚餐／上野住宿",
       "visited": false,
-      "notes": "Toyota 已確認 16:00 在河口湖同店還車，之後才可搭大眾交通返回東京。高速巴士／鐵路車票尚未確認；必須評估 19:45 新宿鳥たか訂位與 3 位成人行李，行程有遲到風險。若難以銜接，應及早變更還車或餐廳時間，勿將未確認轉乘當成已訂票。"
+      "notes": "富士回遊44表定16:48河口湖→18:46新宿；票務出票狀態未獨立核對。19:45新宿燒鳥已訂位，抵達後只有59分鐘，三件24吋行李應先安排新宿寄物或詢問餐廳；誤點需聯絡餐廳。"
     },
     {
       "id": "tokyo-d4-hotel",
