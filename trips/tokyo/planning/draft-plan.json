@@ -54,77 +54,88 @@
   "strategy": {
     "lodging_pattern": "2/1/1",
     "travel_style": "slow family resort trip; avoid shopping-heavy city days",
-    "night_1_2": "Mitsui Garden Hotel Gotanda (confirmed)",
+    "night_1_2": "Gotanda hotel booked; Day 1 evening after arrival prioritizes limited Naka-Meguro / Daikanyama / Shibuya stops. Day 2 is Tsukiji + Ginza + Azabudai + Shiba Park/Tower.",
     "night_3": "Oike Hotel, Kawaguchiko, booked for 2026-10-16",
     "night_4": "Minn Ueno (confirmed)",
-    "route": "Haneda -> Gotanda (2 nights) -> public transit to Kawaguchiko -> Toyota local pickup 10/16 14:00 -> Oike Hotel -> Toyota local return 10/17 16:00 -> return to Tokyo for 19:45 Toritaka Shinjuku -> Minn Ueno -> Narita",
-    "priority": "Family trip, but confirmed car return 10/17 16:00 and Tokyo dinner 19:45 are time-critical; avoid adding sightseeing between them.",
+    "route": "CI220 Haneda 13:10 -> Gotanda check-in -> Oct14 Naka-Meguro/Daikanyama/Shibuya light visit -> Oct15 Tsukiji/Ginza Nagano Market/Azabudai dashi/ Shiba Park Tokyo Tower -> Oct16 Fuji Excursion 93 Shinjuku 11:34-Kawaguchiko 13:31 -> Toyota pickup 14:00 -> Ooike Hotel / Oishi Park -> Oct17 Arakurayama/Oshino Hakkai/(Yamanakako optional) -> Toyota return by 16:00 -> Fuji Excursion 44 16:48-18:46 -> Toritaka Shinjuku 19:45 -> Minn Ueno -> Oct18 Asakusa -> Keisei-Ueno Skyliner 15:20 or 15:40 -> Narita T2 CI109 20:00",
+    "priority": "Preserve confirmed CI220/CI109, hotels, Toyota, and 10/17 Toritaka 19:45; sister suggested trains 93/44 with official running times verified but actual booking NOT verified. Oct17 train arrival 18:46 at Shinjuku leaves 59 minutes before restaurant. Oct18 reserve time for checked luggage and Narita.",
     "car_policy": "CONFIRMED: Toyota Fuji Kawaguchiko shop, pickup 2026-10-16 14:00, return at SAME shop 2026-10-17 16:00. Tokyo->Kawaguchiko and return train/bus not yet booked.",
-    "tsukiji_policy": "Use Day 2 morning for Tsukiji; do not rely on Sunday 10/18 for the full Tsukiji experience.",
+    "tsukiji_policy": "USER CHOSEN: Oct 15 (Thursday) 09:00–12:00 Tsukiji outer market, NOT Oct 18; after Tsukiji prefer Ginza Nagano Market -> Azabudai Dashi Okume (soup stock packets, not dumplings) -> Shiba Park/Tokyo Tower at night. Sister's Shinjuku Day 2 proposal is an alternative only, not an approved replacement.",
     "hakone_policy": "Hakone removed from this trip."
   },
   "proposals": [
     {
       "day": 1,
       "date": "2026-10-14",
-      "title": "松山 -> 羽田 13:10 -> 東京慢慢開始",
+      "title": "羽田13:10→五反田入住→中目黑／代官山／澀谷（體力彈性）",
       "overnight": "Mitsui Garden Hotel Gotanda",
       "items": [
-        "CI220 松山 09:00 出發、羽田 T3 13:10 抵達（已確認）",
-        "羽田→五反田交通未訂；15:00 起可入住三井花園飯店五反田（已訂 2 晚、3 位、無早餐）",
-        "傍晚活動按體力彈性安排，尚未確認"
-      ]
+        "CI220 09:00 松山起飛、13:10 羽田 T3 抵達（已確認），抵達後出關領行李再搭京急／都營淺草線或品川轉山手線到五反田",
+        "15:00 起可入住 Mitsui Garden Hotel Gotanda（已訂）；附近 Café au lait Tokyo Gotanda 或 Tsukemen TETSU 五反田為餐飲候選，非訂位",
+        "下午／傍晚選擇中目黑星巴克臻選烘焙工坊、代官山 Forestgate/T-SITE，再視時間到澀谷宮下公園與十字路口；抵達日不建議全逛",
+        "SHIBUYA SKY（需購票）、惠比壽 TOP of YEBISU、六本木新城展望台是互斥備選，不當作已購票；當晚回五反田住宿"
+      ],
+      "planning_note": "家人提供完整抵達日晚間候選，實際仍以出關、飯店辦理入住時間及體力為準。"
     },
     {
       "day": 2,
       "date": "2026-10-15",
-      "title": "築地早餐 -> 東京慢遊日",
+      "title": "週四築地→銀座自嘲熊→麻布台高湯包→芝公園東京鐵塔夜景",
       "overnight": "Mitsui Garden Hotel Gotanda",
       "items": [
-        "10/15 全天東京景點仍待選定，築地、銀座等是備選，不是已預訂",
-        "晚間返回已訂三井花園飯店五反田，10/16 11:00 前退房"
-      ]
+        "09:00–11:30 築地場外市場早午餐（USER CHOSEN；官方一般遊客建議 09:00–14:00）",
+        "11:45–13:00 濱離宮恩賜庭園是可選步行景點；若想多逛街可直接去銀座",
+        "13:30–15:30 銀座 Nagano Market GINZA 買自嘲熊周邊；若有時間可逛中央通／伊東屋",
+        "16:00–18:00 麻布台之丘的 だし尾粂（Dashi Okume）選購日式高湯包（soup stock packets，並非小籠包），原料需避開牛肉／牛骨來源",
+        "18:00 以後到芝公園／東京鐵塔看夜景（無登塔票，視體力可移到 Day 1 晚上）；回五反田第二晚",
+        "姐姐提出 10/15 新宿御苑、天婦羅、伊勢丹/NEWoMan/LUMINE、東京都廳展望台，先當作候選行程，不覆蓋使用者目前已選路線"
+      ],
+      "planning_note": "10/15 新宿方案是姐姐候選，但與使用者明確選定的築地＋銀座＋麻布台＋芝公園路線衝突；優先保留後者。"
     },
     {
       "day": 3,
       "date": "2026-10-16",
-      "title": "東京搭交通前往河口湖 -> Toyota 14:00 取車 -> 大池飯店",
+      "title": "富士回遊93新宿11:34→河口湖13:31→取車14:00→大池飯店／大石公園",
       "overnight": "富士之宿溫泉旅館 大池飯店 (Oike Hotel)",
       "items": [
-        "11:00 前從五反田飯店退房（能否更早出發須另行規劃）",
-        "東京→河口湖的高速巴士／鐵路交通仍未訂，須安排 14:00 前到 Toyota 富士河口湖店",
-        "14:00 Toyota 富士河口湖店取 Corolla Touring（已訂，10/17 16:00 同店還）",
-        "15:00–18:00 大池飯店辦理入住，18:00 後抵達需先電話聯絡",
-        "如果還有時間且天氣適合，可在河口湖附近短程遊覽；忍野八海／大石公園不是已確認行程",
-        "入住後享用住宿已含的 3 人晚餐，翌晨含早餐"
+        "五反田 11:00 前退房並提前前往新宿站；富士回遊 93 表定新宿 11:34 → 河口湖 13:31（官方確認 2026/10/16 運行，家人提供座位但尚未核對出票狀態）",
+        "14:00 TOYOTA 富士河口湖店取 Corolla Touring（已確認租車，10/17 16:00 同店還）；留時間取車及裝 3 件 24 吋行李",
+        "建議先去大池飯店 15:00–18:00 辦入住／卸行李，再到大石公園拍照；姐姐的 Lawson 河口湖車站前店可列途經短停候選",
+        "姐姐安排 18:00 飯店晚餐（住宿確認信含晚餐，實際時段以飯店為準），回飯店泡湯住宿"
       ],
-      "planning_note": "上午跨城交通優先，車輛 14:00 才能取；不可沿用東京早上取車的舊草案。"
+      "planning_note": "富士回遊93官方班次已查核，出票狀態尚未經 Gmail／票券核實；早點到新宿站避免錯過11:34出發。"
     },
     {
       "day": 4,
       "date": "2026-10-17",
-      "title": "大池飯店退房 -> 河口湖 16:00 還車 -> 新宿 19:45 訂位 -> Minn Ueno",
+      "title": "忠靈塔→忍野八海→山中湖可選→還車／富士回遊44→新宿燒鳥19:45",
       "overnight": "Minn Ueno (confirmed)",
       "items": [
-        "07:30–09:00 大池飯店已含早餐；10:00 前退房",
-        "退房後在河口湖周邊活動及處理行李，景點未訂／待規劃",
-        "16:00 Toyota 富士河口湖店同店還車（已預約）",
-        "還車後河口湖→新宿／上野的車班與行李方式尚未確定，晚餐時間 19:45，銜接有風險",
-        "19:45 鳥たか新宿店 3 人已訂位，只預留座位，現場自由單點",
-        "當晚住 Minn Ueno；15:00–00:00 可入住，含早餐，入住現金押金 JPY1,000"
+        "07:30–09:00 大池早餐、10:00 前退房；盡量提早出門",
+        "新倉山淺間公園／忠靈塔攝影（步道及階梯）、忍野八海自駕與午餐散步（村內需停車步行）為優先",
+        "山中湖長池親水公園視天氣與交通緩衝才加；不把 20 分鐘回車店當保證時間",
+        "目標 15:30 前後在 Toyota 河口湖店準備還車、最遲依訂單 16:00；提前加油，攜帶 3 件 24 吋行李步行到河口湖站",
+        "富士回遊 44 表定河口湖 16:48 → 新宿 18:46（官方核實 2026/10/17 班次，是否已完成出票待確認）",
+        "19:45 Toritaka Shinjuku 3 人已訂位（姐姐稿 19:30 不正確），從新宿抵達到用餐僅 59 分鐘；請預先規劃大行李寄存／帶入與列車誤點備案",
+        "晚餐後前往 Minn Ueno 辦理入住（已訂、當晚至 00:00 可辦理），勿預設晚餐前能先到上野飯店"
       ],
-      "planning_note": "Day 4 僅確定 16:00 河口湖還車、19:45 新宿晚餐、上野住宿。原淺草 TORIYOSHI / 晴空塔不是已訂；優先評估車程並提前更改不合理的預約。"
+      "planning_note": "富士回遊44官方班次已核實，但出票待驗；16:48火車銜接19:45餐廳只餘59分鐘，行李處理是重點。"
     },
     {
       "day": 5,
       "date": "2026-10-18",
-      "title": "Minn Ueno 早餐退房 -> 東京自由時間 -> 成田 T2 -> 桃園",
+      "title": "上野寄行李→雷門／仲見世／淺草寺→八十八淺草→單點壽司→晴空塔可選→成田",
       "overnight": null,
       "items": [
-        "Minn Ueno 已含早餐、10:00 前退房；確認 JPY1,000 押金返還",
-        "最後半天活動、行李與成田 T2 交通待定",
-        "CI109 成田 T2 20:00 起飛，桃園 T2 22:45 抵達（已確認）"
-      ]
+        "Minn Ueno 早餐、10:00 前退房，建議約 09:00 去京成上野寄放 3 件 24 吋行李；務必確認人工寄放與置物櫃當天容量",
+        "上午淺草雷門→仲見世商店街→淺草寺（淺草神社、傳法院通視時間）",
+        "八十八淺草／八十八良葉舎抹茶（東京都台東区花川戸2-14-3）為 user-chosen 停靠，商家營業時間需當天確認",
+        "中午安排淺草可單點的壽司店，非 omakase，尚未選店或訂位；飲食不吃牛肉與牛骨高湯",
+        "午後只選一個方向：隅田川／Sumida River Walk、Tokyo Mizumachi／晴空塔外觀；若搭 15:20 Skyliner，不建議再排合羽橋道具街與晴空塔登塔",
+        "14:30–14:45 前後回京成上野領行李及進站；週日 Skyliner 官方 15:20→16:01 或 15:40→16:21 抵成田 T2·3；姐姐的 15:35 不符週日表",
+        "CI109 20:00 成田 T2 起飛 → 22:45 桃園 T2 抵達（已確認）；不是 20:00 才開始報到"
+      ],
+      "planning_note": "10/18 Skyliner 15:20／15:40 為官網週末表；以14:30–14:45回京成上野取回行李為目標，淺草與晴空塔未必能全逛。"
     }
   ],
   "fuji_segment_detail": {
@@ -180,19 +191,23 @@
     "dates": "2026-10-16 to 2026-10-17"
   },
   "open_questions": [
-    "10/14 羽田→五反田移動方式及晚間活動",
-    "10/15 東京市區完整一天規劃",
-    "10/16 五反田退房→河口湖 14:00 Toyota 取車的交通票與行李",
-    "10/17 河口湖 16:00 Toyota 還車→新宿 19:45 晚餐的交通時刻、後續 Minn Ueno 入住與行李",
-    "取車駕駛的護照、在日本可用駕照／國際駕照核驗",
-    "10/18 最後半天行程與前往成田的交通",
-    "需確認鳥たか醬汁／高湯／共用設備完全不含牛來源",
-    "Google Maps share https://maps.app.goo.gl/ZrFejLQJLHSes9cp8?g_st=ic 尚未能解析地點名稱，已存 discovery inbox 等待辨識"
+    "家人提供富士回遊93／44班次與座位，是否已有正式票券／付款證明（官方可行性已核實）？",
+    "10/14 日落後是否買 SHIBUYA SKY，或只逛澀谷／代官山？",
+    "10/15 築地→銀座→麻布台→東京鐵塔已是使用者優先版本；姐姐新宿御苑等景點先保留候選",
+    "10/16 大池飯店晚餐是否18:00確定，需現場與飯店核對",
+    "10/17 是否安排山中湖（視天氣、油量、還車與16:48列車可行性）",
+    "10/17 18:46抵新宿後三件大行李處理，以及餐廳19:45訂位遲到備案",
+    "10/18 八十八淺草與尚未選定的單點壽司店實際營業、排隊與選單",
+    "10/18 晴空塔外觀與隅田川步道能否配合15:20或15:40 Skyliner；合羽橋屬可刪候選",
+    "取車駕駛證件、飯店飲食牛來源確認、3人行李車廂空間"
   ],
   "notes": [
     "此檔為草案，仍以 days/ 實際確認行程為準，不能把未訂交通變成已確認。",
     "箱根已移除，河口湖 10/16–10/17 一晚。",
-    "2026/10 已改為 Toyota 富士河口湖店 10/16 14:00 取、10/17 16:00 還；10/17 鳥たか新宿店 19:45 已訂。"
+    "2026/10 已改為 Toyota 富士河口湖店 10/16 14:00 取、10/17 16:00 還；10/17 鳥たか新宿店 19:45 已訂。",
+    "2026-10-13 姐姐提供東京5日詳細建議，已另外保存 planning/sister-proposal-and-reconciliation-2026-10-13.md；本檔為整合草案，未更動正式 days/day-N.json。",
+    "富士回遊 93/44 列車運行日期與時間已由富士急/JR官方核對，但實際訂票狀態未經直接票券核實。",
+    "2026-10-18 Skyliner 週末 15:20/15:40/16:00/16:40，家人版本 15:35 應改為 15:40 核對。"
   ],
   "confirmed_rental_car": {
     "provider": "Toyota Rent a Car",
@@ -212,5 +227,45 @@
     "booking_type": "seat only / a la carte",
     "status": "booked",
     "dietary_verification_pending": true
+  },
+  "last_reconciled_on": "2026-10-13",
+  "reconciliation_source": "planning/sister-proposal-and-reconciliation-2026-10-13.md",
+  "verified_suggested_transit": {
+    "fuji_excursion_93": {
+      "date": "2026-10-16",
+      "origin": "Shinjuku",
+      "departure": "11:34",
+      "destination": "Kawaguchiko",
+      "arrival": "13:31",
+      "operates_on_date": true,
+      "booking_status": "family_provided_ticket_details_not_independently_verified",
+      "source": "https://www.fujikyu-railway.jp/news/info.php?no=829"
+    },
+    "fuji_excursion_44": {
+      "date": "2026-10-17",
+      "origin": "Kawaguchiko",
+      "departure": "16:48",
+      "destination": "Shinjuku",
+      "arrival": "18:46",
+      "operates_on_date": true,
+      "booking_status": "family_provided_ticket_details_not_independently_verified",
+      "source": "https://www.fujikyu-railway.jp/fujikaiyuu/"
+    },
+    "skyliner_2026_10_18": {
+      "origin": "Keisei-Ueno",
+      "destination": "Narita Airport T2-3",
+      "preferred": [
+        {
+          "departure": "15:20",
+          "arrival": "16:01"
+        },
+        {
+          "departure": "15:40",
+          "arrival": "16:21"
+        }
+      ],
+      "booking_status": "not_confirmed",
+      "source": "https://www.keisei.co.jp/keisei/tetudou/skyliner/th/traffic/skyliner_0411.php"
+    }
   }
 }
