@@ -24,11 +24,11 @@
       "categoryLabel": "退房",
       "title": "大池飯店退房",
       "visited": false,
-      "notes": "大池飯店 10:00 前退房；當天下午仍需在河口湖活動／移動，16:00 到富士河口湖店還車。先規劃行李保管與取還車動線，並確保晚間可返回東京。"
+      "notes": "大池飯店 10:00 前退房；當天下午仍需在河口湖活動／移動，16:00 到富士河口湖店還車。先規劃行李保管與取還車動線，並確保晚間可返回東京。 建議於09:00前完成退房再出發攝影行程，否則縮短忠靈塔與山中湖。"
     },
     {
       "id": "tokyo-d4-chureito",
-      "time": "08:30–09:45（建議）",
+      "time": "09:15–10:30（建議）",
       "category": "attraction",
       "typeTag": "攝影優先",
       "categoryLabel": "富士山五重塔",
@@ -37,11 +37,11 @@
       "location": {
         "maps_query": "新倉山浅間公園 駐車場"
       },
-      "notes": "建議早起拍攝，可先去再回飯店早餐／退房，但時間需依同行者體力調整；展望台需爬約400階。搜尋指定停車場，切勿違停。導航：https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park+Parking+Lot+1"
+      "notes": "建議早餐後先退房、行李放車上，再到新倉山拍富士山與五重塔；需爬約400階，依體力及當日人潮調整。導航：https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park+Parking+Lot+1"
     },
     {
       "id": "tokyo-d4-oshino",
-      "time": "10:15–12:00（建議）",
+      "time": "11:00–12:30（建議）",
       "category": "attraction",
       "typeTag": "優先安排",
       "categoryLabel": "湧池與村落",
@@ -54,7 +54,7 @@
     },
     {
       "id": "tokyo-d4-yamanakako",
-      "time": "12:30–13:15（選去）",
+      "time": "13:00–13:40（選去）",
       "category": "attraction",
       "typeTag": "時間允許才去",
       "categoryLabel": "富士山湖景",
