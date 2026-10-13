@@ -1,9 +1,9 @@
 {
   "dayNumber": 2,
   "dayLabel": "10/15 (四)",
-  "title": "東京 Day 2｜新宿御苑・新宿購物 → 銀座 Nagano → 芝公園東京鐵塔",
+  "title": "東京 Day 2｜新宿御苑與購物 → 銀座 Nagano → 21:00 後芝公園夜景",
   "stay": "三井花園飯店五反田 / 東京",
-  "bannerAlert": "🗓️ 依家人方案：新宿御苑→新宿午餐／商圈→東京都廳展望台；另撥時間前往銀座 Nagano Market 買自嘲熊，晚上芝公園／東京鐵塔。購物與景點為規劃，非已預約。築地改為未定備選，不硬排 Day 2。",
+  "bannerAlert": "🛍️ 依使用者最新偏好：下午留足時間逛新宿伊勢丹／NEWoMan／LUMINE；東京都廳展望室彈性省略。傍晚短暫前往銀座 Nagano Market 買自嘲熊，21:00 後到芝公園／東京鐵塔拍夜景。注意交通及晚餐時間。",
   "routePoints": [],
   "spots": [
     {
@@ -47,33 +47,33 @@
     },
     {
       "id": "tokyo-d2-shopping",
-      "time": "13:00–14:15",
+      "time": "13:00–17:00",
       "category": "shopping",
       "typeTag": "規劃",
       "categoryLabel": "商圈",
-      "title": "新宿三丁目商圈｜伊勢丹、NEWoMan、LUMINE 擇逛",
+      "title": "新宿逛街｜伊勢丹、NEWoMan、LUMINE（主要下午行程）",
       "visited": false,
       "location": {
         "maps_query": "Isetan Shinjuku"
       },
-      "notes": "以姐姐原案為主；商場不必全逛，預留下午跨區去銀座買 Nagano 的時間。"
+      "notes": "使用者明確希望在新宿實際逛街，預留約3–4小時；商場依喜好自由取捨。新宿御苑後的午餐與商圈為主軸，不要為了跑景點而擠壓購物。"
     },
     {
       "id": "tokyo-d2-tocho",
-      "time": "14:30–15:20",
+      "time": "新宿下午（可選）",
       "category": "attraction",
-      "typeTag": "候選",
+      "typeTag": "彈性候選",
       "categoryLabel": "免費展望台",
       "title": "東京都廳 45F 展望室",
       "visited": false,
       "location": {
         "maps_query": "Tokyo Metropolitan Government Building South Observatory"
       },
-      "notes": "姐姐的都廳景點保留，但與銀座購物跨區需取捨。依現場開放、排隊和交通狀況，可縮短新宿逛街或省略此站。"
+      "notes": "姐姐提議的都廳45F觀景台，與3–4小時新宿購物時間競爭；若要去，可縮短逛街時間，否則直接省略。"
     },
     {
       "id": "tokyo-d2-nagano",
-      "time": "16:15–17:00",
+      "time": "17:45–18:30",
       "category": "shopping",
       "typeTag": "優先安排",
       "categoryLabel": "自嘲熊購物",
@@ -83,24 +83,34 @@
         "address": "東京都中央区銀座2-2-14 マロニエゲート銀座1 4F",
         "maps_query": "ナガノマーケット GINZA マロニエゲート銀座1"
       },
-      "notes": "特別撥約30–45分鐘去銀座買自嘲熊周邊；不是銀座整個下午深度逛。店家與庫存、營業時間以當日公告為準。銀座至芝公園需另外搭車。"
+      "notes": "特別撥約30–45分鐘從新宿搭車前往銀座 Nagano Market 購買自嘲熊，不安排深度銀座逛街。店鋪一般至21:00營業，當日仍須確認；預留跨區交通。"
+    },
+    {
+      "id": "tokyo-d2-dinner",
+      "time": "19:00–20:20",
+      "category": "food",
+      "typeTag": "待選",
+      "categoryLabel": "晚餐",
+      "title": "銀座／麻布台一帶晚餐與休息",
+      "visited": false,
+      "notes": "晚餐尚未訂位；可依地點與排隊時間彈性選擇。原先想去麻布台 Dashi Okume 買日式高湯包是購物候選，不是小籠包餐廳；若想順路加去，需於店舖結束營業前抵達，不能影響21:00芝公園。避免牛肉與牛骨高湯。"
     },
     {
       "id": "tokyo-d2-shiba",
-      "time": "18:00–19:00",
+      "time": "21:00–21:45",
       "category": "attraction",
       "typeTag": "優先安排",
       "categoryLabel": "夜景散步",
-      "title": "芝公園｜欣賞東京鐵塔夜景",
+      "title": "21:00 後芝公園｜東京鐵塔夜景拍照",
       "visited": false,
       "location": {
         "maps_query": "Shiba Park Tokyo Tower"
       },
-      "notes": "依使用者指定加入 Day 2，天黑後步行拍照。可與東京鐵塔外觀一起逛；無需假設已買登塔門票。"
+      "notes": "依使用者指定晚於21:00前往芝公園欣賞東京鐵塔與夜景；建議在芝公園可合法進入的步道散步，留意照明、當日塔體點燈模式及夜間安全。非已訂登塔票。"
     },
     {
       "id": "tokyo-d2-tower",
-      "time": "19:00–19:40",
+      "time": "21:45–22:15",
       "category": "attraction",
       "typeTag": "候選",
       "categoryLabel": "東京地標",
@@ -110,11 +120,11 @@
         "address": "4-2-8 Shibakoen, Minato City, Tokyo",
         "maps_query": "Tokyo Tower"
       },
-      "notes": "拍夜景為主，展望台不是已訂。若不想排太緊，芝公園和鐵塔視為同一段。"
+      "notes": "與芝公園夜景為同一晚間段落，可拍鐵塔外觀；並非保證觀景台在21:00後可入場，須查詢營業時間。"
     },
     {
       "id": "tokyo-d2-hotel",
-      "time": "晚上",
+      "time": "22:30 後（彈性）",
       "category": "hotel",
       "typeTag": "已確認",
       "categoryLabel": "住宿",
