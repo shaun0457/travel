@@ -31,18 +31,18 @@
 
 ### Day 3｜10/16（五）：新宿→河口湖→大池
 - 五反田退房；**富士回遊 93 11:34→13:31**（已核實班次，需另外確認家人的車票）。
-- TOYOTA 富士河口湖店 **14:00 取車**：\[導航\](https://www.google.com/maps/search/?api=1&query=Toyota+Rent+a+Car+Fujikawaguchiko)
-- **大石公園**：\[導航\](https://www.google.com/maps/search/?api=1&query=Oishi+Park+Kawaguchiko)
-- **Lawson 河口湖車站前店**：\[導航\](https://www.google.com/maps/search/?api=1&query=Lawson+Kawaguchiko+Station)
-- **大池飯店** 18:00 前入住：\[導航\](https://www.google.com/maps/search/?api=1&query=Ooike+Hotel+Kawaguchiko)；\[飯店停車場\](https://www.google.com/maps/search/?api=1&query=Oike+Hotel+Parking+Lot)
+- TOYOTA 富士河口湖店 **14:00 取車**：[導航](https://www.google.com/maps/search/?api=1&query=Toyota+Rent+a+Car+Fujikawaguchiko)
+- **大石公園**：[導航](https://www.google.com/maps/search/?api=1&query=Oishi+Park+Kawaguchiko)
+- **Lawson 河口湖車站前店**：[導航](https://www.google.com/maps/search/?api=1&query=Lawson+Kawaguchiko+Station)
+- **大池飯店** 18:00 前入住：[導航](https://www.google.com/maps/search/?api=1&query=Ooike+Hotel+Kawaguchiko)；[飯店停車場](https://www.google.com/maps/search/?api=1&query=Oike+Hotel+Parking+Lot)
 - 18:00 左右旅館晚餐，依實際飯店安排。
 - **整合排序建議**：13:31 抵達→14:00 取車→飯店放行李／先入住→大石公園（視入房流程及傍晚日照），Lawson 只是車站旁短暫拍照點，不優先於飯店。
 
 ### Day 4｜10/17（六）：忠靈塔→忍野八海→山中湖→回東京
 - 早餐 07:30–09:00，10:00 前退房。
-- **新倉山淺間公園／五重塔**：\[導航\](https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park+Parking+Lot+1)
-- **忍野八海** 午餐散步（核心區以停車步行為主）：\[付費停車場搜尋\](https://www.google.com/maps/search/?api=1&query=Oshino+Hakkai+Parking)
-- **山中湖長池親水公園**：\[導航\](https://www.google.com/maps/search/?api=1&query=Nagaike+Shinsui+Park+Yamanakako)
+- **新倉山淺間公園／五重塔**：[導航](https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park+Parking+Lot+1)
+- **忍野八海** 午餐散步（核心區以停車步行為主）：[付費停車場搜尋](https://www.google.com/maps/search/?api=1&query=Oshino+Hakkai+Parking)
+- **山中湖長池親水公園**：[導航](https://www.google.com/maps/search/?api=1&query=Nagaike+Shinsui+Park+Yamanakako)
 - 回河口湖加油，**目標 15:30 左右進店還車（合約 16:00）**；步行回車站搭 **16:48 富士回遊 44** → **18:46 新宿**。
 - **19:45 已訂位** Toritaka Shinjuku；當日只有約 59 分鐘連接新宿到達、三人行李與餐廳，請事先處理行李及列車延誤備援；晚餐後再前往 Minn Ueno 入住。
 - **整合建議**：新倉山＋忍野八海為優先，山中湖視交通及天氣決定是否停留，約 14:00～14:30 開始返回河口湖區，**勿把原案「山中湖到 Toyota 20 分」當成穩定保證值**。
@@ -53,17 +53,17 @@
 - 使用者原本指定：**八十八淺草／八十八良葉舍**、**單點壽司（非 omakase，仍未訂位）**、**東京晴空塔**。
 - **建議優先版**（需提前退房才較從容）：09:00–09:30 京成上野寄行李→09:45 雷門→仲見世→淺草寺（可順訪淺草神社）→11:00 八十八淺草（花川戶 2-14-3）→11:45–12:45 單點壽司午餐→13:00 隅田川周邊／晴空塔外觀（視時間）→14:00 前後返回京成上野領行李→**15:20 或 15:40 Skyliner**→成田 T2 16:01 或 16:21。
 - **合羽橋道具街、整段 Tokyo Mizumachi 慢逛與登晴空塔展望台** 都是加碼候選，若需配合早班 Skyliner 應擇一甚至刪除。晴空塔位於隅田川東側，合羽橋在淺草西側，兩者不適合同時深入逛。
-- 八十八淺草地址：東京都台東区花川戸2-14-3；\[導航\](https://www.google.com/maps/search/?api=1&query=八十八+浅草+花川戸2-14-3)。店家營業時間各平台有差異，請事前確認，不能保證 09:00 開門。
+- 八十八淺草地址：東京都台東区花川戸2-14-3；[導航](https://www.google.com/maps/search/?api=1&query=八十八+浅草+花川戸2-14-3)。店家營業時間各平台有差異，請事前確認，不能保證 09:00 開門。
 - 回程機票 20:00 起飛，不是 20:00 才抵達報到櫃檯。
 
 ## 使用者確定要保留的優先項目（不可被姐姐原案覆蓋）
 1. **10/15 築地早上至中午**（築地場外市場官方推薦 09:00–14:00）：https://www.tsukiji.or.jp/english/shopping/
-2. **銀座 Nagano Market 買自嘲熊**：\[導航\](https://www.google.com/maps/search/?api=1&query=Nagano+Market+Ginza)
-3. **麻布台 だし尾粂 買日式煮湯高湯包，不是小籠包**：\[導航\](https://www.google.com/maps/search/?api=1&query=Dashi+Okume+Azabudai+Hills)
+2. **銀座 Nagano Market 買自嘲熊**：[導航](https://www.google.com/maps/search/?api=1&query=Nagano+Market+Ginza)
+3. **麻布台 だし尾粂 買日式煮湯高湯包，不是小籠包**：[導航](https://www.google.com/maps/search/?api=1&query=Dashi+Okume+Azabudai+Hills)
 4. **芝公園＋東京鐵塔夜景**：優先排 10/15 夜晚，也可 10/14 晚上視體力提前。
 5. **10/18 淺草、八十八淺草、可單點的壽司店、晴空塔**，需看成田交通調整。
 6. **不吃牛肉，包含牛骨高湯**；所有餐飲點餐需核對。
-7. **10/16–17 河口湖租車、忍野八海與攝影點**，另見 \[河口湖自駕拍照攻略\](./kawaguchiko-self-drive-photo-guide-2026-10.md)。
+7. **10/16–17 河口湖租車、忍野八海與攝影點**，另見 [河口湖自駕拍照攻略](./kawaguchiko-self-drive-photo-guide-2026-10.md)。
 
 ## 建議的整合版五日總表
 | 日期 | 主要路線（未標已預訂者均為規劃） | 已確認硬時間 |
