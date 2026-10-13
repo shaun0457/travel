@@ -1,15 +1,19 @@
 [
   {
     "id": "cand-fuji-view",
-    "name": "河口湖攝影備選（大石公園／長崎公園等）",
+    "name": "大石公園｜河口湖與富士山攝影",
     "category": "spot",
     "typeTag": "高優先自然景觀",
     "mapcode": null,
     "x": 0,
     "y": 0,
     "region": "河口湖",
-    "desc": "河口湖10/16–17已確定住大池飯店且已訂當地Toyota租車。大石公園、忠靈塔、忍野八海已排入正式Day3–4；其他河口湖攝影點見本備選庫。",
-    "tag": "河口湖已確認行程＋攝影替代點"
+    "desc": "已排入 10/16 下午，若天氣不佳可替換其他北岸景點。停留約45–60分鐘；不可壓縮大池飯店入住與晚餐。",
+    "tag": "河口湖已確認行程＋攝影替代點",
+    "location": {
+      "maps_query": "大石公園 河口湖"
+    },
+    "duration_min": 60
   },
   {
     "id": "tokyo-bk-tsukiji",
@@ -20,8 +24,11 @@
     "x": 0,
     "y": 0,
     "region": "築地",
-    "desc": "姐姐版 Day2 新宿為優先。築地若另排，建議上午到中午；與新宿完整逛街不可硬塞同一天。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Tsukiji+Outer+Market",
-    "tag": "東京市區備選"
+    "desc": "姐姐版 Day2 新宿為優先。築地若另排，建議上午到中午；與新宿完整逛街不可硬塞同一天。",
+    "tag": "東京市區備選",
+    "location": {
+      "maps_query": "築地場外市場"
+    }
   },
   {
     "id": "tokyo-bk-dashi",
@@ -32,8 +39,11 @@
     "x": 0,
     "y": 0,
     "region": "麻布台之丘",
-    "desc": "想買煮湯用日式高湯包（不是小籠包）。位於麻布台之丘 Garden Plaza C B1F；需確認營業及無牛骨原料；未排入 Day2 必去。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Dashi+Okume+Azabudai+Hills",
-    "tag": "想買・尚未排時段"
+    "desc": "想買煮湯用日式高湯包（不是小籠包）。位於麻布台之丘 Garden Plaza C B1F；需確認營業及無牛骨原料；未排入 Day2 必去。",
+    "tag": "想買・尚未排時段",
+    "location": {
+      "maps_query": "だし尾粂 麻布台ヒルズ"
+    }
   },
   {
     "id": "tokyo-bk-tocho",
@@ -44,8 +54,11 @@
     "x": 0,
     "y": 0,
     "region": "新宿",
-    "desc": "姐姐 Day2 候選；若要保留13:00–17:00 新宿購物，可視排隊與體力省略。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Government+Building+Observatory",
-    "tag": "Day2 替換候選"
+    "desc": "姐姐 Day2 候選；若要保留13:00–17:00 新宿購物，可視排隊與體力省略。",
+    "tag": "Day2 替換候選",
+    "location": {
+      "maps_query": "東京都庁 展望室"
+    }
   },
   {
     "id": "tokyo-bk-shibuya",
@@ -56,19 +69,39 @@
     "x": 0,
     "y": 0,
     "region": "澀谷",
-    "desc": "Day1 抵達晚間候選，需預約有時間的入場票；惠比壽或六本木展望台不需全部去。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Shibuya+Sky",
-    "tag": "Day1 候選・需購票"
+    "desc": "Day1 抵達晚間候選，需預約有時間的入場票；惠比壽或六本木展望台不需全部去。",
+    "tag": "Day1 候選・需購票",
+    "location": {
+      "maps_query": "SHIBUYA SKY"
+    }
   },
   {
     "id": "tokyo-bk-momiji",
-    "name": "河口湖紅葉迴廊／紅葉隧道",
+    "name": "河口湖紅葉迴廊",
     "category": "spot",
     "typeTag": "備選・未預約",
     "mapcode": null,
     "x": 0,
     "y": 0,
     "region": "河口湖北岸",
-    "desc": "10月中旬紅葉可能未盛；替代大石公園或長崎公園時使用，勿壓縮飯店晚餐及還車。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Momiji+Corridor+Kawaguchiko",
+    "desc": "與紅葉隧道不同地點。10月中旬紅葉可能未盛；僅替換既有北岸拍照點，勿壓縮飯店晚餐或16:00還車。",
+    "tag": "Day3–4 攝影候選",
+    "location": {
+      "maps_query": "河口湖 もみじ回廊"
+    },
+    "duration_min": 30
+  },
+  {
+    "id": "tokyo-bk-momiji-tunnel",
+    "name": "河口湖紅葉隧道",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "河口湖北岸",
+    "location": {
+      "maps_query": "河口湖 もみじトンネル"
+    },
+    "duration_min": 30,
+    "desc": "與紅葉迴廊不同地點，獨立導航。10月中旬色況未必理想；僅替換拍照點，合法停車後步行。",
     "tag": "Day3–4 攝影候選"
   },
   {
@@ -80,8 +113,15 @@
     "x": 0,
     "y": 0,
     "region": "河口湖",
-    "desc": "富士山鳥居構圖；山路狹窄且需遵守停車規定，只能替換其他拍照點。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Tenku+no+Torii+Kawaguchiko",
-    "tag": "Day3–4 攝影候選"
+    "desc": "富士山鳥居構圖；山路狹窄且需遵守停車規定，只能替換其他拍照點。",
+    "tag": "Day3–4 攝影候選",
+    "location": {
+      "maps_query": "河口浅間神社 遥拝所 天空の鳥居"
+    },
+    "duration_min": 60,
+    "contact": {
+      "website": "https://asamajinja.or.jp/"
+    }
   },
   {
     "id": "tokyo-bk-ropeway",
@@ -92,8 +132,15 @@
     "x": 0,
     "y": 0,
     "region": "河口湖",
-    "desc": "俯瞰湖與富士山；排隊可能久，不要與忍野八海／忠靈塔全部硬塞。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Mt+Fuji+Panoramic+Ropeway",
-    "tag": "Day3–4 攝影候選"
+    "desc": "僅替換既有景點；排隊與往返預留60–90分鐘，出發前查官方運行公告及末班。強風可能停駛，不影響16:00還車。",
+    "tag": "Day3–4 攝影候選",
+    "location": {
+      "maps_query": "河口湖 富士山パノラマロープウェイ 河口湖畔駅"
+    },
+    "duration_min": 90,
+    "contact": {
+      "website": "https://www.mtfujiropeway.jp/"
+    }
   },
   {
     "id": "tokyo-bk-asakusa-sushi",
@@ -104,8 +151,11 @@
     "x": 0,
     "y": 0,
     "region": "淺草",
-    "desc": "使用者希望非 omakase 自由單點壽司，尚未定店或預約，且需留出返回上野拿行李時間。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Asakusa+a+la+carte+sushi",
-    "tag": "Day5 午餐候選"
+    "desc": "使用者希望非 omakase 自由單點壽司，尚未定店或預約，且需留出返回上野拿行李時間。",
+    "tag": "Day5 午餐候選",
+    "location": {
+      "maps_query": "浅草 寿司 単品"
+    }
   },
   {
     "id": "tokyo-bk-skytree",
@@ -116,8 +166,11 @@
     "x": 0,
     "y": 0,
     "region": "淺草／押上",
-    "desc": "Day5 時間允許可逛晴空塔外觀或 Solamachi；登塔需另購票，優先保留15:20/15:40 Skyliner交通。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree",
-    "tag": "Day5 選去・不保證登塔"
+    "desc": "Day5 時間允許可逛晴空塔外觀或 Solamachi；登塔需另購票，優先保留15:20/15:40 Skyliner交通。",
+    "tag": "Day5 選去・不保證登塔",
+    "location": {
+      "maps_query": "東京スカイツリー"
+    }
   },
   {
     "id": "tokyo-bk-kappabashi",
@@ -128,8 +181,11 @@
     "x": 0,
     "y": 0,
     "region": "淺草西側",
-    "desc": "姐姐 Day5 提案；若同時要晴空塔，兩者位於淺草不同方向，需擇一以免誤機。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Kappabashi+Street",
-    "tag": "Day5 擇一備選"
+    "desc": "姐姐 Day5 提案；若同時要晴空塔，兩者位於淺草不同方向，需擇一以免誤機。",
+    "tag": "Day5 擇一備選",
+    "location": {
+      "maps_query": "かっぱ橋道具街"
+    }
   },
   {
     "id": "tokyo-bk-narita-temple",
@@ -140,8 +196,11 @@
     "x": 0,
     "y": 0,
     "region": "成田市區（不在航廈）",
-    "desc": "獨立半日備選，非成田第二航廈內；10/18已有淺草和20:00航班，不建議順路硬排。需先轉車至成田站，再步行。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Naritasan+Shinshoji",
-    "tag": "成田市區・本次不建議"
+    "desc": "獨立半日備選，非成田第二航廈內；10/18已有淺草和20:00航班，不建議順路硬排。需先轉車至成田站，再步行。",
+    "tag": "成田市區・本次不建議",
+    "location": {
+      "maps_query": "成田山新勝寺"
+    }
   },
   {
     "id": "tokyo-bk-narita-dutyfree",
@@ -152,8 +211,11 @@
     "x": 0,
     "y": 0,
     "region": "成田機場 T2（管制區）",
-    "desc": "CI109 20:00起飛；辦理報到安檢後依登機口及剩餘時間購物，店舖與營業時間以官方 T2 目錄為準。｜Google Maps：https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+2",
-    "tag": "Day5 機場備選"
+    "desc": "CI109 20:00起飛；辦理報到安檢後依登機口及剩餘時間購物，店舖與營業時間以官方 T2 目錄為準。",
+    "tag": "Day5 機場備選",
+    "location": {
+      "maps_query": "成田空港 第2ターミナル"
+    }
   },
   {
     "id": "tokyo-bk-narita-food",
@@ -164,7 +226,91 @@
     "x": 0,
     "y": 0,
     "region": "成田機場 T2",
-    "desc": "機場本身有安檢前、安檢後餐廳。僅作航班前備用，先確認位置及料理是否含牛、牛骨高湯；不可為用餐錯過登機。官方：https://www.narita-airport.jp/en/shop/shop-search/?category=restaurant&terminals=T2｜Google Maps：https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+2+restaurants",
-    "tag": "Day5 機場備選"
+    "desc": "機場本身有安檢前、安檢後餐廳。僅作航班前備用，先確認位置及料理是否含牛、牛骨高湯；不可為用餐錯過登機。官方：https://www.narita-airport.jp/en/shop/shop-search/?category=restaurant&terminals=T2",
+    "tag": "Day5 機場備選",
+    "location": {
+      "maps_query": "成田空港 第2ターミナル レストラン"
+    },
+    "contact": {
+      "website": "https://www.narita-airport.jp/en/shop/shop-search/?category=restaurant&terminals=T2"
+    }
+  },
+  {
+    "id": "tokyo-bk-nagasaki",
+    "name": "長崎公園｜河口湖倒影",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "河口湖北岸",
+    "location": {
+      "maps_query": "長崎公園 河口湖"
+    },
+    "duration_min": 30,
+    "desc": "10/16大石公園後的彈性站；湖面倒影視風勢與能見度。時間不足直接回飯店。",
+    "tag": "Day3–4 攝影候選"
+  },
+  {
+    "id": "tokyo-bk-chureito",
+    "name": "新倉山淺間公園／忠靈塔",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "富士吉田",
+    "location": {
+      "maps_query": "新倉山浅間公園 駐車場"
+    },
+    "duration_min": 90,
+    "desc": "已排入10/17上午；需爬約400階，依體力和人潮調整，早餐後先退房再出發。",
+    "tag": "Day3–4 攝影候選"
+  },
+  {
+    "id": "tokyo-bk-oshino",
+    "name": "忍野八海｜湧池與村落",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "忍野村",
+    "location": {
+      "maps_query": "忍野八海 駐車場"
+    },
+    "duration_min": 90,
+    "desc": "已排入10/17；周邊付費停車後步行，不開車穿梭中心小路。主要池群約60–90分鐘，完整八池需更久。",
+    "tag": "Day3–4 攝影候選"
+  },
+  {
+    "id": "tokyo-bk-yamanakako",
+    "name": "山中湖・長池親水公園",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "山中湖",
+    "location": {
+      "maps_query": "長池親水公園 山中湖"
+    },
+    "duration_min": 30,
+    "desc": "10/17時間與天氣允許才去；以15:30左右返回Toyota、16:00還車為優先。",
+    "tag": "Day3–4 攝影候選"
+  },
+  {
+    "id": "tokyo-bk-asakusa",
+    "name": "淺草寺・雷門・仲見世商店街",
+    "category": "spot",
+    "typeTag": "備選・未預約",
+    "region": "淺草",
+    "location": {
+      "maps_query": "浅草寺 雷門"
+    },
+    "duration_min": 90,
+    "desc": "10/18半日候選，先處理上野退房與行李；商店營業依現場，不影響前往成田機場。",
+    "tag": "Day5 擇時備選"
+  },
+  {
+    "id": "tokyo-bk-asakusa-matcha",
+    "name": "八十八淺草｜抹茶休息",
+    "category": "cafe",
+    "typeTag": "備選・未預約",
+    "region": "淺草",
+    "location": {
+      "maps_query": "八十八浅草"
+    },
+    "duration_min": 45,
+    "desc": "姐姐與使用者的淺草候選。營業、排隊與品項待確認；不為排隊壓縮回上野取行李及機場交通。",
+    "tag": "Day5 擇時備選"
   }
 ]

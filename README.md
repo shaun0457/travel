@@ -43,3 +43,15 @@ npm run verify:build
 ```
 
 GitHub Actions performs the same source-first build before Pages deployment.
+
+`verify:build` also compares generated itinerary, candidates, tasks and packing with
+the authoritative source. The mobile gate checks every rendered day, candidate
+card, Google navigation destination and preservation of saved device progress.
+After deployment, use the same gate against the public URL and deployed commit:
+
+```bash
+npm run verify:mobile -- https://shaun0457.github.io/travel/tokyo/ <deployed-commit-sha>
+```
+
+This public check requires a local verified build and Playwright. It compares the
+live data with that build, verifies HTTP 200 and checks both asset version tags.

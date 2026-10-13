@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
+import {isDeepStrictEqual} from 'node:util';
 
 const root=process.cwd(), trips=path.join(root,'trips');
 let bad=0;
@@ -10,6 +12,28 @@ const allowedInbox=new Set(['received','processing','needs_review','processed','
 const allowedVerification=new Set(['unverified','verified','conflicting','stale']);
 const req=(ok,msg)=>{if(!ok){console.error(`FAIL: ${msg}`);bad++;}};
 const navReady=loc=>!!(loc&&(((Number.isFinite(Number(loc.lat))&&Number.isFinite(Number(loc.lng)))&&(loc.lat!==null&&loc.lng!==null))||loc.address||loc.maps_query));
+
+function verifyGeneratedTrip(slug, dir, days, candidateList) {
+  const file = path.join(root, 'dist', slug, 'assets', 'js', 'travel-data.js');
+  if (!fs.existsSync(file)) return;
+  const context = {window: {}};
+  vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
+  // Compare serialized values across VM realms. Joined PlaceEntity fields may add
+  // data, but every explicitly authored source field must survive the build.
+  const bundle = JSON.parse(JSON.stringify(context.window.TRAVEL_TRIP_DATA));
+  const includesSource = (actual, expected) => {
+    if (Array.isArray(expected)) return Array.isArray(actual) && actual.length === expected.length && expected.every((v, i) => includesSource(actual[i], v));
+    if (expected && typeof expected === 'object') return actual && Object.entries(expected).every(([k, v]) => includesSource(actual[k], v));
+    return isDeepStrictEqual(actual, expected);
+  };
+  req(includesSource(bundle.defaultTripData, days), `${slug}: generated itinerary differs from source`);
+  const rawCandidates = candidateList.map(c => typeof c === 'string' ? {place_id: c} : c);
+  req(includesSource(bundle.candidateDatabase, rawCandidates), `${slug}: generated candidates differ from authoritative source`);
+  for (const name of ['tasks', 'packing']) {
+    req(includesSource(bundle[name === 'tasks' ? 'defaultPendingTasks' : 'defaultPackingList'], readOptional(path.join(dir, `${name}.json`), [])), `${slug}: generated ${name} differs from source`);
+  }
+  console.log(`PASS ${slug}: generated itinerary, candidates, tasks and packing match source`);
+}
 
 for(const slug of fs.readdirSync(trips).filter(s=>fs.statSync(path.join(trips,s)).isDirectory())){
   const d=path.join(trips,slug);
@@ -38,6 +62,7 @@ for(const slug of fs.readdirSync(trips).filter(s=>fs.statSync(path.join(trips,s)
   const claimsDoc=readOptional(path.join(d,'discovery','claims.json'),{claims:[]});const claims=Array.isArray(claimsDoc)?claimsDoc:(claimsDoc.claims||[]);claims.forEach((c,i)=>{fail(c.claim_id&&c.event_id&&c.field!==undefined&&c.value!==undefined,`bad Claim at index ${i}`);const status=c?.verification?.status||'unverified';fail(allowedVerification.has(status),`Claim ${c.claim_id||i} has unsupported verification status ${status}`)});
   const preferred=path.join(d,'planning','candidates.json'),legacy=path.join(d,'candidates.json');fail(fs.existsSync(preferred)||fs.existsSync(legacy),'missing planning/candidates.json and legacy candidates.json');const candidates=readOptional(fs.existsSync(preferred)?preferred:legacy,[]);const candidateList=Array.isArray(candidates)?candidates:(candidates.candidates||[]);candidateList.forEach((c,i)=>{if(c?.place_id)fail(placeMap.has(c.place_id),`candidate ${c.id||i} references missing place_id ${c.place_id}`)});
   fail(ui?.confirmed_option_id,'confirmed UI option missing');fail((ui?.ui_options||[]).some(x=>x.id===ui.confirmed_option_id),'confirmed UI option not found');fail(fs.existsSync(path.join(root,'runtime',meta.template||'gemini-mobile-v1','runtime.json')),'runtime missing');
+  if (process.argv.includes('--build') && meta.publish !== false) verifyGeneratedTrip(slug, d, days, candidateList);
   console.log(`PASS ${slug}: ${days.length} days, ${count} spots, inbox ${aggregateEvents.length+jsonFiles(path.join(d,'discovery','inbox')).length}, places ${placeMap.size}, claims ${claims.length}, candidates ${candidateList.length}`);
 }
 const runtimeTemplateDir=path.join(root,'runtime','gemini-mobile-v1','template-parts');
