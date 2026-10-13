@@ -74,3 +74,11 @@
 ## 2026-10-13 夜景與晴空塔新增安排
 - **10/14（三）或 10/15（四）晚上擇一**：芝公園散步、欣賞東京鐵塔夜景。日期未固定，依抵達時間與築地行程調整；尚未購票或預約展望台。
 - **10/18（日）淺草加晴空塔**：與雷門、仲見世、八十八淺草、單點壽司合併規劃。這是希望造訪的景點，**不代表登塔門票已訂**；必須核對成田回程班機及移動時間，必要時縮短行程。
+
+## 2026-10-13 新增：Nagano 自嘲熊購物 + 麻布台湯包候選
+- **建議 10/15（四）**：上午築地 → 下午銀座 **ナガノマーケット GINZA** 購買 Nagano 自嘲熊（ナガノのくま）周邊 → 傍晚麻布台湯包／餐飲（**店名未核實，暫列待確認**） → 晚上芝公園、東京鐵塔夜景。
+- 若 10/14（三）入境及飯店入住後時間充足，也可把銀座與麻布台／東京鐵塔段提前；**10/14 或 10/15 晚上擇一，不重複強制排兩晚**。
+- Nagano Market 官方店：東京都中央區銀座 2-2-14，**マロニエゲート銀座1 4F**；11:00–21:00（營業時間可能異動），電話 080-7094-5633；[Google Maps 導航](https://www.google.com/maps/search/?api=1&query=Nagano+Market+Ginza)。官方來源：https://nagano-info.jp/tenpo_nm/ginza/ 。店有 Nagano no Kuma 周邊，特定自嘲熊商品與庫存需現場或官方公告確認。
+- 麻布台區域：[Azabudai Hills 導航](https://www.google.com/maps/search/?api=1&query=Azabudai+Hills)；**「麻布台湯包」尚無確認的對應店名、地址或菜單，切勿標為已確認餐廳**；官方商店目錄：https://www.azabudai-hills.com/shop_list/search.html 。
+- 芝公園：[導航](https://www.google.com/maps/search/?api=1&query=Shiba+Park+Tokyo)；東京鐵塔：[導航](https://www.google.com/maps/search/?api=1&query=Tokyo+Tower)。
+- 使用者完全不吃牛肉及牛骨高湯；確認湯包餡料、湯底後再決定是否用餐。
