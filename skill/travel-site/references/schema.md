@@ -79,5 +79,15 @@ Legacy place fields (`id`, `name`, `area`) remain readable during migration, but
 ## Day spot
 Required fields remain `id`, `time`, `title`, `notes`. Optional reusable fields: `place_id`, `location`, `contact`, `duration_min`, `transport_to_next`, `visited`. When `place_id` exists, build resolves PlaceEntity metadata and spot-level values override joined defaults.
 
+## Optional day route choices
+
+A day may declare `routeOptions: [{id, label, summary}]` and a matching
+`defaultRouteOption`. An itinerary spot with `routeOption` is shown only when that
+route is selected; spots without it are common to every route. Route IDs must be
+unique lowercase identifiers, and every route must have at least one navigable
+spot. Timeline, Today, counts and next-stop navigation use the selected route.
+The selected route is device progress stored in the day's state payload; it is
+also included in shared progress links. It never replaces repository facts.
+
 ## Candidate Pool
 `planning/candidates.json` is authoritative when present; root `candidates.json` is the fallback. A candidate may embed presentation fields or reference `place_id`. Only planning-ready PlaceEntities may be automatically proposed by an Agent.

@@ -49,14 +49,42 @@ if(screenshotDir)fs.mkdirSync(screenshotDir,{recursive:true});
 await page.locator('#nav-btn-itinerary').click();
 for(let i=0;i<bundle.defaultTripData.length;i++){
   await page.locator('#day-tabs button').nth(i).click();
+  const day=bundle.defaultTripData[i],options=day.routeOptions?.length?day.routeOptions:[null];
+  for(const option of options){
+  if(option)await page.locator(`#route-summary [data-route-option="${option.id}"]`).click();
+  const visibleSpots=day.spots.filter(s=>!s.routeOption||s.routeOption===option?.id);
   const titles=await page.locator('#spots-timeline-container h3').allTextContents();
-  assert.deepEqual(titles,bundle.defaultTripData[i].spots.map(s=>s.title),`Day ${i+1} rendered itinerary`);
+  assert.deepEqual(titles,visibleSpots.map(s=>s.title),`Day ${i+1} ${option?.id||''} rendered itinerary`);
   await page.evaluate(()=>{window.__navUrls=[];window.open=url=>window.__navUrls.push(url)});
-  const expected=bundle.defaultTripData[i].spots.map(expectedGoogleUrl);
+  const expected=visibleSpots.map(expectedGoogleUrl);
   const buttons=page.locator('#spots-timeline-container .primary-nav');
   for(let j=0;j<expected.length;j++)await buttons.nth(j).click();
   assert.deepEqual(await page.evaluate(()=>window.__navUrls),expected,`Day ${i+1} navigation buttons`);
-  if(screenshotDir&&slug==='tokyo'&&(i===2||i===3))await page.screenshot({path:path.join(screenshotDir,`tokyo-day-${i+1}.png`),fullPage:true});
+  if(option){
+    assert.equal(await page.locator(`#route-summary [data-route-option="${option.id}"]`).getAttribute('aria-pressed'),'true','selected route control');
+    const layout=await page.locator('#route-summary [data-route-option]').evaluateAll(buttons=>buttons.map(b=>({width:b.getBoundingClientRect().width,height:b.getBoundingClientRect().height})));
+    assert.ok(layout.every(r=>r.width>=44&&r.height>=44),'route choice tap targets');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),true,'route screen has no horizontal overflow');
+    // Completing common stops must advance into the selected route, never its alternative.
+    const priorVisited=await page.evaluate(()=>tripData[currentDayIndex].spots.map(s=>s.visited));
+    await page.evaluate(()=>{tripData[currentDayIndex].spots.forEach(s=>s.visited=!s.routeOption);renderToday();renderNextStopBar()});
+    const first=visibleSpots.find(s=>s.routeOption);
+    assert.equal(await page.locator('#next-stop-title').textContent(),first.title,'next stop follows selected route');
+    assert.equal(await page.locator('#today-upcoming h3').first().textContent(),first.title,'today follows selected route');
+    await page.evaluate(flags=>{tripData[currentDayIndex].spots.forEach((s,j)=>s.visited=flags[j]);renderToday();renderItinerary();renderNextStopBar()},priorVisited);
+    if(screenshotDir){
+      await page.evaluate(()=>window.scrollTo(0,0));
+      await page.screenshot({path:path.join(screenshotDir,`${slug}-day-${i+1}-${option.id}.png`),fullPage:true});
+      await page.screenshot({path:path.join(screenshotDir,`${slug}-day-${i+1}-${option.id}-top.png`)});
+    }
+    // Test the card's original source index after filtering, not just its label.
+    const last=visibleSpots.findLast(s=>s.routeOption);
+    const card=page.locator('#spots-timeline-container article').filter({has:page.locator('h3',{hasText:last.title})});
+    await card.getByRole('button',{name:'完成打卡',exact:true}).click();
+    assert.equal(await page.evaluate(id=>tripData[currentDayIndex].spots.find(s=>s.id===id).visited,last.id),true,'filtered route card updates correct source spot');
+    console.log(`PASS Day ${i+1} ${option.id}: ${visibleSpots.length} route stops, navigation destinations, next stop, today, progress indices and tap targets`);
+  }else if(screenshotDir&&slug==='tokyo'&&(i===2||i===3))await page.screenshot({path:path.join(screenshotDir,`tokyo-day-${i+1}.png`),fullPage:true});
+  }
 }
 await page.locator('#nav-btn-saved').click();
 await page.locator('#saved-tab-candidates').click();
@@ -70,9 +98,11 @@ for(const c of bundle.candidateDatabase){
   await page.locator('#navigation-sheet [data-sheet-close]').click();
 }
 if(screenshotDir&&slug==='tokyo')await page.screenshot({path:path.join(screenshotDir,'tokyo-candidates.png'),fullPage:true});
-console.log(`PASS ${slug}: ${bundle.defaultTripData.length} rendered days, ${bundle.defaultTripData.reduce((n,d)=>n+d.spots.length,0)} itinerary navigation buttons, ${bundle.candidateDatabase.length} candidate cards and navigation sheets`);
+console.log(`PASS ${slug}: ${bundle.defaultTripData.length} rendered days, navigation for all ${bundle.defaultTripData.reduce((n,d)=>n+d.spots.length,0)} source stops across route choices, ${bundle.candidateDatabase.length} candidate cards and navigation sheets`);
 
 // An existing device's saved progress must never replace source itinerary facts.
+const selectedRoutes=await page.evaluate(()=>tripData.map(selectedRouteOption));
+const visitedBeforeReload=await page.evaluate(()=>tripData.map(d=>d.spots.filter(s=>s.visited).map(s=>s.id)));
 await page.evaluate(()=>{
   const progress=buildStatePayload();
   progress.days[0].visited=[defaultTripData[0].spots[0].id];
@@ -80,10 +110,25 @@ await page.evaluate(()=>{
   localStorage.setItem(STATE_KEY,JSON.stringify(progress));
 });
 await page.reload();await page.waitForFunction(()=>document.querySelector('#spots-timeline-container article'));
-const restored=await page.evaluate(()=>({days:tripData.map(d=>d.spots.map(s=>s.id)),visited:tripData[0].spots[0].visited,candidates:candidateDatabase.length}));
+const restored=await page.evaluate(()=>({days:tripData.map(d=>d.spots.map(s=>s.id)),visited:tripData[0].spots[0].visited,candidates:candidateDatabase.length,routes:tripData.map(selectedRouteOption),routeVisited:tripData.slice(1).map(d=>d.spots.filter(s=>s.visited).map(s=>s.id))}));
 assert.deepEqual(restored.days,bundle.defaultTripData.map(d=>d.spots.map(s=>s.id)),'saved state preserves latest source');
 assert.equal(restored.visited,true,'saved visited progress survives reload');
 assert.equal(restored.candidates,bundle.candidateDatabase.length,'saved state preserves latest candidates');
+assert.deepEqual(restored.routes,selectedRoutes,'route choice survives reload');
+assert.deepEqual(restored.routeVisited,visitedBeforeReload.slice(1),'route visited progress survives reload');
+const shareUrl=await page.evaluate(()=>generateShareUrl());
+const sharedPage=await browser.newPage({viewport:{width:390,height:844}});
+sharedPage.on('pageerror',error=>runtimeErrors.push(error.message));
+await sharedPage.goto(shareUrl);await sharedPage.waitForFunction(()=>document.querySelector('#spots-timeline-container article'));
+assert.deepEqual(await sharedPage.evaluate(()=>tripData.map(selectedRouteOption)),selectedRoutes,'shared progress restores route selection on a fresh device');
+assert.deepEqual(await sharedPage.evaluate(()=>tripData.slice(1).map(d=>d.spots.filter(s=>s.visited).map(s=>s.id))),visitedBeforeReload.slice(1),'shared progress preserves route visited state');
+await sharedPage.close();
+// Stale/invalid saved route ids fall back to the current source default.
+const invalidFallback=await page.evaluate(()=>{
+  const p=buildStatePayload();p.days.forEach(d=>d.routeOption='removed-route');applyStatePayload(p);
+  return tripData.map(selectedRouteOption);
+});
+assert.deepEqual(invalidFallback,bundle.defaultTripData.map(d=>d.defaultRouteOption||d.routeOptions?.[0]?.id||null),'invalid route choice falls back to source default');
 assert.deepEqual(runtimeErrors,[],'browser runtime errors');
 await browser.close();
-console.log(`PASS ${slug}: saved progress survives reload while current source remains authoritative; no browser runtime errors`);
+console.log(`PASS ${slug}: saved/shared route choices and progress preserved; invalid routes fall back to source; no browser runtime errors`);

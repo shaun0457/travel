@@ -55,6 +55,23 @@ for(const slug of fs.readdirSync(trips).filter(s=>fs.statSync(path.join(trips,s)
     }
   }
   const ids=new Set();let count=0;
+  for (const day of days) {
+    const options = day.routeOptions || [];
+    const optionIds = new Set(options.map(o => o.id));
+    fail(options.length === optionIds.size, `day ${day.dayNumber}: duplicate route option`);
+    if (options.length) {
+      fail(optionIds.has(day.defaultRouteOption), `day ${day.dayNumber}: invalid default route`);
+      options.forEach(o => {
+        fail(/^[a-z][a-z0-9-]*$/.test(o.id) && o.label && o.summary, `day ${day.dayNumber}: route needs stable id, label and summary`);
+        fail(day.spots.some(s => s.routeOption === o.id), `day ${day.dayNumber}: empty route ${o.id}`);
+      });
+    }
+    for (const spot of day.spots || []) {
+      if (!spot.routeOption) continue;
+      fail(optionIds.has(spot.routeOption), `spot ${spot.id}: unknown route ${spot.routeOption}`);
+      fail(navReady(spot.location), `spot ${spot.id}: route stop needs a navigation destination`);
+    }
+  }
   days.forEach((day,i)=>{fail(Array.isArray(day.spots)&&day.spots.length,`day ${i+1} has no spots`);(day.spots||[]).forEach(s=>{count++;fail(s.id&&s.time&&s.title&&s.notes,`spot on day ${i+1} requires id/time/title/notes`);fail(!ids.has(s.id),`duplicate spot id ${s.id}`);ids.add(s.id);if(s.place_id)fail(placeMap.has(s.place_id),`spot ${s.id} references missing place_id ${s.place_id}`)})});
   const inboxAggregate=readOptional(path.join(d,'discovery','inbox.json'),{events:[]});const aggregateEvents=Array.isArray(inboxAggregate)?inboxAggregate:(inboxAggregate.events||[]);const sourceUrls=new Set();
   const validateEvent=(x,label)=>{const id=x.event_id||x.id;fail(id&&x.status&&x?.source?.url,`bad CaptureEvent ${label}`);fail(allowedInbox.has(x.status),`CaptureEvent ${id} has unsupported status ${x.status}`);if(x?.source?.url){fail(!sourceUrls.has(x.source.url),`duplicate discovery source URL ${x.source.url}`);sourceUrls.add(x.source.url)}};

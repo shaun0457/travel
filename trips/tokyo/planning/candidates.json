@@ -189,17 +189,20 @@
   },
   {
     "id": "tokyo-bk-narita-temple",
-    "name": "成田山新勝寺與表參道",
+    "name": "成田山新勝寺｜Day5 成田替代路線",
     "category": "spot",
     "typeTag": "備選・未預約",
     "mapcode": null,
     "x": 0,
     "y": 0,
     "region": "成田市區（不在航廈）",
-    "desc": "獨立半日備選，非成田第二航廈內；10/18已有淺草和20:00航班，不建議順路硬排。需先轉車至成田站，再步行。",
-    "tag": "成田市區・本次不建議",
+    "desc": "Day5可切換成田市區方案，與淺草擇一；先帶行李到成田站確認寄存，散步後直接往成田T2，目標16:00–16:30到航廈。不在第二航廈內。",
+    "tag": "Day5 方案B・取代淺草",
     "location": {
       "maps_query": "成田山新勝寺"
+    },
+    "contact": {
+      "website": "https://www.naritasan.or.jp/access/"
     }
   },
   {
@@ -435,5 +438,41 @@
     },
     "desc": "姐姐的Day1夜景候選，與SHIBUYA SKY、TOP of YEBISU擇一。需查當日票務、開放時間與入場場次；未確認購票，不保證姐姐提議17:30–18:00或20:00後可入場。",
     "tag": "Day1 入住後擇時安排"
+  },
+  {
+    "id": "tokyo-bk-narita-omotesando",
+    "name": "成田山表參道｜老街散步",
+    "category": "shopping",
+    "region": "成田市區",
+    "typeTag": "Day5備選・未預約",
+    "location": {
+      "maps_query": "成田山 表参道"
+    },
+    "desc": "Day5成田方案B，與淺草擇一；成田車站往新勝寺的散步路線，下午取行李後前往機場。",
+    "tag": "Day5 擇時安排"
+  },
+  {
+    "id": "tokyo-bk-asakusa-shrine",
+    "name": "淺草神社／傳法院通｜順訪備選",
+    "category": "spot",
+    "region": "淺草／隅田川",
+    "typeTag": "Day5備選・未預約",
+    "location": {
+      "maps_query": "浅草神社"
+    },
+    "desc": "淺草方案主線參拜後視時間順訪，不影響14:30–14:45回京成上野取行李。",
+    "tag": "Day5 擇時安排"
+  },
+  {
+    "id": "tokyo-bk-mizumachi",
+    "name": "Tokyo Mizumachi／隅田川步道",
+    "category": "shopping",
+    "region": "淺草／隅田川",
+    "typeTag": "Day5備選・未預約",
+    "location": {
+      "maps_query": "東京ミズマチ"
+    },
+    "desc": "淺草方案午後備選，與合羽橋、晴空塔深入逛街取捨，不能壓縮回上野取行李及機場交通。",
+    "tag": "Day5 擇時安排"
   }
 ]

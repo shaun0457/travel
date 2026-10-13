@@ -1,9 +1,9 @@
 {
   "dayNumber": 5,
   "dayLabel": "10/18 (日)",
-  "title": "東京 Day 5｜上野退房 ➔ 成田 T2 ➔ 桃園",
+  "title": "東京 Day 5｜淺草／成田市區二選一 → 成田 T2 → 桃園",
   "stay": "返程",
-  "bannerAlert": "✈️ Minn Ueno 10:00 前退房；CI109 20:00 由成田 T2 起飛、22:45 抵達桃園 T2。白天行程、行李寄放與前往機場時間待排。",
+  "bannerAlert": "🗺️ 選一條白天路線：A淺草（雷門／仲見世／淺草寺、八十八抹茶、單點壽司、晴空塔可選）；B成田市區（表參道／新勝寺）。切換路線會同步更新行程及下一站，兩者不要合併硬排。Minn Ueno 10:00前退房；目標16:00–16:30到成田T2，CI109 20:00起飛。景點、餐飲與列車未標已訂位。",
   "routePoints": [],
   "spots": [
     {
@@ -27,14 +27,278 @@
       "notes": "10:00 前退房；Minn Ueno 訂房信載明入住時繳付 JPY1,000 現金押金，退房房況檢查後退還，離店前請確認領回。白天需安排行李寄放，並預留前往成田 T2 的時間。"
     },
     {
-      "id": "tokyo-d5-plan",
-      "time": "白天",
-      "category": "plan",
-      "typeTag": "待規劃",
-      "categoryLabel": "登機前行程",
-      "title": "東京最後半天＋行李處理待定案",
+      "id": "tokyo-d5-ueno-luggage",
+      "title": "京成上野｜寄放行李",
+      "time": "09:00–09:30（目標）",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
       "visited": false,
-      "notes": "最後半天景點尚未鎖定；需以能順利銜接成田 T2 為優先，避免壓縮國際線報到時間。"
+      "location": {
+        "maps_query": "京成上野駅"
+      },
+      "notes": "淺草方案建議早餐後提早退房，三件24吋行李寄放京成上野，先確認大型櫃／人工寄存可用。JR上野剪票口內的櫃位與京成車站不同；預留14:30–14:45回來取行李與進站。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-kaminarimon",
+      "title": "淺草雷門｜開始淺草散步",
+      "time": "09:45–10:00（建議）",
+      "category": "attraction",
+      "categoryLabel": "景點",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "浅草寺 雷門"
+      },
+      "notes": "使用者指定的淺草最後半天路線，寄放行李後前往雷門，再往仲見世與淺草寺；時間為規劃目標，依實際退房調整。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-nakamise",
+      "title": "仲見世商店街｜小店與伴手禮",
+      "time": "10:00–10:30（彈性）",
+      "category": "shopping",
+      "categoryLabel": "散步購物",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "浅草 仲見世商店街"
+      },
+      "notes": "沿雷門通往淺草寺，各店營業時間不同，沒開門可先參拜後回來；不要為排隊壓縮機場交通。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-sensoji",
+      "title": "淺草寺｜本堂與周邊",
+      "time": "10:30–11:00（彈性）",
+      "category": "attraction",
+      "categoryLabel": "景點",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "浅草寺 本堂"
+      },
+      "notes": "使用者與姐姐的淺草主線。淺草神社、傳法院通可順訪；合羽橋與Tokyo Mizumachi保留備選，不把所有散步支線全部加上。",
+      "routeOption": "asakusa",
+      "contact": {
+        "website": "https://www.senso-ji.jp/"
+      }
+    },
+    {
+      "id": "tokyo-d5-matcha",
+      "title": "八十八淺草｜抹茶休息",
+      "time": "11:00–11:30（建議）",
+      "category": "food",
+      "categoryLabel": "用餐",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "八十八 浅草 抹茶"
+      },
+      "notes": "保留使用者指定的八十八淺草／八十八良葉舎。以店名開啟地圖，最新店址、營業及排隊須確認；若尚未開門或隊伍太長則調整順序，不保證09:00開門。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-sushi",
+      "title": "淺草單點壽司｜非 omakase",
+      "time": "11:45–12:45（建議）",
+      "category": "food",
+      "categoryLabel": "用餐",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "浅草 寿司 単品"
+      },
+      "notes": "使用者希望自由單點壽司；餐廳尚未定店或訂位，導航為店家搜尋，不是已訂餐廳。完全不吃牛肉及牛骨高湯，點餐時確認原料、醬汁與湯底；排隊久可改其他午餐。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-sumida",
+      "title": "隅田公園／隅田川步道｜可選",
+      "time": "13:00 前後（擇時）",
+      "category": "attraction",
+      "categoryLabel": "景點",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "隅田公園 浅草"
+      },
+      "notes": "午餐後可在河邊短暫散步、看晴空塔景色；與深入押上／晴空塔逛街取捨。時間不足直接回上野取行李。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-skytree",
+      "title": "東京晴空塔／Solamachi｜可選",
+      "time": "13:00 前後（時間允許）",
+      "category": "shopping",
+      "categoryLabel": "散步購物",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "東京スカイツリー"
+      },
+      "notes": "保留使用者指定的晴空塔。以外觀與短暫購物為彈性選項，登塔門票未確認；與隅田川慢逛擇時，須留出14:30–14:45到京成上野取行李時間。",
+      "routeOption": "asakusa",
+      "contact": {
+        "website": "https://www.tokyo-skytree.jp/"
+      }
+    },
+    {
+      "id": "tokyo-d5-ueno-return",
+      "title": "返回京成上野｜領行李與進站",
+      "time": "14:30–14:45（目標）",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "京成上野駅"
+      },
+      "notes": "先領回三件行李、處理車票及進站，不把淺草／晴空塔到上野的移動壓到列車發車前。錯過預計班次時先調整車次並確認到機場與報到時間。",
+      "routeOption": "asakusa"
+    },
+    {
+      "id": "tokyo-d5-skyliner",
+      "title": "Skyliner｜京成上野 → 成田 T2・3",
+      "time": "15:20→16:01／15:40→16:21（表定）",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "京成上野駅 スカイライナー"
+      },
+      "notes": "京成官方週末表定候選，實際出票與當日運行待確認；不是已訂車票。於空港第2ビル站下車前往第二航廈。這兩班只用於淺草方案，不是前往成田市區的車。",
+      "routeOption": "asakusa",
+      "contact": {
+        "website": "https://www.keisei.co.jp/keisei/tetudou/skyliner/th/traffic/skyliner_0411.php"
+      }
+    },
+    {
+      "id": "tokyo-d5-narita-transit",
+      "title": "京成上野 → 京成成田｜前往成田市區",
+      "time": "09:30 前後出發（建議）",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "京成成田駅"
+      },
+      "notes": "成田方案：退房後帶行李搭京成本線前往京成成田站，班次與停站須當日確認。新勝寺官網列上野至成田特急約65分鐘，另留進站等車緩衝；不是搭Skyliner到航廈。",
+      "routeOption": "narita",
+      "contact": {
+        "website": "https://www.naritasan.or.jp/access/"
+      }
+    },
+    {
+      "id": "tokyo-d5-narita-luggage",
+      "title": "京成成田／JR成田站｜確認行李寄存",
+      "time": "抵成田市區後",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "京成成田駅 コインロッカー"
+      },
+      "notes": "帶著三件24吋行李先找足夠大的櫃位。觀光協會列京成成田站中央口、JR成田站通道及中央口有置物櫃，但容量與空位不保證；新勝寺附近無寄存所。若無法寄放，取消市區散步、直接帶行李到機場。不要把行李留在上野再折返。",
+      "routeOption": "narita",
+      "contact": {
+        "website": "https://www.nrtk.jp/plan/questions/10.html"
+      }
+    },
+    {
+      "id": "tokyo-d5-narita-omotesando",
+      "title": "成田山表參道｜老街散步",
+      "time": "11:00–12:00（彈性）",
+      "category": "shopping",
+      "categoryLabel": "散步購物",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "成田山 表参道"
+      },
+      "notes": "成田市區替代方案的老街段，從成田車站往新勝寺方向散步，店家營業依現場。不與上午淺草合併；先確認行李寄放再走。",
+      "routeOption": "narita"
+    },
+    {
+      "id": "tokyo-d5-naritasan",
+      "title": "成田山新勝寺｜參拜散步",
+      "time": "12:00–13:00（彈性）",
+      "category": "attraction",
+      "categoryLabel": "景點",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "成田山新勝寺"
+      },
+      "notes": "正式Day5成田替代路線，非成田航廈內景點。參拜與園區散步依體力調整；下午留時間返回車站、領行李並去機場。",
+      "routeOption": "narita",
+      "contact": {
+        "website": "https://www.naritasan.or.jp/access/"
+      }
+    },
+    {
+      "id": "tokyo-d5-narita-lunch",
+      "title": "成田表參道｜午餐候選",
+      "time": "13:00–14:00（彈性）",
+      "category": "food",
+      "categoryLabel": "用餐",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "成田山 表参道 レストラン"
+      },
+      "notes": "午餐尚未選店或訂位；可依口味選日式料理，避開牛肉、牛骨高湯並確認醬汁與湯底。不為熱門店排隊壓縮前往機場時間。",
+      "routeOption": "narita"
+    },
+    {
+      "id": "tokyo-d5-narita-airport-transit",
+      "title": "領行李 → 空港第2ビル站／成田 T2",
+      "time": "14:30–16:00（預留交通）",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "空港第2ビル駅"
+      },
+      "notes": "先回京成成田／JR成田站領行李，再搭停靠空港第2ビル的列車至成田T2；實際班次當日查。新勝寺官網列成田站與空港第2ビル站車程約8分鐘，仍須另外留步行、取行李、等車及航廈移動時間。目標16:00–16:30到航廈。",
+      "routeOption": "narita",
+      "contact": {
+        "website": "https://www.naritasan.or.jp/access/"
+      }
+    },
+    {
+      "id": "tokyo-d5-airport-checkin",
+      "title": "成田機場 T2｜報到、託運與安檢",
+      "time": "16:00–16:30 抵達目標",
+      "category": "transport",
+      "categoryLabel": "交通／行李",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "成田空港 第2ターミナル"
+      },
+      "notes": "淺草與成田市區兩方案在此匯合。CI109 20:00起飛，先辦報到、託運、安檢與出境，實際櫃檯開放、截止及登機時間以華航與當日機場資訊為準。",
+      "contact": {
+        "website": "https://www.narita-airport.jp/"
+      }
+    },
+    {
+      "id": "tokyo-d5-airport-free",
+      "title": "成田 T2｜免稅購物／用餐（有空再逛）",
+      "time": "完成報到安檢後（彈性）",
+      "category": "shopping",
+      "categoryLabel": "散步購物",
+      "typeTag": "規劃・非訂位",
+      "visited": false,
+      "location": {
+        "maps_query": "成田空港 第2ターミナル"
+      },
+      "notes": "這是機場內購物與用餐，與成田山／表參道不同。先確認登機口、登機時間及店家位於安檢前或後；飲食避免牛肉及牛骨高湯，剩餘時間不足直接前往登機口。"
     },
     {
       "id": "tokyo-d5-flight",
@@ -45,6 +309,19 @@
       "title": "CI109｜東京成田 T2 ➔ 台北桃園 T2",
       "visited": false,
       "notes": "20:00 NRT 起飛，22:45 TPE 抵達；飛行時間約 3 小時 45 分。現有電子機票顯示 1PC 託運行李。"
+    }
+  ],
+  "defaultRouteOption": "asakusa",
+  "routeOptions": [
+    {
+      "id": "asakusa",
+      "label": "方案 A｜淺草",
+      "summary": "上野寄行李 → 雷門／仲見世／淺草寺 → 八十八抹茶 → 單點壽司 → 隅田川／晴空塔擇時 → 回上野取行李 → Skyliner → 成田T2。"
+    },
+    {
+      "id": "narita",
+      "label": "方案 B｜成田市區",
+      "summary": "退房後帶行李搭京成本線至京成成田 → 確認車站寄存 → 表參道／新勝寺 → 午餐 → 取行李 → 成田T2。市區與機場是不同站，這條路線取代淺草。"
     }
   ]
 }
