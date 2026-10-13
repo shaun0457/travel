@@ -1,9 +1,9 @@
 {
   "dayNumber": 3,
   "dayLabel": "10/16 (五)",
-  "title": "東京 Day 3｜五反田退房 ➔ 河口湖 ➔ 大池飯店",
+  "title": "東京 Day 3｜河口湖取車・大石公園攝影・大池飯店",
   "stay": "富士之宿溫泉旅館 大池飯店（10/16–10/17）",
-  "bannerAlert": "🚗 10/16 14:00 Toyota 富士河口湖店取車（已預約），需先從東京搭交通工具抵達河口湖；大池飯店 15:00–18:00 入住，晚於 18:00 要先致電。當晚含 3 人晚餐、隔天含早餐；大池費用於現場結算。",
+  "bannerAlert": "🚆 富士回遊93 表定11:34新宿→13:31河口湖（出票待核）；🚗14:00 Toyota取車；🏨大池飯店18:00前入住，飯店晚餐約18:00。大石公園為優先，其他攝影點視時間，勿壓縮入住與晚餐。",
   "routePoints": [],
   "spots": [
     {
@@ -18,13 +18,13 @@
     },
     {
       "id": "tokyo-d3-transfer",
-      "time": "上午（14:00 前抵達）",
+      "time": "11:34–13:31（表定）",
       "category": "transport",
       "typeTag": "待定案",
       "categoryLabel": "東京→河口湖",
       "title": "五反田／東京 ➔ 河口湖",
       "visited": false,
-      "notes": "東京／五反田→富士河口湖店的交通方式與車票尚未確認。租車已預訂當日 14:00 在河口湖取車，不是在東京取車。請為 3 位成人、行李與取車手續預留時間。"
+      "notes": "富士回遊93新宿11:34→河口湖13:31為家人提供及官方表定班次；座位由家人提供但出票尚未獨立核實。抵站至14:00取車只有29分鐘，請提前準備行李及文件。"
     },
     {
       "id": "tokyo-d3-toyota-pickup",
@@ -49,6 +49,46 @@
       "title": "富士之宿溫泉旅館 大池飯店｜辦理入住",
       "visited": false,
       "notes": "10/16–10/17 一晚，3 位成人；15:00–18:00 入住，10:00 前退房。地址：〒401-0301 山梨県富士河口湖町船津6713-103。房型 4F 富士山側和室 10 帖。Trip.com 訂單顯示需於飯店付款 JPY108,315（含溫泉稅），卡片預授權不代表已付清；若 18:00 後抵達請先致電 +81-555-72-2563。"
+    },
+    {
+      "id": "tokyo-d3-oishi",
+      "time": "15:45–16:45（彈性）",
+      "category": "attraction",
+      "typeTag": "優先拍照",
+      "categoryLabel": "河口湖攝影",
+      "title": "大石公園｜花田・河口湖・富士山",
+      "visited": false,
+      "location": {
+        "maps_query": "大石公園 河口湖",
+        "address": "Oishi, Fujikawaguchiko, Yamanashi, Japan"
+      },
+      "notes": "建議先完成大池飯店15:00後入住及卸行李，再開車來拍照約45–60分鐘。10月中旬掃帚草色況與富士山能見度看天氣。導航：https://www.google.com/maps/search/?api=1&query=Oishi+Park+Kawaguchiko"
+    },
+    {
+      "id": "tokyo-d3-nagasaki",
+      "time": "16:45–17:15（有空才去）",
+      "category": "attraction",
+      "typeTag": "彈性候選",
+      "categoryLabel": "北岸攝影",
+      "title": "長崎公園｜富士山與河口湖倒影",
+      "visited": false,
+      "location": {
+        "maps_query": "長崎公園 河口湖"
+      },
+      "notes": "大石公園後若夕陽與時間允許才加；不可晚於飯店晚餐。周邊停車依現場標示，勿路邊違停。導航：https://www.google.com/maps/search/?api=1&query=Nagasaki+Park+Kawaguchiko"
+    },
+    {
+      "id": "tokyo-d3-lawson",
+      "time": "取車前後（可選）",
+      "category": "shopping",
+      "typeTag": "順路候選",
+      "categoryLabel": "便利商店拍照",
+      "title": "Lawson 河口湖車站前店",
+      "visited": false,
+      "location": {
+        "maps_query": "ローソン 河口湖駅前店"
+      },
+      "notes": "姐姐指定的河口湖車站前拍照點，車站附近經過才短暫停留；注意商店拍照規範與人行道安全。導航：https://www.google.com/maps/search/?api=1&query=Lawson+Kawaguchiko+Station"
     },
     {
       "id": "tokyo-d3-dinner",
