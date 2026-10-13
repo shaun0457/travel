@@ -54,13 +54,13 @@
   "strategy": {
     "lodging_pattern": "2/1/1",
     "travel_style": "slow family resort trip; avoid shopping-heavy city days",
-    "night_1_2": "Gotanda hotel booked; Day 1 evening after arrival prioritizes limited Naka-Meguro / Daikanyama / Shibuya stops. Day 2 is Tsukiji + Ginza + Azabudai + Shiba Park/Tower.",
+    "night_1_2": "Day 1 arrival and light Naka-Meguro/Daikanyama/Shibuya. Day 2 sister's Shinjuku Gyoen, lunch, Shinjuku shopping and Metropolitan Government Observatory, then short Nagano Market GINZA visit, Shiba Park/Tokyo Tower at night.",
     "night_3": "Oike Hotel, Kawaguchiko, booked for 2026-10-16",
     "night_4": "Minn Ueno (confirmed)",
-    "route": "CI220 Haneda 13:10 -> Gotanda check-in -> Oct14 Naka-Meguro/Daikanyama/Shibuya light visit -> Oct15 Tsukiji/Ginza Nagano Market/Azabudai dashi/ Shiba Park Tokyo Tower -> Oct16 Fuji Excursion 93 Shinjuku 11:34-Kawaguchiko 13:31 -> Toyota pickup 14:00 -> Ooike Hotel / Oishi Park -> Oct17 Arakurayama/Oshino Hakkai/(Yamanakako optional) -> Toyota return by 16:00 -> Fuji Excursion 44 16:48-18:46 -> Toritaka Shinjuku 19:45 -> Minn Ueno -> Oct18 Asakusa -> Keisei-Ueno Skyliner 15:20 or 15:40 -> Narita T2 CI109 20:00",
+    "route": "CI220 Haneda 13:10 -> Gotanda check-in -> Oct14 Naka-Meguro/Daikanyama/Shibuya light visit -> Oct15 sister Shinjuku Gyoen/Shinjuku shopping/Tocho then short Ginza Nagano Market/Shiba Park Tokyo Tower -> Oct16 Fuji Excursion 93 Shinjuku 11:34-Kawaguchiko 13:31 -> Toyota pickup 14:00 -> Ooike Hotel / Oishi Park -> Oct17 Arakurayama/Oshino Hakkai/(Yamanakako optional) -> Toyota return by 16:00 -> Fuji Excursion 44 16:48-18:46 -> Toritaka Shinjuku 19:45 -> Minn Ueno -> Oct18 Asakusa -> Keisei-Ueno Skyliner 15:20 or 15:40 -> Narita T2 CI109 20:00",
     "priority": "Preserve confirmed CI220/CI109, hotels, Toyota, and 10/17 Toritaka 19:45; sister suggested trains 93/44 with official running times verified but actual booking NOT verified. Oct17 train arrival 18:46 at Shinjuku leaves 59 minutes before restaurant. Oct18 reserve time for checked luggage and Narita.",
     "car_policy": "CONFIRMED: Toyota Fuji Kawaguchiko shop, pickup 2026-10-16 14:00, return at SAME shop 2026-10-17 16:00. Tokyo->Kawaguchiko and return train/bus not yet booked.",
-    "tsukiji_policy": "USER CHOSEN: Oct 15 (Thursday) 09:00–12:00 Tsukiji outer market, NOT Oct 18; after Tsukiji prefer Ginza Nagano Market -> Azabudai Dashi Okume (soup stock packets, not dumplings) -> Shiba Park/Tokyo Tower at night. Sister's Shinjuku Day 2 proposal is an alternative only, not an approved replacement.",
+    "tsukiji_policy": "SUPERSEDED: user changed Oct15 to sister's Shinjuku-based Day2, with separate short Nagano Market Ginza shopping slot and Shiba Park/Tokyo Tower night. Tsukiji now unassigned optional candidate, not booked Day2.",
     "hakone_policy": "Hakone removed from this trip."
   },
   "proposals": [
@@ -80,17 +80,19 @@
     {
       "day": 2,
       "date": "2026-10-15",
-      "title": "週四築地→銀座自嘲熊→麻布台高湯包→芝公園東京鐵塔夜景",
+      "title": "姐姐版新宿御苑／新宿三丁目／東京都廳 → 銀座 Nagano 自嘲熊購物 → 芝公園・東京鐵塔",
       "overnight": "Mitsui Garden Hotel Gotanda",
       "items": [
-        "09:00–11:30 築地場外市場早午餐（USER CHOSEN；官方一般遊客建議 09:00–14:00）",
-        "11:45–13:00 濱離宮恩賜庭園是可選步行景點；若想多逛街可直接去銀座",
-        "13:30–15:30 銀座 Nagano Market GINZA 買自嘲熊周邊；若有時間可逛中央通／伊東屋",
-        "16:00–18:00 麻布台之丘的 だし尾粂（Dashi Okume）選購日式高湯包（soup stock packets，並非小籠包），原料需避開牛肉／牛骨來源",
-        "18:00 以後到芝公園／東京鐵塔看夜景（無登塔票，視體力可移到 Day 1 晚上）；回五反田第二晚",
-        "姐姐提出 10/15 新宿御苑、天婦羅、伊勢丹/NEWoMan/LUMINE、東京都廳展望台，先當作候選行程，不覆蓋使用者目前已選路線"
+        "五反田 Café au lait Tokyo Gotanda 早餐（候選）→搭山手線去新宿",
+        "上午新宿御苑（家人提議主景點）",
+        "午餐：天ぷら船橋屋／天ぷら新宿つな八／蕎麥麵／沼津港壽司擇一，尚未訂位",
+        "下午新宿三丁目伊勢丹、NEWoMan、LUMINE 擇逛，預留跨區交通",
+        "東京都廳45F觀景台（家人指定但行程稍緊，可縮短商場停留／視排隊取捨）",
+        "16:15前後銀座 Nagano Market GINZA 撥30–45分鐘購買自嘲熊；這不是安排銀座整個下午",
+        "晚上芝公園散步＋東京鐵塔夜景，登塔票未買；回五反田飯店",
+        "原先築地＋銀座＋麻布台高湯包路線已退為備選，並非目前 Day 2 正式方案"
       ],
-      "planning_note": "10/15 新宿方案是姐姐候選，但與使用者明確選定的築地＋銀座＋麻布台＋芝公園路線衝突；優先保留後者。"
+      "planning_note": "2026-10-13 後來使用者明確更改：Day 2 以姐姐新宿版為準，加入芝公園與銀座 Nagano 特別撥時間購物。築地與 Dashi Okume 非目前 Day 2 必去，保留於 planning 供後續調整。"
     },
     {
       "day": 3,
@@ -193,7 +195,7 @@
   "open_questions": [
     "家人提供富士回遊93／44班次與座位，是否已有正式票券／付款證明（官方可行性已核實）？",
     "10/14 日落後是否買 SHIBUYA SKY，或只逛澀谷／代官山？",
-    "10/15 築地→銀座→麻布台→東京鐵塔已是使用者優先版本；姐姐新宿御苑等景點先保留候選",
+    "10/15 改以姐姐新宿御苑、午餐、新宿三丁目與東京都廳版為準，另撥時間去銀座 Nagano Market，晚上芝公園東京鐵塔；築地未分配",
     "10/16 大池飯店晚餐是否18:00確定，需現場與飯店核對",
     "10/17 是否安排山中湖（視天氣、油量、還車與16:48列車可行性）",
     "10/17 18:46抵新宿後三件大行李處理，以及餐廳19:45訂位遲到備案",
@@ -207,7 +209,8 @@
     "2026/10 已改為 Toyota 富士河口湖店 10/16 14:00 取、10/17 16:00 還；10/17 鳥たか新宿店 19:45 已訂。",
     "2026-10-13 姐姐提供東京5日詳細建議，已另外保存 planning/sister-proposal-and-reconciliation-2026-10-13.md；本檔為整合草案，未更動正式 days/day-N.json。",
     "富士回遊 93/44 列車運行日期與時間已由富士急/JR官方核對，但實際訂票狀態未經直接票券核實。",
-    "2026-10-18 Skyliner 週末 15:20/15:40/16:00/16:40，家人版本 15:35 應改為 15:40 核對。"
+    "2026-10-18 Skyliner 週末 15:20/15:40/16:00/16:40，家人版本 15:35 應改為 15:40 核對。",
+    "最新指示：10/15 正式 day-2.json 已改為姐姐版新宿景點＋銀座 Nagano 少量購物時間＋芝公園東京鐵塔夜景。築地與麻布台高湯包仍為備選未排定。"
   ],
   "confirmed_rental_car": {
     "provider": "Toyota Rent a Car",
