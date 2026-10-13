@@ -314,7 +314,8 @@
     },
     "duration_min": 45,
     "desc": "姐姐與使用者的淺草候選。營業、排隊與品項待確認；不為排隊壓縮回上野取行李及機場交通。",
-    "tag": "Day5 擇時備選"
+    "tag": "Day5 擇時備選",
+    "food_style": "抹茶"
   },
   {
     "id": "tokyo-bk-gotanda-cafe",
@@ -474,5 +475,842 @@
     },
     "desc": "淺草方案午後備選，與合羽橋、晴空塔深入逛街取捨，不能壓縮回上野取行李及機場交通。",
     "tag": "Day5 擇時安排"
+  },
+  {
+    "id": "tokyo-dining-kawatoyo",
+    "name": "川豊本店｜鰻魚飯",
+    "category": "food",
+    "food_style": "鰻魚飯",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "成田市區",
+    "location": {
+      "country": "Japan",
+      "area": "成田市區",
+      "address": "千葉県成田市仲町386",
+      "maps_query": "川豊本店"
+    },
+    "contact": {
+      "website": "https://www.unagi-kawatoyo.com/shop/"
+    },
+    "duration_min": 60,
+    "constraints": {
+      "opening_hours": "10:00–17:00（L.O.）；不定期休業須查公告",
+      "reservation": "不接受保證座位的預約；3人直接到店排隊"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.unagi-kawatoyo.com/shop/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5成田方案B午餐。想吃成田表參道的鰻魚飯可先看候位；排隊太久改菊屋或其他店，保留取行李與機場時間。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "鰻魚飯・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-kikuya",
+    "name": "日本料理 菊屋｜鰻魚與日式料理",
+    "category": "food",
+    "food_style": "鰻魚飯",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "成田市區",
+    "location": {
+      "country": "Japan",
+      "area": "成田市區",
+      "address": "千葉県成田市仲町385",
+      "maps_query": "日本料理 菊屋"
+    },
+    "contact": {
+      "website": "https://kikuyanarita.jp/"
+    },
+    "duration_min": 60,
+    "constraints": {
+      "opening_hours": "10:00–21:00（L.O.20:00）；售完可能提早結束",
+      "reservation": "預約方式與3人座位請直接洽店家；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://kikuyanarita.jp/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5成田方案B午餐，位於新勝寺門前。可考慮鰻魚蒲燒／白燒及日式單品；與川豊擇一，不安排兩餐鰻魚飯。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "鰻魚飯・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-unatoto-asakusa",
+    "name": "宇奈とと 淺草店｜鰻魚飯",
+    "category": "food",
+    "food_style": "鰻魚飯",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "淺草",
+    "location": {
+      "country": "Japan",
+      "area": "淺草",
+      "address": "東京都台東区花川戸1-5-2",
+      "maps_query": "宇奈とと 淺草店"
+    },
+    "contact": {
+      "website": "https://www.unatoto.com/shop/asakusa/"
+    },
+    "duration_min": 60,
+    "constraints": {
+      "opening_hours": "每日10:00–22:00（L.O.21:30）",
+      "reservation": "不接受座位預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.unatoto.com/shop/asakusa/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5淺草方案A的午餐替代，若當天想吃鰻魚飯可取代尚未訂位的單點壽司。靠近淺草站，仍需看當日排隊。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "鰻魚飯・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-unatetsu-shinjuku",
+    "name": "新宿うな鐵 本店｜鰻魚飯與鰻魚串",
+    "category": "food",
+    "food_style": "鰻魚飯",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "新宿",
+    "location": {
+      "country": "Japan",
+      "area": "新宿",
+      "address": "東京都新宿区歌舞伎町1-11-2",
+      "maps_query": "新宿うな鐵 本店"
+    },
+    "contact": {
+      "website": "https://shinjuku-unatetsu.com/shop"
+    },
+    "duration_min": 60,
+    "constraints": {
+      "opening_hours": "官網內文10:00開店／頁尾11:00開店不一致；23:30結束、L.O.23:00；開店時間先洽店",
+      "reservation": "官網有預約入口；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch",
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://shinjuku-unatetsu.com/shop",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2新宿午餐或購物後用餐候選。鰻魚飯、鰻魚串與日本酒風格；不取代10/17 19:45已訂Toritaka。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "鰻魚飯・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-suzukien",
+    "name": "壽々喜園 淺草本店｜抹茶冰淇淋",
+    "category": "cafe",
+    "food_style": "抹茶",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "淺草",
+    "location": {
+      "country": "Japan",
+      "area": "淺草",
+      "address": "東京都台東区浅草3-4-3",
+      "maps_query": "壽々喜園 淺草本店"
+    },
+    "contact": {
+      "website": "https://www.suzukien.tokyo/view/company"
+    },
+    "duration_min": 45,
+    "constraints": {
+      "opening_hours": "11:00–17:00；不定休",
+      "reservation": "未確認預約制度，依現場候位"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "snack"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "same_day_opening",
+        "selected_item_ingredients"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.suzukien.tokyo/view/company",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5淺草方案A，淺草寺北側的抹茶冰淇淋／茶飲候選。可與八十八淺草擇一或短停，別為排隊壓縮機場交通。\n抹茶以飲料／甜點為主；若選鹹食或含明膠甜點，原料來源須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "抹茶・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-nakamura-ginza",
+    "name": "中村藤吉 銀座店｜抹茶甜點",
+    "category": "cafe",
+    "food_style": "抹茶",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "銀座",
+    "location": {
+      "country": "Japan",
+      "area": "銀座",
+      "address": "東京都中央区銀座6-10-1 GINZA SIX 4F",
+      "maps_query": "中村藤吉 銀座店"
+    },
+    "contact": {
+      "website": "https://global.tokichi.jp/pages/ginza-store"
+    },
+    "duration_min": 45,
+    "constraints": {
+      "opening_hours": "10:30–20:30（咖啡L.O.19:30）；休館依GINZA SIX",
+      "reservation": "咖啡座不接受預約；可能提早停止候位"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "snack"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "same_day_opening",
+        "selected_item_ingredients"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://global.tokichi.jp/pages/ginza-store",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2銀座Nagano短停後若有餘裕才去；GINZA SIX與Nagano所在商場不同，需另外移動。抹茶甜點／茶飲候選，不縮短新宿購物與21:00芝公園。\n抹茶以飲料／甜點為主；若選鹹食或含明膠甜點，原料來源須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "抹茶・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-tsujiri-solamachi",
+    "name": "祇園辻利 Solamachi店｜抹茶霜淇淋",
+    "category": "cafe",
+    "food_style": "抹茶",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "淺草／押上",
+    "location": {
+      "country": "Japan",
+      "area": "淺草／押上",
+      "address": "東京都墨田区押上1-1-2 東京スカイツリータウン・ソラマチ6F",
+      "maps_query": "祇園辻利 Solamachi店"
+    },
+    "contact": {
+      "website": "https://giontsujiri.co.jp/store/skytree/"
+    },
+    "duration_min": 30,
+    "constraints": {
+      "opening_hours": "日文官網11:00–22:00（L.O.21:00）；不定休；英文頁時段不同，以日文及當日公告核對",
+      "reservation": "以外帶甜點／茶飲為主，未確認預約制度"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "snack"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "same_day_opening",
+        "selected_item_ingredients"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://giontsujiri.co.jp/store/skytree/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5淺草方案A若選晴空塔，可順道買抹茶霜淇淋／飲料。不是展望台門票，也不為這店額外延後回上野取行李。\n抹茶以飲料／甜點為主；若選鹹食或含明膠甜點，原料來源須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "抹茶・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-nanas-shinjuku",
+    "name": "nana’s green tea LUMINE EST新宿｜抹茶休息",
+    "category": "cafe",
+    "food_style": "抹茶",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "新宿",
+    "location": {
+      "country": "Japan",
+      "area": "新宿",
+      "address": "東京都新宿区新宿3-38-1 ルミネエスト8F",
+      "maps_query": "nana’s green tea LUMINE EST新宿"
+    },
+    "contact": {
+      "website": "https://www.nanasgreentea.com/blogs/tokyo/lumine-est-shinjuku"
+    },
+    "duration_min": 45,
+    "constraints": {
+      "opening_hours": "11:00–22:00；休館依LUMINE EST",
+      "reservation": "未確認預約制度，依現場候位"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "snack",
+        "lunch"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "same_day_opening",
+        "selected_item_ingredients"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.nanasgreentea.com/blogs/tokyo/lumine-est-shinjuku",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2新宿逛街中的休息選項，抹茶飲料與甜點、丼飯／茶泡飯。LUMINE EST不是NEWoMan；若點鹹食需核對湯底。\n抹茶以飲料／甜點為主；若選鹹食或含明膠甜點，原料來源須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "抹茶・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-ogura-ginza",
+    "name": "おぐ羅 分店｜鳥高湯關東煮",
+    "category": "food",
+    "food_style": "關東煮",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "銀座",
+    "location": {
+      "country": "Japan",
+      "area": "銀座",
+      "address": "東京都中央区銀座2-2-14 マロニエゲート銀座1 12F",
+      "maps_query": "おぐ羅 分店"
+    },
+    "contact": {
+      "website": "https://www.marronniergate.com/shop/index/132"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "午餐11:00–14:30（L.O.14:00）；晚餐17:00–23:00（料理L.O.22:00）",
+      "reservation": "可預約；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner",
+        "lunch"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.marronniergate.com/shop/index/132",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2銀座Nagano Market所在同一棟樓12F，最順路的關東煮晚餐候選。商場官方介紹為昆布、鰹節並加入鳥高湯；仍需店家確認所選料理不含牛與牛骨。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "關東煮・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-takeshi-gotanda",
+    "name": "おでんと焼鳥たけし 西五反田｜關東煮與燒鳥",
+    "category": "food",
+    "food_style": "關東煮",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "五反田",
+    "location": {
+      "country": "Japan",
+      "area": "五反田",
+      "address": "東京都品川区西五反田1-17-1",
+      "maps_query": "おでんと焼鳥たけし 西五反田"
+    },
+    "contact": {
+      "website": "https://oden-nishigotanda.foodre.jp/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "店家官網：平日午餐11:30–14:00／晚餐17:00–23:00；週六15:00–23:00、日祝15:00–22:30；與集團列表開店時段不同，出發前確認",
+      "reservation": "官網可查空席／預約；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://oden-nishigotanda.foodre.jp/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day1若回五反田用餐，關東煮＋燒鳥的替代方案。官方描述為飛魚與雞高湯兩種；須確認實際鍋內食材與是否加入牛筋，不能當作已保證無牛。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "關東煮・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-kumanagi",
+    "name": "熊柳 新宿御苑｜關東煮與炭火燒鳥",
+    "category": "food",
+    "food_style": "關東煮",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "新宿",
+    "location": {
+      "country": "Japan",
+      "area": "新宿",
+      "address": "東京都新宿区新宿1-18-7 プラティーノ新宿御苑2階",
+      "maps_query": "熊柳 新宿御苑"
+    },
+    "contact": {
+      "website": "https://www.kumanagi.com/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "平日午餐11:30–13:30（現金）；平日／週六晚餐17:30–21:30；週日休",
+      "reservation": "可電話詢問座位；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch",
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.kumanagi.com/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2新宿御苑後可詢問午餐，晚餐則會與銀座Nagano行程競爭。官方有昆布與削節高湯關東煮，但午餐菜單是否提供關東煮須先確認。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "關東煮・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-otako-ginza",
+    "name": "お多幸 銀座八丁目店｜關東風關東煮",
+    "category": "food",
+    "food_style": "關東煮",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "銀座",
+    "location": {
+      "country": "Japan",
+      "area": "銀座",
+      "address": "東京都中央区銀座8-6-19",
+      "maps_query": "お多幸 銀座八丁目店"
+    },
+    "contact": {
+      "website": "https://www.ginza-namikidori-w.jp/sp/shop/shop.php?id=shop81"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "營業時段與當日休業待電話確認；商圈官網可核對店址，店家網站目前無法讀取",
+      "reservation": "3人是否可訂位請電話詢問；商圈介紹的座敷預約為4人起"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://www.ginza-namikidori-w.jp/sp/shop/shop.php?id=shop81",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2銀座晚餐的傳統醬油風關東煮候選。營業與3人座位未核實，不先排為固定餐廳；特別詢問高湯及同鍋牛筋。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "關東煮・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-uoshin-shibuya",
+    "name": "魚真 澀谷店｜海鮮居酒屋",
+    "category": "food",
+    "food_style": "居酒屋",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "澀谷",
+    "location": {
+      "country": "Japan",
+      "area": "澀谷",
+      "address": "東京都渋谷区道玄坂2-25-5 島田ビル1F",
+      "maps_query": "魚真 澀谷店"
+    },
+    "contact": {
+      "website": "https://uoshins.com/shibuya/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "17:00–23:00；盂蘭盆與新年等休業須核對",
+      "reservation": "可預約；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://uoshins.com/shibuya/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day1澀谷散步後的海鮮居酒屋選项，官方類型包含居酒屋、壽司與蟹料理。想吃日式海鮮與配酒可考慮；不代表整份菜單無牛。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "居酒屋・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-uoshin-shinjuku",
+    "name": "魚真 新宿店｜海鮮居酒屋",
+    "category": "food",
+    "food_style": "居酒屋",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "新宿",
+    "location": {
+      "country": "Japan",
+      "area": "新宿",
+      "address": "東京都新宿区新宿3-35-5 2F",
+      "maps_query": "魚真 新宿店"
+    },
+    "contact": {
+      "website": "https://uoshins.com/shinjuku/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "週一至六17:00–23:00；日祝16:00–23:00；盂蘭盆及新年休",
+      "reservation": "可電話／官網連結預約；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://uoshins.com/shinjuku/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day2新宿購物後若想先吃海鮮再去銀座，可作替換候選；需重新分配晚餐與Nagano時段，不能全塞進原定下午購物。10/17晚餐仍保留Toritaka。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "居酒屋・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-torikizoku-gotanda",
+    "name": "鳥貴族 五反田東口店｜燒鳥居酒屋",
+    "category": "food",
+    "food_style": "居酒屋",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "五反田",
+    "location": {
+      "country": "Japan",
+      "area": "五反田",
+      "address": "東京都品川区東五反田1-14-14 北原ビル4F",
+      "maps_query": "鳥貴族 五反田東口店"
+    },
+    "contact": {
+      "website": "https://map.torikizoku.co.jp/detail/451/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "平日17:00–翌04:00；週末16:00–翌04:00；特殊日以公告為準",
+      "reservation": "官網有網路預約入口；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://map.torikizoku.co.jp/detail/451/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day1若回飯店附近吃晚餐的燒鳥居酒屋候選；可點雞肉串與日式配菜。確認醬汁／湯品，不能把燒鳥店視為全菜單無牛。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "居酒屋・沿線用餐替代"
+  },
+  {
+    "id": "tokyo-dining-isomaru-ueno",
+    "name": "磯丸水產 上野6丁目店｜海鮮居酒屋",
+    "category": "food",
+    "food_style": "居酒屋",
+    "typeTag": "日式餐飲候選・未預約",
+    "region": "上野",
+    "location": {
+      "country": "Japan",
+      "area": "上野",
+      "address": "東京都台東区上野6-8-13 東京堂ビル1F",
+      "maps_query": "磯丸水產 上野6丁目店"
+    },
+    "contact": {
+      "website": "https://isomaru.jp/1413/"
+    },
+    "duration_min": 90,
+    "constraints": {
+      "opening_hours": "24小時；年中無休；官方註明此店不供應午餐菜單",
+      "reservation": "座位與點餐方式請官網／店家確認；尚未預約"
+    },
+    "planning": {
+      "planning_ready": false,
+      "meal_slots": [
+        "lunch",
+        "dinner"
+      ]
+    },
+    "planning_ready": false,
+    "verification": {
+      "status": "unverified",
+      "checked_at": "2026-10-13",
+      "checked_fields": [
+        "identity",
+        "location",
+        "food_style"
+      ],
+      "pending_fields": [
+        "selected_item_beef_and_stock",
+        "reservation_availability"
+      ]
+    },
+    "sources": [
+      {
+        "type": "official",
+        "platform": "官網",
+        "url": "https://isomaru.jp/1413/",
+        "accessed_at": "2026-10-13"
+      }
+    ],
+    "desc": "Day5回上野取行李時的海鮮用餐備案，或上野住宿附近的彈性餐飲。官方有貝類燒烤、生魚片與蟹味噌；午餐時段不代表有午餐套餐。不要在10/17已訂晚餐後強排第二餐。\n完全不吃牛肉與牛骨高湯；所選料理、湯底及醬汁須向店家確認。\n營業／預約資訊見詳細；核對日期：2026-10-13。",
+    "tag": "居酒屋・沿線用餐替代"
   }
 ]

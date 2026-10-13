@@ -18,6 +18,7 @@ const asArray=v=>Array.isArray(v)?v:[];
 let tripData=clone(defaultTripData),pendingTasks=clone(defaultPendingTasks),packingList=clone(defaultPackingList);
 let currentDayIndex=0,currentMainTab='today',savedPanel='candidates',dayViewMode='list';
 let candCategory='all',candRegion='all',activeNavigationItem=null,activeDetailItem=null;
+let candFoodStyle='all';
 let selectedInboxIds=new Set(),dismissedRecommendations=new Set();
 let currentRate=.215,toastTimer=null;
 let routeChoices={};

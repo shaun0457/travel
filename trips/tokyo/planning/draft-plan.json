@@ -196,7 +196,13 @@
     ]
   },
   "food_preferences": {
-    "yakitori": "CONFIRMED 2026-10-17 19:45 Toritaka Shinjuku for 3, seat-only à la carte. Need to confirm beef, beef fat, beef stock and shared utensils. Previous Asakusa TORIYOSHI was only a candidate."
+    "yakitori": "CONFIRMED 2026-10-17 19:45 Toritaka Shinjuku for 3, seat-only à la carte. Need to confirm beef, beef fat, beef stock and shared utensils. Previous Asakusa TORIYOSHI was only a candidate.",
+    "japanese_styles": [
+      "鰻魚飯",
+      "抹茶",
+      "關東煮",
+      "居酒屋"
+    ]
   },
   "hotel_research": {
     "status": "confirmed",
@@ -224,7 +230,8 @@
     "最新指示：10/15 正式 day-2.json 已改為姐姐版新宿景點＋銀座 Nagano 少量購物時間＋芝公園東京鐵塔夜景。築地與麻布台高湯包仍為備選未排定。",
     "2026-10-13 使用者指定：下午要有充足新宿逛街時間，芝公園夜景要21:00後。已同步正式 days/day-2.json。",
     "2026-10-13：正式Day1已補上姐姐的中目黑／代官山／澀谷行程與獨立導航，餐飲及互斥夜景完整保留於備選。CI220及五反田訂房資訊維持不變。",
-    "2026-10-13：依使用者指出最後一天漏項，正式Day5補上淺草與成田市區可切換方案，含景點／行李／機場交通及導航；CI109 20:00及Minn Ueno早餐／10:00前退房不變。"
+    "2026-10-13：依使用者指出最後一天漏項，正式Day5補上淺草與成田市區可切換方案，含景點／行李／機場交通及導航；CI109 20:00及Minn Ueno早餐／10:00前退房不變。",
+    "2026-10-13：使用者偏好日式餐廳，新增16間鰻魚飯／抹茶／關東煮／居酒屋候選（各4間），每間有獨立導航、官方來源與營業／預約限制；全部保留待選，不自動覆寫正式行程或已訂晚餐。"
   ],
   "confirmed_rental_car": {
     "provider": "Toyota Rent a Car",

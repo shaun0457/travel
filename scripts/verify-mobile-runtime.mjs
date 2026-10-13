@@ -97,6 +97,33 @@ for(const c of bundle.candidateDatabase){
   assert.equal(await page.evaluate(()=>window.__navUrls.at(-1)),expectedGoogleUrl(c),'candidate Google navigation URL');
   await page.locator('#navigation-sheet [data-sheet-close]').click();
 }
+const foodStyles=[...new Set(bundle.candidateDatabase.map(c=>c.food_style).filter(Boolean))];
+for(const style of foodStyles){
+  const button=page.locator('#candidate-food-style-filters button').filter({hasText:style});
+  await button.click();
+  const expected=bundle.candidateDatabase.filter(c=>c.food_style===style);
+  assert.deepEqual(await page.locator('#candidates-list-container h3').allTextContents(),expected.map(c=>c.title||c.name),`food style filter ${style}`);
+  const region=expected[0].region;
+  await page.locator('#candidate-region-filters').getByRole('button',{name:region,exact:true}).click();
+  assert.deepEqual(await page.locator('#candidates-list-container h3').allTextContents(),expected.filter(c=>c.region===region).map(c=>c.title||c.name),`food style and region intersection ${style}`);
+  await page.locator('#candidate-region-filters').getByRole('button',{name:'全部地區',exact:true}).click();
+  assert.equal(await button.getAttribute('aria-pressed'),'true','food style selection state');
+  assert.ok(await button.evaluate(b=>b.getBoundingClientRect().width>=44&&b.getBoundingClientRect().height>=44),'food style tap target');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),true,'food filters have no horizontal page overflow');
+  if(screenshotDir){
+    await page.evaluate(()=>window.scrollTo(0,0));
+    await page.screenshot({path:path.join(screenshotDir,`${slug}-dining-${style}.png`)});
+  }
+}
+if(foodStyles.length){
+  // Choosing another top-level category must clear a conflicting cuisine filter.
+  await page.locator('#candidate-category-filters').getByRole('button',{name:'景點',exact:true}).click();
+  const spots=bundle.candidateDatabase.filter(c=>['spot','attraction','view'].includes(c.category));
+  assert.deepEqual(await page.locator('#candidates-list-container h3').allTextContents(),spots.map(c=>c.title||c.name),'category resets cuisine filter');
+  await page.locator('#candidate-category-filters').getByRole('button',{name:'全部',exact:true}).click();
+  assert.deepEqual(await page.locator('#candidates-list-container h3').allTextContents(),bundle.candidateDatabase.map(c=>c.title||c.name),'reset shows full candidate list');
+  console.log(`PASS ${slug}: ${foodStyles.length} cuisine filters, region intersections, category reset, tap targets and no overflow`);
+}
 if(screenshotDir&&slug==='tokyo')await page.screenshot({path:path.join(screenshotDir,'tokyo-candidates.png'),fullPage:true});
 console.log(`PASS ${slug}: ${bundle.defaultTripData.length} rendered days, navigation for all ${bundle.defaultTripData.reduce((n,d)=>n+d.spots.length,0)} source stops across route choices, ${bundle.candidateDatabase.length} candidate cards and navigation sheets`);
 
