@@ -312,5 +312,128 @@
     "duration_min": 45,
     "desc": "姐姐與使用者的淺草候選。營業、排隊與品項待確認；不為排隊壓縮回上野取行李及機場交通。",
     "tag": "Day5 擇時備選"
+  },
+  {
+    "id": "tokyo-bk-gotanda-cafe",
+    "name": "Café au lait Tokyo Gotanda｜入住後餐飲候選",
+    "category": "food",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "五反田",
+    "location": {
+      "maps_query": "Café au lait Tokyo Gotanda"
+    },
+    "desc": "姐姐的五反田餐飲提案；與Tsukemen TETSU五反田沾麵擇一，TETSU獨立導航在收藏備選。店家營業與排隊待確認；完全不吃牛肉及牛骨高湯，點餐前確認成分。",
+    "tag": "Day1 入住後擇時安排"
+  },
+  {
+    "id": "tokyo-bk-roastery",
+    "name": "中目黑｜星巴克臻選東京烘焙工坊",
+    "category": "food",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "中目黑",
+    "location": {
+      "maps_query": "スターバックス リザーブ ロースタリー 東京"
+    },
+    "desc": "姐姐Day 1路線的中目黑停靠點。入住與放好行李後前往；以出關、實際抵達時間與排隊情況調整，若晚到可縮短或省略。",
+    "tag": "Day1 入住後擇時安排",
+    "contact": {
+      "website": "https://www.starbucks.co.jp/reserve/roastery/"
+    }
+  },
+  {
+    "id": "tokyo-bk-forestgate",
+    "name": "代官山｜Forestgate",
+    "category": "shopping",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "代官山",
+    "location": {
+      "maps_query": "Forestgate 代官山"
+    },
+    "desc": "姐姐的代官山提案；可短暫看建築與商店，和蔦屋書店依興趣分配時間。各店營業時間不同，抵達日不必每間都逛。",
+    "tag": "Day1 入住後擇時安排",
+    "contact": {
+      "website": "https://forestgate-daikanyama.jp/access/"
+    }
+  },
+  {
+    "id": "tokyo-bk-tsite",
+    "name": "代官山｜蔦屋書店 T-SITE",
+    "category": "shopping",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "代官山",
+    "location": {
+      "maps_query": "代官山 蔦屋書店 T-SITE"
+    },
+    "desc": "姐姐的代官山書店散步提案；與Forestgate同區擇時安排，若入住較晚可只選其中一處。",
+    "tag": "Day1 入住後擇時安排",
+    "contact": {
+      "website": "https://store.tsite.jp/daikanyama/access/"
+    }
+  },
+  {
+    "id": "tokyo-bk-miyashita",
+    "name": "澀谷｜宮下公園 MIYASHITA PARK",
+    "category": "shopping",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "澀谷",
+    "location": {
+      "maps_query": "MIYASHITA PARK 渋谷"
+    },
+    "desc": "姐姐的澀谷提案；看公園、商場與附近街區。時間不足可只逛宮下公園或十字路口，實際開放依當日公告。",
+    "tag": "Day1 入住後擇時安排",
+    "contact": {
+      "website": "https://www.miyashita-park.tokyo/"
+    }
+  },
+  {
+    "id": "tokyo-bk-scramble",
+    "name": "澀谷十字路口｜街景散步",
+    "category": "attraction",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "澀谷",
+    "location": {
+      "maps_query": "渋谷スクランブル交差点"
+    },
+    "desc": "姐姐Day 1路線的澀谷街景停靠點；以合法人行動線短暫拍照，不必購展望台門票。",
+    "tag": "Day1 入住後擇時安排"
+  },
+  {
+    "id": "tokyo-bk-gotanda-tetsu",
+    "name": "Tsukemen TETSU 五反田｜沾麵候選",
+    "category": "food",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "五反田",
+    "location": {
+      "maps_query": "つけめんTETSU 五反田店"
+    },
+    "desc": "姐姐的入住後餐飲候選，與Café au lait擇一；營業、菜單與湯底待查，不吃牛肉及牛骨高湯須向店家確認。",
+    "tag": "Day1 入住後擇時安排"
+  },
+  {
+    "id": "tokyo-bk-yebisu",
+    "name": "惠比壽花園廣場 TOP of YEBISU｜夜景三選一",
+    "category": "spot",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "惠比壽",
+    "location": {
+      "maps_query": "恵比寿ガーデンプレイスタワー TOP of YEBISU"
+    },
+    "desc": "姐姐的Day1夜景候選，與SHIBUYA SKY、六本木Tokyo City View擇一。改去惠比壽時縮短澀谷行程；開放區域與當日營業依官方，不代表餐廳已訂位。",
+    "tag": "Day1 入住後擇時安排",
+    "contact": {
+      "website": "https://gardenplace.jp/special/sp/top_of_yebisu/"
+    }
+  },
+  {
+    "id": "tokyo-bk-cityview",
+    "name": "六本木新城 Tokyo City View｜夜景三選一",
+    "category": "spot",
+    "typeTag": "姐姐Day1備選・未預約",
+    "region": "六本木",
+    "location": {
+      "maps_query": "六本木ヒルズ 東京シティビュー"
+    },
+    "desc": "姐姐的Day1夜景候選，與SHIBUYA SKY、TOP of YEBISU擇一。需查當日票務、開放時間與入場場次；未確認購票，不保證姐姐提議17:30–18:00或20:00後可入場。",
+    "tag": "Day1 入住後擇時安排"
   }
 ]

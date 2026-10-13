@@ -1,9 +1,9 @@
 {
   "dayNumber": 1,
   "dayLabel": "10/14 (三)",
-  "title": "東京 Day 1｜松山 ➔ 羽田 T3 ➔ 五反田入住",
+  "title": "東京 Day 1｜羽田 → 五反田入住 → 中目黑・代官山 → 澀谷",
   "stay": "三井花園飯店五反田 / 東京（10/14–10/16）",
-  "bannerAlert": "✈️ 航班與住宿已確認：CI220 09:00 松山 T1 起飛、13:10 羽田 T3 抵達；三井花園飯店五反田 15:00 起可入住。機場到飯店的交通與晚間行程待排。",
+  "bannerAlert": "✈️ CI220 09:00松山T1起飛、13:10羽田T3抵達；五反田飯店15:00起入住。姐姐版路線：中目黑星巴克 → 代官山Forestgate／蔦屋 → 澀谷宮下公園／十字路口。入住後依時間與體力擇2–3處；夜景三選一，未購票，不能視為全部必去。",
   "routePoints": [],
   "spots": [
     {
@@ -37,14 +37,136 @@
       "notes": "入住 10/14–10/16，共 2 晚；15:00–00:00 入住，10/16 11:00 前退房。地址：〒141-0022 東京都品川区東五反田 2-2-6；3 位成人、3 張單人床、不含早餐。Trip.com 訂單顯示房費已線上預付 TWD17,082；東京都住宿稅可能需於現場另付。"
     },
     {
-      "id": "tokyo-d1-plan",
-      "time": "晚間",
-      "category": "plan",
-      "typeTag": "待規劃",
-      "categoryLabel": "抵達日",
-      "title": "五反田周邊／東京晚間行程待排",
+      "id": "tokyo-d1-cafe",
+      "title": "Café au lait Tokyo Gotanda｜入住後餐飲候選",
+      "category": "food",
+      "time": "入住後（可選）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "餐飲候選",
       "visited": false,
-      "notes": "抵達日以不趕行程為原則；晚餐與是否安排銀座等市區活動後續再定。"
+      "location": {
+        "maps_query": "Café au lait Tokyo Gotanda"
+      },
+      "notes": "姐姐的五反田餐飲提案；與Tsukemen TETSU五反田沾麵擇一，TETSU獨立導航在收藏備選。店家營業與排隊待確認；完全不吃牛肉及牛骨高湯，點餐前確認成分。"
+    },
+    {
+      "id": "tokyo-d1-roastery",
+      "title": "中目黑｜星巴克臻選東京烘焙工坊",
+      "category": "food",
+      "time": "下午／傍晚（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "餐飲候選",
+      "visited": false,
+      "location": {
+        "maps_query": "スターバックス リザーブ ロースタリー 東京"
+      },
+      "notes": "姐姐Day 1路線的中目黑停靠點。入住與放好行李後前往；以出關、實際抵達時間與排隊情況調整，若晚到可縮短或省略。",
+      "contact": {
+        "website": "https://www.starbucks.co.jp/reserve/roastery/"
+      }
+    },
+    {
+      "id": "tokyo-d1-forestgate",
+      "title": "代官山｜Forestgate",
+      "category": "shopping",
+      "time": "中目黑後（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "逛街散步",
+      "visited": false,
+      "location": {
+        "maps_query": "Forestgate 代官山"
+      },
+      "notes": "姐姐的代官山提案；可短暫看建築與商店，和蔦屋書店依興趣分配時間。各店營業時間不同，抵達日不必每間都逛。",
+      "contact": {
+        "website": "https://forestgate-daikanyama.jp/access/"
+      }
+    },
+    {
+      "id": "tokyo-d1-tsite",
+      "title": "代官山｜蔦屋書店 T-SITE",
+      "category": "shopping",
+      "time": "代官山段（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "逛街散步",
+      "visited": false,
+      "location": {
+        "maps_query": "代官山 蔦屋書店 T-SITE"
+      },
+      "notes": "姐姐的代官山書店散步提案；與Forestgate同區擇時安排，若入住較晚可只選其中一處。",
+      "contact": {
+        "website": "https://store.tsite.jp/daikanyama/access/"
+      }
+    },
+    {
+      "id": "tokyo-d1-miyashita",
+      "title": "澀谷｜宮下公園 MIYASHITA PARK",
+      "category": "shopping",
+      "time": "傍晚／晚間（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "逛街散步",
+      "visited": false,
+      "location": {
+        "maps_query": "MIYASHITA PARK 渋谷"
+      },
+      "notes": "姐姐的澀谷提案；看公園、商場與附近街區。時間不足可只逛宮下公園或十字路口，實際開放依當日公告。",
+      "contact": {
+        "website": "https://www.miyashita-park.tokyo/"
+      }
+    },
+    {
+      "id": "tokyo-d1-scramble",
+      "title": "澀谷十字路口｜街景散步",
+      "category": "attraction",
+      "time": "澀谷段（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "景點",
+      "visited": false,
+      "location": {
+        "maps_query": "渋谷スクランブル交差点"
+      },
+      "notes": "姐姐Day 1路線的澀谷街景停靠點；以合法人行動線短暫拍照，不必購展望台門票。"
+    },
+    {
+      "id": "tokyo-d1-dinner",
+      "title": "澀谷／五反田｜晚餐與休息",
+      "category": "food",
+      "time": "晚間（依實到調整）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "餐飲候選",
+      "visited": false,
+      "location": {
+        "maps_query": "渋谷駅 レストラン"
+      },
+      "notes": "餐廳尚未選定或訂位；依排隊與體力決定在澀谷用餐或回五反田。完全不吃牛肉及牛骨高湯，確認料理、醬汁及湯底。"
+    },
+    {
+      "id": "tokyo-d1-sky",
+      "title": "SHIBUYA SKY｜夜景三選一",
+      "category": "attraction",
+      "time": "晚間（有票才去）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "景點",
+      "visited": false,
+      "location": {
+        "maps_query": "SHIBUYA SKY"
+      },
+      "notes": "姐姐夜景提案之一；與惠比壽TOP of YEBISU、六本木Tokyo City View三選一，另外兩處在收藏備選。SHIBUYA SKY需日期與時段指定門票，目前未確認購票；以可購票時段為準，可調整晚餐順序，疲倦直接回飯店。",
+      "contact": {
+        "website": "https://www.shibuya-scramble-square.com/sky/"
+      }
+    },
+    {
+      "id": "tokyo-d1-return",
+      "title": "返回三井花園飯店五反田",
+      "category": "hotel",
+      "time": "晚間（彈性）",
+      "typeTag": "姐姐提案・彈性",
+      "categoryLabel": "景點",
+      "visited": false,
+      "location": {
+        "maps_query": "三井ガーデンホテル五反田"
+      },
+      "notes": "10/14住宿已確認；當晚返回五反田休息，隔日仍以新宿御苑與下午購物為主。"
     }
   ]
 }
