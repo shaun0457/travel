@@ -55,3 +55,11 @@ npm run verify:mobile -- https://shaun0457.github.io/travel/tokyo/ <deployed-com
 
 This public check requires a local verified build and Playwright. It compares the
 live data with that build, verifies HTTP 200 and checks both asset version tags.
+
+## Editable schedule on your phone
+
+Each stop offers **調整時間 / 順序** (date, start time, flexible time, insertion position, or move up/down) and **移至收藏**. Favorites offer **安排時間 / 加入行程** and reopen an existing scheduled stop instead of duplicating it. Time changes default to chronological order; an explicit position preserves other stops’ times. The last schedule change can be undone.
+
+The v13 device state stores source-ID overrides, candidate placements and per-day order separately from repository facts. Moving a source stop into Saved retains its latest notes, address and progress; adding it back preserves its identity. Existing v12 state is migrated, including candidate times. Reloads, new deployments and interactive share links preserve these changes. This is device-local storage; the existing remote boolean-progress sync does not synchronize schedule edits. Editing an itinerary time does not change a real reservation. Original route diagrams and transport estimates are hidden after the stop sequence changes, because they no longer describe the edited route.
+
+After building, run `npm run verify:schedule` for the schedule/state migration regression gate (both trips).

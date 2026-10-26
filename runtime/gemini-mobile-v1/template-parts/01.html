@@ -13,6 +13,7 @@
 <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',400:'#38bdf8',500:'#0ea5e9',600:'#0284c7',700:'#0369a1'}},fontFamily:{sans:['Noto Sans TC','sans-serif'],outfit:['Outfit','sans-serif']}}}}</script>
 <style>
 :root{color-scheme:light;padding-top:env(safe-area-inset-top,0)}html{background:#f1f5f9}body{margin:0;min-height:100vh;background:linear-gradient(#f0f9ff,#f8fafc 42%,#f1f5f9);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 150px);-webkit-tap-highlight-color:transparent}.card-shadow{box-shadow:0 5px 22px -4px rgba(14,165,233,.12),0 2px 7px rgba(15,23,42,.04)}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{scrollbar-width:none}.tap-target,.primary-nav,.bottom-nav-btn,.day-tab-btn{min-height:44px;min-width:44px}.sticky-top{top:env(safe-area-inset-top,0)}.nav-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 7px)}.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sheet-backdrop{background:rgba(15,23,42,.52);backdrop-filter:blur(3px)}.sheet-panel{border-radius:28px 28px 0 0;max-height:82vh}.safe-bottom{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #0284c7;outline-offset:2px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+#schedule-undo[hidden]{display:none!important}#schedule-editor{border:0;border-radius:24px;padding:0;width:calc(100% - 24px);max-width:424px;max-height:88dvh;overflow-y:auto;color:#334155;background:#fff;box-shadow:0 20px 60px #0f172a33}#schedule-editor::backdrop{background:#0f172a88;backdrop-filter:blur(3px)}#schedule-editor input,#schedule-editor select{font-size:16px;box-sizing:border-box;max-width:100%}#schedule-editor [hidden]{display:none!important}#schedule-editor button{min-height:44px}#schedule-editor input:disabled{opacity:.45}
 </style>
 </head>
 <body>
@@ -22,7 +23,7 @@
   <div id="share-modal" class="fixed inset-0 z-[70] sheet-backdrop hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="share-title">
     <div class="bg-white rounded-3xl p-5 max-w-sm w-full card-shadow space-y-4 relative max-h-[90vh] overflow-y-auto">
       <button onclick="closeShareModal()" class="tap-target absolute top-2 right-2 w-11 rounded-full bg-slate-100 text-slate-500" aria-label="關閉分享"><i class="fa-solid fa-xmark"></i></button>
-      <div class="pr-12"><h3 id="share-title" class="font-extrabold text-slate-900">分享旅程</h3><p class="text-xs text-slate-500 mt-1">可分享乾淨網址，或把這支手機上的打卡進度一起帶過去。</p></div>
+      <div class="pr-12"><h3 id="share-title" class="font-extrabold text-slate-900">分享旅程</h3><p class="text-xs text-slate-500 mt-1">可分享乾淨網址，或把時間、排序、收藏移動與打卡進度一起帶過去。</p></div>
       <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center gap-2"><div id="share-qrcode" class="bg-white p-2 rounded-xl shadow-sm border border-slate-200 w-40 h-40"></div><span class="text-[11px] text-slate-500">掃描 QR 開啟旅程</span></div>
       <button onclick="copyShareUrl()" class="tap-target w-full rounded-xl bg-brand-600 text-white font-bold text-sm">複製互動連結</button>
       <button id="native-share-btn" onclick="triggerNativeShare()" class="tap-target w-full rounded-xl bg-slate-100 text-slate-700 font-bold text-sm">LINE / AirDrop 分享</button>
@@ -55,6 +56,7 @@
     <div class="max-w-md mx-auto flex items-center justify-between gap-3"><div class="min-w-0"><div id="header-badges" class="flex items-center gap-1.5 overflow-x-auto hide-scrollbar"></div><h1 class="font-extrabold text-slate-900 mt-1 truncate"><span id="header-title">Travel Plan</span> <span id="header-emoji">✈️</span></h1></div><button onclick="openShareModal()" class="tap-target shrink-0 px-3 rounded-full bg-brand-600 text-white text-xs font-bold"><i class="fa-solid fa-share-nodes mr-1"></i>分享</button></div>
   </header>
   <main class="max-w-md mx-auto px-4 pt-3 space-y-4">
+    <div id="schedule-undo" hidden class="bg-sky-50 border border-sky-200 rounded-2xl px-3 flex items-center justify-between gap-2"><p class="text-xs text-brand-700">行程調整已儲存於此裝置</p><button onclick="undoScheduleEdit()" class="tap-target px-3 text-xs font-bold text-brand-700">復原上一步</button></div>
     <div id="day-tabs" class="flex gap-2 overflow-x-auto hide-scrollbar py-1"></div>
 
     <section id="tab-content-today" class="space-y-4">
@@ -68,7 +70,7 @@
         <button id="view-mode-map" onclick="setDayViewMode('map')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">地圖路線</button>
         <button id="view-mode-notes" onclick="setDayViewMode('notes')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">旅程筆記</button>
       </div>
-      <div id="route-summary"></div>
+      <div id="route-summary"></div><p class="text-xs text-slate-500 px-1">點各站「調整」可改日期、時間與順序；暫時不去的地點可移至收藏。</p>
       <div id="route-map-panel" class="hidden bg-white rounded-2xl p-3 card-shadow border border-sky-100">
         <div class="flex items-center justify-between mb-2"><span class="text-xs font-bold text-slate-800"><i class="fa-solid fa-route text-brand-600 mr-1"></i>今日路線</span><span class="text-[10px] text-slate-400">compact map</span></div>
         <canvas id="routeCanvas" width="380" height="180" class="w-full h-[160px] rounded-xl bg-sky-50 border border-sky-100"></canvas>
@@ -81,7 +83,7 @@
       <div class="bg-white rounded-2xl p-2 card-shadow border border-sky-100 grid grid-cols-2 gap-1"><button id="saved-tab-candidates" onclick="switchSavedPanel('candidates')" class="tap-target rounded-xl bg-brand-600 text-white text-xs font-bold">候選池</button><button id="saved-tab-inbox" onclick="switchSavedPanel('inbox')" class="tap-target rounded-xl text-slate-600 text-xs font-bold">靈感 Inbox</button></div>
       <div id="saved-panel-candidates" class="space-y-3">
         <div id="agent-suggestion-card"></div>
-        <div class="bg-white rounded-2xl p-3 card-shadow border border-sky-100 space-y-3"><div><p class="text-[11px] font-bold text-brand-600">Candidate Pool</p><h2 class="font-extrabold text-slate-900">已整理的候選地點</h2></div><div id="candidate-category-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div><div id="candidate-food-style-filters" aria-label="料理種類" class="flex gap-2 overflow-x-auto hide-scrollbar"></div><div id="candidate-region-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div></div>
+        <div class="bg-white rounded-2xl p-3 card-shadow border border-sky-100 space-y-3"><div><p class="text-[11px] font-bold text-brand-600">Candidate Pool</p><h2 class="font-extrabold text-slate-900">收藏與候選地點</h2></div><div id="candidate-category-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div><div id="candidate-food-style-filters" aria-label="料理種類" class="flex gap-2 overflow-x-auto hide-scrollbar"></div><div id="candidate-region-filters" class="flex gap-2 overflow-x-auto hide-scrollbar"></div></div>
         <div id="candidates-list-container" class="space-y-3"></div>
       </div>
       <div id="saved-panel-inbox" class="space-y-3 hidden">

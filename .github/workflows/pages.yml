@@ -27,6 +27,8 @@ jobs:
         run: npm run build
       - name: Verify build
         run: npm run verify:build
+      - name: Verify editable schedule and state migration
+        run: npm run verify:schedule
       - name: Install Playwright mobile gate
         run: |
           npm install --no-save playwright
