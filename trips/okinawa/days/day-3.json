@@ -1,57 +1,57 @@
 {
   "dayNumber": 3,
   "dayLabel": "10/28 (三)",
-  "title": "恩納退房 ➔ 通堂拉麵 ➔ 波上宮/護國寺 ➔ 波之上海灘 ➔ OMO5 ➔ Bic Camera／那霸Main Place服飾購物 ➔ Yakizen 炭火串燒 ➔ 粋 安康魚鍋（候選）",
+  "title": "恩納退房 ➔ 沖繩ライカム購物（mont-bell／Salomon／女裝）➔ 波上宮/護國寺 ➔ 波之上海灘 ➔ OMO5 ➔ Bic Camera Select ➔ Yakizen 炭火串燒",
   "stay": "OMO5 沖縄那覇 by 星野リゾート",
-  "bannerAlert": "🏨 今日南下那霸，先吃通堂、參拜波上宮與護國寺，再入住 OMO5。下午購物新增 Bic Camera 那霸 Main Place，並在同商場逛服飾；18:00 Yakizen 炭火串燒為主晚餐，21:00 後安康魚鍋為候選第二攤。購物建議抓 16:00–17:30，交通時間要留緩衝。",
+  "bannerAlert": "🛍️ 今天把主要購物集中在イオンモール沖縄ライカム：mont-bell、Salomon（ABC-MART GRAND STAGE）和年輕女裝一起逛；之後南下那霸參拜波上宮、護國寺與波之上海灘，入住 OMO5。Bic Camera 改去國際通的 Bic Camera Select，安排晚餐前或晚餐後逛，時間更靈活。",
   "routePoints": [
     {
       "name": "恩納退房",
       "x": 235,
       "y": 80,
-      "time": "10:30"
+      "time": "09:30"
     },
     {
-      "name": "通堂拉麵",
-      "x": 80,
-      "y": 178,
-      "time": "11:30"
+      "name": "沖繩ライカム購物",
+      "x": 175,
+      "y": 115,
+      "time": "11:00"
     },
     {
       "name": "波上宮",
       "x": 80,
       "y": 160,
-      "time": "13:00"
+      "time": "15:00"
     },
     {
       "name": "護国寺",
       "x": 81,
       "y": 161,
-      "time": "13:40"
+      "time": "15:35"
     },
     {
       "name": "波之上海灘",
       "x": 79,
       "y": 162,
-      "time": "14:05"
+      "time": "16:00"
     },
     {
       "name": "OMO5 那霸",
       "x": 92,
       "y": 165,
-      "time": "15:00"
+      "time": "16:45"
     },
     {
-      "name": "Bic Camera／Main Place",
+      "name": "Bic Camera Select",
       "x": 102,
       "y": 168,
-      "time": "16:00"
+      "time": "17:30"
     },
     {
       "name": "Yakizen晚餐",
       "x": 101,
       "y": 166,
-      "time": "18:00"
+      "time": "18:30"
     },
     {
       "name": "粋 いなせ（安康魚鍋）",
@@ -79,19 +79,32 @@
       "notes": "早餐後回住宿整理行李，10:30～11:00 退房南下。"
     },
     {
+      "id": "d3-rycom",
+      "time": "11:00",
+      "category": "shopping",
+      "typeTag": "主要購物站",
+      "categoryLabel": "戶外品牌＋女裝",
+      "title": "イオンモール沖縄ライカム｜mont-bell／Salomon／年輕女裝",
+      "location": {
+        "maps_query": "イオンモール沖縄ライカム"
+      },
+      "visited": false,
+      "notes": "【今天購物主站，建議停留 2～2.5 小時】mont-bell 沖繩ライカム店在館內；Salomon 優先去 ABC-MART GRAND STAGE 3F（Salomon 官方取扱店，公開分類含戶外／跑步與 Sportstyle，未能保證全系列和所有尺寸都有現貨，特定型號建議先詢問）；服飾可逛 H&M、WEGO 等年輕女裝。先買你最在意的 Salomon 背包/鞋款，再逛服飾。從恩納出發車程抓約 1 小時上下，依路況調整；離開後再往那霸。"
+    },
+    {
       "id": "d3-lunch",
-      "time": "11:30",
+      "time": "14:00",
       "category": "food",
       "typeTag": "順路午餐",
       "categoryLabel": "人氣拉麵",
       "title": "通堂拉麵 小祿本店 (おんな味 雞白湯)",
       "mapcode": "33 094 365*41",
       "visited": false,
-      "notes": "【南下那霸第一站午餐】\n招牌「女麵」是清甜純雞骨高湯、「男麵」是濃郁豚骨，搭配豚肉叉燒，完全不含牛肉！吃完剛好去參拜波上宮。"
+      "notes": "【從ライカム南下那霸後的午餐備選】若購物後仍想吃通堂，可安排約 14:00；若時間不夠，改在ライカム商場內簡單午餐，避免影響波上宮參拜與晚上購物。"
     },
     {
       "id": "d3-2a",
-      "time": "13:00",
+      "time": "15:00",
       "category": "shrine",
       "typeTag": "御朱印核心",
       "categoryLabel": "海景神社",
@@ -103,7 +116,7 @@
     },
     {
       "id": "d3-2b",
-      "time": "13:40",
+      "time": "15:35",
       "category": "shrine",
       "typeTag": "御朱印核心",
       "categoryLabel": "沖繩古寺",
@@ -115,7 +128,7 @@
     },
     {
       "id": "d3-beach",
-      "time": "14:05",
+      "time": "16:00",
       "category": "view",
       "typeTag": "順路可去",
       "categoryLabel": "神社下方海景",
@@ -128,7 +141,7 @@
     },
     {
       "id": "d3-3",
-      "time": "15:00",
+      "time": "16:45",
       "category": "hotel",
       "typeTag": "住宿 Check-in",
       "categoryLabel": "星野旅宿",
@@ -140,16 +153,16 @@
     },
     {
       "id": "d3-4",
-      "time": "16:00",
+      "time": "17:30",
       "category": "shopping",
       "typeTag": "新增購物行程",
       "categoryLabel": "電器＋服飾",
-      "title": "Bic Camera 那霸 Main Place ＆ SAN-A 那霸 Main Place 服飾購物",
+      "title": "Bic Camera Select 那霸國際通店",
       "mapcode": "33 157 382*41",
       "visited": false,
-      "notes": "【新增購物・建議 16:00–17:30】前往那霸新都心的 Bic Camera（ビックカメラ 那覇メインプレイス）逛相機、電器與旅行用品；同一商場 SAN-A 那霸 Main Place 可一起逛女裝／年輕服飾店。先列購物清單、留意免稅與行李空間。從 OMO5 往返可搭計程車或單軌＋步行；交通時間請另外預留。若逛得太久，直接縮短自由散步，別影響 18:00 Yakizen。",
+      "notes": "【新增購物】改到國際通上的 Bic Camera Select（不是 Main Place 店，避免誤導）。店內有相機、音訊、旅行用品、美妝家電與伴手禮等；地址：那霸市久茂地3-29-2，公開資料列營業時間 11:00–23:00。建議 17:30–18:15 快速逛，之後前往 Yakizen；如果晚餐後再去也有時間彈性。",
       "location": {
-        "maps_query": "Bic Camera 那覇メインプレイス"
+        "maps_query": "ビックカメラSelect那覇国際通り店"
       }
     },
     {
