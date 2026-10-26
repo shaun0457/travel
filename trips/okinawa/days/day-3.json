@@ -1,9 +1,9 @@
 {
   "dayNumber": 3,
   "dayLabel": "10/28 (三)",
-  "title": "恩納退房 ➔ 通堂拉麵 ➔ 波上宮/護國寺 ➔ 波之上海灘 ➔ OMO5 ➔ 市區漫步 ➔ Yakizen 炭火串燒 ➔ 粋 安康魚鍋（第二攤候選）",
+  "title": "恩納退房 ➔ 通堂拉麵 ➔ 波上宮/護國寺 ➔ 波之上海灘 ➔ OMO5 ➔ Bic Camera／那霸Main Place服飾購物 ➔ Yakizen 炭火串燒 ➔ 粋 安康魚鍋（候選）",
   "stay": "OMO5 沖縄那覇 by 星野リゾート",
-  "bannerAlert": "🏨 今日從恩納退房後直接南下那霸；中午通堂拉麵，下午波上宮、護国寺、波之上海灘與 OMO5 節奏維持不變。🍢 18:00 Yakizen 炭火串燒是主晚餐；21:00 後可續攤到壺川的「くずし割烹 粋」吃安康魚鍋，兩店皆未確認訂位。安康魚需先確認當日供貨及牛骨、牛油、共用鍋具/油具。",
+  "bannerAlert": "🏨 今日南下那霸，先吃通堂、參拜波上宮與護國寺，再入住 OMO5。下午購物新增 Bic Camera 那霸 Main Place，並在同商場逛服飾；18:00 Yakizen 炭火串燒為主晚餐，21:00 後安康魚鍋為候選第二攤。購物建議抓 16:00–17:30，交通時間要留緩衝。",
   "routePoints": [
     {
       "name": "恩納退房",
@@ -42,7 +42,7 @@
       "time": "15:00"
     },
     {
-      "name": "市區漫步",
+      "name": "Bic Camera／Main Place",
       "x": 102,
       "y": 168,
       "time": "16:00"
@@ -141,13 +141,16 @@
     {
       "id": "d3-4",
       "time": "16:00",
-      "category": "view",
-      "typeTag": "自由漫步",
-      "categoryLabel": "市區探索",
-      "title": "那霸市區散步 (牧志市場/國際通/壺屋街)",
+      "category": "shopping",
+      "typeTag": "新增購物行程",
+      "categoryLabel": "電器＋服飾",
+      "title": "Bic Camera 那霸 Main Place ＆ SAN-A 那霸 Main Place 服飾購物",
       "mapcode": "33 157 382*41",
       "visited": false,
-      "notes": "【輕鬆散步・不硬塞】選 1～2 處散步即可。\n💡 晚餐確定吃 Yakizen，可沿國際通一路慢慢走向牧志方向，把散步直接接到晚餐，不用來回折返。"
+      "notes": "【新增購物・建議 16:00–17:30】前往那霸新都心的 Bic Camera（ビックカメラ 那覇メインプレイス）逛相機、電器與旅行用品；同一商場 SAN-A 那霸 Main Place 可一起逛女裝／年輕服飾店。先列購物清單、留意免稅與行李空間。從 OMO5 往返可搭計程車或單軌＋步行；交通時間請另外預留。若逛得太久，直接縮短自由散步，別影響 18:00 Yakizen。",
+      "location": {
+        "maps_query": "Bic Camera 那覇メインプレイス"
+      }
     },
     {
       "id": "d3-yakizen",
