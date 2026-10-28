@@ -1,51 +1,45 @@
 {
   "dayNumber": 4,
   "dayLabel": "10/29 (四)",
-  "title": "那霸早餐 ➔ 沖宮＆護國神社(雙朱印) ➔ Hoppepan ➔ 玉泉洞 ➔ 糸滿魚市場 ➔ 機場還車返台",
+  "title": "OMO早餐 ➔ 波上宮 ➔ 沖宮 ➔ MUJI ➔ Hoppepan ➔ 還車返台",
   "stay": "溫暖的家 ✈️",
-  "bannerAlert": "🍳 08:00 那霸早餐；接著完成奧武山公園雙社御朱印，10:15 到浦添 Hoppepan 買麵包，再一路往南安排玉泉洞與糸滿魚市場。瀨長島與 Outlet 已移除；15:00 還車，18:40 起飛。Hoppepan 請出發前確認店家公告。",
+  "bannerAlert": "08:30 OMO早餐 → 09:15退房 → 09:40波上宮 → 10:40沖宮 → 11:40 MUJI那霸Main Place → 13:20 Hoppepan。13:50離開浦添，留加油與交通緩衝；原訂15:00還車、16:00到機場、18:40 IT233起飛維持。日期依虎航確認信為10/29；各站時間為建議，路況與排隊時優先保留還車緩衝。",
   "routePoints": [
     {
-      "name": "那霸早餐",
-      "x": 102,
-      "y": 168,
-      "time": "08:00"
-    },
-    {
-      "name": "OMO5退房",
+      "name": "OMO早餐",
       "x": 92,
       "y": 165,
-      "time": "08:45"
+      "time": "08:30"
+    },
+    {
+      "name": "退房",
+      "x": 92,
+      "y": 165,
+      "time": "09:15"
+    },
+    {
+      "name": "波上宮",
+      "x": 85,
+      "y": 162,
+      "time": "09:40"
     },
     {
       "name": "沖宮",
       "x": 88,
       "y": 172,
-      "time": "09:00"
+      "time": "10:40"
     },
     {
-      "name": "護國神社",
-      "x": 89,
-      "y": 173,
-      "time": "09:30"
+      "name": "MUJI那霸MainPlace",
+      "x": 105,
+      "y": 158,
+      "time": "11:40"
     },
     {
-      "name": "Hoppepan（浦添）",
+      "name": "Hoppepan浦添",
       "x": 110,
       "y": 150,
-      "time": "10:15"
-    },
-    {
-      "name": "玉泉洞",
-      "x": 120,
-      "y": 215,
-      "time": "11:15"
-    },
-    {
-      "name": "糸滿魚市場",
-      "x": 65,
-      "y": 220,
-      "time": "13:15"
+      "time": "13:20"
     },
     {
       "name": "還車營業所",
@@ -63,56 +57,67 @@
   "spots": [
     {
       "id": "d4-breakfast",
-      "time": "08:00",
+      "time": "08:30",
       "category": "food",
-      "typeTag": "人氣和風早餐",
-      "categoryLabel": "那霸早餐",
-      "title": "旅の終わりの朝ごはん 美栄橋本店",
-      "location": {
-        "maps_query": "旅の終わりの朝ごはん 美栄橋本店 那覇市牧志2-21-7"
-      },
+      "typeTag": "飯店早餐",
+      "categoryLabel": "OMO早餐",
+      "title": "OMO5沖繩那霸｜08:30 早餐",
       "visited": false,
-      "notes": "【移至 Day 4 最後一天】地址：沖縄県那覇市牧志2-21-7 リュービックアパート 1F；原行程資料列營業時間 08:00–14:00，安排 08:00 早餐，建議出發前再次確認營業狀態與候位。"
+      "notes": "【本人指定 08:30】在 OMO5 飯店吃早餐，預留約 45 分鐘。官方早餐 07:00–10:00。早餐後整理行李、退房再出發；餐點如有肉類、湯底或醬料，仍需確認不含牛肉／牛骨／牛油。官方：https://hoshinoresorts.com/ja/hotels/omo5okinawanaha/dining/",
+      "place_id": "naha_omo5"
     },
     {
       "id": "d4-1",
-      "time": "08:45",
+      "time": "09:15",
       "category": "hotel",
       "typeTag": "退房出發",
       "categoryLabel": "行李上車",
-      "title": "OMO5 退房出發 ➔ 一路向南行駛",
+      "title": "OMO5 退房・行李上車",
       "place_id": "naha_omo5",
       "mapcode": "33 156 612*25",
       "visited": false,
-      "notes": "早餐後回 OMO5 取行李、退房，開車前往奧武山公園。"
+      "notes": "早餐後完成退房，帶齊行李、御朱印帳與證件，再出發前往波上宮。"
+    },
+    {
+      "id": "d4-naminoue",
+      "time": "09:40",
+      "category": "shrine",
+      "typeTag": "御朱印核心",
+      "categoryLabel": "海景神社",
+      "title": "波上宮",
+      "place_id": "naha_naminoue_shrine",
+      "visited": false,
+      "notes": "預留約 40 分鐘參拜、御朱印與拍照，另留停車及步行緩衝。導航神社本身，不要停在波之上海灘後便認為已到本殿；御朱印依當日授与所安排。官方：https://naminouegu.jp/"
     },
     {
       "id": "d4-2a",
-      "time": "09:00",
+      "time": "10:40",
       "category": "shrine",
       "typeTag": "御朱印名社",
-      "categoryLabel": "奧武山公園・第一站",
+      "categoryLabel": "奧武山公園・御朱印",
       "title": "沖宮",
       "place_id": "naha_okinogu",
       "mapcode": "33 096 701*82",
       "visited": false,
-      "notes": "【09:00 後再進行御朱印/授与相關行程】原本 08:45 太早；官方社務所 09:00 開始。先參拜沖宮，再步行前往同園區的沖縄県護国神社。"
+      "notes": "預留約 40 分鐘參拜與御朱印，含公園內步行；社務所原資料 09:00–17:00。完成後前往那霸 Main Place；本日不再另排護國神社。官方：https://okinogu.or.jp/"
     },
     {
-      "id": "d4-2b",
-      "time": "09:30",
-      "category": "shrine",
-      "typeTag": "御朱印名社",
-      "categoryLabel": "奧武山公園・第二站",
-      "title": "沖縄県護国神社",
-      "place_id": "naha_okinawa_gokoku",
-      "mapcode": "33 096 701*82",
+      "id": "d4-muji",
+      "time": "11:40",
+      "category": "shopping",
+      "typeTag": "無印良品",
+      "categoryLabel": "購物與午餐彈性時間",
+      "title": "MUJI 無印良品｜那霸 Main Place 2F",
+      "location": {
+        "address": "沖縄県那覇市おもろまち4丁目4番9号 サンエー那覇メインプレイス2階",
+        "maps_query": "無印良品 那覇メインプレイス"
+      },
       "visited": false,
-      "notes": "【雙社拆成獨立導航點】お守り授与為 09:00–17:00；完成後直接往南城市玉泉洞，不再折返市區。"
+      "notes": "選擇往浦添 Hoppepan 方向的那霸 Main Place 店。官方營業時間每日 09:00–22:00，提供免費停車場及免稅服務；購物與簡單午餐合計預留約 80 分鐘，午餐自行選擇並確認無牛成分。13:00 左右離開商場。官方：https://www.muji.com/jp/ja/shop/detail/061768"
     },
     {
       "id": "d4-hoppepan",
-      "time": "10:15",
+      "time": "13:20",
       "category": "food",
       "typeTag": "浦添麵包店",
       "categoryLabel": "人氣烘焙",
@@ -121,30 +126,7 @@
         "maps_query": "ほっぺパン 浦添市内間2-10-10"
       },
       "visited": false,
-      "notes": "【新增・最後一天順路買麵包】店址已由宜野灣搬至浦添市内間2-10-10。現有店家資訊列週四至週日 10:00–19:00、週一至週三休；10/29（四）安排 10:15 到訪。營業日/時間可能調整，出發前請查看店家最新公告。"
-    },
-    {
-      "id": "d4-3",
-      "time": "11:15",
-      "category": "view",
-      "typeTag": "核心景點",
-      "categoryLabel": "鐘乳石奇景",
-      "title": "沖繩世界文化王國 ＆ 玉泉洞",
-      "place_id": "nanjo_okinawa_world",
-      "mapcode": "232 495 330*28",
-      "visited": false,
-      "notes": "【最後一天主要景點】安排約 1.5 小時，遊覽天然鐘乳石洞「玉泉洞」與琉球王國園區；需留意時間，避免影響還車。"
-    },
-    {
-      "id": "d4-4",
-      "time": "13:15",
-      "category": "food",
-      "typeTag": "核心午餐",
-      "categoryLabel": "極鮮生猛市場",
-      "title": "糸滿魚市場 (今日正式海鮮大餐・無牛安心)",
-      "mapcode": "232 484 136*85",
-      "visited": false,
-      "notes": "【今日午餐・生猛海鮮饗宴】預計約 13:15 到訪，品嚐市場海鮮；用餐與採買控制在約 60–75 分鐘，15:00 前往還車。"
+      "notes": "【使用者指定 hoppen，依原行程對應 Hoppepan／ほっぺパン】現址：浦添市内間2-10-10，請勿導航舊宜野灣店。現有店家資訊列木至日 10:00–19:00；當日臨休或售完狀態未確認，出發前查看店家 Instagram。預留約 25–30 分鐘，13:50 左右離開，往還車方向行駛；遇排隊應縮短採買，優先保留還車緩衝。鹹麵包的肉類、醬料與油脂須確認無牛。店家：https://www.instagram.com/hoppe_pan/"
     },
     {
       "id": "d4-6",
@@ -155,7 +137,7 @@
       "title": "營業所周邊加油 ＆ 辦理還車手續",
       "mapcode": "232 543 200*11",
       "visited": false,
-      "notes": "15:00 準時啟動還車流程：加油、驗車、交車，搭乘租車公司免費專車接駁至那霸機場航廈。"
+      "notes": "原行程 15:00 還車維持。13:50 左右離開浦添後依即時路況前往租車公司，預留塞車、加油與驗車時間；建議 14:30 左右先完成周邊加油，15:00 辦理交車，再搭租車公司接駁至機場。租車公司位置沿用原導航。"
     },
     {
       "id": "d4-7",
